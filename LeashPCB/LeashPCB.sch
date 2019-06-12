@@ -1,4 +1,60 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 29 0
 EELAYER END
+$Descr C 22000 17000
+encoding utf-8
+Sheet 1 1
+Title "BeagleDust Leash PCB"
+Date "2019-06-12"
+Rev "1"
+Comp "Beagleboard.org"
+Comment1 "Schematic designed by Analog Life, LLC"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LeashPCB:CC1352R U?
+U 1 1 5D019B84
+P 2900 2750
+F 0 "U?" H 2900 3915 50  0000 C CNN
+F 1 "CC1352R" H 2900 3824 50  0000 C CNN
+F 2 "" H 1750 3000 50  0001 C CNN
+F 3 "" H 1750 3000 50  0001 C CNN
+	1    2900 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LeashPCB:CC1352R U?
+U 2 1 5D01B461
+P 2900 5000
+F 0 "U?" H 3678 5071 50  0000 L CNN
+F 1 "CC1352R" H 3678 4980 50  0000 L CNN
+F 2 "" H 1750 5250 50  0001 C CNN
+F 3 "" H 1750 5250 50  0001 C CNN
+	2    2900 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LeashPCB:CC1352R U?
+U 3 1 5D01C08E
+P 6650 4950
+F 0 "U?" H 6650 6115 50  0000 C CNN
+F 1 "CC1352R" H 6650 6024 50  0000 C CNN
+F 2 "" H 5500 5200 50  0001 C CNN
+F 3 "" H 5500 5200 50  0001 C CNN
+	3    6650 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LeashPCB:CC1352R U?
+U 4 1 5D01CCBD
+P 6650 2650
+F 0 "U?" H 6429 3815 50  0000 C CNN
+F 1 "CC1352R" H 6429 3724 50  0000 C CNN
+F 2 "" H 5500 2900 50  0001 C CNN
+F 3 "" H 5500 2900 50  0001 C CNN
+	4    6650 2650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
