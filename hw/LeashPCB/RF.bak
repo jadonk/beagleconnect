@@ -106,4 +106,6 @@ Wire Wire Line
 	2900 4400 3400 4400
 Wire Wire Line
 	3400 4500 2900 4500
+Text HLabel 1350 1175 0    79   Input ~ 0
+3V3
 $EndSCHEMATC

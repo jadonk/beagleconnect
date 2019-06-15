@@ -42,4 +42,8 @@ F 4 "0" H 5900 4900 50  0001 C CNN "Standard Price"
 	1    5900 4900
 	1    0    0    -1  
 $EndComp
+Text HLabel 3025 2775 0    79   Input ~ 0
+3V
+Text HLabel 3025 3225 0    79   Input ~ 0
+5V
 $EndSCHEMATC
