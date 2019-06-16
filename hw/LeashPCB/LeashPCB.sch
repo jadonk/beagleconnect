@@ -18,14 +18,14 @@ $Sheet
 S 725  725  3500 2650
 U 5D05A323
 F0 "Battery Input" 50
-F1 "Battery Input.sch" 50
+F1 "BatteryInput.sch" 50
 F2 "VBAT" O R 4225 2775 79 
 $EndSheet
 $Sheet
 S 775  3775 3500 2450
 U 5D0603E8
 F0 "External Input" 50
-F1 "External Input.sch" 50
+F1 "ExternalInput.sch" 50
 F2 "V_ALT" O R 4275 4200 79 
 $EndSheet
 $Sheet
@@ -36,6 +36,9 @@ F1 "Boost.sch" 50
 F2 "BOOST_POWER_INPUT" I L 4925 2300 79 
 F3 "5V_REG" O R 9175 3875 79 
 F4 "3V3_REG" O R 9175 4575 79 
+F5 "3v3_CTRL" O R 9175 4700 79 
+F6 "5V_CTRL" O R 9175 4000 79 
+F7 "5V_EN" I R 9175 4125 79 
 $EndSheet
 $Sheet
 S 10750 6425 5050 7450
@@ -43,6 +46,7 @@ U 5D062750
 F0 "RF" 50
 F1 "RF.sch" 50
 F2 "3V3" I L 10750 7150 79 
+F3 "5V_EN" O L 10750 7500 79 
 $EndSheet
 $Sheet
 S 7800 11775 2150 2100
@@ -9911,7 +9915,7 @@ $Sheet
 S 7800 9300 2175 1950
 U 5D099F4C
 F0 "User Input/Output" 50
-F1 "UserInputOut.sch" 50
+F1 "UserInputOutput.sch" 50
 $EndSheet
 $Bitmap
 Pos 13350 9975
@@ -20247,4 +20251,16 @@ Wire Wire Line
 	16275 6850 16275 3875
 Wire Wire Line
 	9175 3875 16275 3875
+Wire Wire Line
+	9175 4125 10275 4125
+Wire Wire Line
+	10275 4125 10275 7500
+Wire Wire Line
+	10275 7500 10750 7500
+Wire Wire Line
+	9175 4700 10400 4700
+Wire Wire Line
+	10400 4700 10400 7300
+Wire Wire Line
+	10400 7300 10750 7300
 $EndSCHEMATC

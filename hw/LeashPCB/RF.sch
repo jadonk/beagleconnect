@@ -108,4 +108,6 @@ Wire Wire Line
 	3400 4500 2900 4500
 Text HLabel 1350 1175 0    79   Input ~ 0
 3V3
+Text HLabel 1350 1600 0    79   Input ~ 0
+5V_EN
 $EndSCHEMATC
