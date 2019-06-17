@@ -332,7 +332,7 @@
   )
 
   (module Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal (layer F.Cu) (tedit 5B78AD87) (tstamp 5D046866)
-    (at 154.8 65 90)
+    (at 154.6 69.2 90)
     (descr "JST PH series connector, S2B-PH-SM4-TB (http://www.jst-mfg.com/product/pdf/eng/ePH.pdf), generated with kicad-footprint-generator")
     (tags "connector JST PH top entry")
     (path /5D0603E8/5D080251)

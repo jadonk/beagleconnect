@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -24,7 +23,8 @@ F 0 "J301" H 4558 3181 50  0000 C CNN
 F 1 "Conn_01x02_Male" H 4558 3090 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 4450 3000 50  0001 C CNN
 F 3 "~" H 4450 3000 50  0001 C CNN
-F 4 "0.10" H 4450 3000 50  0001 C CNN "Standard Price"
+F 4 "0.03" H 4450 3000 50  0001 C CNN "Standard Price"
+F 5 "https://lcsc.com/product-detail/Wire-To-Board-Wire-To-Wire-Connector_Boom-Precision-Elec-PH2-0-2PWB-2P-pitch2-0mm-Horizontal_C47647.html" H 4450 3000 50  0001 C CNN "Link1"
 	1    4450 3000
 	1    0    0    -1  
 $EndComp
@@ -64,4 +64,16 @@ Text HLabel 6550 3000 2    118  Input ~ 0
 V_ALT
 Text Label 5150 3000 0    50   ~ 0
 ALT_IN
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 5D154247
+P 2900 2925
+F 0 "SW?" H 2900 3210 50  0000 C CNN
+F 1 "SW_SPDT" H 2900 3119 50  0000 C CNN
+F 2 "" H 2900 2925 50  0001 C CNN
+F 3 "~" H 2900 2925 50  0001 C CNN
+F 4 "0.05" H 2900 2925 50  0001 C CNN "Standard Price"
+	1    2900 2925
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

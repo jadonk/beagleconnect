@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
@@ -20263,4 +20262,20 @@ Wire Wire Line
 	10400 4700 10400 7300
 Wire Wire Line
 	10400 7300 10750 7300
+Text Notes 1850 925  0    50   ~ 0
+Estimated BOM cost: $0.50\n($0.10 with switch)
+Text Notes 6475 2100 0    50   ~ 0
+Estimated BOM cost: $0.50
+Text Notes 12700 6625 0    50   ~ 0
+Estimated BOM cost: $1.27
+Text Notes 1900 4025 0    50   ~ 0
+Estimated BOM cost: $0.03
+Text Notes 18275 6700 0    50   ~ 0
+Estimated BOM cost: $0.15
+Text Notes 8375 11925 0    50   ~ 0
+Estimated BOM cost: $0.00
+Text Notes 8375 9475 0    50   ~ 0
+Estimated BOM cost: $0.05
+Text Notes 18175 12375 0    50   ~ 0
+Estimated BOM cost: $0.03
 $EndSCHEMATC
