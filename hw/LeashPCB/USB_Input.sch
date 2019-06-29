@@ -1,0 +1,103 @@
+EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 10 10
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 8875 1900 2    98   Output ~ 0
+V_USB
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5D1A78AB
+P 3650 2125
+AR Path="/5D05A323/5D1A78AB" Ref="J?"  Part="1" 
+AR Path="/5D1A71BB/5D1A78AB" Ref="J?"  Part="1" 
+F 0 "J?" H 3707 2592 50  0000 C CNN
+F 1 "USB_B_Micro" H 3707 2501 50  0000 C CNN
+F 2 "" H 3800 2075 50  0001 C CNN
+F 3 "~" H 3800 2075 50  0001 C CNN
+	1    3650 2125
+	1    0    0    -1  
+$EndComp
+Text Notes 1950 2100 0    79   ~ 0
+USB Micro input
+Wire Wire Line
+	3950 1925 4850 1925
+Wire Wire Line
+	5150 1925 5850 1925
+Text Label 4450 1925 0    50   ~ 0
+ALT_IN
+$Comp
+L Diode:BAT54W D?
+U 1 1 5D1A96A8
+P 5000 1925
+F 0 "D?" H 5000 1700 50  0000 C CNN
+F 1 "BAT54" H 5000 1791 50  0000 C CNN
+F 2 "" H 5000 1750 50  0001 C CNN
+F 3 "" H 5000 1925 50  0001 C CNN
+	1    5000 1925
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5D1AB7CD
+P 4175 2575
+F 0 "R?" H 4245 2621 50  0000 L CNN
+F 1 "R" H 4245 2530 50  0000 L CNN
+F 2 "" V 4105 2575 50  0001 C CNN
+F 3 "~" H 4175 2575 50  0001 C CNN
+	1    4175 2575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2325 4175 2325
+Wire Wire Line
+	4175 2325 4175 2425
+Wire Wire Line
+	4175 2725 4175 3025
+$Comp
+L power:GND #PWR?
+U 1 1 5D1ABC30
+P 4175 3025
+F 0 "#PWR?" H 4175 2775 50  0001 C CNN
+F 1 "GND" H 4180 2852 50  0000 C CNN
+F 2 "" H 4175 3025 50  0001 C CNN
+F 3 "" H 4175 3025 50  0001 C CNN
+	1    4175 3025
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D1ABEA2
+P 3650 2725
+F 0 "#PWR?" H 3650 2475 50  0001 C CNN
+F 1 "GND" H 3655 2552 50  0000 C CNN
+F 2 "" H 3650 2725 50  0001 C CNN
+F 3 "" H 3650 2725 50  0001 C CNN
+	1    3650 2725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2525 3650 2600
+Wire Wire Line
+	3550 2525 3550 2600
+Wire Wire Line
+	3550 2600 3650 2600
+Connection ~ 3650 2600
+Wire Wire Line
+	3650 2600 3650 2725
+Text HLabel 8825 2625 2    98   Output ~ 0
+MICRO_RX_SERIALDEBUG_TX
+Text HLabel 8800 2875 2    98   Output ~ 0
+MICRO_TX_SERIALDEBUG_RX
+$EndSCHEMATC

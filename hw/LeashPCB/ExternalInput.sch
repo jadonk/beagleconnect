@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 9
+Sheet 3 10
 Title ""
 Date ""
 Rev ""
@@ -46,18 +47,7 @@ $EndComp
 Wire Wire Line
 	4950 3100 4950 3450
 Wire Wire Line
-	4650 3000 5550 3000
-$Comp
-L Diode:BAT54W D301
-U 1 1 5D0807BE
-P 5700 3000
-F 0 "D301" H 5700 2775 50  0000 C CNN
-F 1 "BAT54" H 5700 2866 50  0000 C CNN
-F 2 "" H 5700 2825 50  0001 C CNN
-F 3 "" H 5700 3000 50  0001 C CNN
-	1    5700 3000
-	-1   0    0    1   
-$EndComp
+	4650 3000 4950 3000
 Wire Wire Line
 	5850 3000 6550 3000
 Text HLabel 6550 3000 2    118  Input ~ 0
@@ -76,4 +66,24 @@ F 4 "0.05" H 2900 2925 50  0001 C CNN "Standard Price"
 	1    2900 2925
 	1    0    0    -1  
 $EndComp
+$Comp
+L Diode:BAT54W D301
+U 1 1 5D0807BE
+P 5700 3000
+F 0 "D301" H 5700 2775 50  0000 C CNN
+F 1 "BAT54" H 5700 2866 50  0000 C CNN
+F 2 "" H 5700 2825 50  0001 C CNN
+F 3 "" H 5700 3000 50  0001 C CNN
+	1    5700 3000
+	-1   0    0    1   
+$EndComp
+Text GLabel 5100 2625 2    50   Input ~ 0
+ALT_IN
+Wire Wire Line
+	5100 2625 4950 2625
+Wire Wire Line
+	4950 2625 4950 3000
+Connection ~ 4950 3000
+Wire Wire Line
+	4950 3000 5550 3000
 $EndSCHEMATC

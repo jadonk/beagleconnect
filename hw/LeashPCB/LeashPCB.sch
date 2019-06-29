@@ -1,9 +1,10 @@
 EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
-Sheet 1 9
+Sheet 1 10
 Title "BeagleDust Leash PCB"
 Date "2019-06-12"
 Rev "1"
@@ -20263,9 +20264,9 @@ Wire Wire Line
 Wire Wire Line
 	10400 7300 10750 7300
 Text Notes 1850 925  0    50   ~ 0
-Estimated BOM cost: $0.50\n($0.10 with switch)
+Estimated BOM cost: $0.50\n($0.10 without ideal diode controller)
 Text Notes 6475 2100 0    50   ~ 0
-Estimated BOM cost: $0.50
+Estimated BOM cost: $0.60
 Text Notes 12700 6625 0    50   ~ 0
 Estimated BOM cost: $1.27
 Text Notes 1900 4025 0    50   ~ 0
@@ -20278,4 +20279,18 @@ Text Notes 8375 9475 0    50   ~ 0
 Estimated BOM cost: $0.05
 Text Notes 18175 12375 0    50   ~ 0
 Estimated BOM cost: $0.03
+$Sheet
+S 825  6625 3450 2425
+U 5D1A71BB
+F0 "USB Input" 79
+F1 "USB_Input.sch" 79
+F2 "V_USB" O R 4275 7000 98 
+$EndSheet
+Wire Wire Line
+	4275 7000 4650 7000
+Wire Wire Line
+	4650 7000 4650 4200
+Connection ~ 4650 4200
+Text Notes 1675 8825 0    118  ~ 24
+USB Power Input
 $EndSCHEMATC
