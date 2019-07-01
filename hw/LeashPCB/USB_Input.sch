@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 10
+Sheet 9 10
 Title ""
 Date ""
 Rev ""
@@ -35,8 +35,6 @@ Wire Wire Line
 	3950 1925 4850 1925
 Wire Wire Line
 	5150 1925 5850 1925
-Text Label 4450 1925 0    50   ~ 0
-ALT_IN
 $Comp
 L Diode:BAT54W D?
 U 1 1 5D1A96A8

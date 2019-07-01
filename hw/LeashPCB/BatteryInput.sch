@@ -2,7 +2,7 @@ EESchema Schematic File Version 4
 LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr B 17000 11000
 encoding utf-8
 Sheet 2 10
 Title ""
@@ -570,7 +570,7 @@ F 4 "0.05" H 2500 1025 50  0001 C CNN "Standard Price"
 	1    2500 1025
 	0    1    1    0   
 $EndComp
-Text HLabel 10100 825  2    118  Input ~ 0
+Text HLabel 13500 825  2    118  Input ~ 0
 VBAT
 Text Label 2900 825  0    50   ~ 0
 1V5_INPUT
@@ -719,7 +719,7 @@ Wire Wire Line
 Connection ~ 5875 825 
 Wire Wire Line
 	5875 825  5425 825 
-Text Notes 1000 950  0    79   ~ 0
+Text Notes 3350 1750 0    79   ~ 0
 Battery input
 Wire Wire Line
 	5425 825  5425 4725
@@ -813,8 +813,6 @@ Wire Wire Line
 Wire Wire Line
 	8150 4725 9675 4725
 Connection ~ 9675 825 
-Wire Wire Line
-	9675 825  10100 825 
 Wire Notes Line
 	6500 4075 8950 4075
 Wire Notes Line
@@ -825,4 +823,66 @@ Wire Notes Line
 	6500 6150 6500 4075
 Text Notes 6625 4275 0    79   ~ 0
 Alternate section for cost reduction
+$Comp
+L Device:R R?
+U 1 1 5D1B1ECE
+P 11250 825
+F 0 "R?" V 11043 825 50  0000 C CNN
+F 1 "0" V 11134 825 50  0000 C CNN
+F 2 "" V 11180 825 50  0001 C CNN
+F 3 "~" H 11250 825 50  0001 C CNN
+	1    11250 825 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9675 825  10025 825 
+Wire Wire Line
+	11400 825  12675 825 
+Wire Wire Line
+	10000 2425 10025 825 
+Connection ~ 10025 825 
+Wire Wire Line
+	10025 825  11100 825 
+Text GLabel 11800 2200 2    50   Input ~ 0
+ALT_IN
+Wire Wire Line
+	12675 2500 12675 825 
+Connection ~ 12675 825 
+Wire Wire Line
+	12675 825  13500 825 
+Wire Notes Line
+	10125 1150 12575 1150
+Wire Notes Line
+	12575 1150 12575 3225
+Text Notes 10250 1350 0    79   ~ 0
+Alternate section for cost reduction
+Wire Notes Line
+	12575 3225 10125 3225
+Wire Notes Line
+	10125 1150 10125 3225
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 5D1CF8AA
+P 11300 1850
+F 0 "J?" V 11264 1662 50  0000 R CNN
+F 1 "Conn_01x03" V 11173 1662 50  0000 R CNN
+F 2 "" H 11300 1850 50  0001 C CNN
+F 3 "~" H 11300 1850 50  0001 C CNN
+	1    11300 1850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11400 2050 11400 2200
+Wire Wire Line
+	11400 2200 11800 2200
+Wire Wire Line
+	11300 2050 11300 2500
+Wire Wire Line
+	11200 2425 11200 2050
+Wire Wire Line
+	10000 2425 11200 2425
+Wire Wire Line
+	11300 2500 12675 2500
+Text Notes 10875 2750 0    50   ~ 0
+Jumper section to switch\nbetween battery and ALT
 $EndSCHEMATC

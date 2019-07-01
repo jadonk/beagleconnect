@@ -55,18 +55,6 @@ V_ALT
 Text Label 5150 3000 0    50   ~ 0
 ALT_IN
 $Comp
-L Switch:SW_SPDT SW?
-U 1 1 5D154247
-P 2900 2925
-F 0 "SW?" H 2900 3210 50  0000 C CNN
-F 1 "SW_SPDT" H 2900 3119 50  0000 C CNN
-F 2 "" H 2900 2925 50  0001 C CNN
-F 3 "~" H 2900 2925 50  0001 C CNN
-F 4 "0.05" H 2900 2925 50  0001 C CNN "Standard Price"
-	1    2900 2925
-	1    0    0    -1  
-$EndComp
-$Comp
 L Diode:BAT54W D301
 U 1 1 5D0807BE
 P 5700 3000
@@ -86,4 +74,6 @@ Wire Wire Line
 Connection ~ 4950 3000
 Wire Wire Line
 	4950 3000 5550 3000
+Text Notes 5375 3300 0    50   ~ 0
+No pop if using the \nswitch/jumper method
 $EndSCHEMATC

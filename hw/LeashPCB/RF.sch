@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 10
+Sheet 4 10
 Title ""
 Date ""
 Rev ""
@@ -110,4 +110,16 @@ Text HLabel 1350 1175 0    79   Input ~ 0
 3V3
 Text HLabel 1350 1600 0    79   Input ~ 0
 5V_EN
+Text HLabel 6750 4850 0    50   Input ~ 0
+SWDIO
+Text HLabel 6750 5050 0    50   Input ~ 0
+SWCLK
+Wire Wire Line
+	6750 5050 7150 5050
+Wire Wire Line
+	6750 4850 7150 4850
+Wire Wire Line
+	7150 5150 6750 5150
+Text HLabel 6750 5150 0    50   Input ~ 0
+RESET_N
 $EndSCHEMATC
