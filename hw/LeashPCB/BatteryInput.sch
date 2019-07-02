@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:LeashPCB-cache
-LIBS:TVRTN-cache
 EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
@@ -571,8 +570,8 @@ F 4 "0.05" H 2500 1025 50  0001 C CNN "Standard Price"
 	1    2500 1025
 	0    1    1    0   
 $EndComp
-Text HLabel 13500 825  2    118  Input ~ 0
-VBAT
+Text HLabel 13500 825  2    118  Output ~ 0
+V_BAT
 Text Label 2900 825  0    50   ~ 0
 1V5_INPUT
 $Comp
@@ -836,54 +835,9 @@ F 3 "~" H 11250 825 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9675 825  10025 825 
+	9675 825  11100 825 
 Wire Wire Line
-	11400 825  12675 825 
-Wire Wire Line
-	10000 2425 10025 825 
-Connection ~ 10025 825 
-Wire Wire Line
-	10025 825  11100 825 
-Text GLabel 11800 2200 2    50   Input ~ 0
-ALT_IN
-Wire Wire Line
-	12675 2500 12675 825 
-Connection ~ 12675 825 
-Wire Wire Line
-	12675 825  13500 825 
-Wire Notes Line
-	10125 1150 12575 1150
-Wire Notes Line
-	12575 1150 12575 3225
-Text Notes 10250 1350 0    79   ~ 0
-Alternate section for cost reduction
-Wire Notes Line
-	12575 3225 10125 3225
-Wire Notes Line
-	10125 1150 10125 3225
-$Comp
-L Connector_Generic:Conn_01x03 J?
-U 1 1 5D1CF8AA
-P 11300 1850
-F 0 "J?" V 11264 1662 50  0000 R CNN
-F 1 "Conn_01x03" V 11173 1662 50  0000 R CNN
-F 2 "" H 11300 1850 50  0001 C CNN
-F 3 "~" H 11300 1850 50  0001 C CNN
-	1    11300 1850
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	11400 2050 11400 2200
-Wire Wire Line
-	11400 2200 11800 2200
-Wire Wire Line
-	11300 2050 11300 2500
-Wire Wire Line
-	11200 2425 11200 2050
-Wire Wire Line
-	10000 2425 11200 2425
-Wire Wire Line
-	11300 2500 12675 2500
-Text Notes 10875 2750 0    50   ~ 0
-Jumper section to switch\nbetween battery and ALT
+	11400 825  13500 825 
+Text Notes 575  750  0    98   ~ 0
+Maybe consider making the \npositive side to be Keystone 55TR?
 $EndSCHEMATC

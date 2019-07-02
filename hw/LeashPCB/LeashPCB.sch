@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:LeashPCB-cache
-LIBS:TVRTN-cache
 EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
@@ -20,7 +19,7 @@ S 725  725  3500 2650
 U 5D05A323
 F0 "Battery Input" 50
 F1 "BatteryInput.sch" 50
-F2 "VBAT" O R 4225 2775 79 
+F2 "V_BAT" O R 4225 2825 98 
 $EndSheet
 $Sheet
 S 775  3775 3500 2450
@@ -20218,16 +20217,7 @@ E2 FF 07 87 5F 04 1B 05 97 81 52 00 00 00 00 49 45 4E 44 AE 42 60 82
 EndData
 $EndBitmap
 Wire Wire Line
-	4225 2775 4650 2775
-Wire Wire Line
-	4650 2775 4650 2300
-Wire Wire Line
-	4650 2300 5750 2300
-Wire Wire Line
-	4275 4200 4650 4200
-Wire Wire Line
-	4650 4200 4650 2775
-Connection ~ 4650 2775
+	4275 4200 4800 4200
 Text Notes 3875 3625 0    50   ~ 0
 Power rails OR'd \nin the sub-sheets
 Wire Wire Line
@@ -20280,11 +20270,6 @@ F0 "USB Input" 79
 F1 "USB_Input.sch" 79
 F2 "V_USB" O R 4275 7000 98 
 $EndSheet
-Wire Wire Line
-	4275 7000 4650 7000
-Wire Wire Line
-	4650 7000 4650 4200
-Connection ~ 4650 4200
 Text Notes 1975 8850 0    118  ~ 24
 USB Input\n(Power/serial)
 $Sheet
@@ -20292,18 +20277,21 @@ S 5750 1925 4250 3000
 U 5D0620A4
 F0 "Boost Converters" 50
 F1 "Boost.sch" 50
-F2 "BOOST_POWER_INPUT" I L 5750 2300 79 
-F3 "5V_REG" O R 10000 3875 79 
-F4 "3V3_REG" O R 10000 4575 79 
-F5 "5V_CTRL" O R 10000 4000 79 
-F6 "5V_EN" I R 10000 4125 79 
+F2 "5V_REG" O R 10000 3875 79 
+F3 "3V3_REG" O R 10000 4575 79 
+F4 "5V_CTRL" O R 10000 4000 79 
+F5 "5V_EN" I R 10000 4125 79 
+F6 "3v3_CTRL" I R 10000 4450 98 
+F7 "V_BAT" I L 5750 2825 98 
+F8 "V_ALT" I L 5750 3750 98 
+F9 "V_USB" I L 5750 4625 98 
 $EndSheet
 Wire Wire Line
 	10400 4700 10400 7300
 Wire Wire Line
 	10000 4700 10400 4700
 Text Notes 1950 6900 0    50   ~ 0
-Estimated BOM cost: $1.00
+Estimated BOM cost: $1.00\n($0.02 without serial to usb)
 $Bitmap
 Pos 2550 7775
 Scale 0.600000
@@ -27336,4 +27324,16 @@ DE 66 1B 86 81 10 94 A2 28 64 96 24 EB 45 44 14 86 A1 54 32 65 59 26 A9 33 DD 6E
 F9 72 29 4B FD 8F 69 7E E0 00 D6 88 7E BC 2E 62 D5 A7 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
+Wire Wire Line
+	5750 2825 4225 2825
+Wire Wire Line
+	5750 3750 4800 3750
+Wire Wire Line
+	4800 3750 4800 4200
+Wire Wire Line
+	5750 4625 5225 4625
+Wire Wire Line
+	5225 4625 5225 7000
+Wire Wire Line
+	4275 7000 5225 7000
 $EndSCHEMATC
