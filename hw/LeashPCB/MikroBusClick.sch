@@ -4,7 +4,7 @@ EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 10
+Sheet 9 10
 Title ""
 Date ""
 Rev ""
@@ -56,9 +56,9 @@ Text HLabel 4600 4750 0    79   Input ~ 0
 CS_MB2
 Text HLabel 4600 2675 0    79   Input ~ 0
 SCK
-Text HLabel 4600 2875 0    79   Input ~ 0
-MISO
 Text HLabel 4600 2775 0    79   Input ~ 0
+MISO
+Text HLabel 4600 2875 0    79   Input ~ 0
 MOSI
 Text HLabel 7275 2375 2    79   Input ~ 0
 PWM_MB1
