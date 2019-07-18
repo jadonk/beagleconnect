@@ -92,4 +92,6 @@ Text Label 6600 3450 2    50   ~ 0
 TCK
 Text Label 6600 3550 2    50   ~ 0
 TDO
+NoConn ~ 3075 4050
+NoConn ~ 2975 1375
 $EndSCHEMATC

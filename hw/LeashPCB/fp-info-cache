@@ -1,4 +1,4 @@
-15950672176506242
+15952235554185242
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -48045,8 +48045,8 @@ CDRH4D28
 
 
 0
-0
-0
+2
+2
 leash
 CP2102-QFN20
 
@@ -48054,6 +48054,13 @@ CP2102-QFN20
 0
 21
 21
+leash
+L_0806_2012Metric
+Inductor SMD 0806 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+inductor
+0
+2
+2
 leash
 mikroBUS
 

@@ -6758,19 +6758,6 @@ F 5 "https://www.mouser.com/ProductDetail/Murata-Electronics/LXES15AAA1-100?qs=Q
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:SPARK_GAP E902
-U 1 1 5B485B80
-P 5300 9250
-F 0 "E902" H 5300 9330 50  0000 C CNN
-F 1 "SPARK_GAP" H 5300 9175 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" H 5300 9180 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/281/LXES%20Series-100-1186247.pdf" V 5300 9250 50  0001 C CNN
-F 4 "LXES15AAA1-100" H 5300 9250 60  0001 C CNN "MPN"
-F 5 "https://www.mouser.com/ProductDetail/Murata-Electronics/LXES15AAA1-100?qs=QJrk779Ozsg3Kjb%252bEWPOeg%3D%3D" H 5300 9250 60  0001 C CNN "Link"
-	1    5300 9250
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:SPARK_GAP E903
 U 1 1 5B48602E
 P 5525 9250
@@ -6948,11 +6935,7 @@ Wire Wire Line
 	4725 9575 5075 9575
 Connection ~ 4725 9575
 Wire Wire Line
-	5300 9575 5300 9450
-Connection ~ 5075 9575
-Wire Wire Line
 	5525 9575 5525 9450
-Connection ~ 5300 9575
 Wire Wire Line
 	5075 8475 5075 9050
 Connection ~ 4725 8475
@@ -6977,7 +6960,6 @@ Wire Wire Line
 Connection ~ 5975 8475
 Wire Wire Line
 	5725 9575 5725 9325
-Connection ~ 5525 9575
 Wire Wire Line
 	5975 9575 5975 9325
 Connection ~ 5725 9575
@@ -6999,10 +6981,6 @@ Wire Wire Line
 	5625 7775 6025 7775
 Wire Wire Line
 	4725 9575 4725 9625
-Wire Wire Line
-	5075 9575 5300 9575
-Wire Wire Line
-	5300 9575 5525 9575
 Wire Wire Line
 	4725 8475 5075 8475
 Wire Wire Line
@@ -7167,16 +7145,36 @@ CTS
 Wire Wire Line
 	8025 8625 7700 8625
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0147
 U 1 1 5D497B67
 P 7350 9625
-F 0 "#PWR?" H 7350 9375 50  0001 C CNN
+F 0 "#PWR0147" H 7350 9375 50  0001 C CNN
 F 1 "GND" H 7350 9475 50  0000 C CNN
 F 2 "" H 7350 9625 50  0001 C CNN
 F 3 "" H 7350 9625 50  0001 C CNN
 	1    7350 9625
 	1    0    0    -1  
 $EndComp
+Connection ~ 5525 9575
+Connection ~ 5075 9575
 Wire Wire Line
-	7350 9525 7350 9625
+	5300 9575 5525 9575
+Wire Wire Line
+	5075 9575 5300 9575
+Connection ~ 5300 9575
+Wire Wire Line
+	5300 9575 5300 9450
+$Comp
+L Device:SPARK_GAP E902
+U 1 1 5B485B80
+P 5300 9250
+F 0 "E902" H 5300 9330 50  0000 C CNN
+F 1 "SPARK_GAP" H 5300 9175 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" H 5300 9180 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/281/LXES%20Series-100-1186247.pdf" V 5300 9250 50  0001 C CNN
+F 4 "LXES15AAA1-100" H 5300 9250 60  0001 C CNN "MPN"
+F 5 "https://www.mouser.com/ProductDetail/Murata-Electronics/LXES15AAA1-100?qs=QJrk779Ozsg3Kjb%252bEWPOeg%3D%3D" H 5300 9250 60  0001 C CNN "Link"
+	1    5300 9250
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

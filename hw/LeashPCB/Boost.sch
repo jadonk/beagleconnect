@@ -23,7 +23,7 @@ P 5275 4725
 F 0 "L1002" H 5275 4940 50  0000 C CNN
 F 1 "6.8U" H 5275 4849 50  0000 C CNN
 F 2 "leash:CDRH4D28" H 5275 4725 50  0001 C CNN
-F 3 "~" H 5275 4725 50  0001 C CNN
+F 3 "http://products.sumida.com/products/pdf/CDRH4D28.pdf" H 5275 4725 50  0001 C CNN
 F 4 "CDRH4D28NP-6R8NC" H 5275 4725 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/sumida-america-components-inc/CDRH4D28NP-6R8NC/308-2188-1-ND/3946493" H 5275 4725 50  0001 C CNN "Link1"
 	1    5275 4725
@@ -7479,7 +7479,7 @@ P 5075 1950
 F 0 "L1001" H 5075 2165 50  0000 C CNN
 F 1 "6.8U" H 5075 2074 50  0000 C CNN
 F 2 "leash:CDRH4D28" H 5075 1950 50  0001 C CNN
-F 3 "~" H 5075 1950 50  0001 C CNN
+F 3 "http://products.sumida.com/products/pdf/CDRH4D28.pdf" H 5075 1950 50  0001 C CNN
 	1    5075 1950
 	1    0    0    -1  
 $EndComp
