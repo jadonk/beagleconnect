@@ -21,9 +21,11 @@ L pspice:INDUCTOR L1002
 U 1 1 5D0BAFAE
 P 5275 4725
 F 0 "L1002" H 5275 4940 50  0000 C CNN
-F 1 "INDUCTOR" H 5275 4849 50  0000 C CNN
-F 2 "" H 5275 4725 50  0001 C CNN
+F 1 "6.8U" H 5275 4849 50  0000 C CNN
+F 2 "leash:CDRH4D28" H 5275 4725 50  0001 C CNN
 F 3 "~" H 5275 4725 50  0001 C CNN
+F 4 "CDRH4D28NP-6R8NC" H 5275 4725 50  0001 C CNN "MPN1"
+F 5 "https://www.digikey.com/product-detail/en/sumida-america-components-inc/CDRH4D28NP-6R8NC/308-2188-1-ND/3946493" H 5275 4725 50  0001 C CNN "Link1"
 	1    5275 4725
 	1    0    0    -1  
 $EndComp
@@ -70,12 +72,9 @@ Connection ~ 4800 4875
 Wire Wire Line
 	4800 4875 4725 4875
 Wire Wire Line
-	4725 4875 4725 4950
-Wire Wire Line
 	4725 5875 5175 5875
 Wire Wire Line
 	4725 5250 4725 5875
-Connection ~ 4725 4875
 Wire Wire Line
 	5175 4875 5175 4925
 Wire Wire Line
@@ -7037,7 +7036,7 @@ U 1 1 5D1D9D03
 P 7500 7000
 F 0 "L1003" H 7500 7215 50  0000 C CNN
 F 1 "INDUCTOR" H 7500 7124 50  0000 C CNN
-F 2 "" H 7500 7000 50  0001 C CNN
+F 2 "leash:L_0806_2012Metric" H 7500 7000 50  0001 C CNN
 F 3 "~" H 7500 7000 50  0001 C CNN
 	1    7500 7000
 	1    0    0    -1  
@@ -7204,13 +7203,13 @@ F 3 "" H 4725 7675 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 8800 7000
-Text HLabel 2700 2100 0    98   Input ~ 0
+Text HLabel 2125 2100 0    98   Input ~ 0
 V_BAT
-Text HLabel 2700 2375 0    98   Input ~ 0
+Text HLabel 2125 2375 0    98   Input ~ 0
 V_ALT
 Wire Wire Line
 	3775 7000 4725 7000
-Text HLabel 2700 2675 0    98   Input ~ 0
+Text HLabel 2125 2675 0    98   Input ~ 0
 V_USB
 Text HLabel 10025 2925 2    118  Input ~ 0
 3v3_CTRL
@@ -7478,8 +7477,8 @@ L pspice:INDUCTOR L1001
 U 1 1 5D08AA82
 P 5075 1950
 F 0 "L1001" H 5075 2165 50  0000 C CNN
-F 1 "INDUCTOR" H 5075 2074 50  0000 C CNN
-F 2 "" H 5075 1950 50  0001 C CNN
+F 1 "6.8U" H 5075 2074 50  0000 C CNN
+F 2 "leash:CDRH4D28" H 5075 1950 50  0001 C CNN
 F 3 "~" H 5075 1950 50  0001 C CNN
 	1    5075 1950
 	1    0    0    -1  
@@ -7487,56 +7486,31 @@ $EndComp
 Text HLabel 14150 4600 2    118  Input ~ 0
 3V3_REG
 Wire Wire Line
-	2700 2100 3100 2100
+	2125 2100 2600 2100
 Wire Wire Line
-	2700 2375 3100 2375
+	2125 2375 2300 2375
 Wire Wire Line
 	3100 2375 3100 2100
 Connection ~ 3100 2100
 Wire Wire Line
 	3100 2100 3250 2100
 Wire Wire Line
-	2700 2675 3250 2675
+	2125 2675 2450 2675
 Wire Wire Line
 	3250 2675 3250 2100
 Connection ~ 3250 2100
 Wire Wire Line
-	3250 2100 3400 2100
+	2300 2375 2300 3775
 Wire Wire Line
-	3100 2375 3100 4875
+	2300 4875 2450 4875
 Wire Wire Line
-	3100 4875 3250 4875
-Connection ~ 3100 2375
+	2450 2675 2450 3500
+Connection ~ 2450 4875
 Wire Wire Line
-	3250 2675 3250 4875
-Connection ~ 3250 2675
-Connection ~ 3250 4875
-Wire Wire Line
-	3250 4875 3400 4875
-Text Notes 3775 3875 0    98   ~ 0
+	2450 4875 2600 4875
+Text Notes 2975 3875 0    98   ~ 0
 V_Bat not hooked into \n5V output normally
-$Comp
-L Device:R R1001
-U 1 1 5D256921
-P 3400 3750
-F 0 "R1001" H 3470 3841 50  0000 L CNN
-F 1 "0" H 3470 3750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 3330 3750 50  0001 C CNN
-F 3 "~" H 3400 3750 50  0001 C CNN
-F 4 "DNP" H 3470 3659 50  0000 L CNN "Population"
-	1    3400 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3400 3600 3400 2100
-Connection ~ 3400 2100
-Wire Wire Line
-	3400 2100 4525 2100
-Wire Wire Line
-	3400 3900 3400 4875
-Connection ~ 3400 4875
-Wire Wire Line
-	3400 4875 4725 4875
+Connection ~ 2600 4875
 Text Notes 4425 1225 0    98   ~ 0
 CONFIG 1: All power inputs go into 3V3 boost, ALT and USB go into the 5V boost\nCONFIG 2: All power inputs go into 3V3 boost, all go into the 5V boost\nCONFIG 3: All power inputs go into 5V boost, 5V is bucked down to 3V3
 Wire Wire Line
@@ -7578,4 +7552,104 @@ Wire Wire Line
 	12825 4600 12825 5425
 Wire Wire Line
 	8800 7000 12825 7000
+$Comp
+L Jumper:SolderJumper_2_Open JP803
+U 1 1 5D3EAA07
+P 2600 3425
+F 0 "JP803" V 2600 3493 50  0000 L CNN
+F 1 "SolderJumper_2_Open" V 2645 3493 50  0001 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 2600 3425 50  0001 C CNN
+F 3 "~" H 2600 3425 50  0001 C CNN
+	1    2600 3425
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 3275 2600 2100
+Wire Wire Line
+	2600 3575 2600 4875
+$Comp
+L Jumper:SolderJumper_2_Bridged JP804
+U 1 1 5D3F4B9C
+P 2875 2100
+F 0 "JP804" H 2875 2213 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2875 2214 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2875 2100 50  0001 C CNN
+F 3 "~" H 2875 2100 50  0001 C CNN
+	1    2875 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 2100 3100 2100
+$Comp
+L Jumper:SolderJumper_2_Bridged JP805
+U 1 1 5D3F5182
+P 2875 2375
+F 0 "JP805" H 2875 2488 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2875 2489 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2875 2375 50  0001 C CNN
+F 3 "~" H 2875 2375 50  0001 C CNN
+	1    2875 2375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 2375 3100 2375
+$Comp
+L Jumper:SolderJumper_2_Bridged JP806
+U 1 1 5D3F567B
+P 2875 2675
+F 0 "JP806" H 2875 2788 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2875 2789 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2875 2675 50  0001 C CNN
+F 3 "~" H 2875 2675 50  0001 C CNN
+	1    2875 2675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 2675 3250 2675
+$Comp
+L Jumper:SolderJumper_2_Bridged JP801
+U 1 1 5D3FA66C
+P 2300 3925
+F 0 "JP801" V 2300 3993 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" H 2300 4039 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2300 3925 50  0001 C CNN
+F 3 "~" H 2300 3925 50  0001 C CNN
+	1    2300 3925
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2300 4075 2300 4875
+$Comp
+L Jumper:SolderJumper_2_Bridged JP802
+U 1 1 5D3FB053
+P 2450 3650
+F 0 "JP802" V 2450 3718 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" H 2450 3764 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2450 3650 50  0001 C CNN
+F 3 "~" H 2450 3650 50  0001 C CNN
+	1    2450 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2450 3800 2450 4875
+Text Label 3650 2100 0    50   ~ 0
+3V3_BOOST_VIN
+Text Label 2925 4875 0    50   ~ 0
+5V_BOOST_VIN
+Connection ~ 2300 2375
+Wire Wire Line
+	2300 2375 2725 2375
+Connection ~ 2450 2675
+Wire Wire Line
+	2450 2675 2725 2675
+Connection ~ 2600 2100
+Wire Wire Line
+	2600 2100 2725 2100
+Wire Wire Line
+	3250 2100 4525 2100
+Wire Wire Line
+	2600 4875 4725 4875
+Connection ~ 4725 4875
+Wire Wire Line
+	4725 4875 4725 4950
 $EndSCHEMATC

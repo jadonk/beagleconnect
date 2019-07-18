@@ -34,7 +34,7 @@ L LeashPCB:1020-1 J202
 U 1 1 5D079C36
 P 2500 2775
 F 0 "J202" V 2446 2953 50  0000 L CNN
-F 1 "1020-1" V 2537 2953 50  0000 L CNN
+F 1 "1076-1" V 2537 2953 50  0000 L CNN
 F 2 "leash:1020-1" H 2500 2775 50  0001 C CNN
 F 3 "" H 2500 2775 50  0001 C CNN
 F 4 "0.05" H 2500 2775 50  0001 C CNN "Standard Price"
@@ -838,6 +838,21 @@ Wire Wire Line
 	9675 825  11100 825 
 Wire Wire Line
 	11400 825  13500 825 
-Text Notes 575  750  0    98   ~ 0
-Maybe consider making the \npositive side to be Keystone 55TR?
+Text Notes 1000 2575 0    50   ~ 0
+Second pad for AA extension
+$Comp
+L LeashPCB:1020-1 J203
+U 1 1 5D3D97E4
+P 1800 2775
+F 0 "J203" V 1746 2953 50  0000 L CNN
+F 1 "1076-1" V 1837 2953 50  0000 L CNN
+F 2 "leash:1020-1" H 1800 2775 50  0001 C CNN
+F 3 "" H 1800 2775 50  0001 C CNN
+F 4 "0.05" H 1800 2775 50  0001 C CNN "Standard Price"
+	1    1800 2775
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1800 2975 2500 2975
+Connection ~ 2500 2975
 $EndSCHEMATC

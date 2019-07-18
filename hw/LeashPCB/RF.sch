@@ -1301,14 +1301,6 @@ Wire Wire Line
 Text Label 4925 8325 2    50   ~ 0
 ~FLASH_CS
 Wire Wire Line
-	4025 8225 4925 8225
-Wire Wire Line
-	4025 8125 4925 8125
-Text Label 4925 8125 2    50   ~ 0
-RTS
-Text Label 4925 8225 2    50   ~ 0
-CTS
-Wire Wire Line
 	2100 825  2350 825 
 $Comp
 L Device:R R1020
@@ -1348,9 +1340,9 @@ Wire Wire Line
 Text HLabel 1600 8925 0    50   Input ~ 0
 CS_MB1
 Wire Wire Line
-	1375 9650 875  9650
+	1375 9650 1025 9650
 Text HLabel 875  9650 0    50   Input ~ 0
-RESET
+RESET_N
 Wire Wire Line
 	1600 8925 2325 8925
 Text HLabel 1625 8125 0    50   Input ~ 0
@@ -1438,4 +1430,61 @@ Text Label 10425 2650 0    50   ~ 0
 RF_2_4GHZ_N
 Wire Wire Line
 	10375 2650 11025 2650
+Text HLabel 5050 8125 2    50   Input ~ 0
+BTN1
+Wire Wire Line
+	4025 8125 4775 8125
+Text HLabel 5050 8225 2    50   Input ~ 0
+BTN2
+Wire Wire Line
+	4025 8225 4475 8225
+$Comp
+L Device:R R1025
+U 1 1 5D3565DC
+P 4475 7875
+F 0 "R1025" H 4545 7921 50  0000 L CNN
+F 1 "10K" H 4545 7830 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 7875 50  0001 C CNN
+F 3 "~" H 4475 7875 50  0001 C CNN
+	1    4475 7875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4475 8025 4475 8225
+Connection ~ 4475 8225
+Wire Wire Line
+	4475 8225 5050 8225
+$Comp
+L Device:R R1026
+U 1 1 5D367843
+P 4775 7875
+F 0 "R1026" H 4845 7921 50  0000 L CNN
+F 1 "10K" H 4845 7830 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4705 7875 50  0001 C CNN
+F 3 "~" H 4775 7875 50  0001 C CNN
+	1    4775 7875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4775 8025 4775 8125
+Connection ~ 4775 8125
+Wire Wire Line
+	4775 8125 5050 8125
+Wire Wire Line
+	4475 7725 4475 7500
+Wire Wire Line
+	4475 7500 4775 7500
+Wire Wire Line
+	4775 7500 4775 7725
+Text Label 4550 7500 0    50   ~ 0
+VDDS
+Text HLabel 875  9800 0    50   Input ~ 0
+RST
+Wire Wire Line
+	875  9800 1025 9800
+Wire Wire Line
+	1025 9800 1025 9650
+Connection ~ 1025 9650
+Wire Wire Line
+	1025 9650 875  9650
 $EndSCHEMATC
