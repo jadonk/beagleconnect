@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
@@ -636,7 +635,7 @@ U 1 1 5D06EB1F
 P 8950 1575
 F 0 "C203" H 9065 1621 50  0000 L CNN
 F 1 "10U" H 9065 1530 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 8988 1425 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8988 1425 50  0001 C CNN
 F 3 "~" H 8950 1575 50  0001 C CNN
 	1    8950 1575
 	1    0    0    -1  
@@ -702,8 +701,6 @@ Wire Wire Line
 	8950 1425 8950 825 
 Connection ~ 8950 825 
 Wire Wire Line
-	8950 825  9675 825 
-Wire Wire Line
 	8950 1725 8950 1975
 Wire Wire Line
 	7700 1925 7975 1925
@@ -717,112 +714,8 @@ Wire Wire Line
 Wire Wire Line
 	5875 1925 5875 825 
 Connection ~ 5875 825 
-Wire Wire Line
-	5875 825  5425 825 
 Text Notes 3350 1750 0    79   ~ 0
 Battery input
-Wire Wire Line
-	5425 825  5425 4725
-Connection ~ 5425 825 
-Wire Wire Line
-	5425 825  5025 825 
-$Comp
-L Device:Q_PMOS_DGS Q202
-U 1 1 5D1B2FC4
-P 7625 4825
-F 0 "Q202" V 7968 4825 50  0000 C CNN
-F 1 "Q_PMOS_DGS" V 7877 4825 50  0000 C CNN
-F 2 "" H 7825 4925 50  0001 C CNN
-F 3 "~" H 7625 4825 50  0001 C CNN
-	1    7625 4825
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Zener D202
-U 1 1 5D1B5E6D
-P 8150 4975
-F 0 "D202" V 8104 5054 50  0000 L CNN
-F 1 "D_Zener" V 8195 5054 50  0000 L CNN
-F 2 "" H 8150 4975 50  0001 C CNN
-F 3 "~" H 8150 4975 50  0001 C CNN
-	1    8150 4975
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R202
-U 1 1 5D1B63DF
-P 7625 5525
-F 0 "R202" H 7695 5571 50  0000 L CNN
-F 1 "R" H 7695 5480 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7555 5525 50  0001 C CNN
-F 3 "~" H 7625 5525 50  0001 C CNN
-	1    7625 5525
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5425 4725 7425 4725
-Wire Wire Line
-	7825 4725 8150 4725
-Wire Wire Line
-	8150 4725 8150 4825
-Connection ~ 8150 4725
-Wire Wire Line
-	7625 5025 7625 5075
-Wire Wire Line
-	7625 5675 7625 5750
-Wire Wire Line
-	8150 5125 8150 5250
-Wire Wire Line
-	8150 5250 7625 5250
-Connection ~ 7625 5250
-Wire Wire Line
-	7625 5250 7625 5375
-$Comp
-L power:GND #PWR0103
-U 1 1 5D1BC7E6
-P 7625 5750
-F 0 "#PWR0103" H 7625 5500 50  0001 C CNN
-F 1 "GND" H 7630 5577 50  0000 C CNN
-F 2 "" H 7625 5750 50  0001 C CNN
-F 3 "" H 7625 5750 50  0001 C CNN
-	1    7625 5750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R201
-U 1 1 5D1BDEB4
-P 7250 5075
-F 0 "R201" V 7043 5075 50  0000 C CNN
-F 1 "R" V 7134 5075 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7180 5075 50  0001 C CNN
-F 3 "~" H 7250 5075 50  0001 C CNN
-	1    7250 5075
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7400 5075 7625 5075
-Connection ~ 7625 5075
-Wire Wire Line
-	7625 5075 7625 5250
-Wire Wire Line
-	7100 5075 6925 5075
-Text GLabel 6925 5075 0    50   Input ~ 0
-ALT_IN
-Wire Wire Line
-	9675 4725 9675 825 
-Wire Wire Line
-	8150 4725 9675 4725
-Connection ~ 9675 825 
-Wire Notes Line
-	6500 4075 8950 4075
-Wire Notes Line
-	8950 4075 8950 6150
-Wire Notes Line
-	8950 6150 6500 6150
-Wire Notes Line
-	6500 6150 6500 4075
-Text Notes 6625 4275 0    79   ~ 0
-Alternate section for cost reduction
 $Comp
 L Device:R R203
 U 1 1 5D1B1ECE
@@ -834,8 +727,6 @@ F 3 "~" H 11250 825 50  0001 C CNN
 	1    11250 825 
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9675 825  11100 825 
 Wire Wire Line
 	11400 825  13500 825 
 Text Notes 1000 2575 0    50   ~ 0
@@ -855,4 +746,10 @@ $EndComp
 Wire Wire Line
 	1800 2975 2500 2975
 Connection ~ 2500 2975
+Text Label 8250 825  0    50   ~ 0
+IDEAL_CATHODE
+Wire Wire Line
+	5025 825  5875 825 
+Wire Wire Line
+	8950 825  11100 825 
 $EndSCHEMATC

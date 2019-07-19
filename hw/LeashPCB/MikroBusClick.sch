@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -223,5 +222,7 @@ SCL
 Text Label 7450 5050 2    50   ~ 0
 SCK
 Text Label 7450 5150 2    50   ~ 0
+5V
+Text Label 7175 2975 2    50   ~ 0
 5V
 $EndSCHEMATC

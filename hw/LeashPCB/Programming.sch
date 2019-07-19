@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -22,7 +21,7 @@ AR Path="/5D08E152" Ref="J?"  Part="1"
 AR Path="/5D062DFA/5D08E152" Ref="J601"  Part="1" 
 F 0 "J601" H 5750 3767 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 5750 3676 50  0000 C CNN
-F 2 "" H 5700 3450 50  0001 C CNN
+F 2 "leash:Tag-Connect" H 5700 3450 50  0001 C CNN
 F 3 "~" H 5700 3450 50  0001 C CNN
 F 4 "0" H 5700 3450 50  0001 C CNN "Standard Price"
 	1    5700 3450
@@ -92,6 +91,4 @@ Text Label 6600 3450 2    50   ~ 0
 TCK
 Text Label 6600 3550 2    50   ~ 0
 TDO
-NoConn ~ 3075 4050
-NoConn ~ 2975 1375
 $EndSCHEMATC

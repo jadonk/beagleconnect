@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr C 22000 17000
@@ -9894,6 +9893,8 @@ S 7800 9300 2175 1950
 U 5D099F4C
 F0 "User Input/Output" 50
 F1 "UserInputOutput.sch" 50
+F2 "BTN1" O R 9975 9850 79 
+F3 "BTN2" O R 9975 10100 79 
 $EndSheet
 $Bitmap
 Pos 12850 9900
@@ -27428,4 +27429,8 @@ Wire Wire Line
 	10000 4000 10400 4000
 Wire Wire Line
 	10400 4000 10400 7300
+Wire Wire Line
+	9975 10100 10750 10100
+Wire Wire Line
+	10750 9850 9975 9850
 $EndSCHEMATC
