@@ -1,14 +1,15 @@
 EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 8 10
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "BeagleDust Leash PCB"
+Date "2019-07-22"
+Rev "1"
+Comp "Beagleboard.org"
+Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""

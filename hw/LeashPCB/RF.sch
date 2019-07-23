@@ -1,14 +1,15 @@
 EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 10 10
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Sheet 9 10
+Title "BeagleDust Leash PCB"
+Date "2019-07-22"
+Rev "1"
+Comp "Beagleboard.org"
+Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -44,15 +45,15 @@ $EndComp
 $Comp
 L LeashPCB:CC1352R U?
 U 4 1 5D098DC1
-P 3000 6025
+P 3675 5900
 AR Path="/5D098DC1" Ref="U?"  Part="4" 
 AR Path="/5D062750/5D098DC1" Ref="U501"  Part="4" 
-F 0 "U501" H 2779 7190 50  0000 C CNN
-F 1 "CC1352R" H 2779 7099 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias" H 1850 6275 50  0001 C CNN
-F 3 "" H 1850 6275 50  0001 C CNN
-F 4 "1.25" H 3000 6025 50  0001 C CNN "Standard Price"
-	4    3000 6025
+F 0 "U501" H 3454 7065 50  0000 C CNN
+F 1 "CC1352R" H 3454 6974 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias" H 2525 6150 50  0001 C CNN
+F 3 "" H 2525 6150 50  0001 C CNN
+F 4 "1.25" H 3675 5900 50  0001 C CNN "Standard Price"
+	4    3675 5900
 	1    0    0    -1  
 $EndComp
 Text HLabel 2100 825  0    79   Input ~ 0
@@ -1279,8 +1280,8 @@ $EndComp
 Text Label 10600 7250 2    50   ~ 0
 MISO
 Wire Wire Line
-	4025 8325 4925 8325
-Text Label 4925 8325 2    50   ~ 0
+	2325 8925 1675 8925
+Text Label 1675 8925 0    50   ~ 0
 ~FLASH_CS
 Wire Wire Line
 	2100 825  2350 825 
@@ -1299,14 +1300,14 @@ Wire Wire Line
 	2650 825  3125 825 
 Text Notes 2075 1100 0    50   ~ 0
 Optional sense resistor for \npower measurement
-Text HLabel 1625 8225 0    50   Input ~ 0
+Text HLabel 1600 8225 0    50   Input ~ 0
 SCL
-Text HLabel 1625 8325 0    50   Input ~ 0
+Text HLabel 1600 8325 0    50   Input ~ 0
 SDA
 Wire Wire Line
-	1625 8325 2325 8325
+	1600 8325 2325 8325
 Wire Wire Line
-	1625 8225 2325 8225
+	1600 8225 2325 8225
 Text HLabel 1600 8625 0    50   Input ~ 0
 MISO
 Wire Wire Line
@@ -1319,89 +1320,81 @@ Text HLabel 1600 8825 0    50   Input ~ 0
 SCLK
 Wire Wire Line
 	1600 8825 2325 8825
-Text HLabel 1600 8925 0    50   Input ~ 0
+Text HLabel 5050 8925 2    50   Input ~ 0
 CS_MB1
 Wire Wire Line
 	1375 9650 1025 9650
 Text HLabel 875  9650 0    50   Input ~ 0
 RESET_N
 Wire Wire Line
-	1600 8925 2325 8925
-Text HLabel 1625 8125 0    50   Input ~ 0
+	5050 8925 4025 8925
+Text HLabel 5050 8825 2    50   Input ~ 0
 CS_MB2
 Wire Wire Line
-	1625 8125 2325 8125
-Text HLabel 5050 8925 2    50   Input ~ 0
+	5050 8825 4025 8825
+Text HLabel 5050 8125 2    50   Input ~ 0
 INT_MB2
 Wire Wire Line
-	4025 8925 5050 8925
-Text HLabel 5050 8825 2    50   Input ~ 0
+	4025 8125 5050 8125
+Text HLabel 5050 8325 2    50   Input ~ 0
 INT_MB1
 Wire Wire Line
-	4025 8825 5050 8825
+	4025 8325 5050 8325
 Text HLabel 5050 8725 2    50   Input ~ 0
 MICRO_TX_MB1_RX
 Wire Wire Line
-	4025 8725 5050 8725
+	4025 8725 4825 8725
 Text HLabel 5050 8625 2    50   Input ~ 0
 MICRO_RX_MB1_TX
 Wire Wire Line
-	4025 8625 5050 8625
-Text HLabel 1625 8425 0    50   Input ~ 0
+	4025 8625 4925 8625
+Text HLabel 1600 8525 0    50   Input ~ 0
 PWM_MB1
-Text HLabel 1625 8525 0    50   Input ~ 0
+Text HLabel 1600 8425 0    50   Input ~ 0
 PWM_MB2
 Wire Wire Line
-	1625 8525 2325 8525
+	1600 8525 1775 8525
 Wire Wire Line
-	1625 8425 2325 8425
+	1600 8425 1825 8425
 Text HLabel 5050 8425 2    50   Input ~ 0
 MICRO_RX_MB2_TX
 Text HLabel 5050 8525 2    50   Input ~ 0
 MICRO_TX_MB2_RX
 Wire Wire Line
-	4025 8425 5050 8425
+	4025 8425 4325 8425
 Wire Wire Line
-	4025 8525 5050 8525
+	4025 8525 4325 8525
 Wire Wire Line
-	2150 5625 1400 5625
+	2825 5500 2075 5500
 Wire Wire Line
-	2150 5725 1400 5725
-Text HLabel 1400 5625 0    50   Input ~ 0
+	2825 5600 2075 5600
+Text HLabel 2075 5500 0    50   Input ~ 0
 AN_MB1
-Text HLabel 1400 5725 0    50   Input ~ 0
+Text HLabel 2075 5600 0    50   Input ~ 0
 AN_MB2
-Text HLabel 1400 5825 0    50   Input ~ 0
+Text HLabel 2075 5700 0    50   Input ~ 0
 2.4G_LED
-Text HLabel 1400 5925 0    50   Input ~ 0
+Text HLabel 2075 5800 0    50   Input ~ 0
 900MHz_LED
 Text HLabel 7225 6150 0    50   Input ~ 0
 Power_LED
-Text HLabel 1400 6025 0    50   Input ~ 0
+Text HLabel 2075 5900 0    50   Input ~ 0
 Click1_LED
-Text HLabel 1400 6125 0    50   Input ~ 0
+Text HLabel 2075 6000 0    50   Input ~ 0
 Click2_LED
 Wire Wire Line
-	1400 5825 2150 5825
+	2075 5700 2825 5700
 Wire Wire Line
-	2150 5925 1400 5925
+	2825 5800 2075 5800
 Wire Wire Line
-	1400 6025 2150 6025
+	2075 5900 2825 5900
 Wire Wire Line
-	1400 6125 2150 6125
+	2075 6000 2825 6000
 Wire Wire Line
 	7550 6700 7550 7400
 Wire Wire Line
-	1400 6225 2150 6225
-Text HLabel 1400 6225 0    50   Input ~ 0
-User_LED
-Wire Wire Line
 	7225 6150 7550 6150
 Connection ~ 7550 6150
-Text HLabel 1400 6325 0    50   Input ~ 0
-5V_CTRL
-Wire Wire Line
-	1400 6325 2150 6325
 Text Label 10425 3100 0    50   ~ 0
 RF_SUB_1GHZ_P
 Text Label 10425 3200 0    50   ~ 0
@@ -1412,53 +1405,49 @@ Text Label 10425 2650 0    50   ~ 0
 RF_2_4GHZ_N
 Wire Wire Line
 	10375 2650 11025 2650
-Text HLabel 5050 8125 2    50   Input ~ 0
+Text HLabel 825  6100 0    50   Input ~ 0
 BTN1
-Wire Wire Line
-	4025 8125 4775 8125
-Text HLabel 5050 8225 2    50   Input ~ 0
+Text HLabel 825  6200 0    50   Input ~ 0
 BTN2
-Wire Wire Line
-	4025 8225 4475 8225
 $Comp
 L Device:R R6
 U 1 1 5D3565DC
-P 4475 7875
-F 0 "R6" H 4545 7921 50  0000 L CNN
-F 1 "10K" H 4545 7830 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 7875 50  0001 C CNN
-F 3 "~" H 4475 7875 50  0001 C CNN
-	1    4475 7875
-	1    0    0    -1  
+P 1400 5850
+F 0 "R6" H 1470 5896 50  0000 L CNN
+F 1 "10K" H 1470 5805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1330 5850 50  0001 C CNN
+F 3 "~" H 1400 5850 50  0001 C CNN
+	1    1400 5850
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4475 8025 4475 8225
-Connection ~ 4475 8225
+	1400 6000 1400 6200
+Connection ~ 1400 6200
 Wire Wire Line
-	4475 8225 5050 8225
+	1400 6200 825  6200
 $Comp
 L Device:R R7
 U 1 1 5D367843
-P 4775 7875
-F 0 "R7" H 4845 7921 50  0000 L CNN
-F 1 "10K" H 4845 7830 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 4705 7875 50  0001 C CNN
-F 3 "~" H 4775 7875 50  0001 C CNN
-	1    4775 7875
-	1    0    0    -1  
+P 1100 5850
+F 0 "R7" H 1170 5896 50  0000 L CNN
+F 1 "10K" H 1170 5805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1030 5850 50  0001 C CNN
+F 3 "~" H 1100 5850 50  0001 C CNN
+	1    1100 5850
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4775 8025 4775 8125
-Connection ~ 4775 8125
+	1100 6000 1100 6100
+Connection ~ 1100 6100
 Wire Wire Line
-	4775 8125 5050 8125
+	1100 6100 825  6100
 Wire Wire Line
-	4475 7725 4475 7500
+	1400 5700 1400 5475
 Wire Wire Line
-	4475 7500 4775 7500
+	1400 5475 1100 5475
 Wire Wire Line
-	4775 7500 4775 7725
-Text Label 4550 7500 0    50   ~ 0
+	1100 5475 1100 5700
+Text Label 1325 5475 2    50   ~ 0
 VDDS
 Text HLabel 875  9800 0    50   Input ~ 0
 RST
@@ -1576,4 +1565,130 @@ Wire Wire Line
 Connection ~ 1375 9650
 Wire Wire Line
 	1375 9650 1375 9700
+$Comp
+L Device:R R?
+U 1 1 5D3AC464
+P 6550 8550
+F 0 "R?" H 6620 8641 50  0000 L CNN
+F 1 "0" H 6620 8550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6480 8550 50  0001 C CNN
+F 3 "~" H 6550 8550 50  0001 C CNN
+F 4 "DNP" H 6620 8459 50  0000 L CNN "Population"
+	1    6550 8550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4925 8425 4925 8275
+Wire Wire Line
+	4925 8275 6550 8275
+Wire Wire Line
+	6550 8275 6550 8400
+Connection ~ 4925 8425
+Wire Wire Line
+	4925 8425 5050 8425
+Wire Wire Line
+	6550 8700 6550 8775
+Wire Wire Line
+	6550 8775 4925 8775
+Wire Wire Line
+	4925 8775 4925 8625
+Connection ~ 4925 8625
+Wire Wire Line
+	4925 8625 5050 8625
+$Comp
+L Device:R R?
+U 1 1 5D3D5F3E
+P 6850 8550
+F 0 "R?" H 6920 8641 50  0000 L CNN
+F 1 "0" H 6920 8550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6780 8550 50  0001 C CNN
+F 3 "~" H 6850 8550 50  0001 C CNN
+F 4 "DNP" H 6920 8459 50  0000 L CNN "Population"
+	1    6850 8550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4825 8525 4825 8375
+Wire Wire Line
+	4825 8375 6850 8375
+Wire Wire Line
+	6850 8375 6850 8400
+Connection ~ 4825 8525
+Wire Wire Line
+	4825 8525 5050 8525
+Wire Wire Line
+	6850 8700 6850 8875
+Wire Wire Line
+	6850 8875 4825 8875
+Wire Wire Line
+	4825 8875 4825 8725
+Connection ~ 4825 8725
+Wire Wire Line
+	4825 8725 5050 8725
+Text Notes 5725 9025 0    50   ~ 0
+Click standard is ambiguous about sharing serial lines
+$Comp
+L Device:R R?
+U 1 1 5D4069D9
+P 1975 8425
+F 0 "R?" V 1925 8225 50  0000 L CNN
+F 1 "0" V 1975 8400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1905 8425 50  0001 C CNN
+F 3 "~" H 1975 8425 50  0001 C CNN
+	1    1975 8425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2125 8425 2325 8425
+$Comp
+L Device:R R?
+U 1 1 5D40AC81
+P 1925 8525
+F 0 "R?" V 1875 8325 50  0000 L CNN
+F 1 "0" V 1925 8500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1855 8525 50  0001 C CNN
+F 3 "~" H 1925 8525 50  0001 C CNN
+	1    1925 8525
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2075 8525 2325 8525
+Text HLabel 5050 8225 2    50   Input ~ 0
+RST_MB1
+Wire Wire Line
+	5050 8225 4025 8225
+Text HLabel 1600 8125 0    50   Input ~ 0
+RST_MB2
+Wire Wire Line
+	1600 8125 2325 8125
+$Comp
+L Device:R R?
+U 1 1 5D62B256
+P 4475 8425
+F 0 "R?" V 4425 8225 50  0000 L CNN
+F 1 "0" V 4475 8400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8425 50  0001 C CNN
+F 3 "~" H 4475 8425 50  0001 C CNN
+	1    4475 8425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4625 8425 4925 8425
+$Comp
+L Device:R R?
+U 1 1 5D62B8DC
+P 4475 8525
+F 0 "R?" V 4425 8325 50  0000 L CNN
+F 1 "0" V 4475 8500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8525 50  0001 C CNN
+F 3 "~" H 4475 8525 50  0001 C CNN
+	1    4475 8525
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4625 8525 4825 8525
+Wire Wire Line
+	1400 6200 2825 6200
+Wire Wire Line
+	1100 6100 2825 6100
 $EndSCHEMATC

@@ -1,14 +1,15 @@
 EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr B 17000 11000
 encoding utf-8
 Sheet 4 10
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "BeagleDust Leash PCB"
+Date "2019-07-22"
+Rev "1"
+Comp "Beagleboard.org"
+Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -16,79 +17,79 @@ $EndDescr
 $Comp
 L Connector_Generic:Conn_02x03_Odd_Even J?
 U 1 1 5D08E152
-P 5700 3450
+P 8825 4675
 AR Path="/5D08E152" Ref="J?"  Part="1" 
 AR Path="/5D062DFA/5D08E152" Ref="J601"  Part="1" 
-F 0 "J601" H 5750 3767 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 5750 3676 50  0000 C CNN
-F 2 "leash:Tag-Connect" H 5700 3450 50  0001 C CNN
-F 3 "~" H 5700 3450 50  0001 C CNN
-F 4 "0" H 5700 3450 50  0001 C CNN "Standard Price"
-	1    5700 3450
+F 0 "J601" H 8875 4992 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 8875 4901 50  0000 C CNN
+F 2 "leash:Tag-Connect" H 8825 4675 50  0001 C CNN
+F 3 "~" H 8825 4675 50  0001 C CNN
+F 4 "0" H 8825 4675 50  0001 C CNN "Standard Price"
+	1    8825 4675
 	1    0    0    -1  
 $EndComp
-Text Label 4300 3200 0    50   ~ 0
+Text Label 7425 4425 0    50   ~ 0
 3V3
 Wire Wire Line
-	5250 3850 4600 3850
+	8375 5075 7725 5075
 $Comp
 L power:GND #PWR?
 U 1 1 5D08E15A
-P 4600 4050
+P 7725 5275
 AR Path="/5D08E15A" Ref="#PWR?"  Part="1" 
 AR Path="/5D062DFA/5D08E15A" Ref="#PWR0601"  Part="1" 
-F 0 "#PWR0601" H 4600 3800 50  0001 C CNN
-F 1 "GND" H 4605 3877 50  0000 C CNN
-F 2 "" H 4600 4050 50  0001 C CNN
-F 3 "" H 4600 4050 50  0001 C CNN
-	1    4600 4050
+F 0 "#PWR0601" H 7725 5025 50  0001 C CNN
+F 1 "GND" H 7730 5102 50  0000 C CNN
+F 2 "" H 7725 5275 50  0001 C CNN
+F 3 "" H 7725 5275 50  0001 C CNN
+	1    7725 5275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 4050 4600 3850
+	7725 5275 7725 5075
 $Comp
 L Device:C C?
 U 1 1 5D08E161
-P 4600 3650
+P 7725 4875
 AR Path="/5D08E161" Ref="C?"  Part="1" 
 AR Path="/5D062DFA/5D08E161" Ref="C601"  Part="1" 
-F 0 "C601" H 4715 3696 50  0000 L CNN
-F 1 "C" H 4715 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 4638 3500 50  0001 C CNN
-F 3 "~" H 4600 3650 50  0001 C CNN
-	1    4600 3650
+F 0 "C601" H 7840 4921 50  0000 L CNN
+F 1 "C" H 7840 4830 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7763 4725 50  0001 C CNN
+F 3 "~" H 7725 4875 50  0001 C CNN
+	1    7725 4875
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4600 3850 4600 3800
-Connection ~ 4600 3850
+	7725 5075 7725 5025
+Connection ~ 7725 5075
 Wire Wire Line
-	4600 3350 4600 3500
+	7725 4575 7725 4725
 Wire Wire Line
-	4600 3350 4600 3200
+	7725 4575 7725 4425
 Wire Wire Line
-	4600 3200 4300 3200
-Connection ~ 4600 3350
+	7725 4425 7425 4425
+Connection ~ 7725 4575
 Wire Wire Line
-	4600 3350 5500 3350
+	7725 4575 8625 4575
 Wire Wire Line
-	5250 3850 5250 3550
+	8375 5075 8375 4775
 Wire Wire Line
-	5250 3550 5500 3550
+	8375 4775 8625 4775
 Wire Wire Line
-	5500 3450 4950 3450
-Text Label 4950 3450 0    50   ~ 0
+	8625 4675 8075 4675
+Text Label 8075 4675 0    50   ~ 0
 ~RESET
 Wire Wire Line
-	6000 3350 6600 3350
+	9125 4575 9725 4575
 Wire Wire Line
-	6000 3450 6600 3450
+	9125 4675 9725 4675
 Wire Wire Line
-	6000 3550 6600 3550
-Text Label 6600 3350 2    50   ~ 0
+	9125 4775 9725 4775
+Text Label 9725 4575 2    50   ~ 0
 TMS
-Text Label 6600 3450 2    50   ~ 0
+Text Label 9725 4675 2    50   ~ 0
 TCK
-Text Label 6600 3550 2    50   ~ 0
+Text Label 9725 4775 2    50   ~ 0
 TDO
 $EndSCHEMATC

@@ -1,14 +1,15 @@
 EESchema Schematic File Version 4
+LIBS:LeashPCB-cache
 EELAYER 29 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr B 17000 11000
 encoding utf-8
 Sheet 6 10
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "BeagleDust Leash PCB"
+Date "2019-07-22"
+Rev "1"
+Comp "Beagleboard.org"
+Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -16,65 +17,65 @@ $EndDescr
 $Comp
 L Switch:SW_SPST SW2
 U 1 1 5D565CF9
-P 4975 3275
-F 0 "SW2" H 4975 3510 50  0000 C CNN
-F 1 "SW_SPST" H 4975 3419 50  0000 C CNN
-F 2 "leash:EVQ-P7A01P" H 4975 3275 50  0001 C CNN
-F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 4975 3275 50  0001 C CNN
-F 4 "EVQ-P7A01P" H 4975 3275 50  0001 C CNN "MPN1"
-F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 4975 3275 50  0001 C CNN "Link1"
-	1    4975 3275
+P 7900 4825
+F 0 "SW2" H 7900 5060 50  0000 C CNN
+F 1 "SW_SPST" H 7900 4969 50  0000 C CNN
+F 2 "leash:EVQ-P7A01P" H 7900 4825 50  0001 C CNN
+F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 7900 4825 50  0001 C CNN
+F 4 "EVQ-P7A01P" H 7900 4825 50  0001 C CNN "MPN1"
+F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 7900 4825 50  0001 C CNN "Link1"
+	1    7900 4825
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0103
 U 1 1 5D565FA6
-P 5275 3650
-F 0 "#PWR0103" H 5275 3400 50  0001 C CNN
-F 1 "GND" H 5280 3477 50  0000 C CNN
-F 2 "" H 5275 3650 50  0001 C CNN
-F 3 "" H 5275 3650 50  0001 C CNN
-	1    5275 3650
+P 8200 5200
+F 0 "#PWR0103" H 8200 4950 50  0001 C CNN
+F 1 "GND" H 8205 5027 50  0000 C CNN
+F 2 "" H 8200 5200 50  0001 C CNN
+F 3 "" H 8200 5200 50  0001 C CNN
+	1    8200 5200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5275 3650 5275 3275
+	8200 5200 8200 4825
 Wire Wire Line
-	5275 3275 5175 3275
-Text HLabel 4525 3275 0    98   Input ~ 0
+	8200 4825 8100 4825
+Text HLabel 7450 4825 0    98   Input ~ 0
 BTN1
 Wire Wire Line
-	4775 3275 4525 3275
+	7700 4825 7450 4825
 $Comp
 L Switch:SW_SPST SW1
 U 1 1 5D568EA2
-P 6575 3250
-F 0 "SW1" H 6575 3485 50  0000 C CNN
-F 1 "SW_SPST" H 6575 3394 50  0000 C CNN
-F 2 "leash:EVQ-P7A01P" H 6575 3250 50  0001 C CNN
-F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 6575 3250 50  0001 C CNN
-F 4 "EVQ-P7A01P" H 6575 3250 50  0001 C CNN "MPN1"
-F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 6575 3250 50  0001 C CNN "Link1"
-	1    6575 3250
+P 9500 4800
+F 0 "SW1" H 9500 5035 50  0000 C CNN
+F 1 "SW_SPST" H 9500 4944 50  0000 C CNN
+F 2 "leash:EVQ-P7A01P" H 9500 4800 50  0001 C CNN
+F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 9500 4800 50  0001 C CNN
+F 4 "EVQ-P7A01P" H 9500 4800 50  0001 C CNN "MPN1"
+F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 9500 4800 50  0001 C CNN "Link1"
+	1    9500 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0153
 U 1 1 5D568EAC
-P 6875 3625
-F 0 "#PWR0153" H 6875 3375 50  0001 C CNN
-F 1 "GND" H 6880 3452 50  0000 C CNN
-F 2 "" H 6875 3625 50  0001 C CNN
-F 3 "" H 6875 3625 50  0001 C CNN
-	1    6875 3625
+P 9800 5175
+F 0 "#PWR0153" H 9800 4925 50  0001 C CNN
+F 1 "GND" H 9805 5002 50  0000 C CNN
+F 2 "" H 9800 5175 50  0001 C CNN
+F 3 "" H 9800 5175 50  0001 C CNN
+	1    9800 5175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6875 3625 6875 3250
+	9800 5175 9800 4800
 Wire Wire Line
-	6875 3250 6775 3250
-Text HLabel 6125 3250 0    98   Input ~ 0
+	9800 4800 9700 4800
+Text HLabel 9050 4800 0    98   Input ~ 0
 BTN2
 Wire Wire Line
-	6375 3250 6125 3250
+	9300 4800 9050 4800
 $EndSCHEMATC
