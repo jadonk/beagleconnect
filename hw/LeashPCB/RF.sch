@@ -58,8 +58,6 @@ F 4 "1.25" H 3675 5900 50  0001 C CNN "Standard Price"
 $EndComp
 Text HLabel 2100 825  0    79   Input ~ 0
 3V3
-Text HLabel 1325 2075 0    79   Input ~ 0
-5V_EN
 $Comp
 L Device:L L4
 U 1 1 5D2E2020
@@ -800,7 +798,7 @@ U 1 1 5D4C01F1
 P 3275 825
 F 0 "L1" V 3465 825 50  0000 C CNN
 F 1 "6.8 uH" V 3374 825 50  0000 C CNN
-F 2 "" H 3275 825 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 3275 825 50  0001 C CNN
 F 3 "~" H 3275 825 50  0001 C CNN
 	1    3275 825 
 	0    1    -1   0   
@@ -879,8 +877,6 @@ Text Label 5100 2575 0    50   ~ 0
 VDDS
 Text Label 4625 2675 0    50   ~ 0
 VDDS
-Text Label 2750 825  0    50   ~ 0
-VDD
 Text Label 3750 825  2    50   ~ 0
 VDDS
 Wire Wire Line
@@ -969,7 +965,7 @@ U 1 1 5D59B32B
 P 1150 3075
 F 0 "Y2" H 1150 3343 50  0000 C CNN
 F 1 "Crystal" H 1150 3252 50  0000 C CNN
-F 2 "" H 1150 3075 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm" H 1150 3075 50  0001 C CNN
 F 3 "~" H 1150 3075 50  0001 C CNN
 	1    1150 3075
 	1    0    0    -1  
@@ -1042,7 +1038,7 @@ U 1 1 5D5BE094
 P 1975 2075
 F 0 "Y1" H 1975 2343 50  0000 C CNN
 F 1 "Crystal_GND2" H 1975 2252 50  0000 C CNN
-F 2 "" H 1975 2075 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm" H 1975 2075 50  0001 C CNN
 F 3 "~" H 1975 2075 50  0001 C CNN
 	1    1975 2075
 	1    0    0    -1  
@@ -1137,10 +1133,6 @@ F 3 "~" H 10850 7325 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10325 7000 10850 7000
-Text Label 11775 7000 2    50   ~ 0
-VDD
-Wire Wire Line
-	11500 7000 11775 7000
 Wire Wire Line
 	10850 7000 10850 7175
 Wire Wire Line
@@ -1170,10 +1162,6 @@ Wire Wire Line
 Connection ~ 8650 7200
 Wire Wire Line
 	8650 7200 8075 7200
-Text Label 8900 6150 2    50   ~ 0
-VDD
-Wire Wire Line
-	8900 6150 8650 6150
 Wire Wire Line
 	8650 6150 8650 6400
 Wire Wire Line
@@ -1264,7 +1252,7 @@ F 3 "~" H 2500 825 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2650 825  3125 825 
+	2650 825  2950 825 
 Text Notes 2075 1100 0    50   ~ 0
 Optional sense resistor for \npower measurement
 Text HLabel 1600 8225 0    50   Input ~ 0
@@ -1372,50 +1360,12 @@ Text Label 10425 2650 0    50   ~ 0
 RF_2_4GHZ_N
 Wire Wire Line
 	10375 2650 11025 2650
-Text HLabel 825  6100 0    50   Input ~ 0
-BTN1
-Text HLabel 825  6200 0    50   Input ~ 0
-BTN2
-$Comp
-L Device:R R6
-U 1 1 5D3565DC
-P 1400 5850
-F 0 "R6" H 1470 5896 50  0000 L CNN
-F 1 "10K" H 1470 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1330 5850 50  0001 C CNN
-F 3 "~" H 1400 5850 50  0001 C CNN
-	1    1400 5850
-	-1   0    0    -1  
-$EndComp
+Text HLabel 1125 6200 0    50   Input ~ 0
+USER_BTN
 Wire Wire Line
 	1400 6000 1400 6200
-Connection ~ 1400 6200
 Wire Wire Line
-	1400 6200 825  6200
-$Comp
-L Device:R R7
-U 1 1 5D367843
-P 1100 5850
-F 0 "R7" H 1170 5896 50  0000 L CNN
-F 1 "10K" H 1170 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1030 5850 50  0001 C CNN
-F 3 "~" H 1100 5850 50  0001 C CNN
-	1    1100 5850
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	1100 6000 1100 6100
-Connection ~ 1100 6100
-Wire Wire Line
-	1100 6100 825  6100
-Wire Wire Line
-	1400 5700 1400 5475
-Wire Wire Line
-	1400 5475 1100 5475
-Wire Wire Line
-	1100 5475 1100 5700
-Text Label 1325 5475 2    50   ~ 0
-VDDS
+	1400 6200 1125 6200
 Connection ~ 1025 9650
 Wire Wire Line
 	1025 9650 875  9650
@@ -1650,8 +1600,6 @@ Wire Wire Line
 	4625 8525 4825 8525
 Wire Wire Line
 	1400 6200 2825 6200
-Wire Wire Line
-	1100 6100 2825 6100
 $Comp
 L Device:L L2
 U 1 1 5D3BBA4C
@@ -1677,4 +1625,81 @@ Wire Wire Line
 	875  9975 1025 9975
 Wire Wire Line
 	1025 9650 1025 9975
+$Comp
+L power:VDD #PWR0157
+U 1 1 5D64C499
+P 8925 6050
+F 0 "#PWR0157" H 8925 5900 50  0001 C CNN
+F 1 "VDD" H 8942 6223 50  0000 C CNN
+F 2 "" H 8925 6050 50  0001 C CNN
+F 3 "" H 8925 6050 50  0001 C CNN
+	1    8925 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8925 6050 8925 6150
+Wire Wire Line
+	8650 6150 8925 6150
+$Comp
+L power:VDD #PWR0158
+U 1 1 5D66692A
+P 2950 700
+F 0 "#PWR0158" H 2950 550 50  0001 C CNN
+F 1 "VDD" H 2967 873 50  0000 C CNN
+F 2 "" H 2950 700 50  0001 C CNN
+F 3 "" H 2950 700 50  0001 C CNN
+	1    2950 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 700  2950 825 
+Connection ~ 2950 825 
+Wire Wire Line
+	2950 825  3125 825 
+$Comp
+L power:VDD #PWR0159
+U 1 1 5D680238
+P 11825 6925
+F 0 "#PWR0159" H 11825 6775 50  0001 C CNN
+F 1 "VDD" H 11842 7098 50  0000 C CNN
+F 2 "" H 11825 6925 50  0001 C CNN
+F 3 "" H 11825 6925 50  0001 C CNN
+	1    11825 6925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11825 6925 11825 7000
+Wire Wire Line
+	11500 7000 11825 7000
+Text Label 1225 5475 0    50   ~ 0
+VDDS
+Wire Wire Line
+	1400 5475 1225 5475
+Wire Wire Line
+	1400 5700 1400 5475
+$Comp
+L Device:R R6
+U 1 1 5D3565DC
+P 1400 5850
+F 0 "R6" H 1470 5896 50  0000 L CNN
+F 1 "10K" H 1470 5805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1330 5850 50  0001 C CNN
+F 3 "~" H 1400 5850 50  0001 C CNN
+	1    1400 5850
+	-1   0    0    -1  
+$EndComp
+Connection ~ 1400 6200
+Wire Wire Line
+	2825 6100 2075 6100
+Text HLabel 2075 6100 0    50   Input ~ 0
+5V_EN
+Text Label 1925 9575 0    50   ~ 0
+~RESET
+Text HLabel 875  10175 0    50   Input ~ 0
+RST_BTN
+Wire Wire Line
+	875  10175 1025 10175
+Wire Wire Line
+	1025 10175 1025 9975
+Connection ~ 1025 9975
 $EndSCHEMATC

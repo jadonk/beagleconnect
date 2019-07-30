@@ -7206,13 +7206,13 @@ F 3 "" H 4725 8175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 8800 7500
-Text HLabel 2125 2100 0    98   Input ~ 0
+Text HLabel 1475 2100 0    98   Input ~ 0
 V_BAT
-Text HLabel 2125 2375 0    98   Input ~ 0
+Text HLabel 1475 2375 0    98   Input ~ 0
 V_ALT
 Wire Wire Line
 	3775 7500 4725 7500
-Text HLabel 2125 2675 0    98   Input ~ 0
+Text HLabel 1475 2675 0    98   Input ~ 0
 V_USB
 Text HLabel 10025 2925 2    118  Input ~ 0
 3v3_CTRL
@@ -7489,24 +7489,13 @@ $EndComp
 Text HLabel 14150 4600 2    118  Input ~ 0
 3V3_REG
 Wire Wire Line
-	2125 2100 2600 2100
-Wire Wire Line
-	2125 2375 2300 2375
-Wire Wire Line
 	3100 2375 3100 2100
 Connection ~ 3100 2100
 Wire Wire Line
 	3100 2100 3250 2100
 Wire Wire Line
-	2125 2675 2450 2675
-Wire Wire Line
 	3250 2675 3250 2100
 Connection ~ 3250 2100
-Wire Wire Line
-	2300 4875 2450 4875
-Connection ~ 2450 4875
-Wire Wire Line
-	2450 4875 2600 4875
 Text Notes 2975 3875 0    98   ~ 0
 V_Bat not hooked into \n5V output normally
 Connection ~ 2600 4875
@@ -7558,8 +7547,6 @@ Text Label 3650 2100 0    50   ~ 0
 3V3_BOOST_VIN
 Text Label 2925 4875 0    50   ~ 0
 5V_BOOST_VIN
-Connection ~ 2300 2375
-Connection ~ 2450 2675
 Connection ~ 2600 2100
 Wire Wire Line
 	3250 2100 4525 2100
@@ -7624,10 +7611,6 @@ Wire Wire Line
 Connection ~ 13800 4600
 Wire Wire Line
 	13800 4600 14150 4600
-Wire Wire Line
-	2450 2675 2450 4875
-Wire Wire Line
-	2300 2375 2300 4875
 $Comp
 L Device:R R10
 U 1 1 5D51CC94
@@ -7641,11 +7624,7 @@ F 4 "DNP" H 2670 3334 50  0000 L CNN "Population"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 2100 3100 2100
-Wire Wire Line
-	2300 2375 3100 2375
-Wire Wire Line
-	2450 2675 3250 2675
+	2600 2100 2675 2100
 Wire Notes Line
 	10375 6850 10375 8875
 Wire Notes Line
@@ -7656,4 +7635,96 @@ Wire Notes Line
 	3425 6850 10400 6850
 Text Notes 5775 9025 0    98   ~ 0
 Not normally populated
+Wire Wire Line
+	2325 2375 2325 4050
+Connection ~ 2325 2375
+Wire Wire Line
+	2325 2375 2675 2375
+Wire Wire Line
+	2325 4875 2475 4875
+Wire Wire Line
+	2475 2675 2475 3750
+Connection ~ 2475 2675
+Wire Wire Line
+	2475 2675 2675 2675
+Connection ~ 2475 4875
+Wire Wire Line
+	2475 4875 2600 4875
+$Comp
+L Jumper:SolderJumper_2_Bridged JP803
+U 1 1 5D5C1D3B
+P 2825 2100
+F 0 "JP803" H 2825 2213 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2825 2214 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2825 2100 50  0001 C CNN
+F 3 "~" H 2825 2100 50  0001 C CNN
+	1    2825 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP804
+U 1 1 5D5CEF43
+P 2825 2375
+F 0 "JP804" H 2825 2488 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2825 2489 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2825 2375 50  0001 C CNN
+F 3 "~" H 2825 2375 50  0001 C CNN
+	1    2825 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP805
+U 1 1 5D5CF3F5
+P 2825 2675
+F 0 "JP805" H 2825 2788 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 2825 2789 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2825 2675 50  0001 C CNN
+F 3 "~" H 2825 2675 50  0001 C CNN
+	1    2825 2675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP802
+U 1 1 5D5CFDCF
+P 2475 3900
+F 0 "JP802" V 2475 4100 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" H 2475 4014 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2475 3900 50  0001 C CNN
+F 3 "~" H 2475 3900 50  0001 C CNN
+	1    2475 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2475 4050 2475 4875
+$Comp
+L Jumper:SolderJumper_2_Bridged JP801
+U 1 1 5D5D22C0
+P 2325 4200
+F 0 "JP801" V 2325 4525 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" H 2325 4314 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2325 4200 50  0001 C CNN
+F 3 "~" H 2325 4200 50  0001 C CNN
+	1    2325 4200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2325 4350 2325 4875
+Text Label 1625 2675 0    50   ~ 0
+V_USB
+Text Label 1625 2375 0    50   ~ 0
+V_ALT
+Text Label 1625 2100 0    50   ~ 0
+V_BAT
+Wire Wire Line
+	2975 2100 3100 2100
+Wire Wire Line
+	2975 2375 3100 2375
+Wire Wire Line
+	2975 2675 3250 2675
+Wire Wire Line
+	1475 2100 2600 2100
+Wire Wire Line
+	1475 2375 2325 2375
+Wire Wire Line
+	1475 2675 2475 2675
 $EndSCHEMATC
