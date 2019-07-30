@@ -60,18 +60,6 @@ Text HLabel 2100 825  0    79   Input ~ 0
 3V3
 Text HLabel 1325 2075 0    79   Input ~ 0
 5V_EN
-Text HLabel 725  11150 0    50   Input ~ 0
-SWDIO
-Text HLabel 725  11350 0    50   Input ~ 0
-SWCLK
-Wire Wire Line
-	725  11350 1125 11350
-Wire Wire Line
-	725  11150 1125 11150
-Wire Wire Line
-	1125 11450 725  11450
-Text HLabel 725  11450 0    50   Input ~ 0
-RESET_N
 $Comp
 L Device:L L4
 U 1 1 5D2E2020
@@ -897,16 +885,10 @@ Text Label 3750 825  2    50   ~ 0
 VDDS
 Wire Wire Line
 	3750 825  3425 825 
-Text Label 1800 9375 0    50   ~ 0
-WMCU_TMS
 Wire Wire Line
 	1800 9375 2325 9375
-Text Label 1800 9475 0    50   ~ 0
-WMCU_TCK
 Wire Wire Line
 	1800 9475 2325 9475
-Text Label 1800 9575 0    50   ~ 0
-WMCU_RESET
 $Comp
 L Device:C C29
 U 1 1 5D56353D
@@ -1094,10 +1076,6 @@ Wire Wire Line
 	2325 9175 1800 9175
 Wire Wire Line
 	2325 9275 1800 9275
-Text Label 1800 9175 0    50   ~ 0
-JTAG_TDO
-Text Label 1800 9275 0    50   ~ 0
-JTAG_TDI
 Wire Wire Line
 	3325 3575 3325 3850
 $Comp
@@ -1438,12 +1416,6 @@ Wire Wire Line
 	1100 5475 1100 5700
 Text Label 1325 5475 2    50   ~ 0
 VDDS
-Text HLabel 875  9800 0    50   Input ~ 0
-RST
-Wire Wire Line
-	875  9800 1025 9800
-Wire Wire Line
-	1025 9800 1025 9650
 Connection ~ 1025 9650
 Wire Wire Line
 	1025 9650 875  9650
@@ -1691,4 +1663,18 @@ F 3 "~" H 8075 875 50  0001 C CNN
 	1    8075 875 
 	0    1    -1   0   
 $EndComp
+Text HLabel 1800 9275 0    50   Input ~ 0
+TDI
+Text HLabel 1800 9175 0    50   Input ~ 0
+TDO
+Text HLabel 1800 9375 0    50   Input ~ 0
+TMS
+Text HLabel 1800 9475 0    50   Input ~ 0
+TCK
+Text HLabel 875  9975 0    50   Input ~ 0
+~RESET
+Wire Wire Line
+	875  9975 1025 9975
+Wire Wire Line
+	1025 9650 1025 9975
 $EndSCHEMATC
