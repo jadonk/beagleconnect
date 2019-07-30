@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:LeashPCB-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
