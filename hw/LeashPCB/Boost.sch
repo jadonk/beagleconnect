@@ -7500,7 +7500,7 @@ Text Notes 2975 3875 0    98   ~ 0
 V_Bat not hooked into \n5V output normally
 Connection ~ 2600 4875
 Text Notes 4425 1225 0    98   ~ 0
-CONFIG 1: All power inputs go into 3V3 boost, ALT and USB go into the 5V boost\nCONFIG 2: All power inputs go into 3V3 boost, all go into the 5V boost\nCONFIG 3: All power inputs go into 5V boost, 5V is bucked down to 3V3
+CONFIG 1: All power inputs go into 3V3 boost, ALT and USB go into the 5V boost\nCONFIG 2: All power inputs go into 3V3 boost, all go into the 5V boost\nCONFIG 3: All power inputs go into 5V boost, 5V is bucked down to 3V3\nCONFIG 4: User has to manually swich from internal power to external power, which are diode ORed together
 Wire Wire Line
 	12825 2000 12825 3175
 Wire Wire Line
@@ -7549,9 +7549,9 @@ Text Label 2925 4875 0    50   ~ 0
 5V_BOOST_VIN
 Connection ~ 2600 2100
 Wire Wire Line
-	3250 2100 4525 2100
+	3250 2100 4325 2100
 Wire Wire Line
-	2600 4875 4725 4875
+	2600 4875 3775 4875
 Connection ~ 4725 4875
 Wire Wire Line
 	4725 4875 4725 4950
@@ -7727,4 +7727,96 @@ Wire Wire Line
 	1475 2375 2325 2375
 Wire Wire Line
 	1475 2675 2475 2675
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 5D429FC4
+P 1925 5900
+F 0 "SW?" H 1925 5575 50  0000 C CNN
+F 1 "SW_SPDT" H 1925 5666 50  0000 C CNN
+F 2 "" H 1925 5900 50  0001 C CNN
+F 3 "~" H 1925 5900 50  0001 C CNN
+F 4 "K3-1293S-E2" H 1925 5900 50  0001 C CNN "MPN1"
+F 5 "DNP" H 1925 5900 50  0001 C CNN "Population"
+F 6 "https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-K3-1293S-E2_C145852.html" H 1925 5900 50  0001 C CNN "Link1"
+	1    1925 5900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2125 5900 3775 5900
+Wire Wire Line
+	3775 5900 3775 5700
+Connection ~ 3775 4875
+Wire Wire Line
+	3775 4875 4725 4875
+Wire Wire Line
+	3775 5900 4325 5900
+Wire Wire Line
+	4325 5900 4325 5725
+Connection ~ 3775 5900
+Connection ~ 4325 2100
+Wire Wire Line
+	4325 2100 4525 2100
+Wire Wire Line
+	1725 6000 750  6000
+Text Label 750  6000 0    50   ~ 0
+V_BAT
+Wire Wire Line
+	1725 5800 1475 5800
+Wire Wire Line
+	1475 5800 1475 5650
+$Comp
+L Device:R R?
+U 1 1 5D476FC0
+P 1250 5400
+F 0 "R?" H 1320 5491 50  0000 L CNN
+F 1 "0" H 1320 5400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1180 5400 50  0001 C CNN
+F 3 "~" H 1250 5400 50  0001 C CNN
+F 4 "DNP" H 1320 5309 50  0000 L CNN "Population"
+	1    1250 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1400 5400 1475 5400
+Wire Wire Line
+	1475 5650 750  5650
+Connection ~ 1475 5650
+Wire Wire Line
+	1475 5650 1475 5400
+Wire Wire Line
+	1100 5400 750  5400
+Text Label 750  5650 0    50   ~ 0
+V_ALT
+Text Label 750  5400 0    50   ~ 0
+V_USB
+$Comp
+L Device:R R?
+U 1 1 5D4BC09C
+P 3775 5550
+F 0 "R?" H 3845 5641 50  0000 L CNN
+F 1 "0" H 3845 5550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3705 5550 50  0001 C CNN
+F 3 "~" H 3775 5550 50  0001 C CNN
+F 4 "DNP" H 3845 5459 50  0000 L CNN "Population"
+	1    3775 5550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3775 5400 3775 4875
+$Comp
+L Device:R R?
+U 1 1 5D4BCBD7
+P 4325 5575
+F 0 "R?" H 4395 5666 50  0000 L CNN
+F 1 "0" H 4395 5575 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4255 5575 50  0001 C CNN
+F 3 "~" H 4325 5575 50  0001 C CNN
+F 4 "DNP" H 4395 5484 50  0000 L CNN "Population"
+	1    4325 5575
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4325 5425 4325 2100
+Text Notes 1075 6525 0    79   ~ 0
+Adding in a low cost, small switch for\nfuture cost reduction. Removes the need\nfor ideal diode controller.
 $EndSCHEMATC
