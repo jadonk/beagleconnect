@@ -302,7 +302,7 @@ Wire Wire Line
 	5900 5150 5900 4975
 Connection ~ 5900 4975
 Wire Wire Line
-	5900 4975 5775 4975
+	5900 4975 5825 4975
 $Bitmap
 Pos 20325 5400
 Scale 1.000000
@@ -7728,18 +7728,18 @@ Wire Wire Line
 Wire Wire Line
 	1475 2675 2475 2675
 $Comp
-L Switch:SW_SPDT SW?
+L Switch:SW_SPDT SW801
 U 1 1 5D429FC4
 P 1925 5900
-F 0 "SW?" H 1925 5575 50  0000 C CNN
+F 0 "SW801" H 1925 5575 50  0000 C CNN
 F 1 "SW_SPDT" H 1925 5666 50  0000 C CNN
-F 2 "" H 1925 5900 50  0001 C CNN
-F 3 "~" H 1925 5900 50  0001 C CNN
+F 2 "leash:K3-1293S-E2" H 1925 5900 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-1293S-E2_C145852.pdf" H 1925 5900 50  0001 C CNN
 F 4 "K3-1293S-E2" H 1925 5900 50  0001 C CNN "MPN1"
 F 5 "DNP" H 1925 5900 50  0001 C CNN "Population"
 F 6 "https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-K3-1293S-E2_C145852.html" H 1925 5900 50  0001 C CNN "Link1"
 	1    1925 5900
-	-1   0    0    1   
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
 	2125 5900 3775 5900
@@ -7747,7 +7747,7 @@ Wire Wire Line
 	3775 5900 3775 5700
 Connection ~ 3775 4875
 Wire Wire Line
-	3775 4875 4725 4875
+	3775 4875 4575 4875
 Wire Wire Line
 	3775 5900 4325 5900
 Wire Wire Line
@@ -7765,10 +7765,10 @@ Wire Wire Line
 Wire Wire Line
 	1475 5800 1475 5650
 $Comp
-L Device:R R?
+L Device:R R801
 U 1 1 5D476FC0
 P 1250 5400
-F 0 "R?" H 1320 5491 50  0000 L CNN
+F 0 "R801" H 1320 5491 50  0000 L CNN
 F 1 "0" H 1320 5400 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 1180 5400 50  0001 C CNN
 F 3 "~" H 1250 5400 50  0001 C CNN
@@ -7790,10 +7790,10 @@ V_ALT
 Text Label 750  5400 0    50   ~ 0
 V_USB
 $Comp
-L Device:R R?
+L Device:R R802
 U 1 1 5D4BC09C
 P 3775 5550
-F 0 "R?" H 3845 5641 50  0000 L CNN
+F 0 "R802" H 3845 5641 50  0000 L CNN
 F 1 "0" H 3845 5550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3705 5550 50  0001 C CNN
 F 3 "~" H 3775 5550 50  0001 C CNN
@@ -7804,10 +7804,10 @@ $EndComp
 Wire Wire Line
 	3775 5400 3775 4875
 $Comp
-L Device:R R?
+L Device:R R803
 U 1 1 5D4BCBD7
 P 4325 5575
-F 0 "R?" H 4395 5666 50  0000 L CNN
+F 0 "R803" H 4395 5666 50  0000 L CNN
 F 1 "0" H 4395 5575 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4255 5575 50  0001 C CNN
 F 3 "~" H 4325 5575 50  0001 C CNN
@@ -7817,6 +7817,34 @@ F 4 "DNP" H 4395 5484 50  0000 L CNN "Population"
 $EndComp
 Wire Wire Line
 	4325 5425 4325 2100
-Text Notes 1075 6525 0    79   ~ 0
+Text Notes 950  6625 0    79   ~ 0
 Adding in a low cost, small switch for\nfuture cost reduction. Removes the need\nfor ideal diode controller.
+$Comp
+L Device:R R?
+U 1 1 5D45EB51
+P 5825 4525
+F 0 "R?" H 5895 4616 50  0000 L CNN
+F 1 "0" H 5895 4525 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5755 4525 50  0001 C CNN
+F 3 "~" H 5825 4525 50  0001 C CNN
+F 4 "DNP" H 5895 4434 50  0000 L CNN "Population"
+	1    5825 4525
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5825 4675 5825 4975
+Connection ~ 5825 4975
+Wire Wire Line
+	5825 4975 5775 4975
+Wire Wire Line
+	4575 4875 4575 4250
+Wire Wire Line
+	4575 4250 5825 4250
+Wire Wire Line
+	5825 4250 5825 4375
+Connection ~ 4575 4875
+Wire Wire Line
+	4575 4875 4725 4875
+Text Notes 5875 4300 0    50   ~ 0
+Optional pull up resistor\nto change to default on \nbehavior
 $EndSCHEMATC
