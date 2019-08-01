@@ -7214,13 +7214,8 @@ Wire Wire Line
 	3775 7500 4725 7500
 Text HLabel 1475 2675 0    98   Input ~ 0
 V_USB
-Text HLabel 10025 2925 2    118  Input ~ 0
-3v3_CTRL
-Wire Wire Line
-	8275 2925 10025 2925
 Wire Wire Line
 	7000 2925 8275 2925
-Connection ~ 8275 2925
 Wire Wire Line
 	8275 2500 8275 2925
 Connection ~ 8275 2000
@@ -7738,6 +7733,7 @@ F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-1293S-E2_C145852.
 F 4 "K3-1293S-E2" H 1925 5900 50  0001 C CNN "MPN1"
 F 5 "DNP" H 1925 5900 50  0001 C CNN "Population"
 F 6 "https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-K3-1293S-E2_C145852.html" H 1925 5900 50  0001 C CNN "Link1"
+F 7 "Alt #: JS102011SAQN" H 1925 5900 50  0001 C CNN "Value modifier"
 	1    1925 5900
 	-1   0    0    -1  
 $EndComp
@@ -7820,10 +7816,10 @@ Wire Wire Line
 Text Notes 950  6625 0    79   ~ 0
 Adding in a low cost, small switch for\nfuture cost reduction. Removes the need\nfor ideal diode controller.
 $Comp
-L Device:R R?
+L Device:R R804
 U 1 1 5D45EB51
 P 5825 4525
-F 0 "R?" H 5895 4616 50  0000 L CNN
+F 0 "R804" H 5895 4616 50  0000 L CNN
 F 1 "0" H 5895 4525 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5755 4525 50  0001 C CNN
 F 3 "~" H 5825 4525 50  0001 C CNN
@@ -7847,4 +7843,9 @@ Wire Wire Line
 	4575 4875 4725 4875
 Text Notes 5875 4300 0    50   ~ 0
 Optional pull up resistor\nto change to default on \nbehavior
+Connection ~ 8275 2925
+Wire Wire Line
+	8275 2925 10025 2925
+Text HLabel 10025 2925 2    118  Input ~ 0
+3v3_CTRL
 $EndSCHEMATC

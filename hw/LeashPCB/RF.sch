@@ -4,7 +4,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 9 10
+Sheet 10 10
 Title "BeagleDust Leash PCB"
 Date "2019-07-22"
 Rev "1"
@@ -1298,11 +1298,11 @@ Wire Wire Line
 Text HLabel 5050 8725 2    50   Input ~ 0
 MICRO_TX_MB1_RX
 Wire Wire Line
-	4025 8725 4825 8725
+	4025 8725 4575 8725
 Text HLabel 5050 8625 2    50   Input ~ 0
 MICRO_RX_MB1_TX
 Wire Wire Line
-	4025 8625 4925 8625
+	4025 8625 4675 8625
 Text HLabel 1600 8525 0    50   Input ~ 0
 PWM_MB1
 Text HLabel 1600 8425 0    50   Input ~ 0
@@ -1702,4 +1702,48 @@ Wire Wire Line
 Wire Wire Line
 	1025 10175 1025 9975
 Connection ~ 1025 9975
+$Comp
+L Device:R R1001
+U 1 1 5D4CBE10
+P 5225 9275
+F 0 "R1001" V 5175 9075 50  0000 L CNN
+F 1 "0" V 5225 9250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5155 9275 50  0001 C CNN
+F 3 "~" H 5225 9275 50  0001 C CNN
+	1    5225 9275
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1019
+U 1 1 5D4E1629
+P 5225 9375
+F 0 "R1019" V 5175 9175 50  0000 L CNN
+F 1 "0" V 5225 9350 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5155 9375 50  0001 C CNN
+F 3 "~" H 5225 9375 50  0001 C CNN
+	1    5225 9375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5075 9275 4675 9275
+Wire Wire Line
+	4675 9275 4675 8625
+Connection ~ 4675 8625
+Wire Wire Line
+	4675 8625 4925 8625
+Wire Wire Line
+	5075 9375 4575 9375
+Wire Wire Line
+	4575 9375 4575 8725
+Connection ~ 4575 8725
+Wire Wire Line
+	4575 8725 4825 8725
+Text HLabel 5775 9275 2    50   Input ~ 0
+DEBUG_RX
+Text HLabel 5775 9375 2    50   Input ~ 0
+DEBUG_TX
+Wire Wire Line
+	5375 9375 5775 9375
+Wire Wire Line
+	5775 9275 5375 9275
 $EndSCHEMATC

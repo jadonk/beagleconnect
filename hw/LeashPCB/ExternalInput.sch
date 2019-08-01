@@ -47,8 +47,6 @@ $EndComp
 Wire Wire Line
 	8000 4825 8000 5175
 Wire Wire Line
-	7700 4725 8000 4725
-Wire Wire Line
 	8900 4725 9600 4725
 Text HLabel 9600 4725 2    118  Input ~ 0
 V_ALT
@@ -65,15 +63,8 @@ F 3 "" H 8750 4725 50  0001 C CNN
 	1    8750 4725
 	-1   0    0    1   
 $EndComp
-Text GLabel 8150 4350 2    50   Input ~ 0
-ALT_IN
-Wire Wire Line
-	8150 4350 8000 4350
-Wire Wire Line
-	8000 4350 8000 4725
-Connection ~ 8000 4725
-Wire Wire Line
-	8000 4725 8600 4725
 Text Notes 8425 5025 0    50   ~ 0
 No pop if using the \nswitch/jumper method
+Wire Wire Line
+	7700 4725 8600 4725
 $EndSCHEMATC
