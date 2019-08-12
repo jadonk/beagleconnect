@@ -25,6 +25,11 @@ F 1 "mikroBUS" H 8700 4649 50  0000 C CNN
 F 2 "leash:MikroBus-SMD" H 8475 4225 50  0001 C CNN
 F 3 "" H 8475 4225 50  0001 C CNN
 F 4 "0" H 8675 4025 50  0001 C CNN "Standard Price"
+F 5 "N/A" H 8675 4025 50  0001 C CNN "Description"
+F 6 "N/A" H 8675 4025 50  0001 C CNN "Link1"
+F 7 "N/A" H 8675 4025 50  0001 C CNN "MPN1"
+F 8 "DNP" H 8675 4025 50  0001 C CNN "Population"
+F 9 "MikroElectronika" H 8675 4025 50  0001 C CNN "Vendor1"
 	1    8675 4025
 	1    0    0    -1  
 $EndComp
@@ -39,6 +44,11 @@ F 1 "mikroBUS" H 8700 6824 50  0000 C CNN
 F 2 "leash:MikroBus-SMD" H 8475 6400 50  0001 C CNN
 F 3 "" H 8475 6400 50  0001 C CNN
 F 4 "0" H 8675 6200 50  0001 C CNN "Standard Price"
+F 5 "N/A" H 8675 6200 50  0001 C CNN "Description"
+F 6 "N/A" H 8675 6200 50  0001 C CNN "Link1"
+F 7 "N/A" H 8675 6200 50  0001 C CNN "MPN1"
+F 8 "DNP" H 8675 6200 50  0001 C CNN "Population"
+F 9 "MikroElectronika" H 8675 6200 50  0001 C CNN "Vendor1"
 	1    8675 6200
 	1    0    0    -1  
 $EndComp

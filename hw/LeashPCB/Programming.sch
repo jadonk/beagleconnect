@@ -59,6 +59,12 @@ F 0 "J401" H 8875 5817 50  0000 C CNN
 F 1 "TAG-CONNECT-10" H 8875 5726 50  0000 C CNN
 F 2 "leash:Tag-Connect-10" H 8825 5400 50  0001 C CNN
 F 3 "~" H 8825 5400 50  0001 C CNN
+F 4 "N/A" H 8825 5400 50  0001 C CNN "Description"
+F 5 "N/A" H 8825 5400 50  0001 C CNN "Link1"
+F 6 "N/A" H 8825 5400 50  0001 C CNN "MPN1"
+F 7 "DNP" H 8825 5400 50  0001 C CNN "Population"
+F 8 "0" H 8825 5400 50  0001 C CNN "Standard Price"
+F 9 "Tag Connect, Inc" H 8825 5400 50  0001 C CNN "Vendor1"
 	1    8825 5400
 	1    0    0    -1  
 $EndComp
@@ -109,6 +115,12 @@ F 0 "J402" H 8382 7071 50  0000 R CNN
 F 1 "Conn_ARM_JTAG_SWD_10" H 8382 6980 50  0000 R CNN
 F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 8825 7025 50  0001 C CNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 8475 5775 50  0001 C CNN
+F 4 "CONN HEADER SMD 10POS 1.27MM" H 8825 7025 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/GRPB052VWQP-RC/S9013E-05-ND/1786428" H 8825 7025 50  0001 C CNN "Link1"
+F 6 "GRPB052VWQP-RC" H 8825 7025 50  0001 C CNN "MPN1"
+F 7 "DNP" H 8825 7025 50  0001 C CNN "Population"
+F 8 "$0.52130" H 8825 7025 50  0001 C CNN "Standard Price"
+F 9 "Sullins Connector Solutions" H 8825 7025 50  0001 C CNN "Vendor1"
 	1    8825 7025
 	1    0    0    -1  
 $EndComp

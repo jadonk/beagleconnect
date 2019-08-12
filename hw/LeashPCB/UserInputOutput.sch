@@ -24,6 +24,9 @@ F 2 "leash:EVQ-P7A01P" H 7900 4825 50  0001 C CNN
 F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 7900 4825 50  0001 C CNN
 F 4 "EVQ-P7A01P" H 7900 4825 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 7900 4825 50  0001 C CNN "Link1"
+F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 7900 4825 50  0001 C CNN "Description"
+F 7 "$0.13050	" H 7900 4825 50  0001 C CNN "Standard Price"
+F 8 "Panasonic Electronic Components" H 7900 4825 50  0001 C CNN "Vendor1"
 	1    7900 4825
 	1    0    0    -1  
 $EndComp
@@ -52,6 +55,9 @@ F 2 "leash:EVQ-P7A01P" H 10125 4800 50  0001 C CNN
 F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 10125 4800 50  0001 C CNN
 F 4 "EVQ-P7A01P" H 10125 4800 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 10125 4800 50  0001 C CNN "Link1"
+F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 10125 4800 50  0001 C CNN "Description"
+F 7 "$0.13050	" H 10125 4800 50  0001 C CNN "Standard Price"
+F 8 "Panasonic Electronic Components" H 10125 4800 50  0001 C CNN "Vendor1"
 	1    10125 4800
 	1    0    0    -1  
 $EndComp

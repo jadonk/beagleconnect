@@ -265,6 +265,10 @@ F 1 "TPS61026" H 6450 5799 50  0000 C CNN
 F 2 "Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm_ThermalVias" H 6250 5425 50  0001 C CNN
 F 3 "" H 6250 5425 50  0001 C CNN
 F 4 "0.25" H 6450 5175 50  0001 C CNN "Standard Price"
+F 5 "IC REG BOOST 5V 1.5A 10VSON" H 6450 5175 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61026DRCTG4/TPS61026DRCTG4-ND/1672118" H 6450 5175 50  0001 C CNN "Link1"
+F 7 "TPS61026DRCTG4" H 6450 5175 50  0001 C CNN "MPN1"
+F 8 "Texas Instruments" H 6450 5175 50  0001 C CNN "Vendor1"
 	1    6450 5175
 	1    0    0    -1  
 $EndComp
@@ -291,6 +295,11 @@ F 0 "R1007" V 5700 5075 50  0000 C CNN
 F 1 "10K" V 5625 4975 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5555 4975 50  0001 C CNN
 F 3 "~" H 5625 4975 50  0001 C CNN
+F 4 "RES SMD 10K OHM 5% 1/16W 0402" H 5625 4975 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 5625 4975 50  0001 C CNN "Link1"
+F 6 "RC0402JR-0710KL" H 5625 4975 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 5625 4975 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 5625 4975 50  0001 C CNN "Vendor1"
 	1    5625 4975
 	0    1    1    0   
 $EndComp
@@ -7012,6 +7021,11 @@ F 1 "TPS62821DLC" H 6450 8324 50  0000 C CNN
 F 2 "leash:TPS62821DLC" H 6375 7700 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps62823.pdf" H 6375 7700 50  0001 C CNN
 F 4 "DNP" H 6475 7750 50  0000 C CNN "Population"
+F 5 "IC REG BUCK ADJ 1A 8VSON-HR" H 6475 7750 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TPS62821DLCR/296-50127-1-ND/9462910" H 6475 7750 50  0001 C CNN "Link1"
+F 7 "TPS62821DLCR" H 6475 7750 50  0001 C CNN "MPN1"
+F 8 "0.20" H 6475 7750 50  0001 C CNN "Standard Price"
+F 9 "Texas Instruments" H 6475 7750 50  0001 C CNN "Vendor1"
 	1    6475 7750
 	1    0    0    -1  
 $EndComp
@@ -7068,7 +7082,7 @@ L Device:C C1007
 U 1 1 5D1DB906
 P 7975 7700
 F 0 "C1007" H 8090 7746 50  0000 L CNN
-F 1 "C" H 8090 7655 50  0000 L CNN
+F 1 "100 pF" H 8090 7655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8013 7550 50  0001 C CNN
 F 3 "~" H 7975 7700 50  0001 C CNN
 F 4 "DNP" H 7975 7700 50  0000 C CNN "Population"
@@ -7140,10 +7154,14 @@ L Device:C C1009
 U 1 1 5D20CB94
 P 8800 8000
 F 0 "C1009" H 8915 8046 50  0000 L CNN
-F 1 "C" H 8915 7955 50  0000 L CNN
+F 1 "10 uF" H 8915 7955 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8838 7850 50  0001 C CNN
 F 3 "~" H 8800 8000 50  0001 C CNN
 F 4 "DNP" H 8800 8000 50  0000 C CNN "Population"
+F 5 "CAP CER 10UF 6.3V X5R 0603" H 8800 8000 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A106MQ8NNNC/1276-1119-1-ND/3889205" H 8800 8000 50  0001 C CNN "Link1"
+F 7 "CL10A106MQ8NNNC" H 8800 8000 50  0001 C CNN "MPN1"
+F 8 "$0.02215" H 8800 8000 50  0001 C CNN "Standard Price"
 	1    8800 8000
 	1    0    0    -1  
 $EndComp
@@ -7164,10 +7182,15 @@ L Device:C C1003
 U 1 1 5D2142AD
 P 4725 7750
 F 0 "C1003" H 4840 7796 50  0000 L CNN
-F 1 "C" H 4840 7705 50  0000 L CNN
+F 1 "1 uF" H 4840 7705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4763 7600 50  0001 C CNN
 F 3 "~" H 4725 7750 50  0001 C CNN
 F 4 "DNP" H 4725 7750 50  0000 C CNN "Population"
+F 5 "CAP CER 0.1UF 10V X5R 0402" H 4725 7750 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 4725 7750 50  0001 C CNN "Link1"
+F 7 "CL05A104MP5NNNC" H 4725 7750 50  0001 C CNN "MPN1"
+F 8 "$0.00315" H 4725 7750 50  0001 C CNN "Standard Price"
+F 9 "Samsung Electro-Mechanics" H 4725 7750 50  0001 C CNN "Vendor1"
 	1    4725 7750
 	1    0    0    -1  
 $EndComp
@@ -7323,6 +7346,10 @@ F 1 "TPS61025" H 6250 3024 50  0000 C CNN
 F 2 "Package_SON:VSON-10-1EP_3x3mm_P0.5mm_EP1.65x2.4mm_ThermalVias" H 6050 2650 50  0001 C CNN
 F 3 "" H 6050 2650 50  0001 C CNN
 F 4 "0.20" H 6250 2400 50  0001 C CNN "Standard Price"
+F 5 "IC REG BOOST 3.3V 1.5A 10VSON" H 6250 2400 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61025DRCR/296-15844-1-ND/600559" H 6250 2400 50  0001 C CNN "Link1"
+F 7 "TPS61025DRCR" H 6250 2400 50  0001 C CNN "MPN1"
+F 8 "Texas Instruments" H 6250 2400 50  0001 C CNN "Vendor1"
 	1    6250 2400
 	1    0    0    -1  
 $EndComp
@@ -7373,6 +7400,11 @@ F 0 "R1006" V 5500 2300 50  0000 C CNN
 F 1 "0" V 5425 2200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5355 2200 50  0001 C CNN
 F 3 "~" H 5425 2200 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5425 2200 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5425 2200 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 5425 2200 50  0001 C CNN "MPN1"
+F 7 "$0.00127	" H 5425 2200 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 5425 2200 50  0001 C CNN "Vendor1"
 	1    5425 2200
 	0    1    1    0   
 $EndComp
@@ -7508,6 +7540,11 @@ F 0 "R1017" H 12895 3416 50  0000 L CNN
 F 1 "0" H 12895 3325 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 12755 3325 50  0001 C CNN
 F 3 "~" H 12825 3325 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 12825 3325 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 12825 3325 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 12825 3325 50  0001 C CNN "MPN1"
+F 7 "$0.00127	" H 12825 3325 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 12825 3325 50  0001 C CNN "Vendor1"
 	1    12825 3325
 	1    0    0    -1  
 $EndComp
@@ -7520,6 +7557,11 @@ F 1 "0" H 12895 5575 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 12755 5575 50  0001 C CNN
 F 3 "~" H 12825 5575 50  0001 C CNN
 F 4 "DNP" H 12895 5484 50  0000 L CNN "Population"
+F 5 "RES 0 OHM JUMPER 1/16W 0402" H 12825 5575 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 12825 5575 50  0001 C CNN "Link1"
+F 7 "RMCF0402ZT0R00" H 12825 5575 50  0001 C CNN "MPN1"
+F 8 "$0.00127	" H 12825 5575 50  0001 C CNN "Standard Price"
+F 9 "Stackpole Electronics Inc" H 12825 5575 50  0001 C CNN "Vendor1"
 	1    12825 5575
 	1    0    0    -1  
 $EndComp
@@ -7566,6 +7608,11 @@ F 0 "R9" H 9320 4866 50  0000 L CNN
 F 1 "0" H 9320 4775 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 9180 4775 50  0001 C CNN
 F 3 "~" H 9250 4775 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 9250 4775 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 9250 4775 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 9250 4775 50  0001 C CNN "MPN1"
+F 7 "$0.00127	" H 9250 4775 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 9250 4775 50  0001 C CNN "Vendor1"
 	1    9250 4775
 	0    1    1    0   
 $EndComp
@@ -7615,6 +7662,11 @@ F 1 "0" H 2670 3425 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 2530 3425 50  0001 C CNN
 F 3 "~" H 2600 3425 50  0001 C CNN
 F 4 "DNP" H 2670 3334 50  0000 L CNN "Population"
+F 5 "RES 0 OHM JUMPER 1/16W 0402" H 2600 3425 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 2600 3425 50  0001 C CNN "Link1"
+F 7 "RMCF0402ZT0R00" H 2600 3425 50  0001 C CNN "MPN1"
+F 8 "$0.00127	" H 2600 3425 50  0001 C CNN "Standard Price"
+F 9 "Stackpole Electronics Inc" H 2600 3425 50  0001 C CNN "Vendor1"
 	1    2600 3425
 	1    0    0    -1  
 $EndComp
@@ -7653,6 +7705,12 @@ F 0 "JP803" H 2825 2213 50  0000 C CNN
 F 1 "SolderJumper_2_Bridged" H 2825 2214 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2825 2100 50  0001 C CNN
 F 3 "~" H 2825 2100 50  0001 C CNN
+F 4 "N/A" H 2825 2100 50  0001 C CNN "Description"
+F 5 "N/A" H 2825 2100 50  0001 C CNN "Link1"
+F 6 "N/A" H 2825 2100 50  0001 C CNN "MPN1"
+F 7 "DNP" H 2825 2100 50  0001 C CNN "Population"
+F 8 "0" H 2825 2100 50  0001 C CNN "Standard Price"
+F 9 "N/A" H 2825 2100 50  0001 C CNN "Vendor1"
 	1    2825 2100
 	1    0    0    -1  
 $EndComp
@@ -7664,6 +7722,12 @@ F 0 "JP804" H 2825 2488 50  0000 C CNN
 F 1 "SolderJumper_2_Bridged" H 2825 2489 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2825 2375 50  0001 C CNN
 F 3 "~" H 2825 2375 50  0001 C CNN
+F 4 "N/A" H 2825 2375 50  0001 C CNN "Description"
+F 5 "N/A" H 2825 2375 50  0001 C CNN "Link1"
+F 6 "N/A" H 2825 2375 50  0001 C CNN "MPN1"
+F 7 "DNP" H 2825 2375 50  0001 C CNN "Population"
+F 8 "0" H 2825 2375 50  0001 C CNN "Standard Price"
+F 9 "N/A" H 2825 2375 50  0001 C CNN "Vendor1"
 	1    2825 2375
 	1    0    0    -1  
 $EndComp
@@ -7675,6 +7739,12 @@ F 0 "JP805" H 2825 2788 50  0000 C CNN
 F 1 "SolderJumper_2_Bridged" H 2825 2789 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2825 2675 50  0001 C CNN
 F 3 "~" H 2825 2675 50  0001 C CNN
+F 4 "N/A" H 2825 2675 50  0001 C CNN "Description"
+F 5 "N/A" H 2825 2675 50  0001 C CNN "Link1"
+F 6 "N/A" H 2825 2675 50  0001 C CNN "MPN1"
+F 7 "DNP" H 2825 2675 50  0001 C CNN "Population"
+F 8 "0" H 2825 2675 50  0001 C CNN "Standard Price"
+F 9 "N/A" H 2825 2675 50  0001 C CNN "Vendor1"
 	1    2825 2675
 	1    0    0    -1  
 $EndComp
@@ -7686,6 +7756,12 @@ F 0 "JP802" V 2475 4100 50  0000 L CNN
 F 1 "SolderJumper_2_Bridged" H 2475 4014 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2475 3900 50  0001 C CNN
 F 3 "~" H 2475 3900 50  0001 C CNN
+F 4 "N/A" H 2475 3900 50  0001 C CNN "Description"
+F 5 "N/A" H 2475 3900 50  0001 C CNN "Link1"
+F 6 "N/A" H 2475 3900 50  0001 C CNN "MPN1"
+F 7 "DNP" H 2475 3900 50  0001 C CNN "Population"
+F 8 "0" H 2475 3900 50  0001 C CNN "Standard Price"
+F 9 "N/A" H 2475 3900 50  0001 C CNN "Vendor1"
 	1    2475 3900
 	0    1    1    0   
 $EndComp
@@ -7699,6 +7775,12 @@ F 0 "JP801" V 2325 4525 50  0000 L CNN
 F 1 "SolderJumper_2_Bridged" H 2325 4314 50  0001 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm" H 2325 4200 50  0001 C CNN
 F 3 "~" H 2325 4200 50  0001 C CNN
+F 4 "N/A" H 2325 4200 50  0001 C CNN "Description"
+F 5 "N/A" H 2325 4200 50  0001 C CNN "Link1"
+F 6 "N/A" H 2325 4200 50  0001 C CNN "MPN1"
+F 7 "DNP" H 2325 4200 50  0001 C CNN "Population"
+F 8 "0" H 2325 4200 50  0001 C CNN "Standard Price"
+F 9 "N/A" H 2325 4200 50  0001 C CNN "Vendor1"
 	1    2325 4200
 	0    1    1    0   
 $EndComp
@@ -7769,6 +7851,11 @@ F 1 "0" H 1320 5400 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 1180 5400 50  0001 C CNN
 F 3 "~" H 1250 5400 50  0001 C CNN
 F 4 "DNP" H 1320 5309 50  0000 L CNN "Population"
+F 5 "RES 0 OHM JUMPER 1/16W 0402" H 1250 5400 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1250 5400 50  0001 C CNN "Link1"
+F 7 "RMCF0402ZT0R00" H 1250 5400 50  0001 C CNN "MPN1"
+F 8 "$0.00127	" H 1250 5400 50  0001 C CNN "Standard Price"
+F 9 "Stackpole Electronics Inc" H 1250 5400 50  0001 C CNN "Vendor1"
 	1    1250 5400
 	0    1    1    0   
 $EndComp
@@ -7794,6 +7881,11 @@ F 1 "0" H 3845 5550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3705 5550 50  0001 C CNN
 F 3 "~" H 3775 5550 50  0001 C CNN
 F 4 "DNP" H 3845 5459 50  0000 L CNN "Population"
+F 5 "RES 0 OHM JUMPER 1/16W 0402" H 3775 5550 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3775 5550 50  0001 C CNN "Link1"
+F 7 "RMCF0402ZT0R00" H 3775 5550 50  0001 C CNN "MPN1"
+F 8 "$0.00127	" H 3775 5550 50  0001 C CNN "Standard Price"
+F 9 "Stackpole Electronics Inc" H 3775 5550 50  0001 C CNN "Vendor1"
 	1    3775 5550
 	-1   0    0    1   
 $EndComp
@@ -7808,6 +7900,11 @@ F 1 "0" H 4395 5575 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4255 5575 50  0001 C CNN
 F 3 "~" H 4325 5575 50  0001 C CNN
 F 4 "DNP" H 4395 5484 50  0000 L CNN "Population"
+F 5 "RES 0 OHM JUMPER 1/16W 0402" H 4325 5575 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4325 5575 50  0001 C CNN "Link1"
+F 7 "RMCF0402ZT0R00" H 4325 5575 50  0001 C CNN "MPN1"
+F 8 "$0.00127	" H 4325 5575 50  0001 C CNN "Standard Price"
+F 9 "Stackpole Electronics Inc" H 4325 5575 50  0001 C CNN "Vendor1"
 	1    4325 5575
 	-1   0    0    1   
 $EndComp
@@ -7824,6 +7921,11 @@ F 1 "0" H 5895 4525 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5755 4525 50  0001 C CNN
 F 3 "~" H 5825 4525 50  0001 C CNN
 F 4 "DNP" H 5895 4434 50  0000 L CNN "Population"
+F 5 "RES 0 OHM JUMPER 1/16W 0402" H 5825 4525 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5825 4525 50  0001 C CNN "Link1"
+F 7 "RMCF0402ZT0R00" H 5825 4525 50  0001 C CNN "MPN1"
+F 8 "$0.00127	" H 5825 4525 50  0001 C CNN "Standard Price"
+F 9 "Stackpole Electronics Inc" H 5825 4525 50  0001 C CNN "Vendor1"
 	1    5825 4525
 	-1   0    0    1   
 $EndComp
