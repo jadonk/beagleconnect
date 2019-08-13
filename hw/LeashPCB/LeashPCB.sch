@@ -6,8 +6,8 @@ $Descr C 22000 17000
 encoding utf-8
 Sheet 1 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""

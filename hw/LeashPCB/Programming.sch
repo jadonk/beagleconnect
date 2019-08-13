@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 4 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -21,9 +21,15 @@ P 7600 5400
 AR Path="/5D08E161" Ref="C?"  Part="1" 
 AR Path="/5D062DFA/5D08E161" Ref="C601"  Part="1" 
 F 0 "C601" H 7715 5446 50  0000 L CNN
-F 1 "C" H 7715 5355 50  0000 L CNN
+F 1 "0.1 uF" H 7715 5355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7638 5250 50  0001 C CNN
 F 3 "~" H 7600 5400 50  0001 C CNN
+F 4 "CAP CER 0.1UF 10V X5R 0402" H 7600 5400 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 7600 5400 50  0001 C CNN "Link1"
+F 6 "CL05A104MP5NNNC" H 7600 5400 50  0001 C CNN "MPN1"
+F 7 "$0.00315" H 7600 5400 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 7600 5400 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 7600 5400 50  0001 C CNN "Short Description"
 	1    7600 5400
 	1    0    0    -1  
 $EndComp
@@ -65,6 +71,7 @@ F 6 "N/A" H 8825 5400 50  0001 C CNN "MPN1"
 F 7 "DNP" H 8825 5400 50  0001 C CNN "Population"
 F 8 "0" H 8825 5400 50  0001 C CNN "Standard Price"
 F 9 "Tag Connect, Inc" H 8825 5400 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 8825 5400 50  0001 C CNN "Short Description"
 	1    8825 5400
 	1    0    0    -1  
 $EndComp
@@ -121,6 +128,7 @@ F 6 "GRPB052VWQP-RC" H 8825 7025 50  0001 C CNN "MPN1"
 F 7 "DNP" H 8825 7025 50  0001 C CNN "Population"
 F 8 "$0.52130" H 8825 7025 50  0001 C CNN "Standard Price"
 F 9 "Sullins Connector Solutions" H 8825 7025 50  0001 C CNN "Vendor1"
+F 10 "CONN HEADER SMD 10POS 1.27MM" H 8825 7025 50  0001 C CNN "Short Description"
 	1    8825 7025
 	1    0    0    -1  
 $EndComp
@@ -131,9 +139,15 @@ P 7375 6925
 AR Path="/5D4F1C98" Ref="C?"  Part="1" 
 AR Path="/5D062DFA/5D4F1C98" Ref="C401"  Part="1" 
 F 0 "C401" H 7490 6971 50  0000 L CNN
-F 1 "C" H 7490 6880 50  0000 L CNN
+F 1 "0.1 uF" H 7490 6880 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7413 6775 50  0001 C CNN
 F 3 "~" H 7375 6925 50  0001 C CNN
+F 4 "CAP CER 0.1UF 10V X5R 0402" H 7375 6925 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 7375 6925 50  0001 C CNN "Link1"
+F 6 "CL05A104MP5NNNC" H 7375 6925 50  0001 C CNN "MPN1"
+F 7 "$0.00315" H 7375 6925 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 7375 6925 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 7375 6925 50  0001 C CNN "Short Description"
 	1    7375 6925
 	1    0    0    -1  
 $EndComp

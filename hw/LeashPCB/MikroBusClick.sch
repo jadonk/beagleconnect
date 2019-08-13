@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 9 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -30,6 +30,7 @@ F 6 "N/A" H 8675 4025 50  0001 C CNN "Link1"
 F 7 "N/A" H 8675 4025 50  0001 C CNN "MPN1"
 F 8 "DNP" H 8675 4025 50  0001 C CNN "Population"
 F 9 "MikroElectronika" H 8675 4025 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 8675 4025 50  0001 C CNN "Short Description"
 	1    8675 4025
 	1    0    0    -1  
 $EndComp
@@ -49,6 +50,7 @@ F 6 "N/A" H 8675 6200 50  0001 C CNN "Link1"
 F 7 "N/A" H 8675 6200 50  0001 C CNN "MPN1"
 F 8 "DNP" H 8675 6200 50  0001 C CNN "Population"
 F 9 "MikroElectronika" H 8675 6200 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 8675 6200 50  0001 C CNN "Short Description"
 	1    8675 6200
 	1    0    0    -1  
 $EndComp

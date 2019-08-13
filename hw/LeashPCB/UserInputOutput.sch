@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 6 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -27,6 +27,7 @@ F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 7900 4825 50  0001 C CNN "Description"
 F 7 "$0.13050	" H 7900 4825 50  0001 C CNN "Standard Price"
 F 8 "Panasonic Electronic Components" H 7900 4825 50  0001 C CNN "Vendor1"
+F 9 "SWITCH TACTILE SPST-NO 0.05A 12V" H 7900 4825 50  0001 C CNN "Short Description"
 	1    7900 4825
 	1    0    0    -1  
 $EndComp
@@ -58,6 +59,7 @@ F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/E
 F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 10125 4800 50  0001 C CNN "Description"
 F 7 "$0.13050	" H 10125 4800 50  0001 C CNN "Standard Price"
 F 8 "Panasonic Electronic Components" H 10125 4800 50  0001 C CNN "Vendor1"
+F 9 "SWITCH TACTILE SPST-NO 0.05A 12V" H 10125 4800 50  0001 C CNN "Short Description"
 	1    10125 4800
 	1    0    0    -1  
 $EndComp

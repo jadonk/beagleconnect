@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 7 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -31,6 +31,7 @@ F 5 "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118193-0001LF/
 F 6 "10118193-0001LF" H 6000 2000 50  0001 C CNN "MPN1"
 F 7 "$0.20843" H 6000 2000 50  0001 C CNN "Standard Price"
 F 8 "Amphenol ICC (FCI)" H 6000 2000 50  0001 C CNN "Vendor1"
+F 9 "CONN RCPT USB2.0 MICRO B SMD R/A" H 6000 2000 50  0001 C CNN "Short Description"
 	1    6000 2000
 	1    0    0    -1  
 $EndComp
@@ -53,6 +54,7 @@ F 5 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAT54GWJ/1727-73
 F 6 "BAT54GWJ" H 7350 1800 50  0001 C CNN "MPN1"
 F 7 "$0.02037" H 7350 1800 50  0001 C CNN "Standard Price"
 F 8 "Nexperia USA Inc." H 7350 1800 50  0001 C CNN "Vendor1"
+F 9 "DIODE SCHOTTKY 30V 200MA SOD123" H 7350 1800 50  0001 C CNN "Short Description"
 	1    7350 1800
 	-1   0    0    1   
 $EndComp
@@ -61,9 +63,15 @@ L Device:R R904
 U 1 1 5D1AB7CD
 P 6525 2450
 F 0 "R904" H 6595 2496 50  0000 L CNN
-F 1 "R" H 6595 2405 50  0000 L CNN
+F 1 "0" H 6595 2405 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 6455 2450 50  0001 C CNN
 F 3 "~" H 6525 2450 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 6525 2450 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 6525 2450 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 6525 2450 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 6525 2450 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 6525 2450 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 6525 2450 50  0001 C CNN "Short Description"
 	1    6525 2450
 	1    0    0    -1  
 $EndComp
@@ -132,6 +140,7 @@ F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A10
 F 6 "CL05A104MP5NNNC" H 7350 5850 50  0001 C CNN "MPN1"
 F 7 "$0.00315" H 7350 5850 50  0001 C CNN "Standard Price"
 F 8 "Samsung Electro-Mechanics" H 7350 5850 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 7350 5850 50  0001 C CNN "Short Description"
 	1    7350 5850
 	1    0    0    -1  
 $EndComp
@@ -148,6 +157,7 @@ F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A10
 F 6 "CL05A104MP5NNNC" H 7100 5850 50  0001 C CNN "MPN1"
 F 7 "$0.00315" H 7100 5850 50  0001 C CNN "Standard Price"
 F 8 "Samsung Electro-Mechanics" H 7100 5850 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 7100 5850 50  0001 C CNN "Short Description"
 	1    7100 5850
 	1    0    0    -1  
 $EndComp
@@ -166,8 +176,9 @@ F 3 "" H 10325 6725 50  0001 C CNN
 F 4 "RES 0 OHM JUMPER 1/16W 0402" H 10325 6725 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 10325 6725 50  0001 C CNN "Link1"
 F 6 "RMCF0402ZT0R00" H 10325 6725 50  0001 C CNN "MPN1"
-F 7 "$0.00127	" H 10325 6725 50  0001 C CNN "Standard Price"
+F 7 "$0.00127" H 10325 6725 50  0001 C CNN "Standard Price"
 F 8 "Stackpole Electronics Inc" H 10325 6725 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 10325 6725 50  0001 C CNN "Short Description"
 	1    10325 6725
 	0    -1   -1   0   
 $EndComp
@@ -182,8 +193,9 @@ F 3 "" H 10325 6825 50  0001 C CNN
 F 4 "RES 0 OHM JUMPER 1/16W 0402" H 10325 6825 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 10325 6825 50  0001 C CNN "Link1"
 F 6 "RMCF0402ZT0R00" H 10325 6825 50  0001 C CNN "MPN1"
-F 7 "$0.00127	" H 10325 6825 50  0001 C CNN "Standard Price"
+F 7 "$0.00127" H 10325 6825 50  0001 C CNN "Standard Price"
 F 8 "Stackpole Electronics Inc" H 10325 6825 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 10325 6825 50  0001 C CNN "Short Description"
 	1    10325 6825
 	0    -1   -1   0   
 $EndComp
@@ -6789,6 +6801,7 @@ F 7 "D20V0L1B2LP-7B" H 7200 7150 50  0001 C CNN "MPN1"
 F 8 "TVS DIODE 20V 34V DFN1006-2" H 7200 7150 50  0001 C CNN "Description"
 F 9 "$0.03400" H 7200 7150 50  0001 C CNN "Standard Price"
 F 10 "Diodes Incorporated" H 7200 7150 50  0001 C CNN "Vendor1"
+F 11 "TVS DIODE 20V 34V DFN1006-2" H 7200 7150 50  0001 C CNN "Short Description"
 	1    7200 7150
 	0    1    1    0   
 $EndComp
@@ -6807,6 +6820,7 @@ F 7 "D20V0L1B2LP-7B" H 7650 7150 50  0001 C CNN "MPN1"
 F 8 "TVS DIODE 20V 34V DFN1006-2" H 7650 7150 50  0001 C CNN "Description"
 F 9 "$0.03400" H 7650 7150 50  0001 C CNN "Standard Price"
 F 10 "Diodes Incorporated" H 7650 7150 50  0001 C CNN "Vendor1"
+F 11 "TVS DIODE 20V 34V DFN1006-2" H 7650 7150 50  0001 C CNN "Short Description"
 	1    7650 7150
 	0    1    1    0   
 $EndComp
@@ -6823,6 +6837,7 @@ F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0747KL/311-47KJRCT
 F 6 "RC0402JR-0747KL" H 6850 7175 50  0001 C CNN "MPN1"
 F 7 "$0.00139" H 6850 7175 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 6850 7175 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 47K OHM 5% 1/16W 0402" H 6850 7175 50  0001 C CNN "Short Description"
 	1    6850 7175
 	1    0    0    -1  
 $EndComp
@@ -6839,6 +6854,7 @@ F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0720KL/311-20KJRCT
 F 6 "RC0402JR-0720KL" H 6500 6375 50  0001 C CNN "MPN1"
 F 7 "$0.00139" H 6500 6375 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 6500 6375 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 20K OHM 5% 1/16W 0402" H 6500 6375 50  0001 C CNN "Short Description"
 	1    6500 6375
 	0    1    1    0   
 $EndComp
@@ -6866,6 +6882,7 @@ F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071K8L/311-1.8KJRC
 F 6 "RC0402JR-071K8L" H 10125 5575 50  0001 C CNN "MPN1"
 F 7 "$0.00139" H 10125 5575 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 10125 5575 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1.8K OHM 5% 1/16W 0402" H 10125 5575 50  0001 C CNN "Short Description"
 	1    10125 5575
 	1    0    0    -1  
 $EndComp
@@ -6882,6 +6899,7 @@ F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A10
 F 6 "CL05A104MP5NNNC" H 8100 7075 50  0001 C CNN "MPN1"
 F 7 "$0.00315" H 8100 7075 50  0001 C CNN "Standard Price"
 F 8 "Samsung Electro-Mechanics" H 8100 7075 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 8100 7075 50  0001 C CNN "Short Description"
 	1    8100 7075
 	1    0    0    1   
 $EndComp
@@ -6898,6 +6916,7 @@ F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A10
 F 6 "CL05A106MP8NUB8" H 7850 7075 50  0001 C CNN "MPN1"
 F 7 "$0.09000" H 7850 7075 50  0001 C CNN "Standard Price"
 F 8 "Samsung Electro-Mechanics" H 7850 7075 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 10UF 10V X5R 0402" H 7850 7075 50  0001 C CNN "Short Description"
 	1    7850 7075
 	1    0    0    -1  
 $EndComp
@@ -6916,6 +6935,7 @@ F 5 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 6 "SML-D12U1WT86" H 6250 6925 50  0001 C CNN "MPN1"
 F 7 "$0.03565" H 6250 6925 50  0001 C CNN "Standard Price"
 F 8 "Rohm Semiconductor" H 6250 6925 50  0001 C CNN "Vendor1"
+F 9 "LED RED DIFFUSED 1608 SMD" H 6250 6925 50  0001 C CNN "Short Description"
 	1    6250 6925
 	0    -1   -1   0   
 $EndComp
@@ -6932,6 +6952,7 @@ F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-074K7L/311-4.7KJRC
 F 6 "RC0402JR-074K7L" H 6250 7275 50  0001 C CNN "MPN1"
 F 7 "$0.00139" H 6250 7275 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 6250 7275 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 4.7K OHM 5% 1/16W 0402" H 6250 7275 50  0001 C CNN "Short Description"
 	1    6250 7275
 	1    0    0    -1  
 $EndComp
@@ -7104,6 +7125,7 @@ F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF040
 F 7 "RMCF0402JT220R" H 11100 7400 50  0001 C CNN "MPN1"
 F 8 "$0.00121" H 11100 7400 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 11100 7400 50  0001 C CNN "Vendor1"
+F 10 "RES 220 OHM 5% 1/16W 0402" H 11100 7400 50  0001 C CNN "Short Description"
 	1    11100 7400
 	1    0    0    -1  
 $EndComp
@@ -7121,6 +7143,7 @@ F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF040
 F 7 "RMCF0402JT220R" H 10850 7400 50  0001 C CNN "MPN1"
 F 8 "$0.00121" H 10850 7400 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 10850 7400 50  0001 C CNN "Vendor1"
+F 10 "RES 220 OHM 5% 1/16W 0402" H 10850 7400 50  0001 C CNN "Short Description"
 	1    10850 7400
 	1    0    0    -1  
 $EndComp
@@ -7138,6 +7161,7 @@ F 6 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 7 "SML-D12U1WT86" H 11100 7050 50  0001 C CNN "MPN1"
 F 8 "$0.03565" H 11100 7050 50  0001 C CNN "Standard Price"
 F 9 "Rohm Semiconductor" H 11100 7050 50  0001 C CNN "Vendor1"
+F 10 "LED RED DIFFUSED 1608 SMD" H 11100 7050 50  0001 C CNN "Short Description"
 	1    11100 7050
 	0    -1   -1   0   
 $EndComp
@@ -7155,6 +7179,7 @@ F 6 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 7 "SML-D12U1WT86" H 10850 7050 50  0001 C CNN "MPN1"
 F 8 "$0.03565" H 10850 7050 50  0001 C CNN "Standard Price"
 F 9 "Rohm Semiconductor" H 10850 7050 50  0001 C CNN "Vendor1"
+F 10 "LED RED DIFFUSED 1608 SMD" H 10850 7050 50  0001 C CNN "Short Description"
 	1    10850 7050
 	0    -1   -1   0   
 $EndComp
@@ -7187,6 +7212,7 @@ F 5 "https://www.digikey.com/product-detail/en/silicon-labs/CP2102N-A02-GQFN20R/
 F 6 "CP2102N-A02-GQFN20R" H 9175 6225 50  0001 C CNN "MPN1"
 F 7 "$1.15261" H 9175 6225 50  0001 C CNN "Standard Price"
 F 8 "Silicon Labs" H 9175 6225 50  0001 C CNN "Vendor1"
+F 9 "IC BRIDGE USB TO UART 20QFN" H 9175 6225 50  0001 C CNN "Short Description"
 	1    9175 6225
 	1    0    0    -1  
 $EndComp
@@ -7257,6 +7283,7 @@ F 7 "D20V0L1B2LP-7B" H 7425 7150 50  0001 C CNN "MPN1"
 F 8 "TVS DIODE 20V 34V DFN1006-2" H 7425 7150 50  0001 C CNN "Description"
 F 9 "$0.03400" H 7425 7150 50  0001 C CNN "Standard Price"
 F 10 "Diodes Incorporated" H 7425 7150 50  0001 C CNN "Vendor1"
+F 11 "TVS DIODE 20V 34V DFN1006-2" H 7425 7150 50  0001 C CNN "Short Description"
 	1    7425 7150
 	0    1    1    0   
 $EndComp
@@ -7300,8 +7327,9 @@ F 4 "DNP" V 11400 6325 50  0000 C CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 11350 6525 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 11350 6525 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 11350 6525 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 11350 6525 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 11350 6525 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 11350 6525 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 11350 6525 50  0001 C CNN "Short Description"
 	1    11350 6525
 	0    -1   -1   0   
 $EndComp
@@ -7317,8 +7345,9 @@ F 4 "DNP" V 11375 6425 50  0000 C CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 11350 6625 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 11350 6625 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 11350 6625 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 11350 6625 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 11350 6625 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 11350 6625 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 11350 6625 50  0001 C CNN "Short Description"
 	1    11350 6625
 	0    -1   -1   0   
 $EndComp

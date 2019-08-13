@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 8 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -21,11 +21,15 @@ L pspice:INDUCTOR L1002
 U 1 1 5D0BAFAE
 P 5275 4725
 F 0 "L1002" H 5275 4940 50  0000 C CNN
-F 1 "6.8U" H 5275 4849 50  0000 C CNN
+F 1 "6.8 uH" H 5275 4849 50  0000 C CNN
 F 2 "leash:CDRH4D28" H 5275 4725 50  0001 C CNN
 F 3 "http://products.sumida.com/products/pdf/CDRH4D28.pdf" H 5275 4725 50  0001 C CNN
 F 4 "CDRH4D28NP-6R8NC" H 5275 4725 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/sumida-america-components-inc/CDRH4D28NP-6R8NC/308-2188-1-ND/3946493" H 5275 4725 50  0001 C CNN "Link1"
+F 6 "FIXED IND 6.8UH 1.12A 108.9 MOHM" H 5275 4725 50  0001 C CNN "Description"
+F 7 "$0.39100" H 5275 4725 50  0001 C CNN "Standard Price"
+F 8 "Sumida America Components Inc." H 5275 4725 50  0001 C CNN "Vendor1"
+F 9 "FIXED IND 6.8UH 1.12A 108.9 MOHM" H 5275 4725 50  0001 C CNN "Short Description"
 	1    5275 4725
 	1    0    0    -1  
 $EndComp
@@ -34,9 +38,15 @@ L Device:C C1002
 U 1 1 5D0BAFB8
 P 4725 5100
 F 0 "C1002" H 4840 5146 50  0000 L CNN
-F 1 "C" H 4840 5055 50  0000 L CNN
+F 1 "10 uF" H 4840 5055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4763 4950 50  0001 C CNN
 F 3 "~" H 4725 5100 50  0001 C CNN
+F 4 "CAP CER 10UF 10V X5R 0402" H 4725 5100 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A106MP8NUB8/1276-6830-1-ND/5961689" H 4725 5100 50  0001 C CNN "Link1"
+F 6 "CL05A106MP8NUB8" H 4725 5100 50  0001 C CNN "MPN1"
+F 7 "$0.09000" H 4725 5100 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 4725 5100 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 10UF 10V X5R 0402" H 4725 5100 50  0001 C CNN "Short Description"
 	1    4725 5100
 	1    0    0    -1  
 $EndComp
@@ -45,9 +55,15 @@ L Device:R R1004
 U 1 1 5D0BAFC2
 P 5175 5075
 F 0 "R1004" H 5245 5121 50  0000 L CNN
-F 1 "R" H 5245 5030 50  0000 L CNN
+F 1 "200K" H 5245 5030 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5105 5075 50  0001 C CNN
 F 3 "~" H 5175 5075 50  0001 C CNN
+F 4 "RES SMD 200K OHM 1% 1/16W 0402" H 5175 5075 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-07200KL/311-200KLRCT-ND/729505" H 5175 5075 50  0001 C CNN "Link1"
+F 6 "RC0402FR-07200KL" H 5175 5075 50  0001 C CNN "MPN1"
+F 7 "$0.00170" H 5175 5075 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 5175 5075 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 200K OHM 1% 1/16W 0402" H 5175 5075 50  0001 C CNN "Short Description"
 	1    5175 5075
 	1    0    0    -1  
 $EndComp
@@ -56,9 +72,15 @@ L Device:R R1005
 U 1 1 5D0BAFCC
 P 5175 5500
 F 0 "R1005" H 5245 5546 50  0000 L CNN
-F 1 "R" H 5245 5455 50  0000 L CNN
+F 1 "390K" H 5245 5455 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5105 5500 50  0001 C CNN
 F 3 "~" H 5175 5500 50  0001 C CNN
+F 4 "RES SMD 390K OHM 1% 1/16W 0402" H 5175 5500 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-07390KL/YAG3143CT-ND/5282008" H 5175 5500 50  0001 C CNN "Link1"
+F 6 "RC0402FR-07390KL" H 5175 5500 50  0001 C CNN "MPN1"
+F 7 "$0.00170" H 5175 5500 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 5175 5500 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 390K OHM 1% 1/16W 0402" H 5175 5500 50  0001 C CNN "Short Description"
 	1    5175 5500
 	1    0    0    -1  
 $EndComp
@@ -125,9 +147,15 @@ L Device:R R1012
 U 1 1 5D0BB00B
 P 7375 5300
 F 0 "R1012" H 7445 5346 50  0000 L CNN
-F 1 "R" H 7445 5255 50  0000 L CNN
+F 1 "10K" H 7445 5255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7305 5300 50  0001 C CNN
 F 3 "~" H 7375 5300 50  0001 C CNN
+F 4 "DNP" H 7375 5300 50  0000 C CNN "Population"
+F 5 "RES SMD 10K OHM 5% 1/16W 0402" H 7375 5300 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 7375 5300 50  0001 C CNN "Link1"
+F 7 "RC0402JR-0710KL" H 7375 5300 50  0001 C CNN "MPN1"
+F 8 "$0.00139" H 7375 5300 50  0001 C CNN "Standard Price"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 7375 5300 50  0001 C CNN "Short Description"
 	1    7375 5300
 	1    0    0    -1  
 $EndComp
@@ -136,9 +164,15 @@ L Device:R R1011
 U 1 1 5D0BB015
 P 7375 4925
 F 0 "R1011" H 7445 4971 50  0000 L CNN
-F 1 "R" H 7445 4880 50  0000 L CNN
+F 1 "10K" H 7445 4880 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7305 4925 50  0001 C CNN
 F 3 "~" H 7375 4925 50  0001 C CNN
+F 4 "DNP" H 7375 4925 50  0000 C CNN "Population"
+F 5 "RES SMD 10K OHM 5% 1/16W 0402" H 7375 4925 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 7375 4925 50  0001 C CNN "Link1"
+F 7 "RC0402JR-0710KL" H 7375 4925 50  0001 C CNN "MPN1"
+F 8 "$0.00139" H 7375 4925 50  0001 C CNN "Standard Price"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 7375 4925 50  0001 C CNN "Short Description"
 	1    7375 4925
 	1    0    0    -1  
 $EndComp
@@ -165,12 +199,13 @@ Wire Wire Line
 $Comp
 L Device:R R1016
 U 1 1 5D0BB039
-P 8475 5125
-F 0 "R1016" H 8545 5171 50  0000 L CNN
-F 1 "R" H 8545 5080 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 8405 5125 50  0001 C CNN
-F 3 "~" H 8475 5125 50  0001 C CNN
-	1    8475 5125
+P 8725 5125
+F 0 "R1016" H 8795 5171 50  0000 L CNN
+F 1 "1 MEG" H 8795 5080 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8655 5125 50  0001 C CNN
+F 3 "~" H 8725 5125 50  0001 C CNN
+F 4 "DNP" H 8875 5000 50  0000 C CNN "Population"
+	1    8725 5125
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -201,33 +236,45 @@ L Device:C C1005
 U 1 1 5D0BB054
 P 7775 5100
 F 0 "C1005" H 7890 5146 50  0000 L CNN
-F 1 "C" H 7890 5055 50  0000 L CNN
+F 1 "2.2 uF" H 7890 5055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7813 4950 50  0001 C CNN
 F 3 "~" H 7775 5100 50  0001 C CNN
+F 4 "CAP CER 2.2UF 10V X5R 0402" H 7775 5100 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/taiyo-yuden/LMK105BJ225MV-F/587-3153-1-ND/2774767" H 7775 5100 50  0001 C CNN "Link1"
+F 6 "LMK105BJ225MV-F" H 7775 5100 50  0001 C CNN "MPN1"
+F 7 "$0.01210" H 7775 5100 50  0001 C CNN "Standard Price"
+F 8 "Taiyo Yuden" H 7775 5100 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 2.2UF 10V X5R 0402" H 7775 5100 50  0001 C CNN "Short Description"
 	1    7775 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C1008
 U 1 1 5D0BB05E
-P 8100 5100
-F 0 "C1008" H 8215 5146 50  0000 L CNN
-F 1 "C" H 8215 5055 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 8138 4950 50  0001 C CNN
-F 3 "~" H 8100 5100 50  0001 C CNN
-	1    8100 5100
+P 8250 5100
+F 0 "C1008" H 8365 5146 50  0000 L CNN
+F 1 "10 uF" H 8365 5055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8288 4950 50  0001 C CNN
+F 3 "~" H 8250 5100 50  0001 C CNN
+F 4 "CAP CER 10UF 10V X5R 0402" H 8250 5100 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A106MP8NUB8/1276-6830-1-ND/5961689" H 8250 5100 50  0001 C CNN "Link1"
+F 6 "CL05A106MP8NUB8" H 8250 5100 50  0001 C CNN "MPN1"
+F 7 "$0.09000" H 8250 5100 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 8250 5100 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 10UF 10V X5R 0402" H 8250 5100 50  0001 C CNN "Short Description"
+	1    8250 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7775 5450 7775 5250
 Connection ~ 7375 5450
 Wire Wire Line
-	8100 5250 8100 5450
+	8250 5250 8250 5450
 Wire Wire Line
 	7375 5450 7775 5450
 Connection ~ 7775 5450
 Wire Wire Line
-	7775 5450 8100 5450
+	7775 5450 8250 5450
 Wire Wire Line
 	7775 4950 7775 4775
 Wire Wire Line
@@ -236,22 +283,20 @@ Connection ~ 7375 4775
 Wire Wire Line
 	7375 4775 7775 4775
 Wire Wire Line
-	8100 4950 8100 4775
+	8250 4950 8250 4775
 Wire Wire Line
-	8100 4775 7775 4775
+	8250 4775 7775 4775
 Connection ~ 7775 4775
 Wire Wire Line
-	8100 4775 8475 4775
+	8725 4775 8725 4975
+Connection ~ 8250 4775
 Wire Wire Line
-	8475 4775 8475 4975
-Connection ~ 8100 4775
+	8725 5275 8725 5700
 Wire Wire Line
-	8475 5275 8475 5700
+	7200 5700 8725 5700
 Wire Wire Line
-	7200 5700 8475 5700
-Wire Wire Line
-	8475 5700 10225 5700
-Connection ~ 8475 5700
+	8725 5700 10225 5700
+Connection ~ 8725 5700
 Text HLabel 10225 5700 2    118  Input ~ 0
 5V_CTRL
 $Comp
@@ -269,6 +314,7 @@ F 5 "IC REG BOOST 5V 1.5A 10VSON" H 6450 5175 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61026DRCTG4/TPS61026DRCTG4-ND/1672118" H 6450 5175 50  0001 C CNN "Link1"
 F 7 "TPS61026DRCTG4" H 6450 5175 50  0001 C CNN "MPN1"
 F 8 "Texas Instruments" H 6450 5175 50  0001 C CNN "Vendor1"
+F 9 "IC REG BOOST 5V 1.5A 10VSON" H 6450 5175 50  0001 C CNN "Short Description"
 	1    6450 5175
 	1    0    0    -1  
 $EndComp
@@ -300,6 +346,7 @@ F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT
 F 6 "RC0402JR-0710KL" H 5625 4975 50  0001 C CNN "MPN1"
 F 7 "$0.00139" H 5625 4975 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 5625 4975 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 5625 4975 50  0001 C CNN "Short Description"
 	1    5625 4975
 	0    1    1    0   
 $EndComp
@@ -7026,6 +7073,7 @@ F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TPS62821DLCR/29
 F 7 "TPS62821DLCR" H 6475 7750 50  0001 C CNN "MPN1"
 F 8 "0.20" H 6475 7750 50  0001 C CNN "Standard Price"
 F 9 "Texas Instruments" H 6475 7750 50  0001 C CNN "Vendor1"
+F 10 "IC REG BUCK ADJ 1A 8VSON-HR" H 6475 7750 50  0001 C CNN "Short Description"
 	1    6475 7750
 	1    0    0    -1  
 $EndComp
@@ -7038,6 +7086,11 @@ F 1 "R" V 5534 7900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5580 7900 50  0001 C CNN
 F 3 "~" H 5650 7900 50  0001 C CNN
 F 4 "DNP" H 5650 7900 50  0000 C CNN "Population"
+F 5 "" H 5650 7900 50  0001 C CNN "Description"
+F 6 "" H 5650 7900 50  0001 C CNN "Link1"
+F 7 "" H 5650 7900 50  0001 C CNN "MPN1"
+F 8 "" H 5650 7900 50  0001 C CNN "Standard Price"
+F 9 "Yageo" H 5650 7900 50  0001 C CNN "Vendor1"
 	1    5650 7900
 	0    1    1    0   
 $EndComp
@@ -7062,6 +7115,11 @@ F 1 "R" H 8205 7745 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8205 7700 50  0001 C CNN
 F 3 "~" H 8275 7700 50  0001 C CNN
 F 4 "DNP" H 8275 7700 50  0000 C CNN "Population"
+F 5 "" H 8275 7700 50  0001 C CNN "Description"
+F 6 "" H 8275 7700 50  0001 C CNN "Link1"
+F 7 "" H 8275 7700 50  0001 C CNN "MPN1"
+F 8 "" H 8275 7700 50  0001 C CNN "Standard Price"
+F 9 "Yageo" H 8275 7700 50  0001 C CNN "Vendor1"
 	1    8275 7700
 	-1   0    0    1   
 $EndComp
@@ -7074,6 +7132,11 @@ F 1 "R" H 8205 8145 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8205 8100 50  0001 C CNN
 F 3 "~" H 8275 8100 50  0001 C CNN
 F 4 "DNP" H 8275 8100 50  0000 C CNN "Population"
+F 5 "" H 8275 8100 50  0001 C CNN "Description"
+F 6 "" H 8275 8100 50  0001 C CNN "Link1"
+F 7 "" H 8275 8100 50  0001 C CNN "MPN1"
+F 8 "" H 8275 8100 50  0001 C CNN "Standard Price"
+F 9 "Yageo" H 8275 8100 50  0001 C CNN "Vendor1"
 	1    8275 8100
 	-1   0    0    1   
 $EndComp
@@ -7086,6 +7149,11 @@ F 1 "100 pF" H 8090 7655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8013 7550 50  0001 C CNN
 F 3 "~" H 7975 7700 50  0001 C CNN
 F 4 "DNP" H 7975 7700 50  0000 C CNN "Population"
+F 5 "CAP CER 100PF 50V C0G/NPO 0402" H 7975 7700 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/yageo/CC0402JRNPO9BN101/311-1024-1-ND/302941" H 7975 7700 50  0001 C CNN "Link1"
+F 7 "CC0402JRNPO9BN101" H 7975 7700 50  0001 C CNN "MPN1"
+F 8 "$0.00346" H 7975 7700 50  0001 C CNN "Standard Price"
+F 9 "CAP CER 100PF 50V C0G/NPO 0402" H 7975 7700 50  0001 C CNN "Short Description"
 	1    7975 7700
 	1    0    0    -1  
 $EndComp
@@ -7162,6 +7230,7 @@ F 5 "CAP CER 10UF 6.3V X5R 0603" H 8800 8000 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A106MQ8NNNC/1276-1119-1-ND/3889205" H 8800 8000 50  0001 C CNN "Link1"
 F 7 "CL10A106MQ8NNNC" H 8800 8000 50  0001 C CNN "MPN1"
 F 8 "$0.02215" H 8800 8000 50  0001 C CNN "Standard Price"
+F 9 "CAP CER 10UF 6.3V X5R 0603" H 8800 8000 50  0001 C CNN "Short Description"
 	1    8800 8000
 	1    0    0    -1  
 $EndComp
@@ -7191,6 +7260,7 @@ F 6 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A10
 F 7 "CL05A104MP5NNNC" H 4725 7750 50  0001 C CNN "MPN1"
 F 8 "$0.00315" H 4725 7750 50  0001 C CNN "Standard Price"
 F 9 "Samsung Electro-Mechanics" H 4725 7750 50  0001 C CNN "Vendor1"
+F 10 "CAP CER 0.1UF 10V X5R 0402" H 4725 7750 50  0001 C CNN "Short Description"
 	1    4725 7750
 	1    0    0    -1  
 $EndComp
@@ -7238,51 +7308,63 @@ Wire Wire Line
 Text HLabel 1475 2675 0    98   Input ~ 0
 V_USB
 Wire Wire Line
-	7000 2925 8275 2925
+	7000 2925 8900 2925
 Wire Wire Line
-	8275 2500 8275 2925
-Connection ~ 8275 2000
+	8900 2500 8900 2925
+Connection ~ 8900 2000
 Wire Wire Line
-	8275 2000 8275 2200
+	8900 2000 8900 2200
 Wire Wire Line
-	7900 2000 8275 2000
-Connection ~ 7900 2000
+	8400 2000 8900 2000
+Connection ~ 8400 2000
 Wire Wire Line
-	7900 2175 7900 2000
+	8400 2175 8400 2000
 Wire Wire Line
-	7900 2000 7575 2000
-Connection ~ 7575 2000
+	8400 2000 7850 2000
+Connection ~ 7850 2000
 Wire Wire Line
-	7575 2175 7575 2000
+	7850 2175 7850 2000
 Wire Wire Line
-	7900 2475 7900 2675
+	8400 2475 8400 2700
 Wire Wire Line
-	7575 2675 7900 2675
+	7850 2700 8400 2700
 Wire Wire Line
-	7175 2675 7575 2675
-Connection ~ 7575 2675
+	7175 2700 7850 2700
+Connection ~ 7850 2700
 Wire Wire Line
-	7575 2675 7575 2475
+	7850 2700 7850 2475
 $Comp
 L Device:C C1006
 U 1 1 5D0AD618
-P 7900 2325
-F 0 "C1006" H 8015 2371 50  0000 L CNN
-F 1 "C" H 8015 2280 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7938 2175 50  0001 C CNN
-F 3 "~" H 7900 2325 50  0001 C CNN
-	1    7900 2325
+P 8400 2325
+F 0 "C1006" H 8515 2371 50  0000 L CNN
+F 1 "10 uF" H 8515 2280 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8438 2175 50  0001 C CNN
+F 3 "~" H 8400 2325 50  0001 C CNN
+F 4 "CAP CER 10UF 10V X5R 0402" H 8400 2325 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A106MP8NUB8/1276-6830-1-ND/5961689" H 8400 2325 50  0001 C CNN "Link1"
+F 6 "CL05A106MP8NUB8" H 8400 2325 50  0001 C CNN "MPN1"
+F 7 "$0.09000" H 8400 2325 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 8400 2325 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 10UF 10V X5R 0402" H 8400 2325 50  0001 C CNN "Short Description"
+	1    8400 2325
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C1004
 U 1 1 5D0AD216
-P 7575 2325
-F 0 "C1004" H 7690 2371 50  0000 L CNN
-F 1 "C" H 7690 2280 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 7613 2175 50  0001 C CNN
-F 3 "~" H 7575 2325 50  0001 C CNN
-	1    7575 2325
+P 7850 2325
+F 0 "C1004" H 7965 2371 50  0000 L CNN
+F 1 "2.2 uF" H 7965 2280 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7888 2175 50  0001 C CNN
+F 3 "~" H 7850 2325 50  0001 C CNN
+F 4 "CAP CER 2.2UF 10V X5R 0402" H 7850 2325 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/taiyo-yuden/LMK105BJ225MV-F/587-3153-1-ND/2774767" H 7850 2325 50  0001 C CNN "Link1"
+F 6 "LMK105BJ225MV-F" H 7850 2325 50  0001 C CNN "MPN1"
+F 7 "$0.01210" H 7850 2325 50  0001 C CNN "Standard Price"
+F 8 "Taiyo Yuden" H 7850 2325 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 2.2UF 10V X5R 0402" H 7850 2325 50  0001 C CNN "Short Description"
+	1    7850 2325
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -7310,12 +7392,13 @@ $EndComp
 $Comp
 L Device:R R1013
 U 1 1 5D0A6EF0
-P 8275 2350
-F 0 "R1013" H 8345 2396 50  0000 L CNN
-F 1 "R" H 8345 2305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 8205 2350 50  0001 C CNN
-F 3 "~" H 8275 2350 50  0001 C CNN
-	1    8275 2350
+P 8900 2350
+F 0 "R1013" H 8970 2396 50  0000 L CNN
+F 1 "1 MEG" H 8970 2305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8830 2350 50  0001 C CNN
+F 3 "~" H 8900 2350 50  0001 C CNN
+F 4 "DNP" H 9075 2225 50  0000 C CNN "Population"
+	1    8900 2350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -7323,16 +7406,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0131
 U 1 1 5D0A6220
-P 7175 2700
-F 0 "#PWR0131" H 7175 2450 50  0001 C CNN
-F 1 "GND" H 7180 2527 50  0000 C CNN
-F 2 "" H 7175 2700 50  0001 C CNN
-F 3 "" H 7175 2700 50  0001 C CNN
-	1    7175 2700
+P 7175 2725
+F 0 "#PWR0131" H 7175 2475 50  0001 C CNN
+F 1 "GND" H 7180 2552 50  0000 C CNN
+F 2 "" H 7175 2725 50  0001 C CNN
+F 3 "" H 7175 2725 50  0001 C CNN
+	1    7175 2725
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7175 2350 7175 2375
+	7175 2350 7175 2400
 Wire Wire Line
 	6750 2350 7175 2350
 $Comp
@@ -7350,6 +7433,7 @@ F 5 "IC REG BOOST 3.3V 1.5A 10VSON" H 6250 2400 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/texas-instruments/TPS61025DRCR/296-15844-1-ND/600559" H 6250 2400 50  0001 C CNN "Link1"
 F 7 "TPS61025DRCR" H 6250 2400 50  0001 C CNN "MPN1"
 F 8 "Texas Instruments" H 6250 2400 50  0001 C CNN "Vendor1"
+F 9 "IC REG BOOST 3.3V 1.5A 10VSON" H 6250 2400 50  0001 C CNN "Short Description"
 	1    6250 2400
 	1    0    0    -1  
 $EndComp
@@ -7357,7 +7441,7 @@ Connection ~ 7175 2350
 Wire Wire Line
 	7175 2300 7175 2350
 Wire Wire Line
-	7175 2000 7575 2000
+	7175 2000 7850 2000
 Wire Wire Line
 	6750 2000 7175 2000
 Connection ~ 7175 2000
@@ -7366,26 +7450,38 @@ L Device:R R1009
 U 1 1 5D09B4F2
 P 7175 2150
 F 0 "R1009" H 7245 2196 50  0000 L CNN
-F 1 "R" H 7245 2105 50  0000 L CNN
+F 1 "10K" H 7245 2105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7105 2150 50  0001 C CNN
 F 3 "~" H 7175 2150 50  0001 C CNN
+F 4 "DNP" H 7325 2025 50  0000 C CNN "Population"
+F 5 "RES SMD 10K OHM 5% 1/16W 0402" H 7175 2150 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 7175 2150 50  0001 C CNN "Link1"
+F 7 "RC0402JR-0710KL" H 7175 2150 50  0001 C CNN "MPN1"
+F 8 "$0.00139" H 7175 2150 50  0001 C CNN "Standard Price"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 7175 2150 50  0001 C CNN "Short Description"
 	1    7175 2150
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R1010
 U 1 1 5D09B4FC
-P 7175 2525
-F 0 "R1010" H 7245 2571 50  0000 L CNN
-F 1 "R" H 7245 2480 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7105 2525 50  0001 C CNN
-F 3 "~" H 7175 2525 50  0001 C CNN
-	1    7175 2525
+P 7175 2550
+F 0 "R1010" H 7245 2596 50  0000 L CNN
+F 1 "10K" H 7245 2505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7105 2550 50  0001 C CNN
+F 3 "~" H 7175 2550 50  0001 C CNN
+F 4 "DNP" H 7325 2425 50  0000 C CNN "Population"
+F 5 "RES SMD 10K OHM 5% 1/16W 0402" H 7175 2550 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 7175 2550 50  0001 C CNN "Link1"
+F 7 "RC0402JR-0710KL" H 7175 2550 50  0001 C CNN "MPN1"
+F 8 "$0.00139" H 7175 2550 50  0001 C CNN "Standard Price"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 7175 2550 50  0001 C CNN "Short Description"
+	1    7175 2550
 	1    0    0    -1  
 $EndComp
-Connection ~ 7175 2675
+Connection ~ 7175 2700
 Wire Wire Line
-	7175 2675 7175 2700
+	7175 2700 7175 2725
 Wire Wire Line
 	5225 2200 5225 2100
 Wire Wire Line
@@ -7403,8 +7499,9 @@ F 3 "~" H 5425 2200 50  0001 C CNN
 F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5425 2200 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5425 2200 50  0001 C CNN "Link1"
 F 6 "RMCF0402ZT0R00" H 5425 2200 50  0001 C CNN "MPN1"
-F 7 "$0.00127	" H 5425 2200 50  0001 C CNN "Standard Price"
+F 7 "$0.00127" H 5425 2200 50  0001 C CNN "Standard Price"
 F 8 "Stackpole Electronics Inc" H 5425 2200 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5425 2200 50  0001 C CNN "Short Description"
 	1    5425 2200
 	0    1    1    0   
 $EndComp
@@ -7474,9 +7571,15 @@ L Device:R R1003
 U 1 1 5D08B301
 P 4975 2725
 F 0 "R1003" H 5045 2771 50  0000 L CNN
-F 1 "R" H 5045 2680 50  0000 L CNN
+F 1 "390K" H 5045 2680 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4905 2725 50  0001 C CNN
 F 3 "~" H 4975 2725 50  0001 C CNN
+F 4 "RES SMD 390K OHM 1% 1/16W 0402" H 4975 2725 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-07390KL/YAG3143CT-ND/5282008" H 4975 2725 50  0001 C CNN "Link1"
+F 6 "RC0402FR-07390KL" H 4975 2725 50  0001 C CNN "MPN1"
+F 7 "$0.00170" H 4975 2725 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 4975 2725 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 390K OHM 1% 1/16W 0402" H 4975 2725 50  0001 C CNN "Short Description"
 	1    4975 2725
 	1    0    0    -1  
 $EndComp
@@ -7485,9 +7588,15 @@ L Device:R R1002
 U 1 1 5D08AFE4
 P 4975 2300
 F 0 "R1002" H 5045 2346 50  0000 L CNN
-F 1 "R" H 5045 2255 50  0000 L CNN
+F 1 "200K" H 5045 2255 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4905 2300 50  0001 C CNN
 F 3 "~" H 4975 2300 50  0001 C CNN
+F 4 "RES SMD 200K OHM 1% 1/16W 0402" H 4975 2300 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402FR-07200KL/311-200KLRCT-ND/729505" H 4975 2300 50  0001 C CNN "Link1"
+F 6 "RC0402FR-07200KL" H 4975 2300 50  0001 C CNN "MPN1"
+F 7 "$0.00170" H 4975 2300 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 4975 2300 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 200K OHM 1% 1/16W 0402" H 4975 2300 50  0001 C CNN "Short Description"
 	1    4975 2300
 	1    0    0    -1  
 $EndComp
@@ -7496,9 +7605,15 @@ L Device:C C1001
 U 1 1 5D08ACDB
 P 4525 2325
 F 0 "C1001" H 4640 2371 50  0000 L CNN
-F 1 "C" H 4640 2280 50  0000 L CNN
+F 1 "10 uF" H 4640 2280 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4563 2175 50  0001 C CNN
 F 3 "~" H 4525 2325 50  0001 C CNN
+F 4 "CAP CER 10UF 10V X5R 0402" H 4525 2325 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A106MP8NUB8/1276-6830-1-ND/5961689" H 4525 2325 50  0001 C CNN "Link1"
+F 6 "CL05A106MP8NUB8" H 4525 2325 50  0001 C CNN "MPN1"
+F 7 "$0.09000" H 4525 2325 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 4525 2325 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 10UF 10V X5R 0402" H 4525 2325 50  0001 C CNN "Short Description"
 	1    4525 2325
 	1    0    0    -1  
 $EndComp
@@ -7507,9 +7622,15 @@ L pspice:INDUCTOR L1001
 U 1 1 5D08AA82
 P 5075 1950
 F 0 "L1001" H 5075 2165 50  0000 C CNN
-F 1 "6.8U" H 5075 2074 50  0000 C CNN
+F 1 "6.8 uH" H 5075 2074 50  0000 C CNN
 F 2 "leash:CDRH4D28" H 5075 1950 50  0001 C CNN
 F 3 "http://products.sumida.com/products/pdf/CDRH4D28.pdf" H 5075 1950 50  0001 C CNN
+F 4 "FIXED IND 6.8UH 1.12A 108.9 MOHM" H 5075 1950 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/sumida-america-components-inc/CDRH4D28NP-6R8NC/308-2188-1-ND/3946493" H 5075 1950 50  0001 C CNN "Link1"
+F 6 "CDRH4D28NP-6R8NC" H 5075 1950 50  0001 C CNN "MPN1"
+F 7 "$0.39100" H 5075 1950 50  0001 C CNN "Standard Price"
+F 8 "Sumida America Components Inc." H 5075 1950 50  0001 C CNN "Vendor1"
+F 9 "FIXED IND 6.8UH 1.12A 108.9 MOHM" H 5075 1950 50  0001 C CNN "Short Description"
 	1    5075 1950
 	1    0    0    -1  
 $EndComp
@@ -7531,7 +7652,7 @@ CONFIG 1: All power inputs go into 3V3 boost, ALT and USB go into the 5V boost\n
 Wire Wire Line
 	12825 2000 12825 3175
 Wire Wire Line
-	8275 2000 12825 2000
+	8900 2000 12825 2000
 $Comp
 L Device:R R1017
 U 1 1 5D2DBA70
@@ -7543,8 +7664,9 @@ F 3 "~" H 12825 3325 50  0001 C CNN
 F 4 "RES 0 OHM JUMPER 1/16W 0402" H 12825 3325 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 12825 3325 50  0001 C CNN "Link1"
 F 6 "RMCF0402ZT0R00" H 12825 3325 50  0001 C CNN "MPN1"
-F 7 "$0.00127	" H 12825 3325 50  0001 C CNN "Standard Price"
+F 7 "$0.00127" H 12825 3325 50  0001 C CNN "Standard Price"
 F 8 "Stackpole Electronics Inc" H 12825 3325 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 12825 3325 50  0001 C CNN "Short Description"
 	1    12825 3325
 	1    0    0    -1  
 $EndComp
@@ -7560,8 +7682,9 @@ F 4 "DNP" H 12895 5484 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 12825 5575 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 12825 5575 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 12825 5575 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 12825 5575 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 12825 5575 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 12825 5575 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 12825 5575 50  0001 C CNN "Short Description"
 	1    12825 5575
 	1    0    0    -1  
 $EndComp
@@ -7596,31 +7719,31 @@ Text Label 9300 7500 0    50   ~ 0
 3V3_BUCK_VOUT
 Text Label 10525 2000 0    50   ~ 0
 3V3_BOOST_VOUT
-Text Label 8200 4775 0    50   ~ 0
+Text Label 8775 4775 0    50   ~ 0
 5V_BOOST_VOUT
 Text Label 3775 7500 0    50   ~ 0
 5V_BOOST_VOUT
 $Comp
 L Device:R R9
 U 1 1 5D38950B
-P 9250 4775
-F 0 "R9" H 9320 4866 50  0000 L CNN
-F 1 "0" H 9320 4775 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 9180 4775 50  0001 C CNN
-F 3 "~" H 9250 4775 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 9250 4775 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 9250 4775 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 9250 4775 50  0001 C CNN "MPN1"
-F 7 "$0.00127	" H 9250 4775 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 9250 4775 50  0001 C CNN "Vendor1"
-	1    9250 4775
+P 9500 4775
+F 0 "R9" H 9570 4866 50  0000 L CNN
+F 1 "0" H 9570 4775 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9430 4775 50  0001 C CNN
+F 3 "~" H 9500 4775 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 9500 4775 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 9500 4775 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 9500 4775 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 9500 4775 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 9500 4775 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 9500 4775 50  0001 C CNN "Short Description"
+	1    9500 4775
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8475 4775 9100 4775
-Connection ~ 8475 4775
+	8725 4775 9350 4775
 Wire Wire Line
-	9400 4775 10000 4775
+	9650 4775 10000 4775
 $Comp
 L power:+5V #PWR0149
 U 1 1 5D3AF152
@@ -7665,8 +7788,9 @@ F 4 "DNP" H 2670 3334 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 2600 3425 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 2600 3425 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 2600 3425 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 2600 3425 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 2600 3425 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 2600 3425 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 2600 3425 50  0001 C CNN "Short Description"
 	1    2600 3425
 	1    0    0    -1  
 $EndComp
@@ -7711,6 +7835,7 @@ F 6 "N/A" H 2825 2100 50  0001 C CNN "MPN1"
 F 7 "DNP" H 2825 2100 50  0001 C CNN "Population"
 F 8 "0" H 2825 2100 50  0001 C CNN "Standard Price"
 F 9 "N/A" H 2825 2100 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 2825 2100 50  0001 C CNN "Short Description"
 	1    2825 2100
 	1    0    0    -1  
 $EndComp
@@ -7728,6 +7853,7 @@ F 6 "N/A" H 2825 2375 50  0001 C CNN "MPN1"
 F 7 "DNP" H 2825 2375 50  0001 C CNN "Population"
 F 8 "0" H 2825 2375 50  0001 C CNN "Standard Price"
 F 9 "N/A" H 2825 2375 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 2825 2375 50  0001 C CNN "Short Description"
 	1    2825 2375
 	1    0    0    -1  
 $EndComp
@@ -7745,6 +7871,7 @@ F 6 "N/A" H 2825 2675 50  0001 C CNN "MPN1"
 F 7 "DNP" H 2825 2675 50  0001 C CNN "Population"
 F 8 "0" H 2825 2675 50  0001 C CNN "Standard Price"
 F 9 "N/A" H 2825 2675 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 2825 2675 50  0001 C CNN "Short Description"
 	1    2825 2675
 	1    0    0    -1  
 $EndComp
@@ -7762,6 +7889,7 @@ F 6 "N/A" H 2475 3900 50  0001 C CNN "MPN1"
 F 7 "DNP" H 2475 3900 50  0001 C CNN "Population"
 F 8 "0" H 2475 3900 50  0001 C CNN "Standard Price"
 F 9 "N/A" H 2475 3900 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 2475 3900 50  0001 C CNN "Short Description"
 	1    2475 3900
 	0    1    1    0   
 $EndComp
@@ -7781,6 +7909,7 @@ F 6 "N/A" H 2325 4200 50  0001 C CNN "MPN1"
 F 7 "DNP" H 2325 4200 50  0001 C CNN "Population"
 F 8 "0" H 2325 4200 50  0001 C CNN "Standard Price"
 F 9 "N/A" H 2325 4200 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 2325 4200 50  0001 C CNN "Short Description"
 	1    2325 4200
 	0    1    1    0   
 $EndComp
@@ -7812,10 +7941,14 @@ F 0 "SW801" H 1925 5575 50  0000 C CNN
 F 1 "SW_SPDT" H 1925 5666 50  0000 C CNN
 F 2 "leash:K3-1293S-E2" H 1925 5900 50  0001 C CNN
 F 3 "https://datasheet.lcsc.com/szlcsc/Korean-Hroparts-Elec-K3-1293S-E2_C145852.pdf" H 1925 5900 50  0001 C CNN
-F 4 "K3-1293S-E2" H 1925 5900 50  0001 C CNN "MPN1"
+F 4 "JS102011SAQN" H 1925 5900 50  0001 C CNN "MPN1"
 F 5 "DNP" H 1925 5900 50  0001 C CNN "Population"
-F 6 "https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-K3-1293S-E2_C145852.html" H 1925 5900 50  0001 C CNN "Link1"
-F 7 "Alt #: JS102011SAQN" H 1925 5900 50  0001 C CNN "Value modifier"
+F 6 "https://www.digikey.com/product-detail/en/c-k/JS102011SAQN/401-1999-2-ND/1640095" H 1925 5900 50  0001 C CNN "Link1"
+F 7 "C&K" H 1925 5900 50  0001 C CNN "Vendor1"
+F 8 "SWITCH SLIDE SPDT 300MA 6V" H 1925 5900 50  0001 C CNN "Description"
+F 9 "https://lcsc.com/product-detail/Toggle-Switches_Korean-Hroparts-Elec-K3-1293S-E2_C145852.html" H 1925 5900 50  0001 C CNN "Link2"
+F 10 "K3-1293S-E2" H 1925 5900 50  0001 C CNN "MPN2"
+F 11 "SWITCH SLIDE SPDT 300MA 6V" H 1925 5900 50  0001 C CNN "Short Description"
 	1    1925 5900
 	-1   0    0    -1  
 $EndComp
@@ -7854,8 +7987,9 @@ F 4 "DNP" H 1320 5309 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 1250 5400 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1250 5400 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 1250 5400 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 1250 5400 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 1250 5400 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 1250 5400 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 1250 5400 50  0001 C CNN "Short Description"
 	1    1250 5400
 	0    1    1    0   
 $EndComp
@@ -7884,8 +8018,9 @@ F 4 "DNP" H 3845 5459 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 3775 5550 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3775 5550 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 3775 5550 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 3775 5550 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 3775 5550 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 3775 5550 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 3775 5550 50  0001 C CNN "Short Description"
 	1    3775 5550
 	-1   0    0    1   
 $EndComp
@@ -7903,8 +8038,9 @@ F 4 "DNP" H 4395 5484 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 4325 5575 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4325 5575 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 4325 5575 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 4325 5575 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 4325 5575 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 4325 5575 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 4325 5575 50  0001 C CNN "Short Description"
 	1    4325 5575
 	-1   0    0    1   
 $EndComp
@@ -7924,8 +8060,9 @@ F 4 "DNP" H 5895 4434 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 5825 4525 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5825 4525 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 5825 4525 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 5825 4525 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 5825 4525 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 5825 4525 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 5825 4525 50  0001 C CNN "Short Description"
 	1    5825 4525
 	-1   0    0    1   
 $EndComp
@@ -7945,9 +8082,12 @@ Wire Wire Line
 	4575 4875 4725 4875
 Text Notes 5875 4300 0    50   ~ 0
 Optional pull up resistor\nto change to default on \nbehavior
-Connection ~ 8275 2925
+Connection ~ 8900 2925
 Wire Wire Line
-	8275 2925 10025 2925
+	8900 2925 10025 2925
 Text HLabel 10025 2925 2    118  Input ~ 0
 3v3_CTRL
+Wire Wire Line
+	8250 4775 8725 4775
+Connection ~ 8725 4775
 $EndSCHEMATC

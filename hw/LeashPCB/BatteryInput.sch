@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 2 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -42,6 +42,7 @@ F 5 "BATT CONTACT SOLID MULTI SMD TAB" H 4025 3725 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/1076-1/36-1076-1-ND/8347182" H 4025 3725 50  0001 C CNN "Link1"
 F 7 "1076-1" H 4025 3725 50  0001 C CNN "MPN1"
 F 8 "Keystone Electronics" H 4025 3725 50  0001 C CNN "Vendor1"
+F 9 "BATT CONTACT SOLID MULTI SMD TAB" H 4025 3725 50  0001 C CNN "Short Description"
 	1    4025 3725
 	0    -1   -1   0   
 $EndComp
@@ -575,6 +576,7 @@ F 5 "BATTERY CONTACT SPRING MULTI SMD" H 4025 1975 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/1020-1/36-1020-1-ND/5118841" H 4025 1975 50  0001 C CNN "Link1"
 F 7 "1020-1" H 4025 1975 50  0001 C CNN "MPN1"
 F 8 "Keystone Electronics" H 4025 1975 50  0001 C CNN "Vendor1"
+F 9 "BATTERY CONTACT SPRING MULTI SMD" H 4025 1975 50  0001 C CNN "Short Description"
 	1    4025 1975
 	0    1    1    0   
 $EndComp
@@ -595,6 +597,7 @@ F 5 "https://www.digikey.com/product-detail/en/diodes-incorporated/D20V0L1B2LP-7
 F 6 "D20V0L1B2LP-7B" H 5900 2525 50  0001 C CNN "MPN1"
 F 7 "$0.03400" H 5900 2525 50  0001 C CNN "Standard Price"
 F 8 "Diodes Incorporated" H 5900 2525 50  0001 C CNN "Vendor1"
+F 9 "TVS DIODE 20V 34V DFN1006-2" H 5900 2525 50  0001 C CNN "Short Description"
 	1    5900 2525
 	0    1    1    0   
 $EndComp
@@ -611,6 +614,7 @@ F 5 "https://www.digikey.com/product-detail/en/yageo/CC0402JRNPO9BN101/311-1024-
 F 6 "CC0402JRNPO9BN101" H 6550 2525 50  0001 C CNN "MPN1"
 F 7 "$0.00346" H 6550 2525 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 6550 2525 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 100PF 50V C0G/NPO 0402" H 6550 2525 50  0001 C CNN "Short Description"
 	1    6550 2525
 	1    0    0    -1  
 $EndComp
@@ -627,6 +631,7 @@ F 5 "https://www.digikey.com/product-detail/en/taiyo-yuden/LMK105BJ225MV-F/587-3
 F 6 "LMK105BJ225MV-F" H 7450 3500 50  0001 C CNN "MPN1"
 F 7 "$0.01210" H 7450 3500 50  0001 C CNN "Standard Price"
 F 8 "Taiyo Yuden" H 7450 3500 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 2.2UF 10V X5R 0402" H 7450 3500 50  0001 C CNN "Short Description"
 	1    7450 3500
 	1    0    0    -1  
 $EndComp
@@ -643,6 +648,7 @@ F 5 "https://www.digikey.com/product-detail/en/texas-instruments/LM74610QDGKRQ1/
 F 6 "Texas Instruments" H 8525 3125 50  0001 C CNN "Vendor1"
 F 7 "0.23" H 8525 3125 50  0001 C CNN "Standard Price"
 F 8 "IC SMART DIODE CTLR 8VSSOP" H 8525 3125 50  0001 C CNN "Description"
+F 9 "IC SMART DIODE CTLR 8VSSOP" H 8525 3125 50  0001 C CNN "Short Description"
 	1    8525 3125
 	1    0    0    -1  
 $EndComp
@@ -666,6 +672,7 @@ F 4 "CAP CER 10UF 6.3V X5R 0603" H 10475 2525 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL10A106MQ8NNNC/1276-1119-1-ND/3889205" H 10475 2525 50  0001 C CNN "Link1"
 F 6 "CL10A106MQ8NNNC" H 10475 2525 50  0001 C CNN "MPN1"
 F 7 "$0.02215" H 10475 2525 50  0001 C CNN "Standard Price"
+F 8 "CAP CER 10UF 6.3V X5R 0603" H 10475 2525 50  0001 C CNN "Short Description"
 	1    10475 2525
 	1    0    0    -1  
 $EndComp
@@ -707,8 +714,12 @@ F 0 "Q201" V 8718 1875 50  0000 C CNN
 F 1 "CSD18501Q5A" V 8627 1875 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TDSON-8-1" H 8575 1800 50  0001 L CIN
 F 3 "http://www.ti.com/lit/gpn/csd18501q5a" V 8375 1875 50  0001 L CNN
-F 4 "0.16" H 8375 1875 50  0001 C CNN "Standard Price"
+F 4 "$0.16" H 8375 1875 50  0001 C CNN "Standard Price"
 F 5 "CSD18501Q5A" H 8375 1875 50  0001 C CNN "MPN1"
+F 6 "MOSFET N-CH 40V 8SON" H 8375 1875 50  0001 C CNN "Description"
+F 7 "https://www.digikey.com/product-detail/en/texas-instruments/CSD18501Q5A/296-30570-1-ND/3478030" H 8375 1875 50  0001 C CNN "Link1"
+F 8 "Texas Instruments" H 8375 1875 50  0001 C CNN "Vendor1"
+F 9 "MOSFET N-CH 40V 8SON" H 8375 1875 50  0001 C CNN "Short Description"
 	1    8375 1875
 	0    1    -1   0   
 $EndComp
@@ -756,8 +767,9 @@ F 3 "~" H 12775 1775 50  0001 C CNN
 F 4 "RES 0 OHM JUMPER 1/16W 0402" H 12775 1775 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 12775 1775 50  0001 C CNN "Link1"
 F 6 "RMCF0402ZT0R00" H 12775 1775 50  0001 C CNN "MPN1"
-F 7 "$0.00127	" H 12775 1775 50  0001 C CNN "Standard Price"
+F 7 "$0.00127" H 12775 1775 50  0001 C CNN "Standard Price"
 F 8 "Stackpole Electronics Inc" H 12775 1775 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 12775 1775 50  0001 C CNN "Short Description"
 	1    12775 1775
 	0    1    1    0   
 $EndComp
@@ -779,6 +791,7 @@ F 6 "https://www.digikey.com/product-detail/en/keystone-electronics/1076-1/36-10
 F 7 "1076-1" H 3325 3725 50  0001 C CNN "MPN1"
 F 8 "DNP" H 3325 3725 50  0001 C CNN "Population"
 F 9 "Keystone Electronics" H 3325 3725 50  0001 C CNN "Vendor1"
+F 10 "BATT CONTACT SOLID MULTI SMD TAB" H 3325 3725 50  0001 C CNN "Short Description"
 	1    3325 3725
 	0    -1   -1   0   
 $EndComp
@@ -805,8 +818,9 @@ F 4 "DNP" V 8250 1075 50  0000 L CNN "Population"
 F 5 "RES 0 OHM JUMPER 1/16W 0402" H 8350 1125 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 8350 1125 50  0001 C CNN "Link1"
 F 7 "RMCF0402ZT0R00" H 8350 1125 50  0001 C CNN "MPN1"
-F 8 "$0.00127	" H 8350 1125 50  0001 C CNN "Standard Price"
+F 8 "$0.00127" H 8350 1125 50  0001 C CNN "Standard Price"
 F 9 "Stackpole Electronics Inc" H 8350 1125 50  0001 C CNN "Vendor1"
+F 10 "RES 0 OHM JUMPER 1/16W 0402" H 8350 1125 50  0001 C CNN "Short Description"
 	1    8350 1125
 	0    1    1    0   
 $EndComp

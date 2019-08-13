@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 5 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -37,6 +37,7 @@ F 5 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 6 "SML-D12U1WT86" H 9000 5050 50  0001 C CNN "MPN1"
 F 7 "$0.03565" H 9000 5050 50  0001 C CNN "Standard Price"
 F 8 "Rohm Semiconductor" H 9000 5050 50  0001 C CNN "Vendor1"
+F 9 "LED RED DIFFUSED 1608 SMD" H 9000 5050 50  0001 C CNN "Short Description"
 	1    9000 5050
 	0    -1   -1   0   
 $EndComp
@@ -45,9 +46,15 @@ L Device:R R701
 U 1 1 5D1F2C92
 P 9000 5525
 F 0 "R701" H 9070 5571 50  0000 L CNN
-F 1 "R" H 9070 5480 50  0000 L CNN
+F 1 "1K" H 9070 5480 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8930 5525 50  0001 C CNN
 F 3 "~" H 9000 5525 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/16W 0402" H 9000 5525 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT-ND/729355" H 9000 5525 50  0001 C CNN "Link1"
+F 6 "RC0402JR-071KL" H 9000 5525 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 9000 5525 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 9000 5525 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1K OHM 5% 1/16W 0402" H 9000 5525 50  0001 C CNN "Short Description"
 	1    9000 5525
 	1    0    0    -1  
 $EndComp
@@ -79,6 +86,7 @@ F 5 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 6 "SML-D12U1WT86" H 9850 5050 50  0001 C CNN "MPN1"
 F 7 "$0.03565" H 9850 5050 50  0001 C CNN "Standard Price"
 F 8 "Rohm Semiconductor" H 9850 5050 50  0001 C CNN "Vendor1"
+F 9 "LED RED DIFFUSED 1608 SMD" H 9850 5050 50  0001 C CNN "Short Description"
 	1    9850 5050
 	0    -1   -1   0   
 $EndComp
@@ -87,9 +95,15 @@ L Device:R R704
 U 1 1 5D1F53B4
 P 9850 5525
 F 0 "R704" H 9920 5571 50  0000 L CNN
-F 1 "R" H 9920 5480 50  0000 L CNN
+F 1 "1K" H 9920 5480 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 9780 5525 50  0001 C CNN
 F 3 "~" H 9850 5525 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/16W 0402" H 9850 5525 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT-ND/729355" H 9850 5525 50  0001 C CNN "Link1"
+F 6 "RC0402JR-071KL" H 9850 5525 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 9850 5525 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 9850 5525 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1K OHM 5% 1/16W 0402" H 9850 5525 50  0001 C CNN "Short Description"
 	1    9850 5525
 	1    0    0    -1  
 $EndComp
@@ -121,6 +135,7 @@ F 5 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 6 "SML-D12U1WT86" H 10275 5050 50  0001 C CNN "MPN1"
 F 7 "$0.03565" H 10275 5050 50  0001 C CNN "Standard Price"
 F 8 "Rohm Semiconductor" H 10275 5050 50  0001 C CNN "Vendor1"
+F 9 "LED RED DIFFUSED 1608 SMD" H 10275 5050 50  0001 C CNN "Short Description"
 	1    10275 5050
 	0    -1   -1   0   
 $EndComp
@@ -129,9 +144,15 @@ L Device:R R705
 U 1 1 5D1F7863
 P 10275 5525
 F 0 "R705" H 10345 5571 50  0000 L CNN
-F 1 "R" H 10345 5480 50  0000 L CNN
+F 1 "1K" H 10345 5480 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 10205 5525 50  0001 C CNN
 F 3 "~" H 10275 5525 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/16W 0402" H 10275 5525 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT-ND/729355" H 10275 5525 50  0001 C CNN "Link1"
+F 6 "RC0402JR-071KL" H 10275 5525 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 10275 5525 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 10275 5525 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1K OHM 5% 1/16W 0402" H 10275 5525 50  0001 C CNN "Short Description"
 	1    10275 5525
 	1    0    0    -1  
 $EndComp
@@ -163,6 +184,7 @@ F 5 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 6 "SML-D12U1WT86" H 10725 5050 50  0001 C CNN "MPN1"
 F 7 "$0.03565" H 10725 5050 50  0001 C CNN "Standard Price"
 F 8 "Rohm Semiconductor" H 10725 5050 50  0001 C CNN "Vendor1"
+F 9 "LED RED DIFFUSED 1608 SMD" H 10725 5050 50  0001 C CNN "Short Description"
 	1    10725 5050
 	0    -1   -1   0   
 $EndComp
@@ -171,9 +193,15 @@ L Device:R R706
 U 1 1 5D1F7884
 P 10725 5525
 F 0 "R706" H 10795 5571 50  0000 L CNN
-F 1 "R" H 10795 5480 50  0000 L CNN
+F 1 "1K" H 10795 5480 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 10655 5525 50  0001 C CNN
 F 3 "~" H 10725 5525 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/16W 0402" H 10725 5525 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT-ND/729355" H 10725 5525 50  0001 C CNN "Link1"
+F 6 "RC0402JR-071KL" H 10725 5525 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 10725 5525 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 10725 5525 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1K OHM 5% 1/16W 0402" H 10725 5525 50  0001 C CNN "Short Description"
 	1    10725 5525
 	1    0    0    -1  
 $EndComp
@@ -232,9 +260,15 @@ L Device:R R702
 U 1 1 5D1F3B15
 P 8550 5525
 F 0 "R702" H 8620 5571 50  0000 L CNN
-F 1 "R" H 8620 5480 50  0000 L CNN
+F 1 "1K" H 8620 5480 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8480 5525 50  0001 C CNN
 F 3 "~" H 8550 5525 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/16W 0402" H 8550 5525 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT-ND/729355" H 8550 5525 50  0001 C CNN "Link1"
+F 6 "RC0402JR-071KL" H 8550 5525 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 8550 5525 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 8550 5525 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1K OHM 5% 1/16W 0402" H 8550 5525 50  0001 C CNN "Short Description"
 	1    8550 5525
 	1    0    0    -1  
 $EndComp
@@ -251,6 +285,7 @@ F 5 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12U1WT86/
 F 6 "SML-D12U1WT86" H 8550 5050 50  0001 C CNN "MPN1"
 F 7 "$0.03565" H 8550 5050 50  0001 C CNN "Standard Price"
 F 8 "Rohm Semiconductor" H 8550 5050 50  0001 C CNN "Vendor1"
+F 9 "LED RED DIFFUSED 1608 SMD" H 8550 5050 50  0001 C CNN "Short Description"
 	1    8550 5050
 	0    -1   -1   0   
 $EndComp

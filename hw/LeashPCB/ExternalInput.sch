@@ -6,8 +6,8 @@ $Descr B 17000 11000
 encoding utf-8
 Sheet 3 10
 Title "BeagleDust Leash PCB"
-Date "2019-07-22"
-Rev "1"
+Date "2019-08-12"
+Rev "A"
 Comp "Beagleboard.org"
 Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
@@ -29,6 +29,7 @@ F 5 "https://www.digikey.com/product-detail/en/jst-sales-america-inc/S2B-PH-SM4-
 F 6 "CONN HEADER SMD R/A 2POS 2MM" H 7500 4725 50  0001 C CNN "Description"
 F 7 "S2B-PH-SM4-TB(LF)(SN)" H 7500 4725 50  0001 C CNN "MPN1"
 F 8 "JST Sales America Inc." H 7500 4725 50  0001 C CNN "Vendor1"
+F 9 "CONN HEADER SMD R/A 2POS 2MM" H 7500 4725 50  0001 C CNN "Short Description"
 	1    7500 4725
 	1    0    0    -1  
 $EndComp
@@ -68,6 +69,7 @@ F 5 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAT54GWJ/1727-73
 F 6 "BAT54GWJ" H 8750 4725 50  0001 C CNN "MPN1"
 F 7 "$0.02037" H 8750 4725 50  0001 C CNN "Standard Price"
 F 8 "Nexperia USA Inc." H 8750 4725 50  0001 C CNN "Vendor1"
+F 9 "DIODE SCHOTTKY 30V 200MA SOD123" H 8750 4725 50  0001 C CNN "Short Description"
 	1    8750 4725
 	-1   0    0    1   
 $EndComp
