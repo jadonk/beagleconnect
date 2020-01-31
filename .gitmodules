@@ -1,0 +1,12 @@
+[submodule "sw/gbridge"]
+	path = sw/gbridge
+	url = https://github.com/friedtco/gbridge
+[submodule "sw/greybus"]
+	path = sw/greybus
+	url = https://github.com/friedtco/greybus
+[submodule "sw/manifesto"]
+	path = sw/manifesto
+	url = https://github.com/vaishnav98/manifesto
+[submodule "sw/pygbmodule"]
+	path = sw/pygbmodule
+	url = https://github.com/cfriedt/pygbmodule
