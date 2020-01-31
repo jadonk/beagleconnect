@@ -1,4 +1,4 @@
-16313660598003242
+16381703536417928
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -72890,129 +72890,325 @@ varistor SIOV
 0
 2
 2
-leash
-1016-1
+pc
+1042
+
+
+0
+2
+2
+pc
+1042-flat
+
+
+0
+2
+2
+pc
+1042-nopaste
+
+
+0
+2
+2
+pc
+2450AT43A100E
+
+
+0
+2
+2
+pc
+4881
 
 
 0
 1
 1
-leash
-1020-1
+pc
+7111S2015X02LF
 
 
 0
-1
-1
-leash
-1076-1
-
-
-0
-1
-1
-leash
-10118192-0001LF(MICRO-USB-B-AMPHENOL-FCI)
-
-
-0
-11
 6
-leash
+6
+pc
+156120M173000-Normal
+
+
+0
+4
+4
+pc
+156120M173000-Reverse
+
+
+0
+4
+4
+pc
+0955032641
+
+
+0
+6
+6
+pc
 A-1JB
 
 
 0
 4
 4
-leash
-CDRH4D28
+pc
+A2235-H
 
 
 0
-2
-2
-leash
-CP2102-QFN20
-
-
-0
-21
-21
-leash
-EVQ-P7A01P
+30
+30
+pc
+APTF1616LSEEZGKQBKC
 
 
 0
 4
-2
-leash
-K3-1293S-E2
+4
+pc
+ASMB-MTB1-0A3A2
+
+
+0
+4
+4
+pc
+B5B-ZR-SM4-TF(LF)(SN)
 
 
 0
 7
-3
-leash
+5
+pc
+BG96
+
+
+0
+102
+102
+pc
+BM04B-SRSS-TB
+
+
+0
+6
+4
+pc
+CCS811
+
+
+0
+11
+11
+pc
+DF23C-30DP-0.5V(92)
+
+
+0
+30
+30
+pc
+DF23C-30DS-0.5V(92)
+
+
+0
+30
+30
+pc
+DR127-100-R
+
+
+0
+2
+2
+pc
+Fiducial_40mil_Dia_80mil_Outer
+Circular Fiducial, 0.75mm bare copper top, 1.5mm keepout (Level B)
+fiducial
+0
+1
+0
+pc
+L80
+
+
+0
+12
+12
+pc
+LQM21
+
+
+0
+2
+2
+pc
+LTST-C19HE1WT
+
+
+0
+4
+4
+pc
 L_0806_2012Metric
 Inductor SMD 0806 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
 inductor
 0
 2
 2
-leash
-MX25R8035FZUIL0
+pc
+MIPEX04
 
 
 0
-9
-9
-leash
-MikroBus-SMD
+8
+8
+pc
+MIPEX04_NoCut
 
 
 0
-16
-16
-leash
+8
+8
+pc
+MountingHole_80mil
+Mounting Hole 3.2mm, no annular, M3
+mounting hole 3.2mm no annular m3
+0
+0
+0
+pc
+PJ-006A
+
+
+0
+3
+3
+pc
+PJ-044BH
+
+
+0
+3
+3
+pc
+PSD1040
+
+
+0
+3
+2
+pc
+Particle-e0
+
+
+0
+63
+63
+pc
+RJ45_OST_PJ012-8P8CX_Vertical
+RJ45 vertical connector http://www.on-shore.com/wp-content/uploads/2015/09/PJ012-8P8CX.pdf
+RJ45 PJ012
+0
+8
+8
+pc
+SGPC3
+
+
+0
+13
+7
+pc
+SHT31
+
+
+0
+17
+9
+pc
+SIM8050-6-0-14-01-A
+
+
+0
+15
+8
+pc
+SPH0645LM4H-B
+
+
+0
+6
+6
+pc
+SolderJumper-2_P1.3mm_SOLDER_TrianglePad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Triangular Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+pc
+TI_S-PVQFN-N16_EP2.14x2.14mm_ThermalVias
+QFN, 16 Pin (http://www.ti.com/lit/ds/symlink/msp430g2001.pdf#page=43), generated with kicad-footprint-generator ipc_noLead_generator.py
+QFN NoLead
+0
+31
+17
+pc
+TPS61240
+Plastic Small Outline No-Lead http://www.ti.com/lit/ml/mpds176e/mpds176e.pdf
+Plastic Small Outline No-Lead
+0
+9
+7
+pc
 TPS62821DLC
 
 
 0
 8
 8
-leash
+pc
 Tag-Connect
 
 
 0
 6
 6
-leash
-Tag-Connect-10
-
-
-0
-10
-10
-leash
+pc
 USB_10118193-0001LF
 
 
 0
 11
 6
-leash
-cc1352r_antenna
+pc
+USB_1051330011
 
 
 0
-3
+8
+8
+pc
+VLF3012AT-4R7MR74
+
+
+0
 2
-leash
-mikroBUS
+2
+pc
+VLP-500-F
 
 
 0
-16
-16
+0
+0
