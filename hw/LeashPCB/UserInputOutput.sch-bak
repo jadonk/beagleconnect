@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 6 10
+Sheet 5 9
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -20,7 +19,7 @@ U 1 1 5D565CF9
 P 7900 4825
 F 0 "SW2" H 7900 5060 50  0000 C CNN
 F 1 "SW_SPST" H 7900 4969 50  0000 C CNN
-F 2 "leash:EVQ-P7A01P" H 7900 4825 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 7900 4825 50  0001 C CNN
 F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 7900 4825 50  0001 C CNN
 F 4 "EVQ-P7A01P" H 7900 4825 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 7900 4825 50  0001 C CNN "Link1"
@@ -52,7 +51,7 @@ U 1 1 5D568EA2
 P 10125 4800
 F 0 "SW1" H 10125 5035 50  0000 C CNN
 F 1 "SW_SPST" H 10125 4944 50  0000 C CNN
-F 2 "leash:EVQ-P7A01P" H 10125 4800 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 10125 4800 50  0001 C CNN
 F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 10125 4800 50  0001 C CNN
 F 4 "EVQ-P7A01P" H 10125 4800 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 10125 4800 50  0001 C CNN "Link1"

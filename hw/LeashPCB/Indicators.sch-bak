@@ -1,10 +1,9 @@
 EESchema Schematic File Version 4
-LIBS:LeashPCB-cache
 EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 5 10
+Sheet 4 9
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"

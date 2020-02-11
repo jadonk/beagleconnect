@@ -1,3 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP Antenna_Dipole_Attach
+D Dipole antenna
+K dipole antenna
+F ~
+$ENDCMP
+#
 #End Doc Library
