@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 9 9
+Sheet 8 9
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -998,12 +998,8 @@ Text HLabel 1600 8825 0    50   Input ~ 0
 SCLK
 Wire Wire Line
 	1600 8825 2325 8825
-Text HLabel 1200 6250 2    50   Input ~ 0
+Text HLabel 1575 8525 0    50   Input ~ 0
 CS_MB1
-Wire Wire Line
-	1375 9650 1025 9650
-Text HLabel 1200 6175 2    50   Input ~ 0
-CS_MB2
 Text HLabel 5050 8125 2    50   Input ~ 0
 INT_MB2
 Wire Wire Line
@@ -1012,50 +1008,12 @@ Text HLabel 5050 8325 2    50   Input ~ 0
 INT_MB1
 Wire Wire Line
 	4025 8325 5050 8325
-Text HLabel 5050 8725 2    50   Input ~ 0
-MICRO_TX_MB1_RX
-Wire Wire Line
-	4025 8725 4575 8725
-Text HLabel 5050 8625 2    50   Input ~ 0
-MICRO_RX_MB1_TX
-Wire Wire Line
-	4025 8625 4675 8625
-Text HLabel 1600 8525 0    50   Input ~ 0
+Text HLabel 2075 5900 0    50   Input ~ 0
 PWM_MB1
-Text HLabel 1600 8425 0    50   Input ~ 0
-PWM_MB2
-Text HLabel 5050 8425 2    50   Input ~ 0
-MICRO_RX_MB2_TX
-Text HLabel 5050 8525 2    50   Input ~ 0
-MICRO_TX_MB2_RX
-Wire Wire Line
-	4025 8425 4325 8425
-Wire Wire Line
-	4025 8525 4325 8525
 Wire Wire Line
 	2825 5500 2075 5500
-Wire Wire Line
-	2825 5600 2075 5600
 Text HLabel 2075 5500 0    50   Input ~ 0
 AN_MB1
-Text HLabel 2075 5600 0    50   Input ~ 0
-AN_MB2
-Text HLabel 2075 5700 0    50   Input ~ 0
-2.4G_LED
-Text HLabel 2075 5800 0    50   Input ~ 0
-900MHz_LED
-Text HLabel 2075 5900 0    50   Input ~ 0
-Click1_LED
-Text HLabel 2075 6000 0    50   Input ~ 0
-Click2_LED
-Wire Wire Line
-	2075 5700 2825 5700
-Wire Wire Line
-	2825 5800 2075 5800
-Wire Wire Line
-	2075 5900 2825 5900
-Wire Wire Line
-	2075 6000 2825 6000
 Wire Wire Line
 	7550 6700 7550 7400
 Text Label 9950 2975 0    50   ~ 0
@@ -1068,12 +1026,8 @@ Text Label 9950 2525 0    50   ~ 0
 RF_2_4GHZ_N
 Wire Wire Line
 	9900 2525 10600 2525
-Text HLabel 6150 10125 2    50   Input ~ 0
-USER_BTN_2
 Wire Wire Line
 	5875 9925 5875 10125
-Wire Wire Line
-	5875 10125 6150 10125
 $Comp
 L LeashPCB:RF_UFL_SMD J2
 U 1 1 5D40296D
@@ -1141,13 +1095,6 @@ F 3 "" H 15750 1775 50  0001 C CNN
 	1    15750 1775
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1375 9575 1375 9650
-Connection ~ 1375 9650
-Wire Wire Line
-	1375 9650 1375 9700
-Text Notes 5725 9025 0    50   ~ 0
-Click standard is ambiguous about sharing serial lines
 Text HLabel 5050 8225 2    50   Input ~ 0
 RST_MB1
 Wire Wire Line
@@ -1156,40 +1103,6 @@ Text HLabel 1600 8125 0    50   Input ~ 0
 RST_MB2
 Wire Wire Line
 	1600 8125 2325 8125
-$Comp
-L Device:R R911
-U 1 1 5D62B256
-P 4475 8425
-F 0 "R911" V 4425 8225 50  0000 L CNN
-F 1 "0" V 4475 8400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8425 50  0001 C CNN
-F 3 "~" H 4475 8425 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8425 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4475 8425 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 4475 8425 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 4475 8425 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 4475 8425 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8425 50  0001 C CNN "Short Description"
-	1    4475 8425
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R913
-U 1 1 5D62B8DC
-P 4475 8525
-F 0 "R913" V 4425 8325 50  0000 L CNN
-F 1 "0" V 4475 8500 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8525 50  0001 C CNN
-F 3 "~" H 4475 8525 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8525 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4475 8525 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 4475 8525 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 4475 8525 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 4475 8525 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8525 50  0001 C CNN "Short Description"
-	1    4475 8525
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5875 10125 4450 10125
 $Comp
@@ -1217,12 +1130,6 @@ Text HLabel 1800 9375 0    50   Input ~ 0
 TMS
 Text HLabel 1800 9475 0    50   Input ~ 0
 TCK
-Text HLabel 875  9975 0    50   Input ~ 0
-~RESET
-Wire Wire Line
-	875  9975 1025 9975
-Wire Wire Line
-	1025 9650 1025 9975
 $Comp
 L power:VDD #PWR0158
 U 1 1 5D66692A
@@ -1247,78 +1154,50 @@ Wire Wire Line
 	5875 9575 6050 9575
 Wire Wire Line
 	5875 9625 5875 9575
-Connection ~ 5875 10125
-Wire Wire Line
-	2825 6100 2075 6100
-Text HLabel 2075 6100 0    50   Input ~ 0
-5V_EN
-Text Label 1925 9575 0    50   ~ 0
-~RESET
-Text HLabel 875  10175 0    50   Input ~ 0
-RST_BTN
-Wire Wire Line
-	875  10175 1025 10175
-Wire Wire Line
-	1025 10175 1025 9975
-Connection ~ 1025 9975
 $Comp
 L Device:R R1001
 U 1 1 5D4CBE10
-P 5225 9275
-F 0 "R1001" V 5175 9075 50  0000 L CNN
-F 1 "0" V 5225 9250 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5155 9275 50  0001 C CNN
-F 3 "~" H 5225 9275 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5225 9275 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5225 9275 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 5225 9275 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 5225 9275 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 5225 9275 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5225 9275 50  0001 C CNN "Short Description"
-	1    5225 9275
+P 5225 8625
+F 0 "R1001" V 5175 8425 50  0000 L CNN
+F 1 "0" V 5225 8600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5155 8625 50  0001 C CNN
+F 3 "~" H 5225 8625 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5225 8625 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5225 8625 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 5225 8625 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 5225 8625 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 5225 8625 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5225 8625 50  0001 C CNN "Short Description"
+	1    5225 8625
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R1019
 U 1 1 5D4E1629
-P 5225 9375
-F 0 "R1019" V 5175 9175 50  0000 L CNN
-F 1 "0" V 5225 9350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5155 9375 50  0001 C CNN
-F 3 "~" H 5225 9375 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5225 9375 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5225 9375 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 5225 9375 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 5225 9375 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 5225 9375 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5225 9375 50  0001 C CNN "Short Description"
-	1    5225 9375
+P 5225 8725
+F 0 "R1019" V 5175 8525 50  0000 L CNN
+F 1 "0" V 5225 8700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5155 8725 50  0001 C CNN
+F 3 "~" H 5225 8725 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5225 8725 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5225 8725 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 5225 8725 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 5225 8725 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 5225 8725 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5225 8725 50  0001 C CNN "Short Description"
+	1    5225 8725
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	5075 9275 4675 9275
-Wire Wire Line
-	4675 9275 4675 8625
-Connection ~ 4675 8625
-Wire Wire Line
-	5075 9375 4575 9375
-Wire Wire Line
-	4575 9375 4575 8725
-Connection ~ 4575 8725
-Text HLabel 5775 9275 2    50   Input ~ 0
+Text HLabel 5775 8625 2    50   Input ~ 0
 DEBUG_RX
-Text HLabel 5775 9375 2    50   Input ~ 0
+Text HLabel 5775 8725 2    50   Input ~ 0
 DEBUG_TX
 Wire Wire Line
-	5375 9375 5775 9375
+	5375 8725 5775 8725
 Wire Wire Line
-	5775 9275 5375 9275
-Text HLabel 6150 10225 2    50   Input ~ 0
-USER_BTN_1
+	5775 8625 5375 8625
 Wire Wire Line
 	5550 10025 5550 10225
-Wire Wire Line
-	5550 10225 6150 10225
 Wire Wire Line
 	5550 10225 4350 10225
 Text Label 5725 9675 2    50   ~ 0
@@ -1344,7 +1223,6 @@ F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 5550 9875 50  0001 C CNN "Short Descriptio
 	1    5550 9875
 	1    0    0    -1  
 $EndComp
-Connection ~ 5550 10225
 Wire Wire Line
 	4450 10125 4450 8825
 Wire Wire Line
@@ -1353,14 +1231,6 @@ Wire Wire Line
 	4350 10225 4350 8925
 Wire Wire Line
 	4350 8925 4025 8925
-Wire Wire Line
-	4625 8525 5050 8525
-Wire Wire Line
-	4625 8425 5050 8425
-Wire Wire Line
-	4675 8625 5050 8625
-Wire Wire Line
-	4575 8725 5050 8725
 $Comp
 L Device:R R901
 U 1 1 5E3E52ED
@@ -1517,9 +1387,7 @@ F 9 "CONN UMC JACK STR 50 OHM SMD" H 15850 1275 50  0001 C CNN "Short Descriptio
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1600 8425 2325 8425
-Wire Wire Line
-	1600 8525 2325 8525
+	2075 5900 2825 5900
 Wire Wire Line
 	14025 5175 14025 2925
 Wire Wire Line
@@ -1651,8 +1519,122 @@ F 8 "BALUN 862MHZ-928MHZ 0805" H 11975 2775 50  0001 C CNN "Short Description"
 $EndComp
 Text Label 8925 6150 2    50   ~ 0
 VDDS
+Connection ~ 5550 10225
+Connection ~ 5875 10125
 Wire Wire Line
 	8650 6150 11825 6150
 Wire Wire Line
 	11825 6150 11825 7000
+Text GLabel 6975 10225 2    79   Input ~ 0
+USER
+Wire Wire Line
+	5550 10225 6675 10225
+$Comp
+L Device:R R801
+U 1 1 5E6D2900
+P 6400 10125
+F 0 "R801" V 6350 9925 50  0000 L CNN
+F 1 "0" V 6400 10100 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 6330 10125 50  0001 C CNN
+F 3 "~" H 6400 10125 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 6400 10125 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 6400 10125 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 6400 10125 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 6400 10125 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 6400 10125 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 6400 10125 50  0001 C CNN "Short Description"
+	1    6400 10125
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6675 10125 6675 10225
+Wire Wire Line
+	5875 10125 6250 10125
+Wire Wire Line
+	6550 10125 6675 10125
+Connection ~ 6675 10225
+Wire Wire Line
+	6675 10225 6975 10225
+Wire Wire Line
+	4025 8425 4325 8425
+Wire Wire Line
+	4025 8525 4325 8525
+Text HLabel 5525 8425 2    50   Input ~ 0
+MICRO_RX_MB1_TX
+Text HLabel 5525 8525 2    50   Input ~ 0
+MICRO_TX_MB1_RX
+$Comp
+L Device:R R913
+U 1 1 5D62B8DC
+P 4475 8525
+F 0 "R913" V 4425 8325 50  0000 L CNN
+F 1 "0" V 4475 8500 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8525 50  0001 C CNN
+F 3 "~" H 4475 8525 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8525 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4475 8525 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 4475 8525 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 4475 8525 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 4475 8525 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8525 50  0001 C CNN "Short Description"
+	1    4475 8525
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R911
+U 1 1 5D62B256
+P 4475 8425
+F 0 "R911" V 4425 8225 50  0000 L CNN
+F 1 "0" V 4475 8400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8425 50  0001 C CNN
+F 3 "~" H 4475 8425 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8425 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4475 8425 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 4475 8425 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 4475 8425 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 4475 8425 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8425 50  0001 C CNN "Short Description"
+	1    4475 8425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4625 8525 5525 8525
+Wire Wire Line
+	4625 8425 5525 8425
+Wire Wire Line
+	4025 8625 5075 8625
+Wire Wire Line
+	4025 8725 5075 8725
+Wire Wire Line
+	1375 9575 1375 9675
+Text GLabel 7400 7400 0    79   Input ~ 0
+RESET_N
+Wire Wire Line
+	7400 7400 7550 7400
+Connection ~ 7550 7400
+Text GLabel 1150 9675 0    79   Input ~ 0
+RESET_N
+Wire Wire Line
+	1150 9675 1375 9675
+Connection ~ 1375 9675
+Wire Wire Line
+	1375 9675 1375 9700
+Wire Wire Line
+	1575 8525 2325 8525
+Text HLabel 2075 5700 0    50   Input ~ 0
+2.4G_LED
+Text HLabel 2075 5800 0    50   Input ~ 0
+900MHz_LED
+Wire Wire Line
+	2075 5700 2825 5700
+Wire Wire Line
+	2825 5800 2075 5800
+Text HLabel 2075 6000 0    50   Input ~ 0
+LED1
+Text HLabel 2075 6100 0    50   Input ~ 0
+LED2
+Wire Wire Line
+	2825 6000 2075 6000
+Wire Wire Line
+	2075 6100 2825 6100
 $EndSCHEMATC

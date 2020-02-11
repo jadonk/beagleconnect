@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 6 9
+Sheet 5 9
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -6809,7 +6809,7 @@ MSP430_TMS
 Wire Wire Line
 	4575 5575 4575 5525
 Wire Wire Line
-	4575 5525 5875 5525
+	4575 5525 5725 5525
 Wire Wire Line
 	3525 5575 4575 5575
 Text Label 3825 5575 0    50   ~ 0
@@ -6848,4 +6848,13 @@ Text Label 5425 6375 0    50   ~ 0
 D-
 Wire Wire Line
 	5400 3300 5400 3500
+Text GLabel 5525 5250 0    79   Input ~ 0
+RESET_N
+Wire Wire Line
+	5725 5250 5725 5525
+Wire Wire Line
+	5525 5250 5725 5250
+Connection ~ 5725 5525
+Wire Wire Line
+	5725 5525 5875 5525
 $EndSCHEMATC

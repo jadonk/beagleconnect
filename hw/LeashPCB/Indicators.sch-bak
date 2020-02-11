@@ -20,9 +20,9 @@ Text HLabel 7100 3375 0    98   Input ~ 0
 Text HLabel 7100 3675 0    98   Input ~ 0
 Power
 Text HLabel 7100 4300 0    98   Input ~ 0
-Click1
+LED1
 Text HLabel 7100 4625 0    98   Input ~ 0
-Click2
+LED2
 $Comp
 L Device:LED D701
 U 1 1 5D1F28D2
