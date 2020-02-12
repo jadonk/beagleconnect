@@ -13,16 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 7100 3075 0    98   Input ~ 0
-2.4G
-Text HLabel 7100 3375 0    98   Input ~ 0
-900MHz
-Text HLabel 7100 3675 0    98   Input ~ 0
-Power
-Text HLabel 7100 4300 0    98   Input ~ 0
-LED1
-Text HLabel 7100 4625 0    98   Input ~ 0
-LED2
 $Comp
 L Device:LED D701
 U 1 1 5D1F28D2
@@ -234,8 +224,6 @@ Wire Wire Line
 Wire Wire Line
 	10275 3375 10275 4900
 Wire Wire Line
-	7100 3075 10725 3075
-Wire Wire Line
 	10725 3075 10725 4900
 Wire Wire Line
 	8550 4625 8550 4900
@@ -288,4 +276,16 @@ F 9 "LED RED DIFFUSED 1608 SMD" H 8550 5050 50  0001 C CNN "Short Description"
 	1    8550 5050
 	0    -1   -1   0   
 $EndComp
+Text GLabel 7075 3075 0    63   Input ~ 0
+2.4G
+Text GLabel 7100 3375 0    63   Input ~ 0
+900M
+Text GLabel 7100 3675 0    63   Input ~ 0
+3V3
+Text GLabel 7100 4300 0    63   Input ~ 0
+LED1
+Text GLabel 7100 4625 0    63   Input ~ 0
+LED2
+Wire Wire Line
+	7075 3075 10725 3075
 $EndSCHEMATC

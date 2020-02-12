@@ -70,8 +70,6 @@ F 9 "RF IC'S + MODULES BLUETOOTH" H 3675 5900 50  0001 C CNN "Short Description"
 	4    3675 5900
 	1    0    0    -1  
 $EndComp
-Text HLabel 2100 825  0    79   Input ~ 0
-3V3
 $Comp
 L Device:L L6
 U 1 1 5D31B1B9
@@ -524,72 +522,10 @@ Text Label 5100 2575 0    50   ~ 0
 VDDS
 Text Label 4625 2675 0    50   ~ 0
 VDDS
-Text Label 3750 825  2    50   ~ 0
+Text Label 4125 825  2    50   ~ 0
 VDDS
 Wire Wire Line
-	3750 825  3425 825 
-Wire Wire Line
-	1800 9375 2325 9375
-Wire Wire Line
-	1800 9475 2325 9475
-$Comp
-L Device:C C29
-U 1 1 5D56353D
-P 1375 9850
-F 0 "C29" H 1260 9804 50  0000 R CNN
-F 1 "0.1 uF" H 1260 9895 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 1413 9700 50  0001 C CNN
-F 3 "~" H 1375 9850 50  0001 C CNN
-F 4 "CAP CER 0.1UF 10V X5R 0402" H 1375 9850 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 1375 9850 50  0001 C CNN "Link1"
-F 6 "CL05A104MP5NNNC" H 1375 9850 50  0001 C CNN "MPN1"
-F 7 "$0.00315" H 1375 9850 50  0001 C CNN "Standard Price"
-F 8 "Samsung Electro-Mechanics" H 1375 9850 50  0001 C CNN "Vendor1"
-F 9 "CAP CER 0.1UF 10V X5R 0402" H 1375 9850 50  0001 C CNN "Short Description"
-	1    1375 9850
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R8
-U 1 1 5D565748
-P 1375 9375
-F 0 "R8" H 1445 9421 50  0000 L CNN
-F 1 "100K" H 1445 9330 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1305 9375 50  0001 C CNN
-F 3 "~" H 1375 9375 50  0001 C CNN
-F 4 "RES SMD 100K OHM 5% 1/16W 0402" H 1375 9375 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363" H 1375 9375 50  0001 C CNN "Link1"
-F 6 "RC0402JR-07100KL" H 1375 9375 50  0001 C CNN "MPN1"
-F 7 "$0.00139" H 1375 9375 50  0001 C CNN "Standard Price"
-F 8 "Yageo" H 1375 9375 50  0001 C CNN "Vendor1"
-F 9 "RES SMD 100K OHM 5% 1/16W 0402" H 1375 9375 50  0001 C CNN "Short Description"
-	1    1375 9375
-	1    0    0    -1  
-$EndComp
-Text Label 1125 9125 0    50   ~ 0
-VDDS
-Wire Wire Line
-	1125 9125 1375 9125
-Wire Wire Line
-	1375 9125 1375 9225
-Wire Wire Line
-	1375 10000 1375 10175
-Wire Wire Line
-	1375 9525 1375 9575
-$Comp
-L power:GND #PWR0140
-U 1 1 5D56C591
-P 1375 10175
-F 0 "#PWR0140" H 1375 9925 50  0001 C CNN
-F 1 "GND" H 1380 10002 50  0000 C CNN
-F 2 "" H 1375 10175 50  0001 C CNN
-F 3 "" H 1375 10175 50  0001 C CNN
-	1    1375 10175
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1375 9575 2325 9575
-Connection ~ 1375 9575
+	4125 825  3725 825 
 $Comp
 L Device:C C20
 U 1 1 5D58F0FC
@@ -756,10 +692,6 @@ F 3 "" H 1975 2350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2325 9175 1800 9175
-Wire Wire Line
-	2325 9275 1800 9275
-Wire Wire Line
 	3325 3575 3325 3850
 $Comp
 L power:GND #PWR0144
@@ -790,10 +722,10 @@ F 9 "IC FLASH 8M SPI 33MHZ 8USON" H 9675 7500 50  0001 C CNN "Short Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R4
+L Device:R R809
 U 1 1 5D649BE8
 P 8650 6550
-F 0 "R4" H 8720 6596 50  0000 L CNN
+F 0 "R809" H 8720 6596 50  0000 L CNN
 F 1 "2.21K" H 8720 6505 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8580 6550 50  0001 C CNN
 F 3 "~" H 8650 6550 50  0001 C CNN
@@ -807,85 +739,81 @@ F 9 "RES SMD 2.21K OHM 1% 1/10W 0402" H 8650 6550 50  0001 C CNN "Short Descript
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R5
+L Device:R R810
 U 1 1 5D649EAA
-P 11350 7000
-F 0 "R5" V 11143 7000 50  0000 C CNN
-F 1 "0" V 11234 7000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 11280 7000 50  0001 C CNN
-F 3 "~" H 11350 7000 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 11350 7000 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 11350 7000 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 11350 7000 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 11350 7000 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 11350 7000 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 11350 7000 50  0001 C CNN "Short Description"
-	1    11350 7000
+P 11600 7000
+F 0 "R810" V 11393 7000 50  0000 C CNN
+F 1 "0" V 11484 7000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 11530 7000 50  0001 C CNN
+F 3 "~" H 11600 7000 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 11600 7000 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 11600 7000 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 11600 7000 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 11600 7000 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 11600 7000 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 11600 7000 50  0001 C CNN "Short Description"
+	1    11600 7000
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C28
+L Device:C C803
 U 1 1 5D64C426
-P 10850 7325
-F 0 "C28" H 10735 7279 50  0000 R CNN
-F 1 "0.1 uF" H 10735 7370 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 10888 7175 50  0001 C CNN
-F 3 "~" H 10850 7325 50  0001 C CNN
-F 4 "CAP CER 0.1UF 10V X5R 0402" H 10850 7325 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 10850 7325 50  0001 C CNN "Link1"
-F 6 "CL05A104MP5NNNC" H 10850 7325 50  0001 C CNN "MPN1"
-F 7 "$0.00315" H 10850 7325 50  0001 C CNN "Standard Price"
-F 8 "Samsung Electro-Mechanics" H 10850 7325 50  0001 C CNN "Vendor1"
-F 9 "CAP CER 0.1UF 10V X5R 0402" H 10850 7325 50  0001 C CNN "Short Description"
-	1    10850 7325
+P 11100 7325
+F 0 "C803" H 10985 7279 50  0000 R CNN
+F 1 "0.1 uF" H 10985 7370 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 11138 7175 50  0001 C CNN
+F 3 "~" H 11100 7325 50  0001 C CNN
+F 4 "CAP CER 0.1UF 10V X5R 0402" H 11100 7325 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 11100 7325 50  0001 C CNN "Link1"
+F 6 "CL05A104MP5NNNC" H 11100 7325 50  0001 C CNN "MPN1"
+F 7 "$0.00315" H 11100 7325 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 11100 7325 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 11100 7325 50  0001 C CNN "Short Description"
+	1    11100 7325
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	10325 7000 10850 7000
+	10325 7000 11100 7000
 Wire Wire Line
-	10850 7000 10850 7175
+	11100 7000 11100 7175
 Wire Wire Line
-	10850 7475 10850 7650
-Connection ~ 10850 7000
+	11100 7475 11100 7650
+Connection ~ 11100 7000
 Wire Wire Line
-	10850 7000 11200 7000
+	11100 7000 11450 7000
 $Comp
 L power:GND #PWR0145
 U 1 1 5D662136
-P 10850 7650
-F 0 "#PWR0145" H 10850 7400 50  0001 C CNN
-F 1 "GND" H 10855 7477 50  0000 C CNN
-F 2 "" H 10850 7650 50  0001 C CNN
-F 3 "" H 10850 7650 50  0001 C CNN
-	1    10850 7650
+P 11100 7650
+F 0 "#PWR0145" H 11100 7400 50  0001 C CNN
+F 1 "GND" H 11105 7477 50  0000 C CNN
+F 2 "" H 11100 7650 50  0001 C CNN
+F 3 "" H 11100 7650 50  0001 C CNN
+	1    11100 7650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10325 7250 10600 7250
+	10325 7250 10575 7250
 Wire Wire Line
 	9025 7200 8650 7200
-Text Label 8075 7200 0    50   ~ 0
+Text Label 8300 7200 0    50   ~ 0
 ~FLASH_CS
 Wire Wire Line
 	8650 6700 8650 7200
 Connection ~ 8650 7200
 Wire Wire Line
-	8650 7200 8075 7200
+	8650 7200 8300 7200
 Wire Wire Line
 	8650 6150 8650 6400
 Wire Wire Line
-	9025 7000 8075 7000
+	9025 7000 8300 7000
 Wire Wire Line
-	9025 7100 8075 7100
-Text Label 8075 7100 0    50   ~ 0
-SCLK
-Text Label 8075 7000 0    50   ~ 0
-MOSI
+	9025 7100 8300 7100
 $Comp
-L Device:R R3
+L Device:R R808
 U 1 1 5D6AB0E0
 P 7925 6550
-F 0 "R3" H 7995 6641 50  0000 L CNN
+F 0 "R808" H 7995 6641 50  0000 L CNN
 F 1 "2.21K" H 7995 6550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7855 6550 50  0001 C CNN
 F 3 "~" H 7925 6550 50  0001 C CNN
@@ -900,10 +828,10 @@ F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7925 6550 50  0001 C CNN "Short Descrip
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L Device:R R807
 U 1 1 5D6AB67B
 P 7550 6550
-F 0 "R2" H 7620 6641 50  0000 L CNN
+F 0 "R807" H 7620 6641 50  0000 L CNN
 F 1 "2.21K" H 7620 6550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7480 6550 50  0001 C CNN
 F 3 "~" H 7550 6550 50  0001 C CNN
@@ -953,71 +881,45 @@ F 3 "" H 8800 8000 50  0001 C CNN
 	1    8800 8000
 	1    0    0    -1  
 $EndComp
-Text Label 10600 7250 2    50   ~ 0
-MISO
 Wire Wire Line
 	2325 8925 1675 8925
 Text Label 1675 8925 0    50   ~ 0
 ~FLASH_CS
 Wire Wire Line
-	2100 825  2350 825 
+	1425 825  1600 825 
 $Comp
 L Device:R R1
 U 1 1 5D89CFDB
-P 2500 825
-F 0 "R1" V 2293 825 50  0000 C CNN
-F 1 "0R1" V 2384 825 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2430 825 50  0001 C CNN
-F 3 "~" H 2500 825 50  0001 C CNN
-F 4 "RES 0.1 OHM 1% 1/16W 0402" H 2500 825 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/yageo/RL0402FR-070R1L/311-.10PCT-ND/1037191" H 2500 825 50  0001 C CNN "Link1"
-F 6 "RL0402FR-070R1L" H 2500 825 50  0001 C CNN "MPN1"
-F 7 "$0.07041" H 2500 825 50  0001 C CNN "Standard Price"
-F 8 "Yageo" H 2500 825 50  0001 C CNN "Vendor1"
-F 9 "RES 0.1 OHM 1% 1/16W 0402" H 2500 825 50  0001 C CNN "Short Description"
-	1    2500 825 
+P 1975 825
+F 0 "R1" V 1768 825 50  0000 C CNN
+F 1 "0R1" V 1859 825 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1905 825 50  0001 C CNN
+F 3 "~" H 1975 825 50  0001 C CNN
+F 4 "RES 0.1 OHM 1% 1/16W 0402" H 1975 825 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RL0402FR-070R1L/311-.10PCT-ND/1037191" H 1975 825 50  0001 C CNN "Link1"
+F 6 "RL0402FR-070R1L" H 1975 825 50  0001 C CNN "MPN1"
+F 7 "$0.07041" H 1975 825 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 1975 825 50  0001 C CNN "Vendor1"
+F 9 "RES 0.1 OHM 1% 1/16W 0402" H 1975 825 50  0001 C CNN "Short Description"
+	1    1975 825 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2650 825  2950 825 
+	2125 825  2300 825 
 Text Notes 2075 1100 0    50   ~ 0
 Optional sense resistor for \npower measurement
-Text HLabel 1600 8225 0    50   Input ~ 0
-SCL
-Text HLabel 1600 8325 0    50   Input ~ 0
-SDA
 Wire Wire Line
 	1600 8325 2325 8325
 Wire Wire Line
 	1600 8225 2325 8225
-Text HLabel 1600 8625 0    50   Input ~ 0
-MISO
 Wire Wire Line
 	1600 8625 2325 8625
 Wire Wire Line
 	1600 8725 2325 8725
-Text HLabel 1600 8725 0    50   Input ~ 0
-MOSI
-Text HLabel 1600 8825 0    50   Input ~ 0
-SCLK
 Wire Wire Line
 	1600 8825 2325 8825
-Text HLabel 2050 7400 0    50   Input ~ 0
-CS_MB1
-Text HLabel 5050 8125 2    50   Input ~ 0
-INT_MB2
-Wire Wire Line
-	4025 8125 5050 8125
-Text HLabel 5050 8325 2    50   Input ~ 0
-INT_MB1
-Wire Wire Line
-	4025 8325 5050 8325
-Text HLabel 1600 8525 0    50   Input ~ 0
-PWM_MB1
 Wire Wire Line
 	2825 5500 2075 5500
-Text HLabel 2075 5500 0    50   Input ~ 0
-AN_MB1
 Wire Wire Line
 	7550 6700 7550 7400
 Text Label 9950 2975 0    50   ~ 0
@@ -1097,12 +999,6 @@ F 3 "" H 15750 1775 50  0001 C CNN
 	1    15750 1775
 	-1   0    0    -1  
 $EndComp
-Text HLabel 5050 8225 2    50   Input ~ 0
-RST_MB1
-Wire Wire Line
-	5050 8225 4025 8225
-Text HLabel 1600 8125 0    50   Input ~ 0
-RST_MB2
 Wire Wire Line
 	1600 8125 2325 8125
 $Comp
@@ -1122,14 +1018,6 @@ F 9 "FERRITE BEAD 1.5 KOHM 0805 1LN" H 6750 825 50  0001 C CNN "Short Descriptio
 	1    6750 825 
 	0    1    -1   0   
 $EndComp
-Text HLabel 1800 9275 0    50   Input ~ 0
-TDI
-Text HLabel 1800 9175 0    50   Input ~ 0
-TDO
-Text HLabel 1800 9375 0    50   Input ~ 0
-TMS
-Text HLabel 1800 9475 0    50   Input ~ 0
-TCK
 $Comp
 L power:VDD #PWR0158
 U 1 1 5D66692A
@@ -1147,12 +1035,12 @@ Connection ~ 2950 825
 Wire Wire Line
 	2950 825  3125 825 
 Wire Wire Line
-	11500 7000 11825 7000
+	11750 7000 11825 7000
 $Comp
-L Device:R R?
+L Device:R R803
 U 1 1 5D4CBE10
 P 5275 9275
-F 0 "R?" V 5225 9075 50  0000 L CNN
+F 0 "R803" V 5225 8950 50  0000 L CNN
 F 1 "0" V 5275 9250 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5205 9275 50  0001 C CNN
 F 3 "~" H 5275 9275 50  0001 C CNN
@@ -1166,10 +1054,10 @@ F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5275 9275 50  0001 C CNN "Short Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R804
 U 1 1 5D4E1629
 P 5275 9375
-F 0 "R?" V 5225 9175 50  0000 L CNN
+F 0 "R804" V 5225 9050 50  0000 L CNN
 F 1 "0" V 5275 9350 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5205 9375 50  0001 C CNN
 F 3 "~" H 5275 9375 50  0001 C CNN
@@ -1182,38 +1070,34 @@ F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5275 9375 50  0001 C CNN "Short Description"
 	1    5275 9375
 	0    -1   -1   0   
 $EndComp
-Text HLabel 5825 9275 2    50   Input ~ 0
-CC1352_TX_MSP430_RX
-Text HLabel 5825 9375 2    50   Input ~ 0
-CC1352_RX_MSP430_TX
 Wire Wire Line
 	5425 9375 5825 9375
 Wire Wire Line
 	5825 9275 5425 9275
 Wire Wire Line
-	1275 6000 1275 6200
-Text Label 1100 5650 0    50   ~ 0
+	7725 8625 7725 8825
+Text Label 7900 8275 2    50   ~ 0
 VDDS
 Wire Wire Line
-	1275 5650 1100 5650
+	7725 8275 7900 8275
 Wire Wire Line
-	1275 5700 1275 5650
+	7725 8325 7725 8275
 $Comp
-L Device:R R?
+L Device:R R806
 U 1 1 5D9EA389
-P 1275 5850
-F 0 "R?" H 1345 5896 50  0000 L CNN
-F 1 "10K" H 1345 5805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1205 5850 50  0001 C CNN
-F 3 "~" H 1275 5850 50  0001 C CNN
-F 4 "RES SMD 10K OHM 5% 1/16W 0402" H 1275 5850 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 1275 5850 50  0001 C CNN "Link1"
-F 6 "RC0402JR-0710KL" H 1275 5850 50  0001 C CNN "MPN1"
-F 7 "$0.00139" H 1275 5850 50  0001 C CNN "Standard Price"
-F 8 "Yageo" H 1275 5850 50  0001 C CNN "Vendor1"
-F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 1275 5850 50  0001 C CNN "Short Description"
-	1    1275 5850
-	-1   0    0    -1  
+P 7725 8475
+F 0 "R806" H 7795 8521 50  0000 L CNN
+F 1 "10K" H 7795 8430 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7655 8475 50  0001 C CNN
+F 3 "~" H 7725 8475 50  0001 C CNN
+F 4 "RES SMD 10K OHM 5% 1/16W 0402" H 7725 8475 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 7725 8475 50  0001 C CNN "Link1"
+F 6 "RC0402JR-0710KL" H 7725 8475 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 7725 8475 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 7725 8475 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 7725 8475 50  0001 C CNN "Short Description"
+	1    7725 8475
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9900 3075 10975 3075
@@ -1490,21 +1374,17 @@ Wire Wire Line
 	8650 6150 11825 6150
 Wire Wire Line
 	11825 6150 11825 7000
-Text GLabel 1125 6200 0    79   Input ~ 0
-USER
+Text GLabel 7875 8825 2    63   Input ~ 0
+USER1
 Wire Wire Line
 	4025 8425 4325 8425
 Wire Wire Line
 	4025 8525 4325 8525
-Text HLabel 5050 8725 2    50   Input ~ 0
-CC1352_RX_MB1_TX
-Text HLabel 5050 8625 2    50   Input ~ 0
-CC1352_TX_MB1_RX
 $Comp
-L Device:R R?
+L Device:R R802
 U 1 1 5D62B8DC
 P 4475 8525
-F 0 "R?" V 4425 8325 50  0000 L CNN
+F 0 "R802" V 4425 8175 50  0000 L CNN
 F 1 "0" V 4475 8500 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8525 50  0001 C CNN
 F 3 "~" H 4475 8525 50  0001 C CNN
@@ -1518,10 +1398,10 @@ F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8525 50  0001 C CNN "Short Description"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R801
 U 1 1 5D62B256
 P 4475 8425
-F 0 "R?" V 4425 8225 50  0000 L CNN
+F 0 "R801" V 4425 8075 50  0000 L CNN
 F 1 "0" V 4475 8400 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4405 8425 50  0001 C CNN
 F 3 "~" H 4475 8425 50  0001 C CNN
@@ -1534,49 +1414,28 @@ F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4475 8425 50  0001 C CNN "Short Description"
 	1    4475 8425
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1375 9575 1375 9675
 Text GLabel 7400 7400 0    79   Input ~ 0
 RESET_N
 Wire Wire Line
 	7400 7400 7550 7400
 Connection ~ 7550 7400
-Text GLabel 1150 9675 0    79   Input ~ 0
-RESET_N
-Wire Wire Line
-	1150 9675 1375 9675
-Connection ~ 1375 9675
-Wire Wire Line
-	1375 9675 1375 9700
 Wire Wire Line
 	1600 8525 2325 8525
-Text HLabel 2075 5700 0    50   Input ~ 0
-2.4G_LED
-Text HLabel 2075 5800 0    50   Input ~ 0
-900MHz_LED
 Wire Wire Line
 	2075 5700 2825 5700
 Wire Wire Line
 	2825 5800 2075 5800
-Text HLabel 2075 5900 0    50   Input ~ 0
-LED1
-Text HLabel 2075 6000 0    50   Input ~ 0
-LED2
 Wire Wire Line
 	2825 6000 2075 6000
 Wire Wire Line
-	2075 6100 2825 6100
-Wire Wire Line
 	2825 5600 2075 5600
-Text HLabel 2075 5600 0    50   Input ~ 0
-AN_MB2
 $Comp
 L Device:Antenna AE801
 U 1 1 5E453F94
 P 16100 4375
 F 0 "AE801" H 16025 4450 50  0000 R CNN
 F 1 "Antenna" H 16025 4375 50  0000 R CNN
-F 2 "" H 16100 4375 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 16100 4375 50  0001 C CNN
 F 3 "~" H 16100 4375 50  0001 C CNN
 	1    16100 4375
 	1    0    0    -1  
@@ -1626,47 +1485,207 @@ Wire Wire Line
 Connection ~ 15225 5175
 Wire Wire Line
 	15225 5175 15350 5175
-Text HLabel 1600 8425 0    50   Input ~ 0
-PWM_MB2
 Wire Wire Line
 	1600 8425 2325 8425
 Wire Wire Line
-	4025 8725 4475 8725
-Wire Wire Line
-	4025 8625 4550 8625
-Text HLabel 5050 8525 2    50   Input ~ 0
-CC1352_RX_MB2_TX
-Text HLabel 5050 8425 2    50   Input ~ 0
-CC1352_TX_MB2_RX
-Wire Wire Line
-	4625 8525 5050 8525
-Wire Wire Line
-	4625 8425 5050 8425
-Wire Wire Line
-	1275 6200 1125 6200
-Text HLabel 5050 8825 2    50   Input ~ 0
-CS_MB2
-Text HLabel 5050 8925 2    50   Input ~ 0
-CS_MB1
-Wire Wire Line
-	4025 8925 5050 8925
-Wire Wire Line
-	4025 8825 5050 8825
+	7725 8825 7875 8825
 Wire Wire Line
 	5125 9275 4550 9275
 Wire Wire Line
 	4550 9275 4550 8625
-Connection ~ 4550 8625
-Wire Wire Line
-	4550 8625 5050 8625
 Wire Wire Line
 	5125 9375 4475 9375
 Wire Wire Line
 	4475 9375 4475 8725
+Connection ~ 7725 8825
+Wire Wire Line
+	4025 8825 7725 8825
+Wire Wire Line
+	7400 8725 7400 9050
+Text Label 7575 8375 2    50   ~ 0
+VDDS
+Wire Wire Line
+	7400 8375 7575 8375
+Wire Wire Line
+	7400 8425 7400 8375
+$Comp
+L Device:R R805
+U 1 1 5E681A4C
+P 7400 8575
+F 0 "R805" H 7470 8621 50  0000 L CNN
+F 1 "10K" H 7470 8530 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7330 8575 50  0001 C CNN
+F 3 "~" H 7400 8575 50  0001 C CNN
+F 4 "RES SMD 10K OHM 5% 1/16W 0402" H 7400 8575 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-0710KL/311-10KJRCT-ND/729365" H 7400 8575 50  0001 C CNN "Link1"
+F 6 "RC0402JR-0710KL" H 7400 8575 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 7400 8575 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 7400 8575 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 10K OHM 5% 1/16W 0402" H 7400 8575 50  0001 C CNN "Short Description"
+	1    7400 8575
+	1    0    0    -1  
+$EndComp
+Text GLabel 7875 9050 2    63   Input ~ 0
+USER2
+Wire Wire Line
+	7400 9050 7875 9050
+Wire Wire Line
+	4025 8925 7050 8925
+Wire Wire Line
+	7050 8925 7050 9050
+Wire Wire Line
+	7050 9050 7400 9050
+Connection ~ 7400 9050
+Text GLabel 2075 5700 0    63   Input ~ 0
+2.4G
+Text GLabel 2075 5800 0    63   Input ~ 0
+900M
+Text GLabel 2075 5900 0    63   Input ~ 0
+LED1
+Text GLabel 2075 6000 0    63   Input ~ 0
+LED2
+Text GLabel 2075 5500 0    63   Input ~ 0
+AN_MB1
+Text GLabel 2075 5600 0    63   Input ~ 0
+AN_MB2
+Text GLabel 2075 6100 0    63   Input ~ 0
+CS_MB1
+Text GLabel 2075 6200 0    63   Input ~ 0
+CS_MB2
+Wire Wire Line
+	2075 6100 2825 6100
+Wire Wire Line
+	2075 6200 2825 6200
+Text GLabel 1600 8125 0    63   Input ~ 0
+RST_MB2
+Text GLabel 1600 8225 0    63   Input ~ 0
+SCL
+Text GLabel 1600 8325 0    63   Input ~ 0
+SDA
+Text GLabel 1600 8425 0    63   Input ~ 0
+PWM_MB2
+Text GLabel 1600 8525 0    63   Input ~ 0
+PWM_MB1
+Text GLabel 1600 8625 0    63   Input ~ 0
+MISO
+Text GLabel 1600 8725 0    63   Input ~ 0
+MOSI
+Text GLabel 1600 8825 0    63   Input ~ 0
+SCK
+Text GLabel 4125 825  2    63   Input ~ 0
+VDDS
+Text GLabel 1450 9575 0    63   Input ~ 0
+RESET_N
+Wire Wire Line
+	1450 9575 2325 9575
+Text GLabel 1450 9175 0    63   Input ~ 0
+CC1352_TDO
+Text GLabel 1450 9275 0    63   Input ~ 0
+CC1352_TDI
+Text GLabel 1450 9375 0    63   Input ~ 0
+CC1352_TMS
+Text GLabel 1450 9475 0    63   Input ~ 0
+CC1352_TCK
+Wire Wire Line
+	1450 9175 2325 9175
+Wire Wire Line
+	1450 9275 2325 9275
+Wire Wire Line
+	1450 9375 2325 9375
+Wire Wire Line
+	1450 9475 2325 9475
+Text GLabel 5000 8125 2    63   Input ~ 0
+INT_MB2
+Text GLabel 5000 8225 2    63   Input ~ 0
+RST_MB1
+Text GLabel 5000 8325 2    63   Input ~ 0
+INT_MB1
+Text GLabel 5000 8425 2    63   Input ~ 0
+CC1352_TX_MB2_RX
+Text GLabel 5000 8525 2    63   Input ~ 0
+CC1352_RX_MB2_TX
+Text GLabel 5000 8625 2    63   Input ~ 0
+CC1352_TX_MB1_RX
+Text GLabel 5000 8725 2    63   Input ~ 0
+CC1352_RX_MB1_TX
+Text GLabel 5825 9275 2    63   Input ~ 0
+CC1352_TX_MSP430_RX
+Text GLabel 5825 9375 2    63   Input ~ 0
+CC1352_RX_MSP430_TX
+Wire Wire Line
+	4025 8725 4475 8725
 Connection ~ 4475 8725
 Wire Wire Line
-	4475 8725 5050 8725
+	4475 8725 5000 8725
 Wire Wire Line
-	2825 6200 1275 6200
-Connection ~ 1275 6200
+	4025 8625 4550 8625
+Connection ~ 4550 8625
+Wire Wire Line
+	4550 8625 5000 8625
+Wire Wire Line
+	5000 8525 4625 8525
+Wire Wire Line
+	5000 8425 4625 8425
+Wire Wire Line
+	5000 8325 4025 8325
+Wire Wire Line
+	5000 8225 4025 8225
+Wire Wire Line
+	5000 8125 4025 8125
+Text GLabel 1425 825  0    63   Input ~ 0
+3V3
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E974385
+P 1600 775
+F 0 "#FLG0101" H 1600 850 50  0001 C CNN
+F 1 "PWR_FLAG" H 1600 925 50  0000 C CNN
+F 2 "" H 1600 775 50  0001 C CNN
+F 3 "~" H 1600 775 50  0001 C CNN
+	1    1600 775 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 775  1600 825 
+Connection ~ 1600 825 
+Wire Wire Line
+	1600 825  1825 825 
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E9A03A4
+P 2300 775
+F 0 "#FLG0102" H 2300 850 50  0001 C CNN
+F 1 "PWR_FLAG" H 2300 925 50  0000 C CNN
+F 2 "" H 2300 775 50  0001 C CNN
+F 3 "~" H 2300 775 50  0001 C CNN
+	1    2300 775 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 775  2300 825 
+Connection ~ 2300 825 
+Wire Wire Line
+	2300 825  2950 825 
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5E9BE17F
+P 3725 750
+F 0 "#FLG0103" H 3725 825 50  0001 C CNN
+F 1 "PWR_FLAG" H 3725 900 50  0000 C CNN
+F 2 "" H 3725 750 50  0001 C CNN
+F 3 "~" H 3725 750 50  0001 C CNN
+	1    3725 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3725 750  3725 825 
+Connection ~ 3725 825 
+Wire Wire Line
+	3725 825  3425 825 
+Text GLabel 8300 7100 0    63   Input ~ 0
+SCK
+Text GLabel 8300 7000 0    63   Input ~ 0
+MOSI
+Text GLabel 10575 7250 2    63   Input ~ 0
+MISO
 $EndSCHEMATC

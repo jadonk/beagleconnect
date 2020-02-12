@@ -51,8 +51,6 @@ Wire Wire Line
 	8000 4825 8000 5175
 Wire Wire Line
 	8900 4725 9600 4725
-Text HLabel 9600 4725 2    118  Input ~ 0
-V_ALT
 Text Label 8200 4725 0    50   ~ 0
 ALT_IN
 $Comp
@@ -76,4 +74,6 @@ Text Notes 8425 5025 0    50   ~ 0
 No pop if using the \nswitch/jumper method
 Wire Wire Line
 	7700 4725 8600 4725
+Text GLabel 9600 4725 2    63   Input ~ 0
+V_ALT
 $EndSCHEMATC

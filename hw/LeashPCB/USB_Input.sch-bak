@@ -13,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text HLabel 8200 1800 2    98   Output ~ 0
-V_USB
 Text Notes 4150 1425 0    79   ~ 0
 USB C input
 Wire Wire Line
@@ -60,10 +58,6 @@ F 3 "" H 5700 3500 50  0001 C CNN
 	1    5700 3500
 	1    0    0    -1  
 $EndComp
-Text HLabel 9250 5925 2    98   Output ~ 0
-MICRO_RX_SERIALDEBUG_TX
-Text HLabel 9225 6175 2    98   Output ~ 0
-MICRO_TX_SERIALDEBUG_RX
 $Bitmap
 Pos 7075 12350
 Scale 1.000000
@@ -6653,14 +6647,6 @@ EndData
 $EndBitmap
 Text Label 6700 1800 0    50   ~ 0
 VBUS
-Text Label 8700 6175 0    60   ~ 0
-RXDO
-Wire Wire Line
-	8700 6175 9225 6175
-Text Label 8725 5925 0    60   ~ 0
-TXDO
-Wire Wire Line
-	8725 5925 9250 5925
 Wire Wire Line
 	6300 2500 6900 2500
 Wire Wire Line
@@ -6709,21 +6695,6 @@ Wire Wire Line
 	2000 5575 3025 5575
 Wire Wire Line
 	3025 5675 2625 5675
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5E5F2B0E
-P 2000 5375
-AR Path="/5D062DFA/5E5F2B0E" Ref="#PWR?"  Part="1" 
-AR Path="/5D1A71BB/5E5F2B0E" Ref="#PWR0101"  Part="1" 
-F 0 "#PWR0101" H 2000 5225 50  0001 C CNN
-F 1 "+3V3" H 2015 5548 50  0000 C CNN
-F 2 "" H 2000 5375 50  0001 C CNN
-F 3 "" H 2000 5375 50  0001 C CNN
-	1    2000 5375
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 5375 2000 5575
 $Comp
 L Connector_Generic:Conn_02x05_Counter_Clockwise J?
 U 1 1 5E5F2B1C
@@ -6814,10 +6785,8 @@ Wire Wire Line
 	3525 5575 4575 5575
 Text Label 3825 5575 0    50   ~ 0
 MSP430_RST_N
-Text HLabel 10400 1200 2    79   Input ~ 0
-5V
 Wire Wire Line
-	10400 1200 7075 1200
+	8200 1200 7075 1200
 Wire Wire Line
 	7075 1200 7075 1800
 Connection ~ 7075 1800
@@ -6848,7 +6817,7 @@ Text Label 5425 6375 0    50   ~ 0
 D-
 Wire Wire Line
 	5400 3300 5400 3500
-Text GLabel 5525 5250 0    79   Input ~ 0
+Text GLabel 5525 5250 0    63   Input ~ 0
 RESET_N
 Wire Wire Line
 	5725 5250 5725 5525
@@ -6857,4 +6826,53 @@ Wire Wire Line
 Connection ~ 5725 5525
 Wire Wire Line
 	5725 5525 5875 5525
+Text GLabel 8200 1800 2    63   Input ~ 0
+V_USB
+Text GLabel 8200 1200 2    63   Input ~ 0
+5V
+Text GLabel 8400 5825 2    63   Input ~ 0
+CC1352_RX_MSP430_TX
+Text GLabel 8400 5925 2    63   Input ~ 0
+CC1352_TX_MSP430_RX
+Wire Wire Line
+	8400 5825 8275 5825
+Wire Wire Line
+	8275 5925 8400 5925
+Text Label 6425 5100 0    63   ~ 0
+VBUS
+Wire Wire Line
+	6425 5100 6775 5100
+Wire Wire Line
+	6775 5100 6775 5275
+Wire Wire Line
+	6775 5100 6875 5100
+Wire Wire Line
+	6875 5100 6875 5275
+Connection ~ 6775 5100
+Wire Wire Line
+	7025 4050 6700 4050
+Wire Wire Line
+	7025 4050 7025 5100
+Text GLabel 6700 4050 0    63   Input ~ 0
+3V3
+Wire Wire Line
+	7025 5100 7175 5100
+Wire Wire Line
+	7275 5100 7275 5275
+Connection ~ 7025 5100
+Wire Wire Line
+	7025 5100 7025 5275
+Wire Wire Line
+	7175 5100 7175 5275
+Connection ~ 7175 5100
+Wire Wire Line
+	7175 5100 7275 5100
+Text Notes 9750 7825 0    1000 ~ 200
+NEED \nTO \nREVIEW
+Text GLabel 1800 5325 0    63   Input ~ 0
+3V3
+Wire Wire Line
+	1800 5325 2000 5325
+Wire Wire Line
+	2000 5325 2000 5575
 $EndSCHEMATC

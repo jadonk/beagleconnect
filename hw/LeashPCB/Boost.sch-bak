@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 7 9
+Sheet 6 9
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -6861,17 +6861,6 @@ Connection ~ 8550 5725
 Wire Wire Line
 	8550 5725 8550 5625
 $Comp
-L power:GND #PWR0128
-U 1 1 5D20C65C
-P 8275 8450
-F 0 "#PWR0128" H 8275 8200 50  0001 C CNN
-F 1 "GND" H 8280 8277 50  0000 C CNN
-F 2 "" H 8275 8450 50  0001 C CNN
-F 3 "" H 8275 8450 50  0001 C CNN
-	1    8275 8450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C1009
 U 1 1 5D20CB94
 P 10350 5575
@@ -6931,7 +6920,7 @@ Wire Wire Line
 	7050 5475 6850 5475
 Connection ~ 6850 5075
 Wire Wire Line
-	6850 5075 7450 5075
+	6850 5075 7100 5075
 Wire Wire Line
 	6275 5075 6275 5175
 Wire Wire Line
@@ -6952,25 +6941,8 @@ F 3 "" H 6275 5750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5325 5075 6275 5075
-Text HLabel 14150 4600 2    118  Input ~ 0
-3V3_REG
 Text Label 10850 5075 0    50   ~ 0
 3V3_BUCK_VOUT
-$Comp
-L power:+3V3 #PWR0150
-U 1 1 5D3B8759
-P 13800 4425
-F 0 "#PWR0150" H 13800 4275 50  0001 C CNN
-F 1 "+3V3" H 13815 4598 50  0000 C CNN
-F 2 "" H 13800 4425 50  0001 C CNN
-F 3 "" H 13800 4425 50  0001 C CNN
-	1    13800 4425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13800 4425 13800 4600
-Wire Wire Line
-	13800 4600 14150 4600
 Wire Wire Line
 	9825 5075 10350 5075
 Connection ~ 10350 5075
@@ -6994,17 +6966,8 @@ F 10 "RES 0 OHM JUMPER 1/16W 0402" H 12300 5075 50  0001 C CNN "Short Descriptio
 	1    12300 5075
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	12450 5075 13800 5075
-Wire Wire Line
-	13800 5075 13800 4600
-Connection ~ 13800 4600
 Text Label 5575 5075 0    79   ~ 0
 3V3_BUCK_IN
-Text HLabel 3225 4300 0    79   Input ~ 0
-V_USB
-Text HLabel 3225 6150 0    79   Input ~ 0
-V_ALT
 Wire Wire Line
 	3225 6150 5325 6150
 Wire Wire Line
@@ -7014,4 +6977,39 @@ Wire Wire Line
 Wire Wire Line
 	5325 4300 5325 5075
 Connection ~ 5325 5075
+Wire Wire Line
+	12450 5075 12875 5075
+Text GLabel 12875 5075 2    63   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR0122
+U 1 1 5E9441DB
+P 9825 6025
+F 0 "#PWR0122" H 9825 5775 50  0001 C CNN
+F 1 "GND" H 9830 5852 50  0000 C CNN
+F 2 "" H 9825 6025 50  0001 C CNN
+F 3 "" H 9825 6025 50  0001 C CNN
+	1    9825 6025
+	1    0    0    -1  
+$EndComp
+Text GLabel 3225 4300 0    63   Input ~ 0
+V_USB
+Text GLabel 3225 6150 0    63   Input ~ 0
+V_ALT
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5E9CDAED
+P 7100 4975
+F 0 "#FLG0104" H 7100 5050 50  0001 C CNN
+F 1 "PWR_FLAG" H 7100 5125 50  0000 C CNN
+F 2 "" H 7100 4975 50  0001 C CNN
+F 3 "~" H 7100 4975 50  0001 C CNN
+	1    7100 4975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4975 7100 5075
+Connection ~ 7100 5075
+Wire Wire Line
+	7100 5075 7450 5075
 $EndSCHEMATC
