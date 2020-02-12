@@ -60,9 +60,9 @@ F 3 "" H 5700 3500 50  0001 C CNN
 	1    5700 3500
 	1    0    0    -1  
 $EndComp
-Text HLabel 10775 2475 2    98   Output ~ 0
+Text HLabel 9250 5925 2    98   Output ~ 0
 MICRO_RX_SERIALDEBUG_TX
-Text HLabel 10750 2725 2    98   Output ~ 0
+Text HLabel 9225 6175 2    98   Output ~ 0
 MICRO_TX_SERIALDEBUG_RX
 $Bitmap
 Pos 7075 12350
@@ -6653,14 +6653,14 @@ EndData
 $EndBitmap
 Text Label 6700 1800 0    50   ~ 0
 VBUS
-Text Label 10225 2725 0    60   ~ 0
+Text Label 8700 6175 0    60   ~ 0
 RXDO
 Wire Wire Line
-	10225 2725 10750 2725
-Text Label 10250 2475 0    60   ~ 0
+	8700 6175 9225 6175
+Text Label 8725 5925 0    60   ~ 0
 TXDO
 Wire Wire Line
-	10250 2475 10775 2475
+	8725 5925 9250 5925
 Wire Wire Line
 	6300 2500 6900 2500
 Wire Wire Line

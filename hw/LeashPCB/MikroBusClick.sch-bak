@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 8 9
+Sheet 7 9
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -125,5 +125,110 @@ MISO
 Text Label 7475 4175 0    50   ~ 0
 MOSI
 Text Label 7500 4275 0    50   ~ 0
+3V3
+$Comp
+L LeashPCB:mikroBUS J?
+U 1 1 5E8910E4
+P 8725 5650
+AR Path="/5E8910E4" Ref="J?"  Part="1" 
+AR Path="/5D066680/5E8910E4" Ref="J701"  Part="1" 
+F 0 "J701" H 8750 6365 50  0000 C CNN
+F 1 "mikroBUS" H 8750 6274 50  0000 C CNN
+F 2 "leash:MikroBus-SMD" H 8525 5850 50  0001 C CNN
+F 3 "" H 8525 5850 50  0001 C CNN
+F 4 "0" H 8725 5650 50  0001 C CNN "Standard Price"
+F 5 "N/A" H 8725 5650 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPTC081KFXC-RC/S5600-ND/776058" H 8725 5650 50  0001 C CNN "Link1"
+F 7 "NPTC081KFXC-RC" H 8725 5650 50  0001 C CNN "MPN1"
+F 8 "Sullins" H 8725 5650 50  0001 C CNN "Vendor1"
+F 9 "CONN HDR 8POS 0.1 TIN SMD" H 8725 5650 50  0001 C CNN "Short Description"
+	1    8725 5650
+	1    0    0    -1  
+$EndComp
+Text HLabel 10100 5900 2    79   Input ~ 0
+5V
+Text HLabel 7425 5300 0    79   Input ~ 0
+AN_MB2
+Text HLabel 7425 5400 0    79   Input ~ 0
+RST_MB2
+Text HLabel 7425 5500 0    79   Input ~ 0
+CS_MB2
+Text HLabel 10100 5300 2    79   Input ~ 0
+PWM_MB2
+Text HLabel 10100 5400 2    79   Input ~ 0
+INT_MB2
+Text HLabel 10100 5500 2    79   Input ~ 0
+MICRO_TX_MB2_RX
+Text HLabel 10100 5600 2    79   Input ~ 0
+MICRO_RX_MB2_TX
+Text HLabel 10100 5800 2    79   Input ~ 0
+SDA
+Wire Wire Line
+	8175 5900 7425 5900
+Wire Wire Line
+	8175 6000 7950 6000
+Wire Wire Line
+	7950 6000 7950 6100
+$Comp
+L power:GND #PWR0103
+U 1 1 5E8910FE
+P 7950 6100
+F 0 "#PWR0103" H 7950 5850 50  0001 C CNN
+F 1 "GND" H 7955 5927 50  0000 C CNN
+F 2 "" H 7950 6100 50  0001 C CNN
+F 3 "" H 7950 6100 50  0001 C CNN
+	1    7950 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7425 5800 8175 5800
+Wire Wire Line
+	7425 5700 8175 5700
+Wire Wire Line
+	7425 5600 8175 5600
+Wire Wire Line
+	7425 5300 8175 5300
+Wire Wire Line
+	8175 5400 7425 5400
+Wire Wire Line
+	8175 5500 7425 5500
+Wire Wire Line
+	9325 5900 10100 5900
+$Comp
+L power:GND #PWR0120
+U 1 1 5E89110F
+P 9550 6150
+F 0 "#PWR0120" H 9550 5900 50  0001 C CNN
+F 1 "GND" H 9555 5977 50  0000 C CNN
+F 2 "" H 9550 6150 50  0001 C CNN
+F 3 "" H 9550 6150 50  0001 C CNN
+	1    9550 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 6000 9325 6000
+Wire Wire Line
+	9550 6000 9550 6150
+Text HLabel 10100 5700 2    79   Input ~ 0
+SCL
+Wire Wire Line
+	10100 5300 9325 5300
+Wire Wire Line
+	10100 5400 9325 5400
+Wire Wire Line
+	9325 5500 10100 5500
+Wire Wire Line
+	10100 5600 9325 5600
+Wire Wire Line
+	9325 5700 10100 5700
+Wire Wire Line
+	10100 5800 9325 5800
+Text Label 7425 5600 0    50   ~ 0
+SCK
+Text Label 7425 5700 0    50   ~ 0
+MISO
+Text Label 7425 5800 0    50   ~ 0
+MOSI
+Text Label 7425 5900 0    50   ~ 0
 3V3
 $EndSCHEMATC
