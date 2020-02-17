@@ -54,20 +54,20 @@ $EndComp
 $Comp
 L LeashPCB:CC1352R U?
 U 4 1 5D098DC1
-P 3675 5900
+P 5200 5600
 AR Path="/5D098DC1" Ref="U?"  Part="4" 
 AR Path="/5D062750/5D098DC1" Ref="U801"  Part="4" 
-F 0 "U801" H 3454 7065 50  0000 C CNN
-F 1 "CC1352R" H 3454 6974 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm" H 2525 6150 50  0001 C CNN
-F 3 "" H 2525 6150 50  0001 C CNN
-F 4 "1.25" H 3675 5900 50  0001 C CNN "Standard Price"
-F 5 "RF IC'S + MODULES BLUETOOTH" H 3675 5900 50  0001 C CNN "Description"
-F 6 "https://www.digikey.com/product-detail/en/texas-instruments/CC1352P1F3RGZT/296-53598-1-ND/10273328" H 3675 5900 50  0001 C CNN "Link1"
-F 7 "CC1352P1F3RGZT" H 3675 5900 50  0001 C CNN "MPN1"
-F 8 "Texas Instruments" H 3675 5900 50  0001 C CNN "Vendor1"
-F 9 "RF IC'S + MODULES BLUETOOTH" H 3675 5900 50  0001 C CNN "Short Description"
-	4    3675 5900
+F 0 "U801" H 4979 6765 50  0000 C CNN
+F 1 "CC1352R" H 4979 6674 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm" H 4050 5850 50  0001 C CNN
+F 3 "" H 4050 5850 50  0001 C CNN
+F 4 "1.25" H 5200 5600 50  0001 C CNN "Standard Price"
+F 5 "RF IC'S + MODULES BLUETOOTH" H 5200 5600 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/texas-instruments/CC1352P1F3RGZT/296-53598-1-ND/10273328" H 5200 5600 50  0001 C CNN "Link1"
+F 7 "CC1352P1F3RGZT" H 5200 5600 50  0001 C CNN "MPN1"
+F 8 "Texas Instruments" H 5200 5600 50  0001 C CNN "Vendor1"
+F 9 "RF IC'S + MODULES BLUETOOTH" H 5200 5600 50  0001 C CNN "Short Description"
+	4    5200 5600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -882,8 +882,8 @@ F 3 "" H 8800 8000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2325 8925 1675 8925
-Text Label 1675 8925 0    50   ~ 0
+	2325 8925 1600 8925
+Text Label 1775 8625 0    50   ~ 0
 ~FLASH_CS
 Wire Wire Line
 	1425 825  1600 825 
@@ -913,13 +913,13 @@ Wire Wire Line
 Wire Wire Line
 	1600 8225 2325 8225
 Wire Wire Line
-	1600 8625 2325 8625
+	1775 8625 2325 8625
 Wire Wire Line
 	1600 8725 2325 8725
 Wire Wire Line
 	1600 8825 2325 8825
 Wire Wire Line
-	2825 5500 2075 5500
+	4350 5200 2725 5200
 Wire Wire Line
 	7550 6700 7550 7400
 Text Label 9950 2975 0    50   ~ 0
@@ -1036,44 +1036,6 @@ Wire Wire Line
 	2950 825  3125 825 
 Wire Wire Line
 	11750 7000 11825 7000
-$Comp
-L Device:R R804
-U 1 1 5D4CBE10
-P 5275 9275
-F 0 "R804" V 5225 8950 50  0000 L CNN
-F 1 "0" V 5275 9250 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5205 9275 50  0001 C CNN
-F 3 "~" H 5275 9275 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5275 9275 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5275 9275 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 5275 9275 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 5275 9275 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 5275 9275 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5275 9275 50  0001 C CNN "Short Description"
-	1    5275 9275
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R805
-U 1 1 5D4E1629
-P 5275 9375
-F 0 "R805" V 5225 9050 50  0000 L CNN
-F 1 "0" V 5275 9350 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5205 9375 50  0001 C CNN
-F 3 "~" H 5275 9375 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 5275 9375 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 5275 9375 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 5275 9375 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 5275 9375 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 5275 9375 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 5275 9375 50  0001 C CNN "Short Description"
-	1    5275 9375
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5425 9375 5825 9375
-Wire Wire Line
-	5825 9275 5425 9275
 Wire Wire Line
 	9900 3075 10975 3075
 Wire Wire Line
@@ -1213,8 +1175,6 @@ F 9 "CONN UMC JACK STR 50 OHM SMD" H 15850 1275 50  0001 C CNN "Short Descriptio
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2075 5900 2825 5900
-Wire Wire Line
 	14025 5175 14025 2925
 Wire Wire Line
 	14025 2925 13800 2925
@@ -1349,7 +1309,7 @@ Wire Wire Line
 	8650 6150 11825 6150
 Wire Wire Line
 	11825 6150 11825 7000
-Text GLabel 7875 8825 2    63   Input ~ 0
+Text GLabel 5000 8825 2    63   Input ~ 0
 USER1
 Wire Wire Line
 	4025 8425 4325 8425
@@ -1397,13 +1357,11 @@ Connection ~ 7550 7400
 Wire Wire Line
 	1600 8525 2325 8525
 Wire Wire Line
-	2075 5700 2825 5700
+	2725 5400 4350 5400
 Wire Wire Line
-	2825 5800 2075 5800
+	4350 5500 2725 5500
 Wire Wire Line
-	2825 6000 2075 6000
-Wire Wire Line
-	2825 5600 2075 5600
+	4350 5300 2725 5300
 $Comp
 L Device:Antenna AE802
 U 1 1 5E453F94
@@ -1462,47 +1420,33 @@ Wire Wire Line
 	15225 5175 15350 5175
 Wire Wire Line
 	1600 8425 2325 8425
-Wire Wire Line
-	5125 9275 4550 9275
-Wire Wire Line
-	4550 9275 4550 8625
-Wire Wire Line
-	5125 9375 4475 9375
-Wire Wire Line
-	4475 9375 4475 8725
-Text GLabel 7875 8925 2    63   Input ~ 0
-USER2
-Text GLabel 2075 5700 0    63   Input ~ 0
-2.4G
-Text GLabel 2075 5800 0    63   Input ~ 0
-900M
-Text GLabel 2075 5900 0    63   Input ~ 0
-LED1
-Text GLabel 2075 6000 0    63   Input ~ 0
-LED2
-Text GLabel 2075 5500 0    63   Input ~ 0
-AN_MB1
-Text GLabel 2075 5600 0    63   Input ~ 0
-AN_MB2
-Text GLabel 2075 6100 0    63   Input ~ 0
-CS_MB1
-Text GLabel 2075 6200 0    63   Input ~ 0
-CS_MB2
-Wire Wire Line
-	2075 6100 2825 6100
-Wire Wire Line
-	2075 6200 2825 6200
-Text GLabel 1600 8125 0    63   Input ~ 0
-RST_MB2
-Text GLabel 1600 8225 0    63   Input ~ 0
-SCL
-Text GLabel 1600 8325 0    63   Input ~ 0
-SDA
-Text GLabel 1600 8425 0    63   Input ~ 0
-PWM_MB2
 Text GLabel 1600 8525 0    63   Input ~ 0
+USER2
+Text GLabel 1600 8225 0    63   Input ~ 0
+2.4G
+Text GLabel 5000 8925 2    63   Input ~ 0
+LED1
+Text GLabel 5000 8125 2    63   Input ~ 0
+LED2
+Text GLabel 2725 5200 0    63   Input ~ 0
+AN_MB1
+Text GLabel 2725 5300 0    63   Input ~ 0
+AN_MB2
+Text GLabel 5000 8725 2    63   Input ~ 0
+CS_MB1
+Text GLabel 5000 8625 2    63   Input ~ 0
+CS_MB2
+Text GLabel 1600 8325 0    63   Input ~ 0
+RST_MB2
+Text GLabel 2725 5400 0    63   Input ~ 0
+SCL
+Text GLabel 2725 5500 0    63   Input ~ 0
+SDA
+Text GLabel 5000 8225 2    63   Input ~ 0
+PWM_MB2
+Text GLabel 2700 6375 0    63   Input ~ 0
 PWM_MB1
-Text GLabel 1600 8625 0    63   Input ~ 0
+Text GLabel 1600 8925 0    63   Input ~ 0
 MISO
 Text GLabel 1600 8725 0    63   Input ~ 0
 MOSI
@@ -1530,34 +1474,16 @@ Wire Wire Line
 	1450 9375 2325 9375
 Wire Wire Line
 	1450 9475 2325 9475
-Text GLabel 5000 8125 2    63   Input ~ 0
-INT_MB2
-Text GLabel 5000 8225 2    63   Input ~ 0
-RST_MB1
 Text GLabel 5000 8325 2    63   Input ~ 0
+INT_MB2
+Text GLabel 1600 8425 0    63   Input ~ 0
+RST_MB1
+Text GLabel 2700 6275 0    63   Input ~ 0
 INT_MB1
 Text GLabel 5000 8425 2    63   Input ~ 0
 CC1352_TX_MB2_RX
 Text GLabel 5000 8525 2    63   Input ~ 0
 CC1352_RX_MB2_TX
-Text GLabel 5000 8625 2    63   Input ~ 0
-CC1352_TX_MB1_RX
-Text GLabel 5000 8725 2    63   Input ~ 0
-CC1352_RX_MB1_TX
-Text GLabel 5825 9275 2    63   Input ~ 0
-CC1352_TX_MSP430_RX
-Text GLabel 5825 9375 2    63   Input ~ 0
-CC1352_RX_MSP430_TX
-Wire Wire Line
-	4025 8725 4475 8725
-Connection ~ 4475 8725
-Wire Wire Line
-	4475 8725 5000 8725
-Wire Wire Line
-	4025 8625 4550 8625
-Connection ~ 4550 8625
-Wire Wire Line
-	4550 8625 5000 8625
 Wire Wire Line
 	5000 8525 4625 8525
 Wire Wire Line
@@ -1625,7 +1551,89 @@ MOSI
 Text GLabel 10575 7250 2    63   Input ~ 0
 MISO
 Wire Wire Line
-	4025 8825 7875 8825
+	4025 8825 5000 8825
 Wire Wire Line
-	4025 8925 7875 8925
+	4025 8925 5000 8925
+Text GLabel 1600 8125 0    63   Input ~ 0
+900M
+Wire Wire Line
+	2700 6275 2825 6275
+Wire Wire Line
+	2825 6275 2825 5800
+Wire Wire Line
+	2825 5800 4350 5800
+Wire Wire Line
+	2900 5900 2900 6375
+Wire Wire Line
+	2900 6375 2700 6375
+Wire Wire Line
+	2900 5900 4350 5900
+$Comp
+L Device:R R804
+U 1 1 5D4CBE10
+P 2275 5900
+F 0 "R804" V 2225 5575 50  0000 L CNN
+F 1 "0" V 2275 5875 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2205 5900 50  0001 C CNN
+F 3 "~" H 2275 5900 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 2275 5900 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 2275 5900 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 2275 5900 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 2275 5900 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 2275 5900 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 2275 5900 50  0001 C CNN "Short Description"
+	1    2275 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R805
+U 1 1 5D4E1629
+P 2275 5800
+F 0 "R805" V 2225 5475 50  0000 L CNN
+F 1 "0" V 2275 5775 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2205 5800 50  0001 C CNN
+F 3 "~" H 2275 5800 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 2275 5800 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 2275 5800 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 2275 5800 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 2275 5800 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 2275 5800 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 2275 5800 50  0001 C CNN "Short Description"
+	1    2275 5800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2125 5800 1875 5800
+Wire Wire Line
+	1875 5900 2125 5900
+Wire Wire Line
+	2425 5800 2675 5800
+Text GLabel 1875 5900 0    63   Input ~ 0
+CC1352_TX_MSP430_RX
+Text GLabel 1875 5800 0    63   Input ~ 0
+CC1352_RX_MSP430_TX
+Text GLabel 1875 5600 0    63   Input ~ 0
+CC1352_RX_MB1_TX
+Text GLabel 1875 5700 0    63   Input ~ 0
+CC1352_TX_MB1_RX
+Wire Wire Line
+	4350 5700 2750 5700
+Wire Wire Line
+	1875 5600 2675 5600
+Wire Wire Line
+	2675 5800 2675 5600
+Connection ~ 2675 5600
+Wire Wire Line
+	2675 5600 4350 5600
+Wire Wire Line
+	2750 5900 2750 5700
+Wire Wire Line
+	2425 5900 2750 5900
+Connection ~ 2750 5700
+Wire Wire Line
+	2750 5700 1875 5700
+Wire Wire Line
+	4025 8625 5000 8625
+Wire Wire Line
+	4025 8725 5000 8725
 $EndSCHEMATC

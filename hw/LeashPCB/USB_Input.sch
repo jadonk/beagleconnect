@@ -16,24 +16,24 @@ $EndDescr
 Text Notes 4150 1425 0    79   ~ 0
 USB C input
 Wire Wire Line
-	6300 1800 7075 1800
+	6300 1800 6800 1800
 Wire Wire Line
-	7500 1800 8200 1800
+	7700 1800 7850 1800
 $Comp
 L Device:D_Schottky D501
 U 1 1 5D1A96A8
-P 7350 1800
-F 0 "D501" H 7350 1575 50  0000 C CNN
-F 1 "BAT54" H 7350 1666 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123" H 7350 1625 50  0001 C CNN
-F 3 "" H 7350 1800 50  0001 C CNN
-F 4 "DIODE SCHOTTKY 30V 200MA SOD123" H 7350 1800 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAT54GWJ/1727-7328-1-ND/7390579" H 7350 1800 50  0001 C CNN "Link1"
-F 6 "BAT54GWJ" H 7350 1800 50  0001 C CNN "MPN1"
-F 7 "$0.02037" H 7350 1800 50  0001 C CNN "Standard Price"
-F 8 "Nexperia USA Inc." H 7350 1800 50  0001 C CNN "Vendor1"
-F 9 "DIODE SCHOTTKY 30V 200MA SOD123" H 7350 1800 50  0001 C CNN "Short Description"
-	1    7350 1800
+P 7550 1800
+F 0 "D501" H 7550 1575 50  0000 C CNN
+F 1 "BAT54" H 7550 1666 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" H 7550 1625 50  0001 C CNN
+F 3 "" H 7550 1800 50  0001 C CNN
+F 4 "DIODE SCHOTTKY 30V 200MA SOD123" H 7550 1800 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/nexperia-usa-inc/BAT54GWJ/1727-7328-1-ND/7390579" H 7550 1800 50  0001 C CNN "Link1"
+F 6 "BAT54GWJ" H 7550 1800 50  0001 C CNN "MPN1"
+F 7 "$0.02037" H 7550 1800 50  0001 C CNN "Standard Price"
+F 8 "Nexperia USA Inc." H 7550 1800 50  0001 C CNN "Vendor1"
+F 9 "DIODE SCHOTTKY 30V 200MA SOD123" H 7550 1800 50  0001 C CNN "Short Description"
+	1    7550 1800
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -6645,7 +6645,7 @@ C1 FA 1E 00 00 00 98 3F 58 DF 03 00 00 00 F3 07 EB 7B 00 00 00 60 FE 60 7D 0F 00
 EF 01 00 00 80 F9 E3 FF 00 7E BD 64 66 9C 00 6F 15 00 00 00 00 49 45 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-Text Label 6700 1800 0    50   ~ 0
+Text Label 6375 1800 0    50   ~ 0
 VBUS
 Wire Wire Line
 	6300 2500 6900 2500
@@ -6667,30 +6667,6 @@ F 4 "MSP430F5500IRGZR" H 7075 6525 50  0001 C CNN "MPN1"
 	1    7075 6525
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C?
-U 1 1 5E5F2B02
-P 2000 5775
-AR Path="/5E5F2B02" Ref="C?"  Part="1" 
-AR Path="/5D062DFA/5E5F2B02" Ref="C?"  Part="1" 
-AR Path="/5D1A71BB/5E5F2B02" Ref="C501"  Part="1" 
-F 0 "C501" H 2115 5821 50  0000 L CNN
-F 1 "0.1 uF" H 2115 5730 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2038 5625 50  0001 C CNN
-F 3 "~" H 2000 5775 50  0001 C CNN
-F 4 "CAP CER 0.1UF 10V X5R 0402" H 2000 5775 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 2000 5775 50  0001 C CNN "Link1"
-F 6 "CL05A104MP5NNNC" H 2000 5775 50  0001 C CNN "MPN1"
-F 7 "$0.00315" H 2000 5775 50  0001 C CNN "Standard Price"
-F 8 "Samsung Electro-Mechanics" H 2000 5775 50  0001 C CNN "Vendor1"
-F 9 "CAP CER 0.1UF 10V X5R 0402" H 2000 5775 50  0001 C CNN "Short Description"
-F 10 "+A1" H 2000 5775 50  0001 C CNN "Population"
-	1    2000 5775
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2000 5575 2000 5625
-Connection ~ 2000 5575
 Wire Wire Line
 	2000 5575 3025 5575
 Wire Wire Line
@@ -6743,9 +6719,6 @@ Wire Wire Line
 Connection ~ 2900 5975
 Wire Wire Line
 	2900 5975 2000 5975
-Wire Wire Line
-	2000 5925 2000 5975
-Connection ~ 2000 5975
 NoConn ~ 3525 5675
 Wire Wire Line
 	5875 5675 4425 5675
@@ -6785,13 +6758,6 @@ Wire Wire Line
 	3525 5575 4575 5575
 Text Label 3825 5575 0    50   ~ 0
 MSP430_RST_N
-Wire Wire Line
-	8200 1200 7075 1200
-Wire Wire Line
-	7075 1200 7075 1800
-Connection ~ 7075 1800
-Wire Wire Line
-	7075 1800 7200 1800
 $Comp
 L Connector:USB_C_Plug_USB2.0 P501
 U 1 1 5E44AB21
@@ -6826,9 +6792,9 @@ Wire Wire Line
 Connection ~ 5725 5525
 Wire Wire Line
 	5725 5525 5875 5525
-Text GLabel 8200 1800 2    63   Input ~ 0
+Text GLabel 7850 1800 2    63   Input ~ 0
 V_USB
-Text GLabel 8200 1200 2    63   Input ~ 0
+Text GLabel 7850 1200 2    63   Input ~ 0
 5V
 Text GLabel 8400 5825 2    63   Input ~ 0
 CC1352_RX_MSP430_TX
@@ -6875,4 +6841,26 @@ Wire Wire Line
 	1800 5325 2000 5325
 Wire Wire Line
 	2000 5325 2000 5575
+$Comp
+L Device:Polyfuse F501
+U 1 1 5E57D147
+P 6950 1800
+F 0 "F501" V 6850 1800 50  0000 C CNN
+F 1 "Polyfuse" V 7050 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7000 1600 50  0001 L CNN
+F 3 "~" H 6950 1800 50  0001 C CNN
+	1    6950 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7100 1800 7200 1800
+Wire Wire Line
+	7200 1800 7400 1800
+Wire Wire Line
+	7200 1200 7850 1200
+Connection ~ 7200 1800
+Wire Wire Line
+	7200 1200 7200 1800
+Text Notes 850  5850 0    79   ~ 0
+Decoupling cap shared\nwith other prog header
 $EndSCHEMATC
