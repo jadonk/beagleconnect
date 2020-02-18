@@ -1620,12 +1620,12 @@ Wire Wire Line
 Text GLabel 1675 8925 0    63   Input ~ 0
 MISO
 $Comp
-L Device:Polyfuse F?
+L Device:Polyfuse F801
 U 1 1 5E7EC3D9
 P 1975 825
-F 0 "F?" V 1875 825 50  0000 C CNN
+F 0 "F801" V 1875 825 50  0000 C CNN
 F 1 "Polyfuse" V 2075 825 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric" H 2025 625 50  0001 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2025 625 50  0001 L CNN
 F 3 "~" H 1975 825 50  0001 C CNN
 	1    1975 825 
 	0    1    1    0   

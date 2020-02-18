@@ -6,4 +6,10 @@ K dipole antenna
 F ~
 $ENDCMP
 #
+$CMP MSP430F5500IRGZ-EP
+D 8kB Flash, 4kB + 2kB RAM, QFN-48
+K TI MSP430 16-bit mixed signal microcontroller
+F http://www.ti.com/lit/ds/symlink/msp430f5500.pdf
+$ENDCMP
+#
 #End Doc Library
