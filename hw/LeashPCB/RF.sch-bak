@@ -881,29 +881,10 @@ F 3 "" H 8800 8000 50  0001 C CNN
 	1    8800 8000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2325 8925 1675 8925
-Text Label 1675 8925 0    50   ~ 0
+Text Label 1775 8625 0    50   ~ 0
 ~FLASH_CS
 Wire Wire Line
 	1425 825  1600 825 
-$Comp
-L Device:R R801
-U 1 1 5D89CFDB
-P 1975 825
-F 0 "R801" V 1768 825 50  0000 C CNN
-F 1 "0R1" V 1859 825 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1905 825 50  0001 C CNN
-F 3 "~" H 1975 825 50  0001 C CNN
-F 4 "RES 0.1 OHM 1% 1/16W 0402" H 1975 825 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/yageo/RL0402FR-070R1L/311-.10PCT-ND/1037191" H 1975 825 50  0001 C CNN "Link1"
-F 6 "RL0402FR-070R1L" H 1975 825 50  0001 C CNN "MPN1"
-F 7 "$0.07041" H 1975 825 50  0001 C CNN "Standard Price"
-F 8 "Yageo" H 1975 825 50  0001 C CNN "Vendor1"
-F 9 "RES 0.1 OHM 1% 1/16W 0402" H 1975 825 50  0001 C CNN "Short Description"
-	1    1975 825 
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2125 825  2300 825 
 Text Notes 2075 1100 0    50   ~ 0
@@ -913,7 +894,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 8225 2325 8225
 Wire Wire Line
-	1600 8625 2325 8625
+	1775 8625 2325 8625
 Wire Wire Line
 	1600 8725 2325 8725
 Wire Wire Line
@@ -1446,8 +1427,6 @@ Text GLabel 5000 8225 2    63   Input ~ 0
 PWM_MB2
 Text GLabel 2700 6375 0    63   Input ~ 0
 PWM_MB1
-Text GLabel 1600 8625 0    63   Input ~ 0
-MISO
 Text GLabel 1600 8725 0    63   Input ~ 0
 MOSI
 Text GLabel 1600 8825 0    63   Input ~ 0
@@ -1636,4 +1615,19 @@ Wire Wire Line
 	4025 8625 5000 8625
 Wire Wire Line
 	4025 8725 5000 8725
+Wire Wire Line
+	2325 8925 1675 8925
+Text GLabel 1675 8925 0    63   Input ~ 0
+MISO
+$Comp
+L Device:Polyfuse F?
+U 1 1 5E7EC3D9
+P 1975 825
+F 0 "F?" V 1875 825 50  0000 C CNN
+F 1 "Polyfuse" V 2075 825 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 2025 625 50  0001 L CNN
+F 3 "~" H 1975 825 50  0001 C CNN
+	1    1975 825 
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
