@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr C 22000 17000
 encoding utf-8
-Sheet 1 9
+Sheet 1 10
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -25672,5 +25672,11 @@ S 4800 11975 2175 1950
 U 5D099F4C
 F0 "User Input/Output" 50
 F1 "UserInputOutput.sch" 50
+$EndSheet
+$Sheet
+S 7225 8900 2250 2050
+U 5E6C68DD
+F0 "Sensors" 50
+F1 "Sensors.sch" 50
 $EndSheet
 $EndSCHEMATC

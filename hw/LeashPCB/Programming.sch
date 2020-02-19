@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 3 9
+Sheet 3 10
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"

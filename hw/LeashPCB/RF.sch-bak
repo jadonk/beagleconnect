@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 8 9
+Sheet 8 10
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
 Rev "A"
@@ -1402,7 +1402,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 8425 2325 8425
 Text GLabel 1600 8525 0    63   Input ~ 0
-USER2
+INT_SENSOR
 Text GLabel 1600 8225 0    63   Input ~ 0
 2.4G
 Text GLabel 5000 8925 2    63   Input ~ 0
