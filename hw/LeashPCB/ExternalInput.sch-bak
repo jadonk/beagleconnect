@@ -51,8 +51,6 @@ Wire Wire Line
 	8000 4825 8000 5175
 Wire Wire Line
 	8900 4725 9600 4725
-Text Label 8200 4725 0    50   ~ 0
-ALT_IN
 $Comp
 L Device:D_Schottky D201
 U 1 1 5D0807BE
@@ -73,7 +71,16 @@ $EndComp
 Text Notes 8425 5025 0    50   ~ 0
 No pop if using the \nswitch/jumper method
 Wire Wire Line
-	7700 4725 8600 4725
+	7700 4725 8325 4725
 Text GLabel 9600 4725 2    63   Input ~ 0
 V_ALT
+Text GLabel 8575 4300 2    63   Input ~ 0
+ALT_IN
+Wire Wire Line
+	8575 4300 8325 4300
+Wire Wire Line
+	8325 4300 8325 4725
+Connection ~ 8325 4725
+Wire Wire Line
+	8325 4725 8600 4725
 $EndSCHEMATC

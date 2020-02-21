@@ -33,8 +33,6 @@ Text GLabel 4475 3000 0    50   Input ~ 0
 SDA
 Text GLabel 4475 3100 0    50   Input ~ 0
 SCL
-Text GLabel 4475 3300 0    50   Input ~ 0
-INT_TH
 Wire Wire Line
 	4925 3450 4850 3450
 Wire Wire Line
@@ -282,13 +280,16 @@ F 3 "https://www.st.com/resource/en/datasheet/lis2DE12.pdf" H 5800 5625 50  0001
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor_Optical:LTR-303ALS-01 U1003
+L LeashPCB:OPT3001 U1003
 U 1 1 5E7503C1
 P 2775 5725
 F 0 "U1003" H 2475 6075 50  0000 L CNN
-F 1 "LTR-303ALS-01" H 2825 6075 50  0000 L CNN
-F 2 "OptoDevice:Lite-On_LTR-303ALS-01" H 2775 6175 50  0001 C CNN
-F 3 "http://optoelectronics.liteon.com/upload/download/DS86-2013-0004/LTR-303ALS-01_DS_V1.pdf" H 2475 6075 50  0001 C CNN
+F 1 "OPT3001" H 2825 6075 50  0000 L CNN
+F 2 "leash:USON6" H 2775 6175 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opt3001.pdf" H 2475 6075 50  0001 C CNN
+F 4 "OPT3001DNPR" H 2775 5725 50  0001 C CNN "MPN1"
+F 5 "0.2175" H 2775 5725 50  0001 C CNN "Standard Price"
+F 6 "http://www.ti.com/product/OPT3001/samplebuy" H 2775 5725 50  0001 C CNN "Link1"
 	1    2775 5725
 	1    0    0    -1  
 $EndComp
@@ -349,12 +350,10 @@ F 3 "" H 2775 6275 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2775 6125 2775 6275
-Text GLabel 7700 2750 0    50   Input ~ 0
-INT_LTR303
-Text GLabel 3350 5725 2    50   Input ~ 0
-INT_LTR303
+Text GLabel 3350 5625 2    50   Input ~ 0
+INT_OPT3001
 Wire Wire Line
-	3350 5725 3175 5725
+	3350 5625 3175 5625
 Text GLabel 5025 5725 0    50   Input ~ 0
 SCL
 Text GLabel 5025 5525 0    50   Input ~ 0
@@ -505,4 +504,44 @@ Text GLabel 10475 2600 2    50   Input ~ 0
 VDDS
 Text GLabel 2225 5100 0    50   Input ~ 0
 VDDS
+Text GLabel 4475 3300 0    50   Input ~ 0
+INT_HDC2010
+$Comp
+L Device:R R?
+U 1 1 5E4E359C
+P 3475 5825
+AR Path="/5D062750/5E4E359C" Ref="R?"  Part="1" 
+AR Path="/5E6C68DD/5E4E359C" Ref="R1008"  Part="1" 
+F 0 "R1008" V 3425 5600 50  0000 L CNN
+F 1 "0" V 3475 5800 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3405 5825 50  0001 C CNN
+F 3 "~" H 3475 5825 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 3475 5825 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3475 5825 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 3475 5825 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 3475 5825 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 3475 5825 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3475 5825 50  0001 C CNN "Short Description"
+	1    3475 5825
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3175 5825 3325 5825
+Wire Wire Line
+	3700 5825 3700 6125
+Wire Wire Line
+	3625 5825 3700 5825
+$Comp
+L power:GND #PWR0110
+U 1 1 5E4E591F
+P 3700 6125
+F 0 "#PWR0110" H 3700 5875 50  0001 C CNN
+F 1 "GND" H 3700 5975 50  0000 C CNN
+F 2 "" H 3700 6125 50  0001 C CNN
+F 3 "" H 3700 6125 50  0001 C CNN
+	1    3700 6125
+	1    0    0    -1  
+$EndComp
+Text GLabel 7700 2750 0    50   Input ~ 0
+INT_OPT3001
 $EndSCHEMATC

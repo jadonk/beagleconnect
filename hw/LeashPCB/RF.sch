@@ -796,35 +796,33 @@ Wire Wire Line
 	10325 7250 10575 7250
 Wire Wire Line
 	9025 7200 8650 7200
-Text Label 8300 7200 0    50   ~ 0
-~FLASH_CS
 Wire Wire Line
 	8650 6700 8650 7200
 Connection ~ 8650 7200
 Wire Wire Line
-	8650 7200 8300 7200
+	8650 7200 8400 7200
 Wire Wire Line
 	8650 6150 8650 6400
 Wire Wire Line
-	9025 7000 8300 7000
+	9025 7000 8400 7000
 Wire Wire Line
-	9025 7100 8300 7100
+	9025 7100 8400 7100
 $Comp
 L Device:R R809
 U 1 1 5D6AB0E0
-P 7925 6550
-F 0 "R809" H 7995 6641 50  0000 L CNN
-F 1 "2.21K" H 7995 6550 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7855 6550 50  0001 C CNN
-F 3 "~" H 7925 6550 50  0001 C CNN
-F 4 "-P" H 7995 6459 50  0000 L CNN "Population"
-F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7925 6550 50  0001 C CNN "Description"
-F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 7925 6550 50  0001 C CNN "Link1"
-F 7 "ERJ-2RKF2211X" H 7925 6550 50  0001 C CNN "MPN1"
-F 8 "$0.00563	" H 7925 6550 50  0001 C CNN "Standard Price"
-F 9 "Panasonic Electronic Components" H 7925 6550 50  0001 C CNN "Vendor1"
-F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7925 6550 50  0001 C CNN "Short Description"
-	1    7925 6550
+P 7850 6550
+F 0 "R809" H 7920 6641 50  0000 L CNN
+F 1 "2.21K" H 7920 6550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7780 6550 50  0001 C CNN
+F 3 "~" H 7850 6550 50  0001 C CNN
+F 4 "-P" H 7920 6459 50  0000 L CNN "Population"
+F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7850 6550 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 7850 6550 50  0001 C CNN "Link1"
+F 7 "ERJ-2RKF2211X" H 7850 6550 50  0001 C CNN "MPN1"
+F 8 "$0.00563	" H 7850 6550 50  0001 C CNN "Standard Price"
+F 9 "Panasonic Electronic Components" H 7850 6550 50  0001 C CNN "Vendor1"
+F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7850 6550 50  0001 C CNN "Short Description"
+	1    7850 6550
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -846,21 +844,21 @@ F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7550 6550 50  0001 C CNN "Short Descrip
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8650 6150 7925 6150
+	8650 6150 7850 6150
 Wire Wire Line
-	7925 6150 7925 6400
+	7850 6150 7850 6400
 Wire Wire Line
-	7925 7300 9025 7300
+	7850 7300 9025 7300
 Wire Wire Line
-	7925 6700 7925 7300
+	7850 6700 7850 7300
 Connection ~ 8650 6150
 Wire Wire Line
 	9025 7400 7550 7400
 Wire Wire Line
-	7550 6150 7925 6150
+	7550 6150 7850 6150
 Wire Wire Line
 	7550 6400 7550 6150
-Connection ~ 7925 6150
+Connection ~ 7850 6150
 Wire Wire Line
 	9025 7650 8800 7650
 Wire Wire Line
@@ -1523,11 +1521,11 @@ Wire Wire Line
 Connection ~ 3725 825 
 Wire Wire Line
 	3725 825  3425 825 
-Text GLabel 8300 7100 0    63   Input ~ 0
+Text GLabel 8400 7100 0    50   Input ~ 0
 SCK
-Text GLabel 8300 7000 0    63   Input ~ 0
+Text GLabel 8400 7000 0    50   Input ~ 0
 MOSI
-Text GLabel 10575 7250 2    63   Input ~ 0
+Text GLabel 10575 7250 2    50   Input ~ 0
 MISO
 Wire Wire Line
 	4025 8825 5000 8825
@@ -1630,4 +1628,6 @@ F 3 "~" H 1975 825 50  0001 C CNN
 	1    1975 825 
 	0    1    1    0   
 $EndComp
+Text GLabel 8400 7200 0    50   Input ~ 0
+~FLASH_CS
 $EndSCHEMATC
