@@ -1020,25 +1020,10 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5E5724CE
-P 8425 6025
+P 8500 6625
 AR Path="/5D062750/5E5724CE" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5E5724CE" Ref="R511"  Part="1" 
-F 0 "R511" V 8475 6175 50  0000 L CNN
-F 1 "0" V 8425 6000 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 8355 6025 50  0001 C CNN
-F 3 "~" H 8425 6025 50  0001 C CNN
-F 4 "" H 8425 6025 50  0001 C CNN "Description"
-F 5 "$0.00563	" H 8425 6025 50  0001 C CNN "Standard Price"
-	1    8425 6025
-	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 5E572A75
-P 8500 6625
-AR Path="/5D062750/5E572A75" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5E572A75" Ref="R507"  Part="1" 
-F 0 "R507" V 8550 6775 50  0000 L CNN
+F 0 "R511" V 8550 6775 50  0000 L CNN
 F 1 "0" V 8500 6600 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 8430 6625 50  0001 C CNN
 F 3 "~" H 8500 6625 50  0001 C CNN
@@ -1047,16 +1032,31 @@ F 5 "$0.00563	" H 8500 6625 50  0001 C CNN "Standard Price"
 	1    8500 6625
 	0    1    -1   0   
 $EndComp
-Text GLabel 8900 6625 2    50   Input ~ 0
-USER
+$Comp
+L Device:R R?
+U 1 1 5E572A75
+P 8475 6025
+AR Path="/5D062750/5E572A75" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5E572A75" Ref="R507"  Part="1" 
+F 0 "R507" V 8525 6175 50  0000 L CNN
+F 1 "0" V 8475 6000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8405 6025 50  0001 C CNN
+F 3 "~" H 8475 6025 50  0001 C CNN
+F 4 "" H 8475 6025 50  0001 C CNN "Description"
+F 5 "$0.00563	" H 8475 6025 50  0001 C CNN "Standard Price"
+	1    8475 6025
+	0    1    -1   0   
+$EndComp
+Text GLabel 8875 6025 2    50   Input ~ 0
+USER1
 Wire Wire Line
-	8900 6625 8650 6625
+	8875 6025 8625 6025
 Wire Wire Line
 	5700 6625 5875 6625
-Text GLabel 8825 6025 2    50   Input ~ 0
+Text GLabel 8900 6625 2    50   Input ~ 0
 RESET_N
 Wire Wire Line
-	8825 6025 8575 6025
+	8900 6625 8650 6625
 Wire Wire Line
 	5700 6525 5875 6525
 Wire Wire Line
@@ -1079,4 +1079,6 @@ Wire Wire Line
 	8725 6125 8275 6125
 Wire Wire Line
 	8350 6625 8275 6625
+Wire Wire Line
+	8325 6025 8275 6025
 $EndSCHEMATC
