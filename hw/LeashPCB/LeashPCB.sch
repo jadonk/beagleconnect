@@ -18446,6 +18446,10 @@ F 0 "H101" H 2350 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2350 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2350 12450 50  0001 C CNN
 F 3 "~" H 2350 12450 50  0001 C CNN
+F 4 "N/A" H 2350 12450 50  0001 C CNN "Link1"
+F 5 "N/A" H 2350 12450 50  0001 C CNN "MPN1"
+F 6 "N/A" H 2350 12450 50  0001 C CNN "Short Description"
+F 7 "0" H 2350 12450 50  0001 C CNN "Standard Price"
 	1    2350 12450
 	1    0    0    -1  
 $EndComp
@@ -18457,6 +18461,10 @@ F 0 "H102" H 2525 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2525 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2525 12450 50  0001 C CNN
 F 3 "~" H 2525 12450 50  0001 C CNN
+F 4 "N/A" H 2525 12450 50  0001 C CNN "Link1"
+F 5 "N/A" H 2525 12450 50  0001 C CNN "MPN1"
+F 6 "N/A" H 2525 12450 50  0001 C CNN "Short Description"
+F 7 "0" H 2525 12450 50  0001 C CNN "Standard Price"
 	1    2525 12450
 	1    0    0    -1  
 $EndComp
@@ -18468,6 +18476,10 @@ F 0 "H103" H 2700 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2700 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2700 12450 50  0001 C CNN
 F 3 "~" H 2700 12450 50  0001 C CNN
+F 4 "N/A" H 2700 12450 50  0001 C CNN "Link1"
+F 5 "N/A" H 2700 12450 50  0001 C CNN "MPN1"
+F 6 "N/A" H 2700 12450 50  0001 C CNN "Short Description"
+F 7 "0" H 2700 12450 50  0001 C CNN "Standard Price"
 	1    2700 12450
 	1    0    0    -1  
 $EndComp
@@ -18479,6 +18491,10 @@ F 0 "H104" H 2875 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2875 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2875 12450 50  0001 C CNN
 F 3 "~" H 2875 12450 50  0001 C CNN
+F 4 "N/A" H 2875 12450 50  0001 C CNN "Link1"
+F 5 "N/A" H 2875 12450 50  0001 C CNN "MPN1"
+F 6 "N/A" H 2875 12450 50  0001 C CNN "Short Description"
+F 7 "0" H 2875 12450 50  0001 C CNN "Standard Price"
 	1    2875 12450
 	1    0    0    -1  
 $EndComp

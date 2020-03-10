@@ -13,25 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L LeashPCB:mikroBUS J?
-U 1 1 5D092D9C
-P 8675 4025
-AR Path="/5D092D9C" Ref="J?"  Part="1" 
-AR Path="/5D066680/5D092D9C" Ref="J701"  Part="1" 
-F 0 "J701" H 8700 4740 50  0000 C CNN
-F 1 "mikroBUS" H 8700 4649 50  0000 C CNN
-F 2 "leash:MikroBus-SMD" H 8475 4225 50  0001 C CNN
-F 3 "" H 8475 4225 50  0001 C CNN
-F 4 "0" H 8675 4025 50  0001 C CNN "Standard Price"
-F 5 "N/A" H 8675 4025 50  0001 C CNN "Description"
-F 6 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPTC081KFXC-RC/S5600-ND/776058" H 8675 4025 50  0001 C CNN "Link1"
-F 7 "NPTC081KFXC-RC" H 8675 4025 50  0001 C CNN "MPN1"
-F 8 "Sullins" H 8675 4025 50  0001 C CNN "Vendor1"
-F 9 "CONN HDR 8POS 0.1 TIN SMD" H 8675 4025 50  0001 C CNN "Short Description"
-	1    8675 4025
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8125 4375 7900 4375
 Wire Wire Line
@@ -86,12 +67,16 @@ F 0 "J702" H 8750 6365 50  0000 C CNN
 F 1 "mikroBUS" H 8750 6274 50  0000 C CNN
 F 2 "leash:MikroBus-SMD" H 8525 5850 50  0001 C CNN
 F 3 "" H 8525 5850 50  0001 C CNN
-F 4 "0" H 8725 5650 50  0001 C CNN "Standard Price"
+F 4 "0.10" H 8725 5650 50  0001 C CNN "Standard Price"
 F 5 "N/A" H 8725 5650 50  0001 C CNN "Description"
-F 6 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPTC081KFXC-RC/S5600-ND/776058" H 8725 5650 50  0001 C CNN "Link1"
-F 7 "NPTC081KFXC-RC" H 8725 5650 50  0001 C CNN "MPN1"
-F 8 "Sullins" H 8725 5650 50  0001 C CNN "Vendor1"
+F 6 "https://SZconnect.com" H 8725 5650 50  0001 C CNN "Link1"
+F 7 "ST-FH-254-0144-B" H 8725 5650 50  0001 C CNN "MPN1"
+F 8 "Sinotop Electronics Ltd" H 8725 5650 50  0001 C CNN "Vendor1"
 F 9 "CONN HDR 8POS 0.1 TIN SMD" H 8725 5650 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPPC081KFXC-RC/S5639-ND/776098" H 8725 5650 50  0001 C CNN "Link2"
+F 11 "NPPC081KFXC-RC" H 8725 5650 50  0001 C CNN "MPN2"
+F 12 "Need to buy in pairs!" H 8725 5650 50  0001 C CNN "Value modifier"
+F 13 "Sullins Connector Solutions" H 8725 5650 50  0001 C CNN "Vendor2"
 	1    8725 5650
 	1    0    0    -1  
 $EndComp
@@ -223,4 +208,27 @@ Wire Wire Line
 	7175 5800 8175 5800
 Wire Wire Line
 	8175 5900 7175 5900
+$Comp
+L LeashPCB:mikroBUS J?
+U 1 1 5D092D9C
+P 8675 4025
+AR Path="/5D092D9C" Ref="J?"  Part="1" 
+AR Path="/5D066680/5D092D9C" Ref="J701"  Part="1" 
+F 0 "J701" H 8700 4740 50  0000 C CNN
+F 1 "mikroBUS" H 8700 4649 50  0000 C CNN
+F 2 "leash:MikroBus-SMD" H 8475 4225 50  0001 C CNN
+F 3 "" H 8475 4225 50  0001 C CNN
+F 4 "0.10" H 8675 4025 50  0001 C CNN "Standard Price"
+F 5 "Order 2 of these connectors! Right tight top" H 8675 4025 50  0001 C CNN "Description"
+F 6 "https://SZconnect.com" H 8675 4025 50  0001 C CNN "Link1"
+F 7 "ST-FH-254-0144-B" H 8675 4025 50  0001 C CNN "MPN1"
+F 8 "Sinotop Electronics Ltd" H 8675 4025 50  0001 C CNN "Vendor1"
+F 9 "CONN HDR 8POS 0.1 TIN SMD" H 8675 4025 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPPC081KFXC-RC/S5639-ND/776098" H 8675 4025 50  0001 C CNN "Link2"
+F 11 "NPPC081KFXC-RC" H 8675 4025 50  0001 C CNN "MPN2"
+F 12 "Need to buy in pairs!" H 8675 4025 50  0001 C CNN "Value modifier"
+F 13 "Sullins Connector Solutions" H 8675 4025 50  0001 C CNN "Vendor2"
+	1    8675 4025
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

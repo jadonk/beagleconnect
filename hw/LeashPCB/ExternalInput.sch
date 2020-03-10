@@ -24,11 +24,14 @@ F 1 "Conn_01x02_Male" H 7608 4815 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 7500 4725 50  0001 C CNN
 F 3 "~" H 7500 4725 50  0001 C CNN
 F 4 "$0.03" H 7500 4725 50  0001 C CNN "Standard Price"
-F 5 "https://www.digikey.com/product-detail/en/jst-sales-america-inc/S2B-PH-SM4-TB-LF-SN/455-1749-1-ND/926846" H 7500 4725 50  0001 C CNN "Link1"
+F 5 "https://SeeedStudio.com" H 7500 4725 50  0001 C CNN "Link1"
 F 6 "CONN HEADER SMD R/A 2POS 2MM" H 7500 4725 50  0001 C CNN "Description"
-F 7 "S2B-PH-SM4-TB(LF)(SN)" H 7500 4725 50  0001 C CNN "MPN1"
-F 8 "JST Sales America Inc." H 7500 4725 50  0001 C CNN "Vendor1"
+F 7 "A2001WF-02A" H 7500 4725 50  0001 C CNN "MPN1"
+F 8 "Seeed Studio" H 7500 4725 50  0001 C CNN "Vendor1"
 F 9 "CONN HEADER SMD R/A 2POS 2MM" H 7500 4725 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/jst-sales-america-inc/S2B-PH-SM4-TB-LF-SN/455-1749-1-ND/926846" H 7500 4725 50  0001 C CNN "Link2"
+F 11 "S2B-PH-SM4-TB(LF)(SN)" H 7500 4725 50  0001 C CNN "MPN2"
+F 12 "JST Sales America Inc." H 7500 4725 50  0001 C CNN "Vendor2"
 	1    7500 4725
 	1    0    0    -1  
 $EndComp

@@ -21,12 +21,15 @@ F 0 "SW901" H 6575 5685 50  0000 C CNN
 F 1 "SW_SPST" H 6575 5594 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 6575 5450 50  0001 C CNN
 F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 6575 5450 50  0001 C CNN
-F 4 "EVQ-P7A01P" H 6575 5450 50  0001 C CNN "MPN1"
-F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 6575 5450 50  0001 C CNN "Link1"
+F 4 "SKRPABE010" H 6575 5450 50  0001 C CNN "MPN1"
+F 5 "https://www.seeedstudio.com/opl.html" H 6575 5450 50  0001 C CNN "Link1"
 F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 6575 5450 50  0001 C CNN "Description"
 F 7 "$0.13050	" H 6575 5450 50  0001 C CNN "Standard Price"
-F 8 "Panasonic Electronic Components" H 6575 5450 50  0001 C CNN "Vendor1"
+F 8 "ALPS" H 6575 5450 50  0001 C CNN "Vendor1"
 F 9 "SWITCH TACTILE SPST-NO 0.05A 12V" H 6575 5450 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 6575 5450 50  0001 C CNN "Link2"
+F 11 "EVQ-P7A01P" H 6575 5450 50  0001 C CNN "MPN2"
+F 12 "Panasonic Electronic Components" H 6575 5450 50  0001 C CNN "Vendor2"
 	1    6575 5450
 	1    0    0    -1  
 $EndComp
@@ -53,12 +56,15 @@ F 0 "SW902" H 9075 5635 50  0000 C CNN
 F 1 "SW_SPST" H 9075 5544 50  0000 C CNN
 F 2 "Button_Switch_SMD:SW_SPST_PTS810" H 9075 5400 50  0001 C CNN
 F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 9075 5400 50  0001 C CNN
-F 4 "EVQ-P7A01P" H 9075 5400 50  0001 C CNN "MPN1"
-F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 9075 5400 50  0001 C CNN "Link1"
+F 4 "SKRPABE010" H 9075 5400 50  0001 C CNN "MPN1"
+F 5 "https://www.seeedstudio.com/opl.html" H 9075 5400 50  0001 C CNN "Link1"
 F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 9075 5400 50  0001 C CNN "Description"
 F 7 "$0.13050	" H 9075 5400 50  0001 C CNN "Standard Price"
-F 8 "Panasonic Electronic Components" H 9075 5400 50  0001 C CNN "Vendor1"
+F 8 "ALPS" H 9075 5400 50  0001 C CNN "Vendor1"
 F 9 "SWITCH TACTILE SPST-NO 0.05A 12V" H 9075 5400 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 9075 5400 50  0001 C CNN "Link2"
+F 11 "EVQ-P7A01P" H 9075 5400 50  0001 C CNN "MPN2"
+F 12 "Panasonic Electronic Components" H 9075 5400 50  0001 C CNN "Vendor2"
 	1    9075 5400
 	1    0    0    -1  
 $EndComp

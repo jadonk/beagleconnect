@@ -21,7 +21,11 @@ F 0 "U1001" H 5725 2700 50  0000 C CNN
 F 1 "HDC2010" H 5125 2700 50  0000 C CNN
 F 2 "leash:HDC2010" H 5425 3400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/hdc2010.pdf" H 5425 3400 50  0001 C CNN
-F 4 "http://www.ti.com/product/HDC2010" H 5425 3250 50  0001 C CNN "Link1"
+F 4 "https://www.digikey.com/product-detail/en/texas-instruments/HDC2010YPAR/296-47774-2-ND/7561364" H 5425 3250 50  0001 C CNN "Link1"
+F 5 "HDC2010YPAR" H 5425 3250 50  0001 C CNN "MPN1"
+F 6 "GEN 2 HUMIDITY SENSOR" H 5425 3250 50  0001 C CNN "Short Description"
+F 7 "0.2175" H 5425 3250 50  0001 C CNN "Standard Price"
+F 8 "Texas Instruments" H 5425 3250 50  0001 C CNN "Vendor1"
 	1    5425 3250
 	1    0    0    -1  
 $EndComp
@@ -76,7 +80,7 @@ F 3 "~" H 4550 2500 50  0001 C CNN
 F 4 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4550 2500 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 4550 2500 50  0001 C CNN "Link1"
 F 6 "ERJ-2RKF2211X" H 4550 2500 50  0001 C CNN "MPN1"
-F 7 "$0.00563	" H 4550 2500 50  0001 C CNN "Standard Price"
+F 7 "0.00498" H 4550 2500 50  0001 C CNN "Standard Price"
 F 8 "Panasonic Electronic Components" H 4550 2500 50  0001 C CNN "Vendor1"
 F 9 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4550 2500 50  0001 C CNN "Short Description"
 	1    4550 2500
@@ -134,7 +138,7 @@ F 3 "~" H 4900 2500 50  0001 C CNN
 F 4 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4900 2500 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 4900 2500 50  0001 C CNN "Link1"
 F 6 "ERJ-2RKF2211X" H 4900 2500 50  0001 C CNN "MPN1"
-F 7 "$0.00563	" H 4900 2500 50  0001 C CNN "Standard Price"
+F 7 "0.00498" H 4900 2500 50  0001 C CNN "Standard Price"
 F 8 "Panasonic Electronic Components" H 4900 2500 50  0001 C CNN "Vendor1"
 F 9 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4900 2500 50  0001 C CNN "Short Description"
 	1    4900 2500
@@ -170,6 +174,11 @@ F 0 "U1002" H 9025 2300 50  0000 C CNN
 F 1 "SN74AUP2G32" H 8825 3200 50  0000 C CNN
 F 2 "Package_SON:X2SON-8_1.4x1mm_P0.35mm" H 8725 2900 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/sn74aup2g32.pdf" H 8725 2900 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/texas-instruments/SN74AUP2G32DQER/296-25873-2-ND/2242310" H 8825 2800 50  0001 C CNN "Link1"
+F 5 "SN74AUP2G32DQER" H 8825 2800 50  0001 C CNN "MPN1"
+F 6 "IC GATE OR 2CH 2-INP 8X2SON" H 8825 2800 50  0001 C CNN "Short Description"
+F 7 "0.0225" H 8825 2800 50  0001 C CNN "Standard Price"
+F 8 "Texas Instruments" H 8825 2800 50  0001 C CNN "Vendor1"
 	1    8825 2800
 	1    0    0    -1  
 $EndComp
@@ -276,6 +285,11 @@ F 0 "U1004" H 5950 6075 50  0000 R CNN
 F 1 "LIS2DE12" H 6300 6075 50  0000 L CNN
 F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 6300 6175 50  0001 L CNN
 F 3 "https://www.st.com/resource/en/datasheet/lis2DE12.pdf" H 5800 5625 50  0001 C CNN
+F 4 "https://www.digikey.com/products/en/sensors-transducers/motion-sensors-accelerometers/515?k=LIS2DE12&k=&pkeyword=LIS2DE12&sv=0&pv7=1&sf=0&FV=-8%7C515&quantity=&ColumnSort=0&page=1&pageSize=25" H 6150 5625 50  0001 C CNN "Link1"
+F 5 "LIS2DE12TR" H 6150 5625 50  0001 C CNN "MPN1"
+F 6 "ACCEL 2-16G I2C/SPI 12LGA" H 6150 5625 50  0001 C CNN "Short Description"
+F 7 "0.51200" H 6150 5625 50  0001 C CNN "Standard Price"
+F 8 "STMicroelectronics" H 6150 5625 50  0001 C CNN "Vendor1"
 	1    6150 5625
 	1    0    0    -1  
 $EndComp
@@ -289,7 +303,9 @@ F 2 "leash:USON6" H 2775 6175 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/opt3001.pdf" H 2475 6075 50  0001 C CNN
 F 4 "OPT3001DNPR" H 2775 5725 50  0001 C CNN "MPN1"
 F 5 "0.2175" H 2775 5725 50  0001 C CNN "Standard Price"
-F 6 "http://www.ti.com/product/OPT3001/samplebuy" H 2775 5725 50  0001 C CNN "Link1"
+F 6 "https://www.digikey.com/product-detail/en/texas-instruments/OPT3001DNPR/296-40474-2-ND/5039362" H 2775 5725 50  0001 C CNN "Link1"
+F 7 "SENSOR OPT 550NM AMBIENT 6USON" H 2775 5725 50  0001 C CNN "Short Description"
+F 8 "Texas Instruments" H 2775 5725 50  0001 C CNN "Vendor1"
 	1    2775 5725
 	1    0    0    -1  
 $EndComp

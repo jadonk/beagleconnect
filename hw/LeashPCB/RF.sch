@@ -184,10 +184,10 @@ F 6 "RMCF0402ZT0R00" H 14550 5175 50  0001 C CNN "MPN1"
 F 7 "$0.00127" H 14550 5175 50  0001 C CNN "Standard Price"
 F 8 "Stackpole Electronics Inc" H 14550 5175 50  0001 C CNN "Vendor1"
 F 9 "RES 0 OHM JUMPER 1/16W 0402" H 14550 5175 50  0001 C CNN "Short Description"
-F 10 "Resistor_SMD:R_0402_1005Metric" H 14550 5175 50  0001 C CNN "Link2"
+F 10 "" H 14550 5175 50  0001 C CNN "Link2"
 F 11 "~" H 14550 5175 50  0001 C CNN "MPN2"
-F 12 "0" H 14550 5175 50  0001 C CNN "Value modifier"
-F 13 "RES 0 OHM JUMPER 1/16W 0402" H 14550 5175 50  0001 C CNN "Vendor2"
+F 12 "" H 14550 5175 50  0001 C CNN "Value modifier"
+F 13 "" H 14550 5175 50  0001 C CNN "Vendor2"
 	1    14550 5175
 	0    1    -1   0   
 $EndComp
@@ -573,6 +573,7 @@ F 5 "https://www.digikey.com/product-detail/en/ecs-inc/ECS-.327-7-12-C-TR/XC2290
 F 6 "ECS-.327-7-12-C-TR" H 1150 3075 50  0001 C CNN "MPN1"
 F 7 "$0.3770" H 1150 3075 50  0001 C CNN "Standard Price"
 F 8 "CRYSTAL 32.7680KHZ 7PF SMD" H 1150 3075 50  0001 C CNN "Short Description"
+F 9 "ECS Inc." H 1150 3075 50  0001 C CNN "Vendor1"
 	1    1150 3075
 	1    0    0    -1  
 $EndComp
@@ -663,6 +664,9 @@ F 5 "https://www.digikey.com/product-detail/en/ndk-america-inc/NX2016SA-48M-EXS0
 F 6 "NX2016SA-48M-EXS00A-CS05517" H 1975 2075 50  0001 C CNN "MPN1"
 F 7 "$0.40890" H 1975 2075 50  0001 C CNN "Standard Price"
 F 8 "CRYSTAL 48MHZ 7PF SMD" H 1975 2075 50  0001 C CNN "Short Description"
+F 9 "https://www.digikey.com/product-detail/en/kyocera-international-inc-electronic-components/CX2016DB48000C0WLLA1/1253-1388-2-ND/5181901" H 1975 2075 50  0001 C CNN "Link2"
+F 10 "CX2016DB48000C0WLLA1" H 1975 2075 50  0001 C CNN "MPN2"
+F 11 "Kyocera International Inc. Electronic Components" H 1975 2075 50  0001 C CNN "Vendor1"
 	1    1975 2075
 	1    0    0    -1  
 $EndComp
@@ -732,7 +736,7 @@ F 3 "~" H 8650 6550 50  0001 C CNN
 F 4 "RES SMD 2.21K OHM 1% 1/10W 0402" H 8650 6550 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 8650 6550 50  0001 C CNN "Link1"
 F 6 "ERJ-2RKF2211X" H 8650 6550 50  0001 C CNN "MPN1"
-F 7 "$0.00563	" H 8650 6550 50  0001 C CNN "Standard Price"
+F 7 "0.00498" H 8650 6550 50  0001 C CNN "Standard Price"
 F 8 "Panasonic Electronic Components" H 8650 6550 50  0001 C CNN "Vendor1"
 F 9 "RES SMD 2.21K OHM 1% 1/10W 0402" H 8650 6550 50  0001 C CNN "Short Description"
 	1    8650 6550
@@ -819,7 +823,7 @@ F 4 "-P" H 7920 6459 50  0000 L CNN "Population"
 F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7850 6550 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 7850 6550 50  0001 C CNN "Link1"
 F 7 "ERJ-2RKF2211X" H 7850 6550 50  0001 C CNN "MPN1"
-F 8 "$0.00563	" H 7850 6550 50  0001 C CNN "Standard Price"
+F 8 "0.00498" H 7850 6550 50  0001 C CNN "Standard Price"
 F 9 "Panasonic Electronic Components" H 7850 6550 50  0001 C CNN "Vendor1"
 F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7850 6550 50  0001 C CNN "Short Description"
 	1    7850 6550
@@ -837,7 +841,7 @@ F 4 "-P" H 7620 6459 50  0000 L CNN "Population"
 F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7550 6550 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 7550 6550 50  0001 C CNN "Link1"
 F 7 "ERJ-2RKF2211X" H 7550 6550 50  0001 C CNN "MPN1"
-F 8 "$0.00563	" H 7550 6550 50  0001 C CNN "Standard Price"
+F 8 "0.00498" H 7550 6550 50  0001 C CNN "Standard Price"
 F 9 "Panasonic Electronic Components" H 7550 6550 50  0001 C CNN "Vendor1"
 F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7550 6550 50  0001 C CNN "Short Description"
 	1    7550 6550
@@ -923,8 +927,11 @@ F 4 "CONN UMC JACK STR 50 OHM SMD" H 16075 5175 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/amphenol-rf-division/A-1JB/ARF1579CT-ND/1196264" H 16075 5175 50  0001 C CNN "Link1"
 F 6 "A-1JB" H 16075 5175 50  0001 C CNN "MPN1"
 F 7 "$0.36310" H 16075 5175 50  0001 C CNN "Standard Price"
-F 8 "Amphenol RF Division" H 16075 5175 50  0001 C CNN "Vendor1"
+F 8 "" H 16075 5175 50  0001 C CNN "Vendor1"
 F 9 "CONN UMC JACK STR 50 OHM SMD" H 16075 5175 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/amphenol-rf-division/A-1JB/ARF1579CT-ND/1196264" H 16075 5175 50  0001 C CNN "Link2"
+F 11 "A-1JB" H 16075 5175 50  0001 C CNN "MPN2"
+F 12 "Amphenol RF Division" H 16075 5175 50  0001 C CNN "Vendor2"
 	1    16075 5175
 	1    0    0    -1  
 $EndComp
@@ -1148,8 +1155,11 @@ F 4 "CONN UMC JACK STR 50 OHM SMD" H 15850 1275 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/amphenol-rf-division/A-1JB/ARF1579CT-ND/1196264" H 15850 1275 50  0001 C CNN "Link1"
 F 6 "A-1JB" H 15850 1275 50  0001 C CNN "MPN1"
 F 7 "$0.36310" H 15850 1275 50  0001 C CNN "Standard Price"
-F 8 "Amphenol RF Division" H 15850 1275 50  0001 C CNN "Vendor1"
+F 8 "" H 15850 1275 50  0001 C CNN "Vendor1"
 F 9 "CONN UMC JACK STR 50 OHM SMD" H 15850 1275 50  0001 C CNN "Short Description"
+F 10 "https://www.digikey.com/product-detail/en/amphenol-rf-division/A-1JB/ARF1579CT-ND/1196264" H 15850 1275 50  0001 C CNN "Link2"
+F 11 "A-1JB" H 15850 1275 50  0001 C CNN "MPN2"
+F 12 "Amphenol RF Division" H 15850 1275 50  0001 C CNN "Vendor2"
 	1    15850 1275
 	1    0    0    -1  
 $EndComp
@@ -1349,6 +1359,9 @@ F 0 "AE802" H 16025 4450 50  0000 R CNN
 F 1 "Antenna" H 16025 4375 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 16100 4375 50  0001 C CNN
 F 3 "~" H 16100 4375 50  0001 C CNN
+F 4 "N/A" H 16100 4375 50  0001 C CNN "MPN1"
+F 5 "N/A" H 16100 4375 50  0001 C CNN "Link1"
+F 6 "N/A" H 16100 4375 50  0001 C CNN "Vendor1"
 	1    16100 4375
 	1    0    0    -1  
 $EndComp
@@ -1625,6 +1638,11 @@ F 0 "F801" V 1875 825 50  0000 C CNN
 F 1 "Polyfuse" V 2075 825 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" H 2025 625 50  0001 L CNN
 F 3 "~" H 1975 825 50  0001 C CNN
+F 4 "https://www.digikey.com/product-detail/en/yageo/RC0603JR-070RL/311-0-0GRTR-ND/726675" H 1975 825 50  0001 C CNN "Link1"
+F 5 "RC0603JR-070RL" H 1975 825 50  0001 C CNN "MPN1"
+F 6 "RES SMD 0 OHM JUMPER 1/10W 0603" H 1975 825 50  0001 C CNN "Short Description"
+F 7 "0.00196" H 1975 825 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 1975 825 50  0001 C CNN "Vendor1"
 	1    1975 825 
 	0    1    1    0   
 $EndComp
