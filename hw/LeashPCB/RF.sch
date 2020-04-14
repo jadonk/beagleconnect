@@ -75,15 +75,15 @@ L Device:L L803
 U 1 1 5D31B1B9
 P 14100 1275
 F 0 "L803" V 14290 1275 50  0000 C CNN
-F 1 "2 nH" V 14199 1275 50  0000 C CNN
+F 1 "0" V 14199 1275 50  0000 C CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 14100 1275 50  0001 C CNN
 F 3 "~" H 14100 1275 50  0001 C CNN
 F 4 "FIXED IND 2NH 900MA 100 MOHM SMD" H 14100 1275 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/murata-electronics-north-america/LQG15HS2N0S02D/490-6569-1-ND/3845766" H 14100 1275 50  0001 C CNN "Link1"
-F 6 "LQG15HS2N0S02D" H 14100 1275 50  0001 C CNN "MPN1"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 14100 1275 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 14100 1275 50  0001 C CNN "MPN1"
 F 7 "$0.01872" H 14100 1275 50  0001 C CNN "Standard Price"
-F 8 "Murata Electronics North America" H 14100 1275 50  0001 C CNN "Vendor1"
-F 9 "FIXED IND 2NH 900MA 100 MOHM SMD" H 14100 1275 50  0001 C CNN "Short Description"
+F 8 "Stackpole Electronics Inc" H 14100 1275 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 14100 1275 50  0001 C CNN "Short Description"
 	1    14100 1275
 	0    1    -1   0   
 $EndComp
@@ -101,6 +101,7 @@ F 6 "GRM1555C1H1R0CA01D" H 13775 1550 50  0001 C CNN "MPN1"
 F 7 "$0.00588" H 13775 1550 50  0001 C CNN "Standard Price"
 F 8 "Murata Electronics North America" H 13775 1550 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 1PF 50V C0G/NP0 0402" H 13775 1550 50  0001 C CNN "Short Description"
+F 10 "DNP" H 13925 1675 50  0000 C CNN "Population"
 	1    13775 1550
 	-1   0    0    1   
 $EndComp
@@ -118,6 +119,7 @@ F 6 "GRM1555C1H1R0CA01D" H 14400 1550 50  0001 C CNN "MPN1"
 F 7 "$0.00588" H 14400 1550 50  0001 C CNN "Standard Price"
 F 8 "Murata Electronics North America" H 14400 1550 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 1PF 50V C0G/NP0 0402" H 14400 1550 50  0001 C CNN "Short Description"
+F 10 "DNP" H 14200 1675 50  0000 C CNN "Population"
 	1    14400 1550
 	-1   0    0    1   
 $EndComp
@@ -167,6 +169,7 @@ F 6 "CC0402CRNPO9BN2R7" H 14175 5425 50  0001 C CNN "MPN1"
 F 7 "$0.00454" H 14175 5425 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 14175 5425 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 2.7PF 50V C0G/NPO 0402" H 14175 5425 50  0001 C CNN "Short Description"
+F 10 "DNP" H 14375 5300 50  0000 C CNN "Population"
 	1    14175 5425
 	1    0    0    -1  
 $EndComp
@@ -205,6 +208,7 @@ F 6 "CC0402DRNPO9BN5R6" H 14900 5400 50  0001 C CNN "MPN1"
 F 7 "$0.00548" H 14900 5400 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 14900 5400 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 5.6PF 50V C0G/NPO 0402" H 14900 5400 50  0001 C CNN "Short Description"
+F 10 "DNP" H 15100 5275 50  0000 C CNN "Population"
 	1    14900 5400
 	1    0    0    -1  
 $EndComp
@@ -819,7 +823,7 @@ F 0 "R809" H 7920 6641 50  0000 L CNN
 F 1 "2.21K" H 7920 6550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7780 6550 50  0001 C CNN
 F 3 "~" H 7850 6550 50  0001 C CNN
-F 4 "-P" H 7920 6459 50  0000 L CNN "Population"
+F 4 "" H 7920 6459 50  0000 L CNN "Population"
 F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7850 6550 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 7850 6550 50  0001 C CNN "Link1"
 F 7 "ERJ-2RKF2211X" H 7850 6550 50  0001 C CNN "MPN1"
@@ -837,7 +841,7 @@ F 0 "R807" H 7620 6641 50  0000 L CNN
 F 1 "2.21K" H 7620 6550 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 7480 6550 50  0001 C CNN
 F 3 "~" H 7550 6550 50  0001 C CNN
-F 4 "-P" H 7620 6459 50  0000 L CNN "Population"
+F 4 "" H 7620 6459 50  0000 L CNN "Population"
 F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 7550 6550 50  0001 C CNN "Description"
 F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 7550 6550 50  0001 C CNN "Link1"
 F 7 "ERJ-2RKF2211X" H 7550 6550 50  0001 C CNN "MPN1"
@@ -1181,6 +1185,7 @@ F 6 "GRM1555C1H1R0CA01D" H 15200 1275 50  0001 C CNN "MPN1"
 F 7 "$0.00588" H 15200 1275 50  0001 C CNN "Standard Price"
 F 8 "Murata Electronics North America" H 15200 1275 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 1PF 50V C0G/NP0 0402" H 15200 1275 50  0001 C CNN "Short Description"
+F 10 "DNP" H 14975 1125 50  0000 C CNN "Population"
 	1    15200 1275
 	0    -1   -1   0   
 $EndComp
@@ -1213,6 +1218,8 @@ F 2 "leash:RFECA3216060A1T" H 15900 2375 50  0001 C CNN
 F 3 "http://www.passivecomponent.com/wp-content/uploads/2018/10/ASC_RFECA3216060A1T_V09.pdf" H 15900 2375 50  0001 C CNN
 F 4 "http://www.passivecomponent.com/product-search/Antenna/?c2VsZWN0%5Bseries%5D%5Bvalue%5D=Chip+Antenna+%28BT%2C+Wifi+BAND%29" H 15900 2375 50  0001 C CNN "Link1"
 F 5 "Walsin Technology Corporation" H 15900 2375 50  0001 C CNN "Vendor1"
+F 6 "RFECA3216060A1T" H 15900 2375 50  0001 C CNN "MPN1"
+F 7 "Chip Antenna" H 15900 2375 50  0001 C CNN "Short Description"
 	1    15900 2375
 	1    0    0    -1  
 $EndComp
@@ -1362,6 +1369,7 @@ F 3 "~" H 16100 4375 50  0001 C CNN
 F 4 "N/A" H 16100 4375 50  0001 C CNN "MPN1"
 F 5 "N/A" H 16100 4375 50  0001 C CNN "Link1"
 F 6 "N/A" H 16100 4375 50  0001 C CNN "Vendor1"
+F 7 "Wire mount point for 900 MHz Antenna" H 16100 4375 50  0001 C CNN "Short Description"
 	1    16100 4375
 	1    0    0    -1  
 $EndComp
@@ -1379,6 +1387,7 @@ F 6 "GRM1555C1H1R0CA01D" H 15500 4575 50  0001 C CNN "MPN1"
 F 7 "$0.00588" H 15500 4575 50  0001 C CNN "Standard Price"
 F 8 "Murata Electronics North America" H 15500 4575 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 1PF 50V C0G/NP0 0402" H 15500 4575 50  0001 C CNN "Short Description"
+F 10 "DNP" H 15300 4450 50  0000 C CNN "Population"
 	1    15500 4575
 	0    -1   -1   0   
 $EndComp

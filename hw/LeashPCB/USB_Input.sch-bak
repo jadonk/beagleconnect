@@ -99,7 +99,7 @@ F 3 "~" H 3225 5775 50  0001 C CNN
 F 4 "N/A" H 3225 5775 50  0001 C CNN "Description"
 F 5 "N/A" H 3225 5775 50  0001 C CNN "Link1"
 F 6 "N/A" H 3225 5775 50  0001 C CNN "MPN1"
-F 7 "+A1" H 3225 5775 50  0001 C CNN "Population"
+F 7 "" H 3225 5775 50  0001 C CNN "Population"
 F 8 "0" H 3225 5775 50  0001 C CNN "Standard Price"
 F 9 "Tag Connect, Inc" H 3225 5775 50  0001 C CNN "Vendor1"
 F 10 "N/A" H 3225 5775 50  0001 C CNN "Short Description"

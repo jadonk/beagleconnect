@@ -29,7 +29,7 @@ F 6 "CL05A104MP5NNNC" H 7025 5400 50  0001 C CNN "MPN1"
 F 7 "$0.00315" H 7025 5400 50  0001 C CNN "Standard Price"
 F 8 "Samsung Electro-Mechanics" H 7025 5400 50  0001 C CNN "Vendor1"
 F 9 "CAP CER 0.1UF 10V X5R 0402" H 7025 5400 50  0001 C CNN "Short Description"
-F 10 "+A1" H 7025 5400 50  0001 C CNN "Population"
+F 10 "" H 7025 5400 50  0001 C CNN "Population"
 	1    7025 5400
 	1    0    0    -1  
 $EndComp
@@ -53,7 +53,7 @@ F 3 "~" H 8825 5400 50  0001 C CNN
 F 4 "N/A" H 8825 5400 50  0001 C CNN "Description"
 F 5 "N/A" H 8825 5400 50  0001 C CNN "Link1"
 F 6 "N/A" H 8825 5400 50  0001 C CNN "MPN1"
-F 7 "+A1" H 8825 5400 50  0001 C CNN "Population"
+F 7 "" H 8825 5400 50  0001 C CNN "Population"
 F 8 "0" H 8825 5400 50  0001 C CNN "Standard Price"
 F 9 "Tag Connect, Inc" H 8825 5400 50  0001 C CNN "Vendor1"
 F 10 "N/A" H 8825 5400 50  0001 C CNN "Short Description"
