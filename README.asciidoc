@@ -1,3 +1,10 @@
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
 :toc:
 :toc-placement!:
 
@@ -15,26 +22,17 @@ https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
 https://en.wikipedia.org/wiki/Internet_of_things[IoT].
 
 BeagleConnect solves: 
-* The need to write software to add a large set of
-diverse devices to your system, 
-* The need to maintain the software with
-security updates, 
-* The need to rapidly prototype using off-the-shelf
-software and hardware without wiring, 
-* The need to connect to devices
-using long-range, low-power wireless, and 
-* The need to produce
-high-volume custom hardware cost-optimized for your requirements.
+* The need to write software to add a large set of diverse devices to your system, 
+* The need to maintain the software with security updates, 
+* The need to rapidly prototype using off-the-shelf software and hardware without wiring, 
+* The need to connect to devices using long-range, low-power wireless, and 
+* The need to produce high-volume custom hardware cost-optimized for your requirements.
 
 The minimally viable BeagleConnect development release: 
-* Supports at
-least 100 mikroBUS-based Click boards from Mikroelectronika, * Works
+* Supports at least 100 mikroBUS-based Click boards from Mikroelectronika, * Works
 with BLE-enabled Linux computers at 2.4GHz, 
-* Works on long-range
-sub-GHz at 500m with data rates of 1kbps, and 
-* Comprises of low-cost
-BeagleBoard.org Linux SBC, a BeagleConnect gateway, and at least 10
-BeagleConnect device nodes each supporting 2 add-on devices.
+* Works on long-range sub-GHz at 500m with data rates of 1kbps, and 
+* Comprises of low-cost BeagleBoard.org Linux SBC, a BeagleConnect gateway, and at least 10 BeagleConnect device nodes each supporting 2 add-on devices.
 
 A wireless BeagleConnect board for adding a new device node is targeted
 to cost under US$10.
@@ -289,14 +287,12 @@ TODO items
 
 * Linux kernel driver
 * Provisioning
-* Kconfig and what-not for adding a new BeagleDust to the network
-* Kconfig and what-not for configuring Clicks connected to BeagleDust
 * Firmware for host CC13x
 * Firmware for device CC13x
 * Click Board drivers and device tree formatted metadata for 100 or so
 Click Boards
 * Click Board plug-ins for node-red for the same 100 or so Click Boards
-* BeagleDust System Reference Manual and FAQs
+* BeagleConnect System Reference Manual and FAQs
 
 [[associated-pre-work]]
 Associated pre-work
