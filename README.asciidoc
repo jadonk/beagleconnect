@@ -132,7 +132,9 @@ Long-range, low-power wireless
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 BeagleConnect wireless hardware is built around a
-http://www.ti.com/product/CC1352R[TI CC1352] with TODO benefits.
+http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
+microcontroller. CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
+80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
 
 [[full-customization-possible]]
 Full customization possible
@@ -146,17 +148,25 @@ BeagleConnect is meant to enable rapid-prototyping and not to
 necessarily satisfy any particular end-product's requirements, but with
 full considerations for go-to-market needs.
 
-BeagleConnect is: * Available for at least 10 years, * Built with fully
+BeagleConnect is:
+
+* Available for at least 10 years, 
+* Built with fully
 open source software with submissions to mainline Linux and Zephyr
-repositories to aide in support and porting, * Built with fully open
+repositories to aide in support and porting, 
+* Built with fully open
 source and non-restrictive hardware design including schematic,
 bill-of-materials, layout, and manufacturing files (with only the
 BeagleBoard.org logo removed due to licensing restrictions of our
-brand), * Built with parts where at least a compatible part is available
-from worldwide distributors in any quantity, * Built with design and
-manufacturing partners able to help scale derivative designs, * Based on
+brand), 
+* Built with parts where at least a compatible part is available
+from worldwide distributors in any quantity, 
+* Built with design and
+manufacturing partners able to help scale derivative designs, 
+* Based on
 a security model using public/private keypairs that can be replaced to
-secure your own network, and * Fully FCC/CE certified.
+secure your own network, and 
+* Fully FCC/CE certified.
 
 [[usage-and-development]]
 Usage and development
