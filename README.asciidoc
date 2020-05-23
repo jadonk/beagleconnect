@@ -55,9 +55,8 @@ board.
 
 toc::[]
 
+.BeagleConnect wireless board prototype rev B
 [[beagleconnect-wireless-board-prototype-rev-b]]
-BeagleConnect wireless board prototype rev B
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg?raw=true[BeagleConnect
 rev B prototype]
