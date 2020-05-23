@@ -10,3 +10,6 @@
 [submodule "sw/pygbmodule"]
 	path = sw/pygbmodule
 	url = https://github.com/cfriedt/pygbmodule
+[submodule "sw/mikrobus"]
+	path = sw/mikrobus
+	url = https://github.com/vaishnav98/mikrobus
