@@ -1,3 +1,4 @@
 = BeagleConnect software projects
 
-* [mikrobus] - A Linux kernel driver for mikroBUS sensor, actuator and indicator add-on boards
+* *mikrobus* is a Linux kernel driver for mikroBUS sensor, actuator and indicator add-on boards.
+* *manifesto* is a tool for converting text-based parameters into binary files. The tool is used for two purposes. One,  describe the interfaces exported over Greybus to Linux. Two, describe the parameters for the mikroBUS driver to load device drivers for the add-on board.
