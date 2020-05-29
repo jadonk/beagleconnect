@@ -1,4 +1,9 @@
 = BeagleConnect software projects
 
+== Linux side
 * *mikrobus* is a Linux kernel driver for mikroBUS sensor, actuator and indicator add-on boards.
 * *manifesto* is a tool for converting text-based parameters into binary files. The tool is used for two purposes. One,  describe the interfaces exported over Greybus to Linux. Two, describe the parameters for the mikroBUS driver to load device drivers for the add-on board.
+* *greybus* is the Linux kernel driver that enables new embedded busses to be added to the running Linux kernel and sent over other transports.
+* *gbridge* is a Linux userspace application that implements other transports for Greybus, including transmission over IP.
+
+== Device side
