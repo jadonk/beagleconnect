@@ -13,3 +13,6 @@
 [submodule "sw/zephyrproject/zephyr"]
 	path = sw/zephyrproject/zephyr
 	url = https://github.com/jadonk/zephyr
+[submodule "sw/mikrobus"]
+	path = sw/mikrobus
+	url = https://github.com/vaishnav98/mikrobus
