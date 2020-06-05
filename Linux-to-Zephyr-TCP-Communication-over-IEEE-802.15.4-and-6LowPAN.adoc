@@ -18,6 +18,8 @@ https://en.wikipedia.org/wiki/6LoWPAN[6LowPAN]).
 
 == Hardware Requirements
 
+WARNING: Things might fail silently if you have the wrong board or wrong revision.
+
 * a Linux workstation running https://releases.ubuntu.com/18.04.4[Ubuntu
 Bionic]
 ** Only x86_64 is supported at this time
@@ -39,8 +41,6 @@ http://downloads.qi-hardware.com/people/werner/wpan/web[atusb]
 http://shop.sysmocom.de/products/atusb[sysmocom]
 ** This part is https://www.oshwa.org/[OSHW] (i.e. all CAD files and
 firmware source is available) for those who choose to create their own.
-
-WARNING: Things might fail silently if you have the wrong board or wrong revision.
 
 == Prerequisites
 
