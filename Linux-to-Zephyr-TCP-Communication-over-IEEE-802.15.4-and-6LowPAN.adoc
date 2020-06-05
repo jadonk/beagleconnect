@@ -1,4 +1,12 @@
-== Linux to Zephyr TCP Communication over IEEE 802.15.4 and 6LowPAN
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+= Linux to Zephyr TCP Communication over IEEE 802.15.4 and 6LowPAN
 
 This document describes, in some detail, the steps required to establish
 a reliable TCP commmunication channel between a
@@ -22,6 +30,7 @@ distributor
 ** Please ensure that you purchase a device with
 http://www.ti.com/lit/er/swrz077b/swrz077b.pdf[Revision E Silicon] to
 avoid silicon errata.
+WARNING: Things might fail silently if you have the wrong board or wrong revision.
 ** Also ensure that all jumpers are connected
 `GND, 5V, 3V3, RXD<<, TXD>>, RST, TMS, TCK, TDO, TDI, SW0`
 * a USB IEEE 802.15.4 adapter
