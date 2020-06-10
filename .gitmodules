@@ -1,18 +1,18 @@
 [submodule "sw/gbridge"]
 	path = sw/gbridge
-	url = https://github.com/friedtco/gbridge
+	url = https://github.com/jadonk/gbridge
 [submodule "sw/greybus"]
 	path = sw/greybus
-	url = https://github.com/friedtco/greybus
+	url = https://github.com/jadonk/greybus
 [submodule "sw/manifesto"]
 	path = sw/manifesto
-	url = https://github.com/vaishnav98/manifesto
+	url = https://github.com/jadonk/manifesto
 [submodule "sw/pygbmodule"]
 	path = sw/pygbmodule
-	url = https://github.com/cfriedt/pygbmodule
+	url = https://github.com/jadonk/pygbmodule
 [submodule "sw/zephyrproject/zephyr"]
 	path = sw/zephyrproject/zephyr
 	url = https://github.com/jadonk/zephyr
 [submodule "sw/mikrobus"]
 	path = sw/mikrobus
-	url = https://github.com/vaishnav98/mikrobus
+	url = https://github.com/jadonk/mikrobus
