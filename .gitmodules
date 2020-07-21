@@ -16,3 +16,6 @@
 [submodule "sw/mikrobus"]
 	path = sw/mikrobus
 	url = https://github.com/jadonk/mikrobus
+[submodule "docs/manifesto.wiki"]
+	path = docs/manifesto.wiki
+	url = https://github.com/vaishnav98/manifesto.wiki
