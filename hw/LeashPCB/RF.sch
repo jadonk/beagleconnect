@@ -723,7 +723,7 @@ F 3 "https://www.macronix.com/Lists/Datasheet/Attachments/7461/MX25R8035F,%20Wid
 F 4 "MX25R8035FZUIL0" H 9750 6975 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/macronix/MX25R8035FZUIL0/1092-1207-1-ND/6558611" H 9750 6975 50  0001 C CNN "Link1"
 F 6 "IC FLASH 8M SPI 33MHZ 8USON" H 9750 6975 50  0001 C CNN "Description"
-F 7 "$0.42218" H 9750 6975 50  0001 C CNN "Standard Price"
+F 7 "0.42218" H 9750 6975 50  0001 C CNN "Standard Price"
 F 8 "Macronix" H 9750 6975 50  0001 C CNN "Vendor1"
 F 9 "IC FLASH 8M SPI 33MHZ 8USON" H 9750 6975 50  0001 C CNN "Short Description"
 	1    9750 6975
@@ -1624,6 +1624,7 @@ F 3 " http://www.ti.com/lit/ds/symlink/ts5a3166.pdf" H 8475 9800 50  0001 C CNN
 F 4 "TS5A23157RSER" H 8475 9350 50  0001 C CNN "MPN1"
 F 5 "https://www.digikey.com/product-detail/en/texas-instruments/TS5A23157RSER/296-21919-2-ND/1629092" H 8475 9350 50  0001 C CNN "Link1"
 F 6 "Texas Instruments" H 8475 9350 50  0001 C CNN "Vendor1"
+F 7 "0.04" H 8475 9350 50  0001 C CNN "Standard Price"
 	1    8475 9350
 	1    0    0    -1  
 $EndComp

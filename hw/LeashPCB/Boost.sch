@@ -6745,7 +6745,7 @@ F 6 "Yageo" H 7200 5475 50  0001 C CNN "Vendor1"
 F 7 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363" H 7200 5475 50  0001 C CNN "Link1"
 F 8 "RC0402JR-07100KL" H 7200 5475 50  0001 C CNN "MPN1"
 F 9 "RES SMD 100K OHM 5% 1/16W 0402" H 7200 5475 50  0001 C CNN "Short Description"
-F 10 "$0.00139" H 7200 5475 50  0001 C CNN "Standard Price"
+F 10 "0.00139" H 7200 5475 50  0001 C CNN "Standard Price"
 	1    7200 5475
 	0    1    1    0   
 $EndComp
@@ -6794,7 +6794,7 @@ F 6 "Yageo" H 10075 5675 50  0001 C CNN "Vendor1"
 F 7 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363" H 10075 5675 50  0001 C CNN "Link1"
 F 8 "RC0402JR-07100KL" H 10075 5675 50  0001 C CNN "MPN1"
 F 9 "RES SMD 100K OHM 5% 1/16W 0402" H 10075 5675 50  0001 C CNN "Short Description"
-F 10 "$0.00139" H 10075 5675 50  0001 C CNN "Standard Price"
+F 10 "0.00139" H 10075 5675 50  0001 C CNN "Standard Price"
 	1    10075 5675
 	-1   0    0    1   
 $EndComp

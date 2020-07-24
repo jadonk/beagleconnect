@@ -1489,8 +1489,8 @@ Wire Wire Line
 Connection ~ 2575 6775
 Wire Wire Line
 	2575 6775 2700 6775
-Text Notes 775  8050 0    50   ~ 0
-When USER1 is pressed, it pulls MSP_PUR high\nThis puts the MSP430 into programming mode\nwhen pressed during USB power up.\n\nThe USER button is also used as an input to the \nCC1352R  for it's programming, but is active low
+Text Notes 825  8650 0    50   ~ 0
+When USER_BOOT button is pressed during USB power up, \nit pulls MSP_PUR high. This puts the MSP430 into programming mode.\n\nThe USER_BOOT button is also used as an input to the \nCC1352R  for it's programming, but is active low
 Text GLabel 9650 7300 2    63   Input ~ 0
 USER_BOOT
 Wire Wire Line
