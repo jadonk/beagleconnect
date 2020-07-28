@@ -62,9 +62,9 @@ Text Label 9850 2275 2    50   ~ 0
 D+
 Text Label 8900 2075 2    50   ~ 0
 D-
-Text Label 2200 5175 0    50   ~ 0
+Text Label 750  5150 0    50   ~ 0
 MSP430_TDI
-Text Label 2200 5375 0    50   ~ 0
+Text Label 875  5350 0    50   ~ 0
 MSP430_TMS
 $Comp
 L Connector:USB_C_Plug_USB2.0 P501
@@ -115,7 +115,7 @@ Wire Wire Line
 	7775 4875 7775 5050
 Wire Wire Line
 	7775 4875 7875 4875
-Text GLabel 2075 5275 0    63   Input ~ 0
+Text GLabel 2500 5250 0    63   Input ~ 0
 3V3
 $Comp
 L Device:Polyfuse F501
@@ -142,7 +142,7 @@ Wire Wire Line
 Connection ~ 7800 1575
 Wire Wire Line
 	7800 975  7800 1575
-Text Notes 925  4600 0    79   ~ 0
+Text Notes 650  4575 0    79   ~ 0
 Decoupling cap shared\nwith other prog header
 $Comp
 L Device:C C?
@@ -967,21 +967,21 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_02x05_Counter_Clockwise J?
 U 1 1 5E5F2B1C
-P 3050 5175
+P 2775 5150
 AR Path="/5D062DFA/5E5F2B1C" Ref="J?"  Part="1" 
 AR Path="/5D1A71BB/5E5F2B1C" Ref="J501"  Part="1" 
-F 0 "J501" H 3100 5592 50  0000 C CNN
-F 1 "TAG-CONNECT-10" H 3100 5501 50  0000 C CNN
-F 2 "leash:Tag-Connect-10" H 3050 5175 50  0001 C CNN
-F 3 "~" H 3050 5175 50  0001 C CNN
-F 4 "N/A" H 3050 5175 50  0001 C CNN "Description"
-F 5 "N/A" H 3050 5175 50  0001 C CNN "Link1"
-F 6 "N/A" H 3050 5175 50  0001 C CNN "MPN1"
-F 7 "" H 3050 5175 50  0001 C CNN "Population"
-F 8 "0" H 3050 5175 50  0001 C CNN "Standard Price"
-F 9 "Tag Connect, Inc" H 3050 5175 50  0001 C CNN "Vendor1"
-F 10 "N/A" H 3050 5175 50  0001 C CNN "Short Description"
-	1    3050 5175
+F 0 "J501" H 2825 5567 50  0000 C CNN
+F 1 "TAG-CONNECT-10" H 2825 5476 50  0000 C CNN
+F 2 "leash:Tag-Connect-10" H 2775 5150 50  0001 C CNN
+F 3 "~" H 2775 5150 50  0001 C CNN
+F 4 "N/A" H 2775 5150 50  0001 C CNN "Description"
+F 5 "N/A" H 2775 5150 50  0001 C CNN "Link1"
+F 6 "N/A" H 2775 5150 50  0001 C CNN "MPN1"
+F 7 "" H 2775 5150 50  0001 C CNN "Population"
+F 8 "0" H 2775 5150 50  0001 C CNN "Standard Price"
+F 9 "Tag Connect, Inc" H 2775 5150 50  0001 C CNN "Vendor1"
+F 10 "N/A" H 2775 5150 50  0001 C CNN "Short Description"
+	1    2775 5150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1007,8 +1007,6 @@ Wire Wire Line
 Wire Wire Line
 	9325 5300 10275 5300
 Text Label 10275 5300 2    50   ~ 0
-MSP430_TEST
-Text Label 4050 5175 2    50   ~ 0
 MSP430_TEST
 $Comp
 L Power_Protection:SP0504BAJT D502
@@ -1049,35 +1047,29 @@ NoConn ~ 7000 3200
 Text Notes 6650 8450 0    50   ~ 0
 May want to shrink center pad or connect manually\n\nOn rev B prototype, the soldermask peeled back and many of the \npins on the edge of the QFN would short to the center pad after \nattempted repair to the part (reflow, component replacement)
 Wire Wire Line
-	3350 5275 4050 5275
-Text Label 4050 5275 2    50   ~ 0
-MSP430_TCK
+	3075 5250 3650 5250
 Wire Wire Line
-	3350 5075 3500 5075
+	3075 5050 3225 5050
 Wire Wire Line
-	3500 5075 3500 5525
+	3225 5050 3225 5500
 $Comp
 L power:GND #PWR0114
 U 1 1 5F338BA2
-P 3500 5525
-F 0 "#PWR0114" H 3500 5275 50  0001 C CNN
-F 1 "GND" H 3505 5352 50  0000 C CNN
-F 2 "" H 3500 5525 50  0001 C CNN
-F 3 "" H 3500 5525 50  0001 C CNN
-	1    3500 5525
+P 3225 5500
+F 0 "#PWR0114" H 3225 5250 50  0001 C CNN
+F 1 "GND" H 3230 5327 50  0000 C CNN
+F 2 "" H 3225 5500 50  0001 C CNN
+F 3 "" H 3225 5500 50  0001 C CNN
+	1    3225 5500
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3350 5375
+NoConn ~ 3075 5350
 Wire Wire Line
-	3350 4975 3525 4975
+	875  5350 1350 5350
 Wire Wire Line
-	2200 5375 2850 5375
-Wire Wire Line
-	2850 5175 2200 5175
-Text Label 2200 4975 0    50   ~ 0
+	2575 5150 1650 5150
+Text Label 850  4950 0    50   ~ 0
 MSP430_TDO
-Wire Wire Line
-	2200 4975 2725 4975
 Text Label 5825 5550 0    50   ~ 0
 MSP430_TDI
 Text Label 5825 5750 0    50   ~ 0
@@ -1094,7 +1086,7 @@ Text Label 5825 5650 0    50   ~ 0
 MSP430_TMS
 Wire Wire Line
 	5825 5650 6475 5650
-Text Label 4050 4975 2    50   ~ 0
+Text Label 2375 4950 2    50   ~ 0
 ~MSP430_RST
 Text Label 4775 5300 0    50   ~ 0
 ~MSP430_RST
@@ -1102,58 +1094,23 @@ Wire Wire Line
 	4775 5300 5325 5300
 $Comp
 L Device:R R?
-U 1 1 5F3E3582
-P 3125 4475
-AR Path="/5D062750/5F3E3582" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F3E3582" Ref="R512"  Part="1" 
-F 0 "R512" V 3175 4625 50  0000 L CNN
-F 1 "0" V 3125 4450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 3055 4475 50  0001 C CNN
-F 3 "~" H 3125 4475 50  0001 C CNN
-F 4 "" H 3125 4475 50  0001 C CNN "Description"
-F 5 "$0.00127" H 3125 4475 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 3175 4300 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3125 4475 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 3125 4475 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3125 4475 50  0001 C CNN "Short Description"
-	1    3125 4475
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3275 4475 3525 4475
-Wire Wire Line
-	3525 4475 3525 4975
-Connection ~ 3525 4975
-Wire Wire Line
-	2975 4475 2725 4475
-Wire Wire Line
-	2725 4475 2725 4975
-Connection ~ 2725 4975
-Wire Wire Line
-	2725 4975 2850 4975
-$Comp
-L Device:R R?
 U 1 1 5F3F6279
-P 4200 5275
+P 3850 5250
 AR Path="/5D062750/5F3F6279" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5F3F6279" Ref="R513"  Part="1" 
-F 0 "R513" V 4250 5425 50  0000 L CNN
-F 1 "0" V 4200 5250 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 4130 5275 50  0001 C CNN
-F 3 "~" H 4200 5275 50  0001 C CNN
-F 4 "" H 4200 5275 50  0001 C CNN "Description"
-F 5 "$0.00127" H 4200 5275 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 4250 5100 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 4200 5275 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 4200 5275 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 4200 5275 50  0001 C CNN "Short Description"
-	1    4200 5275
+F 0 "R513" V 3900 5400 50  0000 L CNN
+F 1 "0" V 3850 5225 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3780 5250 50  0001 C CNN
+F 3 "~" H 3850 5250 50  0001 C CNN
+F 4 "" H 3850 5250 50  0001 C CNN "Description"
+F 5 "$0.00127" H 3850 5250 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 3900 5075 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3850 5250 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 3850 5250 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3850 5250 50  0001 C CNN "Short Description"
+	1    3850 5250
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	4350 5175 4350 5275
-Wire Wire Line
-	3350 5175 4350 5175
 Text Notes 1675 5925 0    50   ~ 0
 Verify all connections with Erik Larson
 $Comp
@@ -1328,41 +1285,41 @@ NoConn ~ 6475 7300
 $Comp
 L Device:R R?
 U 1 1 5F6EA49C
-P 1775 5075
+P 1500 5050
 AR Path="/5D062750/5F6EA49C" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5F6EA49C" Ref="R518"  Part="1" 
-F 0 "R518" V 1825 5225 50  0000 L CNN
-F 1 "0" V 1775 5050 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1705 5075 50  0001 C CNN
-F 3 "~" H 1775 5075 50  0001 C CNN
-F 4 "" H 1775 5075 50  0001 C CNN "Description"
-F 5 "$0.00127" H 1775 5075 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 1825 4900 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1775 5075 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 1775 5075 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1775 5075 50  0001 C CNN "Short Description"
-	1    1775 5075
+F 0 "R518" V 1550 5200 50  0000 L CNN
+F 1 "0" V 1500 5025 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 5050 50  0001 C CNN
+F 3 "~" H 1500 5050 50  0001 C CNN
+F 4 "" H 1500 5050 50  0001 C CNN "Description"
+F 5 "$0.00127" H 1500 5050 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 1550 4875 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 5050 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 1500 5050 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 5050 50  0001 C CNN "Short Description"
+	1    1500 5050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2075 5275 2850 5275
+	2500 5250 2575 5250
 Wire Wire Line
-	2850 5075 1925 5075
+	2575 5050 1650 5050
 $Comp
 L power:GND #PWR0501
 U 1 1 5F71BB40
-P 1350 5300
-F 0 "#PWR0501" H 1350 5050 50  0001 C CNN
-F 1 "GND" H 1355 5127 50  0000 C CNN
-F 2 "" H 1350 5300 50  0001 C CNN
-F 3 "" H 1350 5300 50  0001 C CNN
-	1    1350 5300
+P 625 5275
+F 0 "#PWR0501" H 625 5025 50  0001 C CNN
+F 1 "GND" H 630 5102 50  0000 C CNN
+F 2 "" H 625 5275 50  0001 C CNN
+F 3 "" H 625 5275 50  0001 C CNN
+	1    625  5275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1625 5075 1350 5075
+	1350 5050 625  5050
 Wire Wire Line
-	1350 5075 1350 5300
+	625  5050 625  5275
 Wire Wire Line
 	14075 3050 14325 3050
 Wire Wire Line
@@ -1519,32 +1476,25 @@ NoConn ~ 8875 5800
 $Comp
 L Connector:TestPoint TP501
 U 1 1 5F864228
-P 4175 4625
-F 0 "TP501" H 4233 4743 50  0000 L CNN
-F 1 "TestPoint" H 4233 4652 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4375 4625 50  0001 C CNN
-F 3 "~" H 4375 4625 50  0001 C CNN
-	1    4175 4625
+P 2450 4275
+F 0 "TP501" H 2508 4393 50  0000 L CNN
+F 1 "TestPoint" H 2508 4302 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2650 4275 50  0001 C CNN
+F 3 "~" H 2650 4275 50  0001 C CNN
+	1    2450 4275
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4175 4625 4175 4975
-Wire Wire Line
-	3525 4975 4175 4975
-Wire Wire Line
-	4625 4625 4625 5175
-Wire Wire Line
-	4625 5175 4350 5175
-Connection ~ 4350 5175
+	3650 4700 3650 5250
 $Comp
 L Connector:TestPoint TP502
 U 1 1 5F87F30E
-P 4625 4625
-F 0 "TP502" H 4683 4743 50  0000 L CNN
-F 1 "TestPoint" H 4683 4652 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4825 4625 50  0001 C CNN
-F 3 "~" H 4825 4625 50  0001 C CNN
-	1    4625 4625
+P 3650 4700
+F 0 "TP502" H 3708 4818 50  0000 L CNN
+F 1 "TestPoint" H 3708 4727 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3850 4700 50  0001 C CNN
+F 3 "~" H 3850 4700 50  0001 C CNN
+	1    3650 4700
 	1    0    0    -1  
 $EndComp
 Text GLabel 9650 7200 2    63   Input ~ 0
@@ -1567,4 +1517,138 @@ F 8 "Texas Instruments" H 7675 6300 50  0001 C CNN "Vendor1"
 $EndComp
 Wire Wire Line
 	8875 7200 9650 7200
+$Comp
+L Device:R R?
+U 1 1 5F2AECDA
+P 1500 4950
+AR Path="/5D062750/5F2AECDA" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5F2AECDA" Ref="R507"  Part="1" 
+F 0 "R507" V 1550 5100 50  0000 L CNN
+F 1 "0" V 1500 4925 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 4950 50  0001 C CNN
+F 3 "~" H 1500 4950 50  0001 C CNN
+F 4 "" H 1500 4950 50  0001 C CNN "Description"
+F 5 "$0.00127" H 1500 4950 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 1550 4775 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 4950 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 1500 4950 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 4950 50  0001 C CNN "Short Description"
+	1    1500 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	850  4950 1350 4950
+Wire Wire Line
+	1650 4950 2450 4950
+Wire Wire Line
+	2450 4950 2575 4950
+Connection ~ 2450 4950
+Wire Wire Line
+	2450 4450 2450 4950
+Wire Wire Line
+	2700 4450 2450 4450
+Wire Wire Line
+	3075 4950 3250 4950
+Wire Wire Line
+	3250 4450 3250 4950
+Wire Wire Line
+	3000 4450 3250 4450
+$Comp
+L Device:R R?
+U 1 1 5F3E3582
+P 2850 4450
+AR Path="/5D062750/5F3E3582" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5F3E3582" Ref="R512"  Part="1" 
+F 0 "R512" V 2900 4600 50  0000 L CNN
+F 1 "0" V 2850 4425 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2780 4450 50  0001 C CNN
+F 3 "~" H 2850 4450 50  0001 C CNN
+F 4 "" H 2850 4450 50  0001 C CNN "Description"
+F 5 "$0.00127" H 2850 4450 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 2900 4275 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 2850 4450 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 2850 4450 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 2850 4450 50  0001 C CNN "Short Description"
+	1    2850 4450
+	0    1    1    0   
+$EndComp
+Text Label 3625 5250 2    50   ~ 0
+MSP430_TEST
+Text Label 4575 5250 2    50   ~ 0
+MSP430_TCK
+Wire Wire Line
+	3075 5150 3700 5150
+Wire Wire Line
+	4575 5250 4000 5250
+$Comp
+L Device:R R?
+U 1 1 5F32BF98
+P 1500 5350
+AR Path="/5D062750/5F32BF98" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5F32BF98" Ref="R525"  Part="1" 
+F 0 "R525" V 1550 5500 50  0000 L CNN
+F 1 "0" V 1500 5325 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 5350 50  0001 C CNN
+F 3 "~" H 1500 5350 50  0001 C CNN
+F 4 "" H 1500 5350 50  0001 C CNN "Description"
+F 5 "$0.00127" H 1500 5350 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 1550 5175 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 5350 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 1500 5350 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 5350 50  0001 C CNN "Short Description"
+	1    1500 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1650 5350 2575 5350
+$Comp
+L Device:R R?
+U 1 1 5F37F7C2
+P 1500 5150
+AR Path="/5D062750/5F37F7C2" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5F37F7C2" Ref="R524"  Part="1" 
+F 0 "R524" V 1550 5300 50  0000 L CNN
+F 1 "0" V 1500 5125 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 5150 50  0001 C CNN
+F 3 "~" H 1500 5150 50  0001 C CNN
+F 4 "" H 1500 5150 50  0001 C CNN "Description"
+F 5 "$0.00127" H 1500 5150 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 1550 4975 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 5150 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 1500 5150 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 5150 50  0001 C CNN "Short Description"
+	1    1500 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 5150 750  5150
+Wire Wire Line
+	2450 4275 2450 4450
+Connection ~ 2450 4450
+Connection ~ 3650 5250
+Wire Wire Line
+	3650 5250 3700 5250
+$Comp
+L Device:R R?
+U 1 1 5F3BEF9B
+P 3850 5150
+AR Path="/5D062750/5F3BEF9B" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5F3BEF9B" Ref="R526"  Part="1" 
+F 0 "R526" V 3900 5300 50  0000 L CNN
+F 1 "0" V 3850 5125 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3780 5150 50  0001 C CNN
+F 3 "~" H 3850 5150 50  0001 C CNN
+F 4 "" H 3850 5150 50  0001 C CNN "Description"
+F 5 "$0.00127" H 3850 5150 50  0001 C CNN "Standard Price"
+F 6 "DNP" V 3900 4975 50  0000 C CNN "Population"
+F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3850 5150 50  0001 C CNN "Link1"
+F 8 "RMCF0402ZT0R00" H 3850 5150 50  0001 C CNN "MPN1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3850 5150 50  0001 C CNN "Short Description"
+	1    3850 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 5150 4575 5150
+Text Label 4575 5150 2    50   ~ 0
+MSP430_TEST
 $EndSCHEMATC
