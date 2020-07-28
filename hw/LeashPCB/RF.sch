@@ -1601,13 +1601,13 @@ Wire Wire Line
 	2250 5950 1900 5950
 Wire Wire Line
 	2250 6050 1900 6050
-Text GLabel 9700 8900 2    63   Input ~ 0
+Text GLabel 9700 9400 2    63   Input ~ 0
 CC1352_TX_MB1_RX
-Text GLabel 9625 9400 2    63   Input ~ 0
+Text GLabel 9625 8900 2    63   Input ~ 0
 CC1352_RX_MB1_TX
-Text GLabel 9600 9650 2    63   Input ~ 0
+Text GLabel 9600 9100 2    63   Input ~ 0
 CC1352_RX_MSP430_TX
-Text GLabel 9675 9100 2    63   Input ~ 0
+Text GLabel 9675 9650 2    63   Input ~ 0
 CC1352_TX_MSP430_RX
 Wire Wire Line
 	4025 8925 4975 8925
@@ -1629,13 +1629,13 @@ F 7 "0.04" H 8475 9350 50  0001 C CNN "Standard Price"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8775 8900 9700 8900
+	8775 9400 9700 9400
 Wire Wire Line
-	8775 9400 9625 9400
+	8775 8900 9625 8900
 Wire Wire Line
-	9600 9650 8775 9650
+	9600 9100 8775 9100
 Wire Wire Line
-	9675 9100 8775 9100
+	9675 9650 8775 9650
 Wire Wire Line
 	8125 9500 6625 9500
 Wire Wire Line
