@@ -5,10 +5,10 @@ $Descr C 22000 17000
 encoding utf-8
 Sheet 1 10
 Title "BeagleConnect Leash PCB"
-Date "2020-03-10"
-Rev "B"
+Date "2020-08-06"
+Rev "C"
 Comp "Beagleboard.org"
-Comment1 "Schematic designed by Analog Life, LLC"
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""

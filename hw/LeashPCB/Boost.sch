@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 6 10
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
-Rev "A"
+Rev "C"
 Comp "Beagleboard.org"
-Comment1 "Schematic designed by Analog Life, LLC"
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""

@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 10 10
 Title ""
 Date ""
-Rev ""
+Rev "C"
 Comp ""
-Comment1 ""
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
