@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 7 10
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
-Rev "C"
+Rev "A"
 Comp "Beagleboard.org"
-Comment1 "Schematic originally designed by Analog Life, LLC"
+Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -18,10 +18,10 @@ Wire Wire Line
 Wire Wire Line
 	7900 4375 7900 4475
 $Comp
-L power:GND #PWR0701
+L power:GND #PWR031
 U 1 1 5D1F9F78
 P 7900 4475
-F 0 "#PWR0701" H 7900 4225 50  0001 C CNN
+F 0 "#PWR031" H 7900 4225 50  0001 C CNN
 F 1 "GND" H 7905 4302 50  0000 C CNN
 F 2 "" H 7900 4475 50  0001 C CNN
 F 3 "" H 7900 4475 50  0001 C CNN
@@ -31,10 +31,10 @@ $EndComp
 Wire Wire Line
 	9275 4275 10050 4275
 $Comp
-L power:GND #PWR0703
+L power:GND #PWR033
 U 1 1 5D200D92
 P 9500 4525
-F 0 "#PWR0703" H 9500 4275 50  0001 C CNN
+F 0 "#PWR033" H 9500 4275 50  0001 C CNN
 F 1 "GND" H 9505 4352 50  0000 C CNN
 F 2 "" H 9500 4525 50  0001 C CNN
 F 3 "" H 9500 4525 50  0001 C CNN
@@ -58,12 +58,12 @@ Wire Wire Line
 Wire Wire Line
 	10050 4175 9275 4175
 $Comp
-L LeashPCB:mikroBUS J?
+L LeashPCB:mikroBUS-LeashPCB J?
 U 1 1 5E8910E4
 P 8725 5650
 AR Path="/5E8910E4" Ref="J?"  Part="1" 
-AR Path="/5D066680/5E8910E4" Ref="J702"  Part="1" 
-F 0 "J702" H 8750 6365 50  0000 C CNN
+AR Path="/5D066680/5E8910E4" Ref="J5"  Part="1" 
+F 0 "J5" H 8750 6365 50  0000 C CNN
 F 1 "mikroBUS" H 8750 6274 50  0000 C CNN
 F 2 "leash:MikroBus-SMD" H 8525 5850 50  0001 C CNN
 F 3 "" H 8525 5850 50  0001 C CNN
@@ -74,9 +74,11 @@ F 7 "ST-FH-254-0144-B" H 8725 5650 50  0001 C CNN "MPN1"
 F 8 "Sinotop Electronics Ltd" H 8725 5650 50  0001 C CNN "Vendor1"
 F 9 "CONN HDR 8POS 0.1 TIN SMD" H 8725 5650 50  0001 C CNN "Short Description"
 F 10 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPPC081KFXC-RC/S5639-ND/776098" H 8725 5650 50  0001 C CNN "Link2"
-F 11 "NPPC081KFXC-RC" H 8725 5650 50  0001 C CNN "MPN2"
+F 11 "ST-FH-254" H 8725 5650 50  0001 C CNN "MPN2"
 F 12 "Need to buy in pairs!" H 8725 5650 50  0001 C CNN "Value modifier"
-F 13 "Sullins Connector Solutions" H 8725 5650 50  0001 C CNN "Vendor2"
+F 13 "Seeed Studio" H 8725 5650 50  0001 C CNN "Vendor2"
+F 14 "SMD Black Female Header;1*8P-2.54-7.1mm（右前左后）" H 8725 5650 50  0001 C CNN "Seeed Description"
+F 15 "320030864" H 8725 5650 50  0001 C CNN "Seeed PN"
 	1    8725 5650
 	1    0    0    -1  
 $EndComp
@@ -85,10 +87,10 @@ Wire Wire Line
 Wire Wire Line
 	7950 6000 7950 6100
 $Comp
-L power:GND #PWR0702
+L power:GND #PWR032
 U 1 1 5E8910FE
 P 7950 6100
-F 0 "#PWR0702" H 7950 5850 50  0001 C CNN
+F 0 "#PWR032" H 7950 5850 50  0001 C CNN
 F 1 "GND" H 7955 5927 50  0000 C CNN
 F 2 "" H 7950 6100 50  0001 C CNN
 F 3 "" H 7950 6100 50  0001 C CNN
@@ -96,10 +98,10 @@ F 3 "" H 7950 6100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0704
+L power:GND #PWR034
 U 1 1 5E89110F
 P 9550 6150
-F 0 "#PWR0704" H 9550 5900 50  0001 C CNN
+F 0 "#PWR034" H 9550 5900 50  0001 C CNN
 F 1 "GND" H 9555 5977 50  0000 C CNN
 F 2 "" H 9550 6150 50  0001 C CNN
 F 3 "" H 9550 6150 50  0001 C CNN
@@ -209,12 +211,12 @@ Wire Wire Line
 Wire Wire Line
 	8175 5900 7175 5900
 $Comp
-L LeashPCB:mikroBUS J?
+L LeashPCB:mikroBUS-LeashPCB J?
 U 1 1 5D092D9C
 P 8675 4025
 AR Path="/5D092D9C" Ref="J?"  Part="1" 
-AR Path="/5D066680/5D092D9C" Ref="J701"  Part="1" 
-F 0 "J701" H 8700 4740 50  0000 C CNN
+AR Path="/5D066680/5D092D9C" Ref="J4"  Part="1" 
+F 0 "J4" H 8700 4740 50  0000 C CNN
 F 1 "mikroBUS" H 8700 4649 50  0000 C CNN
 F 2 "leash:MikroBus-SMD" H 8475 4225 50  0001 C CNN
 F 3 "" H 8475 4225 50  0001 C CNN
@@ -225,9 +227,11 @@ F 7 "ST-FH-254-0144-B" H 8675 4025 50  0001 C CNN "MPN1"
 F 8 "Sinotop Electronics Ltd" H 8675 4025 50  0001 C CNN "Vendor1"
 F 9 "CONN HDR 8POS 0.1 TIN SMD" H 8675 4025 50  0001 C CNN "Short Description"
 F 10 "https://www.digikey.com/product-detail/en/sullins-connector-solutions/NPPC081KFXC-RC/S5639-ND/776098" H 8675 4025 50  0001 C CNN "Link2"
-F 11 "NPPC081KFXC-RC" H 8675 4025 50  0001 C CNN "MPN2"
+F 11 "ST-FH-254" H 8675 4025 50  0001 C CNN "MPN2"
 F 12 "Need to buy in pairs!" H 8675 4025 50  0001 C CNN "Value modifier"
-F 13 "Sullins Connector Solutions" H 8675 4025 50  0001 C CNN "Vendor2"
+F 13 "Seeed Studio" H 8675 4025 50  0001 C CNN "Vendor2"
+F 14 "SMD Black Female Header;1*8P-2.54-7.1mm（右前左后）" H 8675 4025 50  0001 C CNN "Seeed Description"
+F 15 "320030864" H 8675 4025 50  0001 C CNN "Seeed PN"
 	1    8675 4025
 	1    0    0    -1  
 $EndComp
