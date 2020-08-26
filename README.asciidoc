@@ -12,11 +12,17 @@ endif::[]
 BeagleConnect
 -------------
 
-The purpose of BeagleConnect is to eliminate the need to write software
-to connect to a massive library of
+BeagleConnect is a revolutionary technology virtually eliminating low-level software
+development for IoT and IIoT applications, such as building automation, factory
+automation, and home automation. While numerous IoT and IIoT solutions available today
+provide massive software libraries for microcontrollers supporting a limited body of
 https://en.wikipedia.org/wiki/Sensor[sensors],
 https://en.wikipedia.org/wiki/Actuator[actuators] and
-https://en.wikipedia.org/wiki/Indicator_(distance_amplifying_instrument)[indicators].
+https://en.wikipedia.org/wiki/Indicator_(distance_amplifying_instrument)[indicators]
+as well as libraries for communicating over various networks,
+BeagleConnect simply eliminates the need for these libraries by shifting the burden
+into the most massive and collaborative software project of all time, the Linux kernel.
+
 These are the tools used to automate things in
 https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
 https://en.wikipedia.org/wiki/Internet_of_things[IoT].
