@@ -173,36 +173,31 @@ Here, we will build and flash the Zephyr [greybus_net sample](https://github.com
 
 After flashing, you should observe the something matching the following output in `minicom`.
 ```
-*** Booting Zephyr OS build zephyr-v2.3.0-4-g51eadb73fa71  ***
-[00:00:00.011,444] <inf> net_config: Initializing network
-[00:00:00.111,450] <inf> net_config: IPv6 address: fe80::cf99:a11c:4b:1200
-[00:00:00.117,553] <inf> net_config: IPv6 address: fe80::cf99:a11c:4b:1200
-gbsetup(): 584: Registering platform drivers..
-gbsetup(): 587: Getting static manifest blob..
-gbsetup(): 591: Parsing manifest..
-GB: D: identify_descriptor():298: cport_id = 0
-GB: D: identify_descriptor():298: cport_id = 1
-gbsetup(): 597: Parsed manifest
-gbsetup(): 599: Updating manifest blob..
-gbsetup(): 602: Initializing Greybus..
-gbsetup(): 609: Enabling Cports..
-GB: I: enable_cports():129: Registering CONTROL greybus driver.
-GB: D: _gb_register_driver():544: Registering Greybus driver on CP0
-GB: I: enable_cports():136: Registering GPIO greybus driver.
-GB: D: _gb_register_driver():544: Registering Greybus driver on CP1
-gbsetup(): 612: Greybus is active.
-netsetup(): 156: initializing control_thread stack
-netsetup(): 169: initializing gpio_thread stack
-netsetup(): 186: creating control server socket
-netsetup(): 192: creating gpio server socket
-netsetup(): 199: setting socket options for control server
-netsetup(): 207: setting socket options for gpio server
-netsetup(): 215: binding control server socket
-netsetup(): 222: binding gpio server socket
-netsetup(): 230: listening on control server socket
-netsetup(): 236: listening on gpio server socket
-accept_loop(): 259: preparing pollfds
-accept_loop(): 266: calling poll
+*** Booting Zephyr OS build zephyr-v2.3.0-1435-g40c0ed940d71  ***
+[00:00:00.011,932] <inf> net_config: Initializing network
+[00:00:00.111,938] <inf> net_config: IPv6 address: fe80::6c42:bc1c:4b:1200
+[00:00:00.112,121] <dbg> greybus_service.greybus_service_init: Greybus initializing..
+[00:00:00.112,426] <dbg> greybus_transport_tcpip.gb_transport_backend_init: Greybus TCP/IP Transport initializing..
+[00:00:00.112,579] <dbg> greybus_transport_tcpip.netsetup: created server socket 0 for cport 0
+[00:00:00.112,579] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 0
+[00:00:00.112,609] <dbg> greybus_transport_tcpip.netsetup: binding socket 0 (cport 0) to port 4242
+[00:00:00.112,640] <dbg> greybus_transport_tcpip.netsetup: listening on socket 0 (cport 0)
+[00:00:00.112,823] <dbg> greybus_transport_tcpip.netsetup: created server socket 1 for cport 1
+[00:00:00.112,823] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 1
+[00:00:00.112,854] <dbg> greybus_transport_tcpip.netsetup: binding socket 1 (cport 1) to port 4243
+[00:00:00.112,854] <dbg> greybus_transport_tcpip.netsetup: listening on socket 1 (cport 1)
+[00:00:00.113,037] <inf> net_config: IPv6 address: fe80::6c42:bc1c:4b:1200
+[00:00:00.113,250] <dbg> greybus_transport_tcpip.netsetup: created server socket 2 for cport 2
+[00:00:00.113,250] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 2
+[00:00:00.113,281] <dbg> greybus_transport_tcpip.netsetup: binding socket 2 (cport 2) to port 4244
+[00:00:00.113,311] <dbg> greybus_transport_tcpip.netsetup: listening on socket 2 (cport 2)
+[00:00:00.113,494] <dbg> greybus_transport_tcpip.netsetup: created server socket 3 for cport 3
+[00:00:00.113,494] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 3
+[00:00:00.113,525] <dbg> greybus_transport_tcpip.netsetup: binding socket 3 (cport 3) to port 4245
+[00:00:00.113,555] <dbg> greybus_transport_tcpip.netsetup: listening on socket 3 (cport 3)
+[00:00:00.113,861] <inf> greybus_transport_tcpip: Greybus TCP/IP Transport initialized
+[00:00:00.116,149] <inf> greybus_service: Greybus is active
+[00:00:00.116,546] <dbg> greybus_transport_tcpip.accept_loop: calling poll
 uart:~$ 
 ```
 
