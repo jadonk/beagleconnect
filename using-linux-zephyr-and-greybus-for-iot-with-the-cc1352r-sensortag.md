@@ -547,65 +547,51 @@ Second, run the script with root privileges: `sudo bash blinky.sh`
 The output of your minicom session should resemble the following.
 
 ```console
-*** Booting Zephyr OS build zephyr-v2.3.0-4-g51eadb73fa71  ***
-[00:00:00.011,535] <inf> net_config: Initializing network
-[00:00:00.111,511] <inf> net_config: IPv6 address: fe80::cf99:a11c:4b:1200
-[00:00:00.119,628] <inf> net_config: IPv6 address: fe80::cf99:a11c:4b:1200
-gbsetup(): 584: Registering platform drivers..
-gbsetup(): 587: Getting static manifest blob..
-gbsetup(): 591: Parsing manifest..
-GB: D: identify_descriptor():298: cport_id = 0
-GB: D: identify_descriptor():298: cport_id = 1
-gbsetup(): 597: Parsed manifest
-gbsetup(): 599: Updating manifest blob..
-gbsetup(): 602: Initializing Greybus..
-gbsetup(): 609: Enabling Cports..
-GB: I: enable_cports():129: Registering CONTROL greybus driver.
-GB: D: _gb_register_driver():544: Registering Greybus driver on CP0
-GB: I: enable_cports():136: Registering GPIO greybus driver.
-GB: D: _gb_register_driver():544: Registering Greybus driver on CP1
-gbsetup(): 612: Greybus is active.
-netsetup(): 156: initializing control_thread stack
-netsetup(): 169: initializing gpio_thread stack
-netsetup(): 186: creating control server socket
-netsetup(): 192: creating gpio server socket
-netsetup(): 199: setting socket options for control server
-netsetup(): 207: setting socket options for gpio server
-netsetup(): 215: binding control server socket
-netsetup(): 222: binding gpio server socket
-netsetup(): 230: listening on control server socket
-netsetup(): 236: listening on gpio server socket
-accept_loop(): 259: preparing pollfds
-accept_loop(): 266: calling poll
-accept_loop(): 272: returned from poll
-accept_loop(): 274: control socket has a traffic
-accept_loop(): 290: accepted connection from [2001:db8::2]:46140 as fd 2
-accept_loop(): 292: spawning control thread..
-accept_loop(): 259: preparing pollfds
-accept_loop(): 266: calling poll
-GB: D: gb_process_request():251: gb_control_protocol_version: 0
-GB: D: gb_process_request():251: gb_control_get_manifest_size: 0
-GB: D: gb_process_request():251: gb_control_get_manifest: 0
-GB: D: gb_process_request():251: gb_control_bundle_activate: 0
-accept_loop(): 272: returned from poll
-accept_loop(): 302: gpio service has traffic
-accept_loop(): 318: accepted connection from [2001:db8::2]:48314 as fd 3
-accept_loop(): 320: spawning gpio thread..
-pthread_create: Success
-GB: D: gb_process_request():251: gb_control_connected: 0
-GB: D: gb_process_request():251: gb_gpio_line_count: 0
-GB: D: gb_process_request():251: gb_gpio_get_direction: 0
-GB: D: gb_process_request():251: gb_gpio_activate: 0
-GB: D: gb_process_request():251: gb_gpio_get_direction: 0
-GB: D: gb_process_request():251: gb_gpio_direction_out: 0
-GB: D: gb_process_request():251: gb_gpio_deactivate: 0
-GB: D: gb_process_request():251: gb_gpio_activate: 0
-GB: D: gb_process_request():251: gb_gpio_get_direction: 0
-GB: D: gb_process_request():251: gb_gpio_direction_out: 0
-GB: D: gb_process_request():251: gb_gpio_deactivate: 0
-GB: D: gb_process_request():251: gb_gpio_activate: 0
-GB: D: gb_process_request():251: gb_gpio_get_direction: 0
-GB: D: gb_process_request():251: gb_gpio_direction_out: 0
+$ *** Booting Zephyr OS build zephyr-v2.3.0-1435-g40c0ed940d71  ***
+[00:00:00.011,932] <inf> net_config: Initializing network
+[00:00:00.111,938] <inf> net_config: IPv6 address: fe80::6c42:bc1c:4b:1200
+[00:00:00.112,121] <dbg> greybus_service.greybus_service_init: Greybus initializing..
+[00:00:00.112,426] <dbg> greybus_transport_tcpip.gb_transport_backend_init: Greybus TCP/IP Transport initializing..
+[00:00:00.112,579] <dbg> greybus_transport_tcpip.netsetup: created server socket 0 for cport 0
+[00:00:00.112,579] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 0
+[00:00:00.112,609] <dbg> greybus_transport_tcpip.netsetup: binding socket 0 (cport 0) to port 4242
+[00:00:00.112,640] <dbg> greybus_transport_tcpip.netsetup: listening on socket 0 (cport 0)
+[00:00:00.112,823] <dbg> greybus_transport_tcpip.netsetup: created server socket 1 for cport 1
+[00:00:00.112,823] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 1
+[00:00:00.112,854] <dbg> greybus_transport_tcpip.netsetup: binding socket 1 (cport 1) to port 4243
+[00:00:00.112,854] <dbg> greybus_transport_tcpip.netsetup: listening on socket 1 (cport 1)
+[00:00:00.113,037] <inf> net_config: IPv6 address: fe80::6c42:bc1c:4b:1200
+[00:00:00.113,250] <dbg> greybus_transport_tcpip.netsetup: created server socket 2 for cport 2
+[00:00:00.113,250] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 2
+[00:00:00.113,281] <dbg> greybus_transport_tcpip.netsetup: binding socket 2 (cport 2) to port 4244
+[00:00:00.113,311] <dbg> greybus_transport_tcpip.netsetup: listening on socket 2 (cport 2)
+[00:00:00.113,494] <dbg> greybus_transport_tcpip.netsetup: created server socket 3 for cport 3
+[00:00:00.113,494] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 3
+[00:00:00.113,525] <dbg> greybus_transport_tcpip.netsetup: binding socket 3 (cport 3) to port 4245
+[00:00:00.113,555] <dbg> greybus_transport_tcpip.netsetup: listening on socket 3 (cport 3)
+[00:00:00.113,861] <inf> greybus_transport_tcpip: Greybus TCP/IP Transport initialized
+[00:00:00.116,149] <inf> greybus_service: Greybus is active
+[00:00:00.116,546] <dbg> greybus_transport_tcpip.accept_loop: calling poll
+[00:45:08.397,399] <dbg> greybus_transport_tcpip.accept_loop: poll returned 1
+[00:45:08.397,399] <dbg> greybus_transport_tcpip.accept_loop: socket 0 (cport 0) has traffic
+[00:45:08.397,491] <dbg> greybus_transport_tcpip.accept_loop: accepted connection from [2001:db8::2]:39638 as fd 4
+[00:45:08.397,491] <dbg> greybus_transport_tcpip.accept_loop: spawning client thread..
+[00:45:08.397,735] <dbg> greybus_transport_tcpip.accept_loop: calling poll
+[00:45:08.491,363] <dbg> greybus_transport_tcpip.accept_loop: poll returned 1
+[00:45:08.491,363] <dbg> greybus_transport_tcpip.accept_loop: socket 3 (cport 3) has traffic
+[00:45:08.491,455] <dbg> greybus_transport_tcpip.accept_loop: accepted connection from [2001:db8::2]:39890 as fd 5
+[00:45:08.491,455] <dbg> greybus_transport_tcpip.accept_loop: spawning client thread..
+[00:45:08.491,699] <dbg> greybus_transport_tcpip.accept_loop: calling poll
+[00:45:08.620,056] <dbg> greybus_transport_tcpip.accept_loop: poll returned 1
+[00:45:08.620,086] <dbg> greybus_transport_tcpip.accept_loop: socket 2 (cport 2) has traffic
+[00:45:08.620,147] <dbg> greybus_transport_tcpip.accept_loop: accepted connection from [2001:db8::2]:42422 as fd 6
+[00:45:08.620,147] <dbg> greybus_transport_tcpip.accept_loop: spawning client thread..
+[00:45:08.620,422] <dbg> greybus_transport_tcpip.accept_loop: calling poll
+[00:45:08.679,504] <dbg> greybus_transport_tcpip.accept_loop: poll returned 1
+[00:45:08.679,534] <dbg> greybus_transport_tcpip.accept_loop: socket 1 (cport 1) has traffic
+[00:45:08.679,595] <dbg> greybus_transport_tcpip.accept_loop: accepted connection from [2001:db8::2]:48286 as fd 7
+[00:45:08.679,595] <dbg> greybus_transport_tcpip.accept_loop: spawning client thread..
+[00:45:08.679,870] <dbg> greybus_transport_tcpip.accept_loop: calling poll
 ...
 ```
 # Read I2C Registers
