@@ -607,9 +607,34 @@ GB: D: gb_process_request():251: gb_gpio_get_direction: 0
 GB: D: gb_process_request():251: gb_gpio_direction_out: 0
 ...
 ```
+# Read I2C Registers
+
+The SensorTag comes with an opt3001 ambient light sensor as well as an hdc2080 temperature & humidity sensor.
+
+First, find which i2c device corresponds to the SensorTag:
+
+```bash
+ls -la /sys/bus/i2c/devices/* | grep "greybus"
+lrwxrwxrwx 1 root root 0 Aug 15 11:24 /sys/bus/i2c/devices/i2c-8 -> ../../../devices/virtual/gb_nl/gn_nl/greybus1/1-2/1-2.2/1-2.2.2/gbphy2/i2c-8
+```
+On my machine, the i2c device node that Greybus creates is /dev/i2c-8.
+
+Read the ID registers (at the i2c register address 0x7e) of the opt3001 sensor (at i2c bus address 0x44) as shown below:
+
+```bash
+i2cget -y 8 0x44 0x7e w
+0x4954
+```
+
+Read the ID registers (at the i2c register address 0xfc) of the hdc2080 sensor (at i2c bus address 0x41) as shown below:
+
+```bash
+i2cget -y 8 0x41 0xfc w 
+0x5449
+```
 
 # Conclusion
-The blinking LED can be a somewhat anticlimactic, but hopefully it illustrates the potential for Greybus as an IoT application layer protocol.
+The blinking LED can and poking i2c registers can be a somewhat anticlimactic, but hopefully it illustrates the potential for Greybus as an IoT application layer protocol.
 
 What is nice about this demo, is that we're using Device Tree to describe our Greybus Peripheral declaratively, they Greybus Manifest is automatically generated, and the Greybus Service is automatically started in Zephyr.
 
