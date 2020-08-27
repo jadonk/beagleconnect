@@ -27,6 +27,7 @@
     + [Build and probe Greybus Kernel Modules](#build-and-probe-greybus-kernel-modules)
     + [Build and Run Gbridge](#build-and-run-gbridge)
 - [Blinky!](#blinky-)
+- [Read I2C Registers](#read-i2c-registers)
 - [Conclusion](#conclusion)
 
 # Introduction
