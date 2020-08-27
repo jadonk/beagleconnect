@@ -137,7 +137,7 @@ Therefore, in order to reproduce this example, please run the following in your 
 ```console
 git remote add greybus https://github.com/cfriedt/zephyr.git
 git fetch greybus
-git checkout -b greybus-service-sensortag-lpc2020 greybus/greybus-service-sensortag-lpc2020
+git checkout -b greybus-service-lpc2020 greybus/greybus-service-lpc2020
 west update
 ```
 
