@@ -26,4 +26,10 @@ K ambient light sensor i2c
 F http://optoelectronics.liteon.com/upload/download/DS86-2013-0004/LTR-303ALS-01_DS_V1.pdf
 $ENDCMP
 #
+$CMP TS5A23157
+D Single SPST Analog Switch, 5-V/3.3-V, normally OFF, 0.9Ohm Ron, SC-70
+K Analog Switch SPST
+F  http://www.ti.com/lit/ds/symlink/ts5a3166.pdf
+$ENDCMP
+#
 #End Doc Library

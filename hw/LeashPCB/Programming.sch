@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 3 10
 Title "BeagleDust Leash PCB"
 Date "2019-08-12"
-Rev "A"
+Rev "C"
 Comp "Beagleboard.org"
-Comment1 "Schematic designed by Analog Life, LLC"
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -20,7 +20,7 @@ P 7025 5400
 AR Path="/5D08E161" Ref="C?"  Part="1" 
 AR Path="/5D062DFA/5D08E161" Ref="C301"  Part="1" 
 F 0 "C301" H 7140 5446 50  0000 L CNN
-F 1 "0.1 uF" H 7140 5355 50  0000 L CNN
+F 1 "0.1U" H 7140 5355 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7063 5250 50  0001 C CNN
 F 3 "~" H 7025 5400 50  0001 C CNN
 F 4 "CAP CER 0.1UF 10V X5R 0402" H 7025 5400 50  0001 C CNN "Description"

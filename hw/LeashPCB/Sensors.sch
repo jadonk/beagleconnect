@@ -6,9 +6,9 @@ encoding utf-8
 Sheet 10 10
 Title ""
 Date ""
-Rev ""
+Rev "C"
 Comp ""
-Comment1 ""
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -93,7 +93,7 @@ P 3250 2425
 AR Path="/5D062750/5E6D759A" Ref="C?"  Part="1" 
 AR Path="/5E6C68DD/5E6D759A" Ref="C1001"  Part="1" 
 F 0 "C1001" H 3135 2379 50  0000 R CNN
-F 1 "0.1 uF" H 3135 2470 50  0000 R CNN
+F 1 "0.1U" H 3135 2470 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3288 2275 50  0001 C CNN
 F 3 "~" H 3250 2425 50  0001 C CNN
 F 4 "CAP CER 0.1UF 10V X5R 0402" H 3250 2425 50  0001 C CNN "Description"
@@ -210,7 +210,7 @@ P 10425 2925
 AR Path="/5D062750/5E6E5EA9" Ref="C?"  Part="1" 
 AR Path="/5E6C68DD/5E6E5EA9" Ref="C1002"  Part="1" 
 F 0 "C1002" H 10310 2879 50  0000 R CNN
-F 1 "0.1 uF" H 10310 2970 50  0000 R CNN
+F 1 "0.1U" H 10310 2970 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 10463 2775 50  0001 C CNN
 F 3 "~" H 10425 2925 50  0001 C CNN
 F 4 "CAP CER 0.1UF 10V X5R 0402" H 10425 2925 50  0001 C CNN "Description"
@@ -274,8 +274,6 @@ Wire Wire Line
 Text GLabel 8050 2900 0    50   Input ~ 0
 INT_SENSOR
 Wire Wire Line
-	8425 2750 8200 2750
-Wire Wire Line
 	9425 3050 9225 3050
 $Comp
 L Sensor_Motion:LIS2DE12 U1004
@@ -314,7 +312,7 @@ Wire Wire Line
 Wire Wire Line
 	2775 5100 2775 5325
 Wire Wire Line
-	5650 4725 6150 4725
+	4875 4725 5250 4725
 Wire Wire Line
 	6150 4725 6150 5125
 Wire Wire Line
@@ -366,8 +364,6 @@ F 3 "" H 2775 6275 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2775 6125 2775 6275
-Text GLabel 3350 5625 2    50   Input ~ 0
-INT_OPT3001
 Wire Wire Line
 	3350 5625 3175 5625
 Text GLabel 5025 5725 0    50   Input ~ 0
@@ -439,8 +435,6 @@ Text GLabel 6975 5525 2    50   Input ~ 0
 INT_LIS2DE12_1
 Wire Wire Line
 	6975 5525 6650 5525
-Text GLabel 9425 3050 2    50   Input ~ 0
-INT_LIS2DE12
 Wire Wire Line
 	6650 5925 6775 5925
 Wire Wire Line
@@ -454,7 +448,7 @@ Text GLabel 6975 5625 2    50   Input ~ 0
 INT_LIS2DE12_2
 Wire Wire Line
 	6975 5625 6650 5625
-Text GLabel 7675 2625 0    50   Input ~ 0
+Text GLabel 8050 2750 0    50   Input ~ 0
 INT_LIS2DE12_2
 Wire Wire Line
 	8300 2225 8300 2600
@@ -462,57 +456,7 @@ Wire Wire Line
 	8300 2600 8425 2600
 Wire Wire Line
 	8000 2225 8300 2225
-$Comp
-L Device:R R?
-U 1 1 5E78AEF0
-P 7950 2750
-AR Path="/5D062750/5E78AEF0" Ref="R?"  Part="1" 
-AR Path="/5E6C68DD/5E78AEF0" Ref="R1007"  Part="1" 
-F 0 "R1007" V 7900 2525 50  0000 L CNN
-F 1 "0" V 7950 2725 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7880 2750 50  0001 C CNN
-F 3 "~" H 7950 2750 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 7950 2750 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 7950 2750 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 7950 2750 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 7950 2750 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 7950 2750 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 7950 2750 50  0001 C CNN "Short Description"
-	1    7950 2750
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7800 2750 7700 2750
-$Comp
-L Device:R R?
-U 1 1 5E78B7F5
-P 7950 2625
-AR Path="/5D062750/5E78B7F5" Ref="R?"  Part="1" 
-AR Path="/5E6C68DD/5E78B7F5" Ref="R1006"  Part="1" 
-F 0 "R1006" V 7900 2400 50  0000 L CNN
-F 1 "0" V 7950 2600 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 7880 2625 50  0001 C CNN
-F 3 "~" H 7950 2625 50  0001 C CNN
-F 4 "RES 0 OHM JUMPER 1/16W 0402" H 7950 2625 50  0001 C CNN "Description"
-F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 7950 2625 50  0001 C CNN "Link1"
-F 6 "RMCF0402ZT0R00" H 7950 2625 50  0001 C CNN "MPN1"
-F 7 "$0.00127" H 7950 2625 50  0001 C CNN "Standard Price"
-F 8 "Stackpole Electronics Inc" H 7950 2625 50  0001 C CNN "Vendor1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 7950 2625 50  0001 C CNN "Short Description"
-F 10 "DNP" V 7975 2425 50  0000 C CNN "Population"
-	1    7950 2625
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8100 2625 8200 2625
-Wire Wire Line
-	8200 2625 8200 2750
-Connection ~ 8200 2750
-Wire Wire Line
-	8200 2750 8100 2750
-Wire Wire Line
-	7800 2625 7675 2625
-Text GLabel 5650 4725 0    50   Input ~ 0
+Text GLabel 4875 4725 0    50   Input ~ 0
 VDDS
 Text GLabel 3200 2100 0    50   Input ~ 0
 VDDS
@@ -528,7 +472,7 @@ U 1 1 5E4E359C
 P 3475 5825
 AR Path="/5D062750/5E4E359C" Ref="R?"  Part="1" 
 AR Path="/5E6C68DD/5E4E359C" Ref="R1008"  Part="1" 
-F 0 "R1008" V 3425 5600 50  0000 L CNN
+F 0 "R1008" V 3550 5500 50  0000 L CNN
 F 1 "0" V 3475 5800 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 3405 5825 50  0001 C CNN
 F 3 "~" H 3475 5825 50  0001 C CNN
@@ -558,6 +502,60 @@ F 3 "" H 3700 6125 50  0001 C CNN
 	1    3700 6125
 	1    0    0    -1  
 $EndComp
-Text GLabel 7700 2750 0    50   Input ~ 0
-INT_OPT3001
+Wire Wire Line
+	8050 2750 8425 2750
+$Comp
+L Device:R R?
+U 1 1 5F5F1CFB
+P 3500 5625
+AR Path="/5D062750/5F5F1CFB" Ref="R?"  Part="1" 
+AR Path="/5E6C68DD/5F5F1CFB" Ref="R1006"  Part="1" 
+F 0 "R1006" V 3450 5275 50  0000 L CNN
+F 1 "0" V 3500 5600 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 3430 5625 50  0001 C CNN
+F 3 "~" H 3500 5625 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 3500 5625 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3500 5625 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 3500 5625 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 3500 5625 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 3500 5625 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3500 5625 50  0001 C CNN "Short Description"
+F 10 "DNP" V 3550 5450 50  0000 C CNN "Population"
+	1    3500 5625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 5625 4050 5625
+Text GLabel 4050 5625 2    50   Input ~ 0
+INT_MB2
+$Comp
+L Device:R R?
+U 1 1 5F5FF654
+P 5250 5125
+AR Path="/5D062750/5F5FF654" Ref="R?"  Part="1" 
+AR Path="/5E6C68DD/5F5FF654" Ref="R1007"  Part="1" 
+F 0 "R1007" H 5320 5171 50  0000 L CNN
+F 1 "2.21K" H 5320 5080 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5180 5125 50  0001 C CNN
+F 3 "~" H 5250 5125 50  0001 C CNN
+F 4 "RES SMD 2.21K OHM 1% 1/10W 0402" H 5250 5125 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 5250 5125 50  0001 C CNN "Link1"
+F 6 "ERJ-2RKF2211X" H 5250 5125 50  0001 C CNN "MPN1"
+F 7 "0.00498" H 5250 5125 50  0001 C CNN "Standard Price"
+F 8 "Panasonic Electronic Components" H 5250 5125 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 2.21K OHM 1% 1/10W 0402" H 5250 5125 50  0001 C CNN "Short Description"
+	1    5250 5125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5425 5250 5425
+Wire Wire Line
+	5250 5425 5250 5275
+Wire Wire Line
+	5250 4975 5250 4725
+Connection ~ 5250 4725
+Wire Wire Line
+	5250 4725 6150 4725
+Text GLabel 9425 3050 2    50   Input ~ 0
+INT_LIS2DE12_1
 $EndSCHEMATC

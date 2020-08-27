@@ -24,7 +24,7 @@ F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 6575 5450
 F 4 "SKRPABE010" H 6575 5450 50  0001 C CNN "MPN1"
 F 5 "https://www.seeedstudio.com/opl.html" H 6575 5450 50  0001 C CNN "Link1"
 F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 6575 5450 50  0001 C CNN "Description"
-F 7 "$0.13050	" H 6575 5450 50  0001 C CNN "Standard Price"
+F 7 "0.13050	" H 6575 5450 50  0001 C CNN "Standard Price"
 F 8 "ALPS" H 6575 5450 50  0001 C CNN "Vendor1"
 F 9 "SWITCH TACTILE SPST-NO 0.05A 12V" H 6575 5450 50  0001 C CNN "Short Description"
 F 10 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 6575 5450 50  0001 C CNN "Link2"
@@ -59,7 +59,7 @@ F 3 "https://b2b-api.panasonic.eu/file_stream/pids/fileversion/2431" H 9075 5400
 F 4 "SKRPABE010" H 9075 5400 50  0001 C CNN "MPN1"
 F 5 "https://www.seeedstudio.com/opl.html" H 9075 5400 50  0001 C CNN "Link1"
 F 6 "SWITCH TACTILE SPST-NO 0.05A 12V" H 9075 5400 50  0001 C CNN "Description"
-F 7 "$0.13050	" H 9075 5400 50  0001 C CNN "Standard Price"
+F 7 "0.13050	" H 9075 5400 50  0001 C CNN "Standard Price"
 F 8 "ALPS" H 9075 5400 50  0001 C CNN "Vendor1"
 F 9 "SWITCH TACTILE SPST-NO 0.05A 12V" H 9075 5400 50  0001 C CNN "Short Description"
 F 10 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-P7A01P/P16763TR-ND/4429447" H 9075 5400 50  0001 C CNN "Link2"
@@ -127,7 +127,7 @@ F 3 "~" H 5900 5250 50  0001 C CNN
 F 4 "RES SMD 100K OHM 5% 1/16W 0402" H 5900 5250 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363" H 5900 5250 50  0001 C CNN "Link1"
 F 6 "RC0402JR-07100KL" H 5900 5250 50  0001 C CNN "MPN1"
-F 7 "$0.00139" H 5900 5250 50  0001 C CNN "Standard Price"
+F 7 "0.00139" H 5900 5250 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 5900 5250 50  0001 C CNN "Vendor1"
 F 9 "RES SMD 100K OHM 5% 1/16W 0402" H 5900 5250 50  0001 C CNN "Short Description"
 	1    5900 5250
@@ -140,7 +140,7 @@ P 5900 5725
 AR Path="/5D062750/5E811A75" Ref="C?"  Part="1" 
 AR Path="/5D099F4C/5E811A75" Ref="C901"  Part="1" 
 F 0 "C901" H 5785 5679 50  0000 R CNN
-F 1 "0.1 uF" H 5785 5770 50  0000 R CNN
+F 1 "0.1U" H 5785 5770 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 5938 5575 50  0001 C CNN
 F 3 "~" H 5900 5725 50  0001 C CNN
 F 4 "CAP CER 0.1UF 10V X5R 0402" H 5900 5725 50  0001 C CNN "Description"
@@ -157,7 +157,7 @@ Wire Wire Line
 Text GLabel 5650 5000 0    63   Input ~ 0
 VDDS
 Text GLabel 8300 5500 0    79   Input ~ 0
-USER1
+USER_BOOT
 Wire Wire Line
 	8525 5500 8525 5525
 Wire Wire Line
@@ -200,7 +200,7 @@ F 3 "~" H 8525 5200 50  0001 C CNN
 F 4 "RES SMD 100K OHM 5% 1/16W 0402" H 8525 5200 50  0001 C CNN "Description"
 F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363" H 8525 5200 50  0001 C CNN "Link1"
 F 6 "RC0402JR-07100KL" H 8525 5200 50  0001 C CNN "MPN1"
-F 7 "$0.00139" H 8525 5200 50  0001 C CNN "Standard Price"
+F 7 "0.00139" H 8525 5200 50  0001 C CNN "Standard Price"
 F 8 "Yageo" H 8525 5200 50  0001 C CNN "Vendor1"
 F 9 "RES SMD 100K OHM 5% 1/16W 0402" H 8525 5200 50  0001 C CNN "Short Description"
 	1    8525 5200
@@ -213,7 +213,7 @@ P 8525 5675
 AR Path="/5D062750/5E815D1A" Ref="C?"  Part="1" 
 AR Path="/5D099F4C/5E815D1A" Ref="C902"  Part="1" 
 F 0 "C902" H 8410 5629 50  0000 R CNN
-F 1 "0.1 uF" H 8410 5720 50  0000 R CNN
+F 1 "0.1U" H 8410 5720 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8563 5525 50  0001 C CNN
 F 3 "~" H 8525 5675 50  0001 C CNN
 F 4 "CAP CER 0.1UF 10V X5R 0402" H 8525 5675 50  0001 C CNN "Description"
