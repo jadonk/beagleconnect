@@ -5,10 +5,10 @@ $Descr C 22000 17000
 encoding utf-8
 Sheet 1 10
 Title "BeagleConnect Leash PCB"
-Date "2020-08-06"
-Rev "C"
+Date "2020-03-10"
+Rev "B"
 Comp "Beagleboard.org"
-Comment1 "Schematic originally designed by Analog Life, LLC"
+Comment1 "Schematic designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -18439,10 +18439,10 @@ F0 "MikroBus Click" 50
 F1 "MikroBusClick.sch" 50
 $EndSheet
 $Comp
-L Mechanical:MountingHole_Pad H101
+L Mechanical:MountingHole_Pad H1
 U 1 1 5E434808
 P 2350 12450
-F 0 "H101" H 2350 12700 50  0000 C CNN
+F 0 "H1" H 2350 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2350 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2350 12450 50  0001 C CNN
 F 3 "~" H 2350 12450 50  0001 C CNN
@@ -18450,14 +18450,16 @@ F 4 "N/A" H 2350 12450 50  0001 C CNN "Link1"
 F 5 "N/A" H 2350 12450 50  0001 C CNN "MPN1"
 F 6 "N/A" H 2350 12450 50  0001 C CNN "Short Description"
 F 7 "0" H 2350 12450 50  0001 C CNN "Standard Price"
+F 8 "0" H 2350 12450 50  0001 C CNN "Seeed PN"
+F 9 "DNP" H 2350 12450 50  0001 C CNN "Population"
 	1    2350 12450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H102
+L Mechanical:MountingHole_Pad H2
 U 1 1 5E43574A
 P 2525 12450
-F 0 "H102" H 2525 12700 50  0000 C CNN
+F 0 "H2" H 2525 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2525 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2525 12450 50  0001 C CNN
 F 3 "~" H 2525 12450 50  0001 C CNN
@@ -18465,14 +18467,16 @@ F 4 "N/A" H 2525 12450 50  0001 C CNN "Link1"
 F 5 "N/A" H 2525 12450 50  0001 C CNN "MPN1"
 F 6 "N/A" H 2525 12450 50  0001 C CNN "Short Description"
 F 7 "0" H 2525 12450 50  0001 C CNN "Standard Price"
+F 8 "0" H 2525 12450 50  0001 C CNN "Seeed PN"
+F 9 "DNP" H 2525 12450 50  0001 C CNN "Population"
 	1    2525 12450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H103
+L Mechanical:MountingHole_Pad H3
 U 1 1 5E43589E
 P 2700 12450
-F 0 "H103" H 2700 12700 50  0000 C CNN
+F 0 "H3" H 2700 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2700 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2700 12450 50  0001 C CNN
 F 3 "~" H 2700 12450 50  0001 C CNN
@@ -18480,14 +18484,16 @@ F 4 "N/A" H 2700 12450 50  0001 C CNN "Link1"
 F 5 "N/A" H 2700 12450 50  0001 C CNN "MPN1"
 F 6 "N/A" H 2700 12450 50  0001 C CNN "Short Description"
 F 7 "0" H 2700 12450 50  0001 C CNN "Standard Price"
+F 8 "0" H 2700 12450 50  0001 C CNN "Seeed PN"
+F 9 "DNP" H 2700 12450 50  0001 C CNN "Population"
 	1    2700 12450
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad H104
+L Mechanical:MountingHole_Pad H4
 U 1 1 5E435A48
 P 2875 12450
-F 0 "H104" H 2875 12700 50  0000 C CNN
+F 0 "H4" H 2875 12700 50  0000 C CNN
 F 1 "Mounting Hole" H 2875 12625 50  0001 C CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2_Pad_Via" H 2875 12450 50  0001 C CNN
 F 3 "~" H 2875 12450 50  0001 C CNN
@@ -18495,6 +18501,8 @@ F 4 "N/A" H 2875 12450 50  0001 C CNN "Link1"
 F 5 "N/A" H 2875 12450 50  0001 C CNN "MPN1"
 F 6 "N/A" H 2875 12450 50  0001 C CNN "Short Description"
 F 7 "0" H 2875 12450 50  0001 C CNN "Standard Price"
+F 8 "0" H 2875 12450 50  0001 C CNN "Seeed PN"
+F 9 "DNP" H 2875 12450 50  0001 C CNN "Population"
 	1    2875 12450
 	1    0    0    -1  
 $EndComp
@@ -18519,8 +18527,8 @@ L power:GND #PWR?
 U 1 1 5E43D40C
 P 2350 12800
 AR Path="/5D1A71BB/5E43D40C" Ref="#PWR?"  Part="1" 
-AR Path="/5E43D40C" Ref="#PWR0101"  Part="1" 
-F 0 "#PWR0101" H 2350 12550 50  0001 C CNN
+AR Path="/5E43D40C" Ref="#PWR01"  Part="1" 
+F 0 "#PWR01" H 2350 12550 50  0001 C CNN
 F 1 "GND" H 2355 12627 50  0000 C CNN
 F 2 "" H 2350 12800 50  0001 C CNN
 F 3 "" H 2350 12800 50  0001 C CNN
