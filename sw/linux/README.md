@@ -6,9 +6,9 @@ To build, make sure you've already built your previous kernel properly, then...
 
 ```
 cd <your linux source tree>
-git am <beagleconnect source tree>/sw/mikrobus/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
-git am <beagleconnect source tree>/sw/mikrobus/0001-mikroBUS-build-fixes.patch
-scripts/kconfig/merge_config.sh <beagleconnect source tree>/sw/mikrobus/mikrobus.config
+git am <beagleconnect source tree>/sw/linux/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
+git am <beagleconnect source tree>/sw/linux/0001-mikroBUS-build-fixes.patch
+scripts/kconfig/merge_config.sh <beagleconnect source tree>/sw/linux/mikrobus.config
 make
 sudo make modules_install
 sudo make install
