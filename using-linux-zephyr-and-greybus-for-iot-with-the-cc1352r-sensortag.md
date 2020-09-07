@@ -150,13 +150,12 @@ Here, we will build and flash the Zephyr [greybus_net sample](https://github.com
     ```
     export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
     export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
-    export BOARD=cc1352r1_sensortag
-    export ZEPHYR_PROJECT=samples/subsys/greybus/net
     ```
 1. Set up the required Zephyr environment variables via `source zephyr-env.sh`
 1. Build the project
     ```
-    west build ${ZEPHYR_PROJECT} -- -DCONF_FILE="prj.conf overlay-802154.conf"
+    BOARD=cc1352r_launchxl west build samples/subsys/greybus/net --build-dir build/greybus_launchpad \
+      -- -DCONF_FILE="prj.conf overlay-802154.conf"
     ```
 1. Ensure that the last part of the build process looks somewhat like this:
     ```console
@@ -167,7 +166,7 @@ Here, we will build and flash the Zephyr [greybus_net sample](https://github.com
             IDT_LIST:         152 B         2 KB      7.42%
     [245/245] Linking C executable zephyr/zephyr.elf
     ```
-1. Flash the firmware to your device using `west flash`
+1. Flash the firmware to your device using `west flash --builddir build/greybus_launchpad`
 
 ## The Zephyr Shell
 
