@@ -166,7 +166,7 @@ Here, we will build and flash the Zephyr [greybus_net sample](https://github.com
             IDT_LIST:         152 B         2 KB      7.42%
     [245/245] Linking C executable zephyr/zephyr.elf
     ```
-1. Flash the firmware to your device using `west flash --builddir build/greybus_launchpad`
+1. Flash the firmware to your device using `BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad`
 
 ## The Zephyr Shell
 
