@@ -154,8 +154,8 @@ Here, we will build and flash the Zephyr [greybus_net sample](https://github.com
 1. Set up the required Zephyr environment variables via `source zephyr-env.sh`
 1. Build the project
     ```
-    BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --build-dir build/greybus_launchpad \
-      -- -DCONF_FILE="prj.conf overlay-802154.conf"
+    BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine --build-dir build/greybus_launchpad -- \
+      -DCONF_FILE="prj.conf overlay-802154.conf"
     ```
 1. Ensure that the last part of the build process looks somewhat like this:
     ```console
