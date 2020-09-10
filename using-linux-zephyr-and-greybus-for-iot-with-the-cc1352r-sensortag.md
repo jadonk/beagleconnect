@@ -483,17 +483,15 @@ make -j`nproc --all`
 
 The gbridge utility was created as a proof of concept to abstract the Greybus Netlink datapath among several reliable transports. For the purposes of this tutorial, we'll be using it as a TCP/IP bridge.
 
-To download and run `gbridge`, perform the following:
+To run `gbridge`, perform the following:
 ```console
-cd ${WORKSPACE}
-git clone https://github.com/friedtco/gbridge.git
 cd gbridge
-git checkout -b feature/tcpip-ble-ipsp origin/feature/tcpip-ble-ipsp
 autoreconf -vfi
-GBDIR=${PWD}/../greybus \
+GBNETLINKDIR=${PWD}/../greybus \
   ./configure --enable-uart --enable-tcpip --disable-gbsim --enable-netlink --disable-bluetooth
 make -j`nproc --all`
-./gbridge
+sudo make install
+gbridge
 ```
 
 # Blinky!
