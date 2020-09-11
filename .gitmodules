@@ -7,9 +7,6 @@
 [submodule "sw/manifesto"]
 	path = sw/manifesto
 	url = https://github.com/jadonk/manifesto
-[submodule "sw/pygbmodule"]
-	path = sw/pygbmodule
-	url = https://github.com/jadonk/pygbmodule
 [submodule "sw/zephyrproject/zephyr"]
 	path = sw/zephyrproject/zephyr
 	url = https://github.com/jadonk/zephyr

@@ -1,13 +1,14 @@
-# Using Linux, Zephyr & Greybus for IoT with the CC1352R SensorTag
+# Using Linux, Zephyr & Greybus for IoT with the CC1352R1 LaunchPad (or CC1352R SensorTag)
 
 - [Introduction](#introduction)
   * [Why??](#why--)
   * [History](#history)
 - [Hardware Requirements](#hardware-requirements)
 - [Prerequisites](#prerequisites)
-- [Console (Minicom)](#console--minicom-)
-  * [Set Up Minicom](#set-up-minicom)
-  * [Run Minicom](#run-minicom)
+- [Cloning the repository](#cloning-the-repository)
+- [Console (tio)](#console---tio--)
+  * [Set Up tio](#set-up--tio-)
+  * [Run tio](#run--tio-)
 - [Zephyr](#zephyr)
   * [Add the Fork](#add-the-fork)
   * [Build and Flash Zephyr](#build-and-flash-zephyr)
@@ -45,7 +46,7 @@ The goal here is to provide a community-maintained, developer-friendly, and open
 There are a few technologies at the core of this demonstration, and far too much background information to describe adequately here, so they are simply listed below for brevity
 * [Project Ara](https://en.wikipedia.org/wiki/Project_Ara)
 * [IPv6](https://en.wikipedia.org/wiki/IPv6) (via [6LoWPAN](https://en.wikipedia.org/wiki/6LoWPAN))
-* Zephyr support for [IEEE 802.15.4](https://docs.zephyrproject.org/latest/reference/networking/ieee802154.html)
+* [Zephyr](https://zephyrproject.org) support for [IEEE 802.15.4](https://docs.zephyrproject.org/latest/reference/networking/ieee802154.html)
 * [Greybus](https://youtu.be/UzRq8jAHAxU) originally from [Project Ara](https://youtu.be/UzRq8jAHAxU)
 * [Using Greybus for IoT](https://youtu.be/7H50pv-4YXw)
 
@@ -69,11 +70,11 @@ Greybus currently supports several busses, including:
 * a Linux workstation running [Ubuntu Bionic](https://releases.ubuntu.com/18.04.4)
   * Only x86_64 is supported at this time
 * a USB-Serial adapter
-* a J-Link JTAG tool
+* a J-Link JTAG tool (optional) or a LaunchPad (may require some wires)
 * a board that is supported by Zephyr with support for IEEE 802.15.4
-  * In this example, we use the [cc1352r1_sensortag](https://www.ti.com/tool/LPSTK-CC1352R)
-  * Available for purchase directly from [Texas Instruments](https://www.ti.com/tool/LPSTK-CC1352R) or a distributor
-  * Connect DIO12 (RXD) and DIO13 (TXD) as well as GND to the appropriate pins on your serial adapter 
+  * In this example, we use the [cc1352r1_launchpadxl](https://www.ti.com/tool/LAUNCHXL-CC1352R1)
+  * Alternatively, you could use the [cc1352r_sensortag](https://www.ti.com/tool/LPSTK-CC1352R) 
+    * Connect DIO12 (RXD) and DIO13 (TXD) as well as GND to the appropriate pins on your serial adapter 
 * a USB IEEE 802.15.4 adapter
   * In this example, we use the [atusb](http://downloads.qi-hardware.com/people/werner/wpan/web)
   * Available for purchase from [sysmocom](http://shop.sysmocom.de/products/atusb)
@@ -85,45 +86,33 @@ Greybus currently supports several busses, including:
 * [Zephyr SDK](https://docs.zephyrproject.org/latest/getting_started/index.html#install-a-toolchain) is installed at ~/zephyr-sdk-0.11.2 (any later version should be fine as well)
 * Zephyr board is connected via USB
 
-# Console (Minicom)
-In order to see diagnostic messages or to run certain commands on the Zephyr device we will require a terminal open to the device console. In this case, we use [minicom](https://en.wikipedia.org/wiki/Minicom). We will run it twice; the first time for setup using root privileges, and the a second time as a regular user.
+# Cloning the repository
+This repository utilizes (git submodules)[https://git-scm.com/book/en/v2/Git-Tools-Submodules] to
+keep track of all of the projects required to reproduce the on-going work. The instructions here
+only cover checking out the "demo" branch which should stay in a tested state. On-going development
+will be on the "master" branch.
 
-## Set Up Minicom
+## Clone specific tag
 ```console
-sudo minicom -s
+cd <parent directory you choose>
+git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
 ```
-You should see the options shown below:
-```console
-            +-----[configuration]------+                                     
-            | Filenames and paths      |                                     
-            | File transfer protocols  |                                     
-            | Serial port setup        |                                     
-            | Modem and dialing        |                                     
-            | Screen and keyboard      |
-            | Save setup as dfl        |
-            | Save setup as..          |
-            | Exit                     |
-            | Exit from Minicom        |
-            +--------------------------+
-```
-1. Select *Serial port setup*, hit *Enter*
-1. Press 'A' for *Serial Device*, type in `/dev/ttyACM0`, and hit *Enter* again
-1. Press 'E' for *Bps/Par/Bits*, press 'E' for `115200`, and 'Q' for *8-N-1*, and hit *Enter* again
-1. Press 'F' to set *Hardware Flow Control: No*
-1. Press *Down* to *Save setup as..*, and then enter `ttyACM0` when prompted, and hit *Enter*
-1. Press *Down* to *Exit from Minicom* and finally hit *Enter* again to exit setup
 
-## Run Minicom
+# Console (`tio`)
+In order to see diagnostic messages or to run certain commands on the Zephyr device we will require a terminal open to the device console. In this case, we use [tio](https://tio.github.io/).
+
+## Install `tio`
+```console
+sudo apt install -y tio
+```
+
+## Run `tio`
 Now, we'll open a terminal to Zephyr using the newly created setup with the command below.
 ```console
-minicom ttyACM0
+tio /dev/ttyACM0
 ```
-Enter the following key combinations
-* `Ctrl+A, U` -> `Add carriage return ON`
-* `Ctrl+A, W` -> `Linewrap ON`
-* `Ctrl+A, C` -> clear the screen
 
-To exit minicom (later), enter `Ctrl+A, X`.
+To exit `tio` (later), enter `ctrl+t, q`.
 
 # Zephyr
 ## Add the Fork
