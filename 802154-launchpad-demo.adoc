@@ -1,4 +1,12 @@
-== Using Linux, Zephyr & Greybus for IoT with the CC1352R1 LaunchPad (or CC1352R SensorTag)
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+
+= IEEE 802.15.4 Greybus demo for LaunchPad
 
 * link:#introduction[Introduction]
 ** link:#why--[Why??]
