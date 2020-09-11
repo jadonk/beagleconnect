@@ -63,11 +63,13 @@ toc::[]
 
 [.float-group]
 --
-[.left,caption="BeagleConnect case design"]
-image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240]
+[.left]
+.BeagleConnect case
+image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240,title="BeagleConnect case"]
 
-[.right,caption="BeagleConnect Leash rev B prototype"]
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect Leash rev B prototype,300,200]
+[.right]
+.BeagleConnect Leash rev B prototype
+image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect Leash rev B prototype,300,200,title="BeagleConnect Leash"]
 --
 
 [[what-is-new]]
