@@ -63,13 +63,8 @@ toc::[]
 
 [.float-group]
 --
-[.left]
-.BeagleConnect case
-image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240,title="BeagleConnect case"]
-
-[.right]
-.BeagleConnect Leash rev B prototype
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect Leash rev B prototype,300,200,title="BeagleConnect Leash"]
+image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240,title="BeagleConnect case",role="related thumb left"]
+image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect Leash rev B prototype,300,200,title="BeagleConnect Leash",role="related thumb right"]
 --
 
 [[what-is-new]]
@@ -153,9 +148,9 @@ BeagleConnect is meant to enable rapid-prototyping and not to
 necessarily satisfy any particular end-product's requirements, but with
 full considerations for go-to-market needs.
 
-BeagleConnect is:
+Each BeagleBoard.org BeagleConnect solution will be:
 
-* Available for at least 10 years, 
+* Readily available for over 10 years, 
 * Built with fully
 open source software with submissions to mainline Linux and Zephyr
 repositories to aide in support and porting, 
@@ -177,7 +172,7 @@ secure your own network, and
 == Usage
 
 [[beagleconnect-user-experience]]
-=== BeagleConnect user experience
+=== BeagleConnect wireless user experience
 
 [[enable-a-linux-host-with-beagleconnect]]
 ==== Enable a Linux host with BeagleConnect
@@ -213,19 +208,20 @@ using native device drivers.
 TODO: Actually, Node-RED will make these show up automatically as streams.
 
 [[components]]
-Components
-~~~~~~~~~~
+=== Components for wireless experience
 
-* Host-side: BeagleConnect board connects a CC1352 to a Beagle or other
-Linux host over USB to serial
-* Provides long-range, low-power wireless communications
-* Device-side: BeagleConnect board with a CC1352 is powered by a battery
-(coin cell or JST connector) or USB connector
-* Provides 2 mikroBUS connectors for connecting any of hundreds of
+* Host-side: BeagleConnect Leash connected to a Beagle or other
+Linux host over USB
++
+NOTE: If the Linux host has BLE, the BeagleConnect is optional for short distances
++
+** Provides long-range, low-power wireless communications
+** Paired with a Linux kernel driver
+* Device-side: BeagleConnect Leash is powered by a battery or USB connector
+** Provides 2 mikroBUS connectors for connecting any of hundreds of
 https://bbb.io/click[Click Board] mikroBUS add-on devices
 * Standard firmware on the host-side and target-side CC1352s transport
 the standard busses
-* Paired with a Linux kernel driver
 * Provides new Linux host controllers for SPI, I2C, UART, PWM, ADC, and
 GPIO with interrupts
 * Two-step provisioning
