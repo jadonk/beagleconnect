@@ -394,6 +394,7 @@ The major advantage there is that drivers can be well maintained in
 Linux rather than buried in microcontroller firmware.
 
 Greybus currently supports several busses, including:
+
 * USB
 * I2C
 * GPIO
