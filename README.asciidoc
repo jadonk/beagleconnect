@@ -300,6 +300,7 @@ to here.#
 
 There are several different development equipment options. The earliest available option...
 
+[horizontal]
 Host:: x86 Linux machine
 BeagleConnect gateway device:: http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad]
 BeagleConnect node device:: * http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
