@@ -77,15 +77,17 @@ proof-of-concept for that. All that is required is a reliable transport.
 
 There are a few technologies at the core of this demonstration, and far
 too much background information to describe adequately here, so they are
-simply listed below for brevity *
-https://en.wikipedia.org/wiki/Project_Ara[Project Ara] *
-https://en.wikipedia.org/wiki/IPv6[IPv6] (via
-https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN]) *
-https://zephyrproject.org[Zephyr] support for
+simply listed below for brevity:
+
+* https://en.wikipedia.org/wiki/Project_Ara[Project Ara]
+* https://en.wikipedia.org/wiki/IPv6[IPv6] (via
+https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN])
+* https://zephyrproject.org[Zephyr] support for
 https://docs.zephyrproject.org/latest/reference/networking/ieee802154.html[IEEE
-802.15.4] * https://youtu.be/UzRq8jAHAxU[Greybus] originally from
-https://youtu.be/UzRq8jAHAxU[Project Ara] *
-https://youtu.be/7H50pv-4YXw[Using Greybus for IoT]
+802.15.4]
+* https://youtu.be/UzRq8jAHAxU[Greybus] originally from
+https://youtu.be/UzRq8jAHAxU[Project Ara]
+* https://youtu.be/7H50pv-4YXw[Using Greybus for IoT]
 
 In short, Greybus is an application layer protocol that can be described
 as a ``bus transport'' in that it conveys bus-specific messages back and
@@ -101,9 +103,17 @@ device.
 The major advantage there is that drivers can be well maintained in
 Linux rather than buried in microcontroller firmware.
 
-Greybus currently supports several busses, including: * USB * I2C * GPIO
-* PWM * SPI * UART * SDIO * Camera (V4L) * LED (with various
-programmability) * AUDIO (I2S)
+Greybus currently supports several busses, including:
+* USB
+* I2C
+* GPIO
+* PWM
+* SPI
+* UART
+* SDIO
+* Camera (V4L)
+* LED (with various programmability)
+* AUDIO (I2S)
 
 == Hardware Requirements
 
@@ -301,17 +311,21 @@ kernel messages.
 Lines beginning with `uart:~$` indicates that the Zephyr shell is
 prompting you to enter a command.
 
-From the informational messages shown, we observe the following. *
-Zephyr is configured with the following
+From the informational messages shown, we observe the following.
+
+* Zephyr is configured with the following
 https://en.wikipedia.org/wiki/Link-local_address#IPv6[link-local IPv6
-address] `fe80::cf99:a11c:4b:1200` * It is listening for (both) TCP and
-UDP traffic on port 4242
+address] `fe80::3177:a11c:4b:1200`
+* It is listening for (both) TCP and UDP traffic on port 4242
 
 However, what the log messages do _not_ show (which will come into play
-later), are 2 critical pieces of information: 1. The RF Channel: As you
+later), are 2 critical pieces of information:
+
+1. *The RF Channel*: As you
 may have guessed, IEEE 802.15.4 devices are only able to communicate
 with each other if they are using the same frequency to transmit and
-recieve data. This information is part of the Physical Layer. 1. The
+recieve data. This information is part of the Physical Layer.
+2. The
 https://www.silabs.com/community/wireless/proprietary/knowledge-base.entry.html/2019/10/04/connect_tutorial6-ieee802154addressing-rapc[PAN
 identifier]: IEEE 802.15.4 devices are only be able to communicate with
 one another if they use the _same_ PAN ID. This permits multiple
@@ -423,9 +437,32 @@ WARNING: If you aren't comfortable building and installing a Linux kernel on you
 you should probably just stop here. I'll assume you know the basics of building and installing
 a Linux kernel from here on out.
 
-For this demo, I used the 5.8.4 stable kernel.
+=== Clone, patch, and build the kernel
+For this demo, I used the 5.8.4 stable kernel. Also, I've applied the `mikrobus` kernel
+driver, though it isn't strictly required for greybus.
 
-=== Clone and build the kernel
+NOTE: Again, `/tmp` is just used as a placeholder and you can use whatever directory you'd like.
+
+TODO: The patches for gb-netlink will eventually be applied here until pushed into mainline.
+
+[source,console]
+----
+cd /tmp
+git clone --branch v5.8.4 --single-branch git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+cd linux
+git checkout -b v5.8.4-greybus
+git am /tmp/beagleconnect/sw/linux/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
+git am /tmp/beagleconnect/sw/linux/0001-mikroBUS-build-fixes.patch
+cp /boot/config-`uname -r` .config
+yes "" | make oldconfig
+./scripts/kconfig/merge_config.sh .config /tmp/beagleconnect/sw/linux/mikrobus.config
+./scripts/kconfig/merge_config.sh .config /tmp/beagleconnect/sw/linux/atusb.config
+make -j`nproc --all`
+sudo make modules_install
+sudo make install
+----
+
+Reboot and select your new kernel.
 
 === Probe the IEEE 802.15.4 Device Driver
 
