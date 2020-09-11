@@ -42,7 +42,7 @@ The minimally viable BeagleConnect development release:
 * Comprises of low-cost BeagleBoard.org Linux SBC, a BeagleConnect gateway, and at 
   least 10 BeagleConnect device nodes each supporting 2 add-on devices.
 
-BeagleConnect Leash which enables wirelessly adding new device nodes is targeted
+IMPORTANT: BeagleConnect Leash enables wirelessly adding new device nodes is targeted
 to cost under US$10.
 
 Future releases will be collaborated with the community, evolve
@@ -113,8 +113,7 @@ https://wiki.p2pfoundation.net/Linux_-_Governance[highly-regarded
 governance model].
 
 [[on-going-maintenance]]
-On-going maintenance
-~~~~~~~~~~~~~~~~~~~~
+=== On-going maintenance
 
 Because there isn't code specific to any given network-of-devices
 configuration, we can all leverage the same software code base. This
@@ -129,16 +128,14 @@ the potential for bugs is kept low. With large user base, the potential
 for discovering and resolving bugs is high.
 
 [[rapid-prototyping-without-wiring]]
-Rapid prototyping without wiring
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Rapid prototyping without wiring
 
 BeagleConnect utilizes the https://elinux.org/Mikrobus[mikroBUS
 standard]. The mikroBUS standard interface is flexible enough for almost
 any typical sensor or indicator with hundreds of devices available.
 
 [[long-range-low-power-wireless]]
-Long-range, low-power wireless
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Long-range, low-power wireless
 
 BeagleConnect wireless hardware is built around a
 http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
@@ -146,8 +143,7 @@ microcontroller. CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB F
 80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
 
 [[full-customization-possible]]
-Full customization possible
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== Full customization possible
 
 BeagleConnect utilizes https://www.oshwa.org/definition/[open source
 hardware] and https://en.wikipedia.org/wiki/Open-source_software[open
@@ -177,17 +173,14 @@ a security model using public/private keypairs that can be replaced to
 secure your own network, and 
 * Fully FCC/CE certified.
 
-[[usage-and-development]]
-Usage and development
----------------------
+[[usage]]
+== Usage
 
 [[beagleconnect-user-experience]]
-BeagleConnect user experience
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=== BeagleConnect user experience
 
 [[enable-a-linux-host-with-beagleconnect]]
-Enable a Linux host with BeagleConnect
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Enable a Linux host with BeagleConnect
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
 Step 1] Log into a host system running Linux that is BeagleConnect
@@ -204,20 +197,20 @@ be shown as a BeagleConnect with a Click Board device on it and a
 battery.
 
 [[connect-host-and-device]]
-Connect host and device
-^^^^^^^^^^^^^^^^^^^^^^^
+==== Connect host and device
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning
 Step 2] Initiate a connection between the host and devices by pressing
 the discovery button(s).
 
 [[device-data-shows-up-as-files]]
-Device data shows up as files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==== Device data shows up as files
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
 Step 3] New streams of self-describing data show up on the host system
 using native device drivers.
+
+TODO: Actually, Node-RED will make these show up automatically as streams.
 
 [[components]]
 Components
