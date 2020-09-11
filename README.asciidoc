@@ -61,13 +61,14 @@ ships programmed and ready to be used.
 
 toc::[]
 
-[[beagleconnect-case]]
-.BeagleConnect case
-image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design]
+[.float-group]
+--
+[.left]
+image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,200]
 
-[[beagleconnect-leash-prototype-rev-b]]
-.BeagleConnect Leash prototype rev B
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg?raw=true[BeagleConnect Leash rev B prototype]
+[.left]
+image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg?raw=true[BeagleConnect Leash rev B prototype,300,200
+--]
 
 [[what-is-new]]
 == What is new?
