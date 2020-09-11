@@ -81,7 +81,7 @@ image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_09
 [[what-is-new]]
 == What makes BeagleConnect new and different?
 
-BeagleConnect solves IoT in a different and better way than any previous
+IMPORTANT: BeagleConnect solves IoT in a different and better way than any previous
 solution.
 
 [[the-device-interface-software-is-already-done]]
@@ -231,7 +231,15 @@ or be made as complex as desired using virtually any programming language or env
 TODO: Actually, Node-RED will make these show up automatically as streams.
 
 [[components]]
-=== Components for wireless experience
+=== Components
+
+[horizontal]
+BeagleConnect enabled host:: Linux computer, possibly single-board computer (SBC), with
+`BeagleConnect management software` and `BeagleConnect gateway function`. `BeagleConnect gateway
+function` can be provided by a `BeagleConnect compatible interface` or by connecting a
+`BeagleConnect gateway device` over USB.
+
+BeagleConnect Leash:: 
 
 * Host-side: BeagleConnect Leash connected to a Beagle or other
 Linux host over USB
