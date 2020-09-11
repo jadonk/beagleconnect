@@ -140,10 +140,17 @@ BeagleConnect utilizes the https://elinux.org/Mikrobus[mikroBUS
 standard]. The mikroBUS standard interface is flexible enough for almost
 any typical sensor or indicator with hundreds of devices available.
 
+NOTE: Currently, we have support in the Linux kernel for a bit over 100
+_Click_ mikroBUS add-on boards from Mikroelektronika and are working
+with Mikroelektronika on a updated version of the specification for these
+boards to self-identify. Further, eventually the vast majority of over
+800 currently available _Click_ mikroBUS add-on boards will be supported
+as well as the hundreds of compliant boards developed every year.
+
 [[long-range-low-power-wireless]]
 === Long-range, low-power wireless
 
-BeagleConnect wireless hardware is built around a
+BeagleConnect Leash wireless hardware is built around a
 http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
 microcontroller. CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
 80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
