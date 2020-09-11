@@ -6,9 +6,9 @@
 - [Hardware Requirements](#hardware-requirements)
 - [Prerequisites](#prerequisites)
 - [Cloning the repository](#cloning-the-repository)
-- [Console (tio)](#console---tio--)
-  * [Set Up tio](#set-up--tio-)
-  * [Run tio](#run--tio-)
+- [Console (tio)](#console-tio)
+  * [Set Up tio](#set-up-tio)
+  * [Run tio](#run-tio)
 - [Zephyr](#zephyr)
   * [Add the Fork](#add-the-fork)
   * [Build and Flash Zephyr](#build-and-flash-zephyr)
@@ -69,12 +69,7 @@ Greybus currently supports several busses, including:
 # Hardware Requirements
 * a Linux workstation running [Ubuntu Bionic](https://releases.ubuntu.com/18.04.4)
   * Only x86_64 is supported at this time
-* a USB-Serial adapter
-* a J-Link JTAG tool (optional) or a LaunchPad (may require some wires)
-* a board that is supported by Zephyr with support for IEEE 802.15.4
-  * In this example, we use the [cc1352r1_launchpadxl](https://www.ti.com/tool/LAUNCHXL-CC1352R1)
-  * Alternatively, you could use the [cc1352r_sensortag](https://www.ti.com/tool/LPSTK-CC1352R) 
-    * Connect DIO12 (RXD) and DIO13 (TXD) as well as GND to the appropriate pins on your serial adapter 
+* a [CC1352R1 LaunchPad](https://www.ti.com/tool/LAUNCHXL-CC1352R1)
 * a USB IEEE 802.15.4 adapter
   * In this example, we use the [atusb](http://downloads.qi-hardware.com/people/werner/wpan/web)
   * Available for purchase from [sysmocom](http://shop.sysmocom.de/products/atusb)
@@ -92,14 +87,19 @@ keep track of all of the projects required to reproduce the on-going work. The i
 only cover checking out the "demo" branch which should stay in a tested state. On-going development
 will be on the "master" branch.
 
+The parent directory `/tmp` is simply used as a placeholder for testing. Please use whatever parent
+directory you see fit.
+
 ## Clone specific tag
 ```console
-cd <parent directory you choose>
+cd /tmp
 git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
 ```
 
 # Console (`tio`)
-In order to see diagnostic messages or to run certain commands on the Zephyr device we will require a terminal open to the device console. In this case, we use [tio](https://tio.github.io/).
+In order to see diagnostic messages or to run certain commands on the Zephyr device we will require
+a terminal open to the device console. In this case, we use [tio](https://tio.github.io/) due how
+its usage simplifies the instructions.
 
 ## Install `tio`
 ```console
