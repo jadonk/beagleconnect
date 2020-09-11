@@ -139,12 +139,12 @@ fine as well)
 
 == Cloning the repository
 
-This repository utilizes (git
-submodules)[https://git-scm.com/book/en/v2/Git-Tools-Submodules] to keep
+This repository utilizes
+https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to keep
 track of all of the projects required to reproduce the on-going work.
-The instructions here only cover checking out the ``demo'' branch which
+The instructions here only cover checking out the `demo` branch which
 should stay in a tested state. On-going development will be on the
-``master'' branch.
+`master` branch.
 
 The parent directory `/tmp` is simply used as a placeholder for testing.
 Please use whatever parent directory you see fit.
@@ -192,18 +192,21 @@ repository. Currently, it is just in a Zephyr fork, but it should be
 converted to a proper
 https://docs.zephyrproject.org/latest/guides/modules.html[Module
 (External Project)]. This is for a number of reasons, but mainly there
-must be: * specifications for authentication and encryption *
-specifications for joining and rejoining wireless networks *
-specifications for discovery
+must be:
 
-Therefore, in order to reproduce this example, please run the following
-in your zephyr directory.
+* specifications for authentication and encryption 
+* specifications for joining and rejoining wireless networks 
+* specifications for discovery
+
+Therefore, in order to reproduce this example, please run the following.
+
+NOTE: Open a separate terminal window (`Ctrl+Shift+N`) or simply create a
+new tab in your existing terminal (`Ctrl+Shift+T`) so that you can see
+both or quickly switch between `tio` and the shell.
 
 [source,console]
 ----
-git remote add greybus https://github.com/cfriedt/zephyr.git
-git fetch greybus
-git checkout -b greybus-service-lpc2020 greybus/greybus-service-lpc2020
+cd /tmp/beagleconnect/sw/zephyrproject/zephyr
 west update
 ----
 
@@ -214,26 +217,52 @@ https://github.com/cfriedt/zephyr/tree/greybus-sockets/samples/subsys/greybus/ne
 sample] to our device.
 
 [arabic]
-. Open a separate terminal window (`Ctrl+Shift+N`) or simply create a
-new tab in your existing terminal (`Ctrl+Shift+T`) so that you can see
-both or quickly switch between `minicom` and the shell.
-. Now in the shell, change to the `zephyrproject/zephyr` directory
 . Edit the file `~/.zephyrrc` and place the following text inside of it
-`export ZEPHYR_TOOLCHAIN_VARIANT=zephyr     export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2`
++
+[source,console]
+----
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
+----
++
 . Set up the required Zephyr environment variables via
-`source zephyr-env.sh`
++
+[source,console]
+----
+source zephyr-env.sh
+----
++
 . Build the project
-`BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine --build-dir build/greybus_launchpad -- \       -DCONF_FILE="prj.conf overlay-802154.conf"`
++
+[source,console]
+----
+BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
+  --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154.conf"
+----
++
 . Ensure that the last part of the build process looks somewhat like
 this:
-`console     ...     Memory region         Used Size  Region Size  %age Used                FLASH:      261996 B         1 MB     24.99%                 SRAM:       50879 B       256 KB     19.41%             IDT_LIST:         152 B         2 KB      7.42%     [245/245] Linking C executable zephyr/zephyr.elf`
+[source,console]
+----
+...
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      261996 B         1 MB     24.99%
+            SRAM:       50879 B       256 KB     19.41%
+        IDT_LIST:         152 B         2 KB      7.42%
+[245/245] Linking C executable zephyr/zephyr.elf
+----
++
 . Flash the firmware to your device using
-`BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad`
++
+[source,console]
+----
+BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad
+----
 
 === The Zephyr Shell
 
 After flashing, you should observe the something matching the following
-output in `minicom`.
+output in `tio`.
 
 ....
 *** Booting Zephyr OS build zephyr-v2.3.0-1435-g40c0ed940d71  ***
