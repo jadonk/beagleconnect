@@ -4,7 +4,6 @@ ifdef::env-github[]
 :important-caption: :heavy_exclamation_mark:
 :caution-caption: :fire:
 :warning-caption: :warning:
-:todo-caption: :memo:
 endif::[]
 :toc:
 :toc-placement!:
@@ -189,6 +188,8 @@ secure your own network, and
 
 [[usage]]
 == Usage
+This section describes the usage model we are developing. To use the current code in development,
+please refer to the <<development>> section below.
 
 [[beagleconnect-user-experience]]
 === BeagleConnect wireless user experience
@@ -199,22 +200,16 @@ secure your own network, and
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
 Step 1] Log into a host system running Linux that is BeagleConnect
 enabled. Enable a Linux host with BeagleConnect by plugging a
-BeagleConnect gateway device into it's USB port. You'll also want to have a
-BeagleConnect node device with a sensor, actuator or indicator device connected.
+`BeagleConnect gateway device` into it's USB port. You'll also want to have a
+`BeagleConnect node device` with a sensor, actuator or indicator device connected.
 
-NOTE: BeagleConnect Leash can act as either a gateway device or a node device.
+NOTE: `BeagleConnect Leash` can act as either a gateway device or a node device.
 
-IMPORTANT: The Linux host will need to run the BeagleConnect management
-software, most of which is incorporated into the Linux kernel. Support will
+IMPORTANT: The Linux host will need to run the `BeagleConnect management
+software`, most of which is incorporated into the Linux kernel. Support will
 be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 
-TODO: Currently the host is shown to be a PocketBeagle with a cape, but
-should likely be a different SBC with a BeagleConnect board connected
-over USB.
-
-TODO: Currently the device is shown to be a Sensortag, but should likely
-be shown as a BeagleConnect Leash with a Click Board device on it and a
-battery.
+#TODO: Clean up images#
 
 [[connect-host-and-device]]
 ==== Connect host and device
@@ -236,7 +231,7 @@ live dashboards, or other logical operations without requiring any sensor-specif
 coding. Business logic can be applied using simple if-this-then-that style operations
 or be made as complex as desired using virtually any programming language or environment.
 
-TODO: Actually, Node-RED will make these show up automatically as streams.
+#TODO: Actually, Node-RED will make these show up automatically as streams.#
 
 [[components]]
 === Components
@@ -246,28 +241,39 @@ BeagleConnect enabled host:: Linux computer, possibly single-board computer (SBC
 `BeagleConnect management software` and `BeagleConnect gateway function`. `BeagleConnect gateway
 function` can be provided by a `BeagleConnect compatible interface` or by connecting a
 `BeagleConnect gateway device` over USB.
-
-BeagleConnect Leash:: 
-
-* Host-side: BeagleConnect Leash connected to a Beagle or other
-Linux host over USB
 +
 NOTE: If the Linux host has BLE, the BeagleConnect is optional for short distances
 +
-** Provides long-range, low-power wireless communications
-** Paired with a Linux kernel driver
-* Device-side: BeagleConnect Leash is powered by a battery or USB connector
+
+BeagleConnect Leash:: Board, case, and wireless MCU with `Zephyr` based firmware for acting
+as either a `BeagleConnect gateway device` or `BeagleConnect node device`.
+* In `BeagleConnect gateway device` mode:
+** Provides long-range, low-power wireless communications,
+** Connects with the `host` via USB and an associated Linux kernel driver, and
+** Is powered by the USB connector.
+* In `BeagleConnect node device` mode:
+** Powered by a battery or USB connector
 ** Provides 2 mikroBUS connectors for connecting any of hundreds of
 https://bbb.io/click[Click Board] mikroBUS add-on devices
-* Standard firmware on the host-side and target-side CC1352s transport
-the standard busses
-* Provides new Linux host controllers for SPI, I2C, UART, PWM, ADC, and
-GPIO with interrupts
-* Two-step provisioning
-* Enter provisioning mode by pressing the button on the host-side
-BeagleConnect
-* Press the button on any powered device-side BeagleConnect to add it to
-the network
+** Provides new Linux host controllers for SPI, I2C, UART, PWM, ADC, and
+GPIO with interrupts via `Greybus`
+
+BeagleConnect gateway device:: Provides a `BeagleConnect compatible interface` to a host. This
+could be a built-in interface device or one connected over USB. `BeagleConnect Leash` can provide
+this function.
+
+BeagleConnect node device:: Utilizes a `BeagleConnect compatible interface` and #TODO#
+
+BeagleConnect compatible interface:: Immediate plans are to support Bluetooth Low Energy (BLE),
+2.4GHz IEEE 802.15.4, and Sub-GHz IEEE 802.15.4 _wireless_ interfaces. A built-in BLE interface is
+suitable for this at short range, whereas IEEE 802.15.4 is typically significantly better at long
+ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being considered for future
+`BeagleConnect gateway device` and `BeagleConnect node device` designs.
+
+Greybus:: #TODO#
+
+TODO: Find a place for the following notes:
+
 ** The device interfaces get exposed to the host via Greybus BRIDGED_PHY
 protocol
 ** The I2C bus is probed for a an identifier EEPROM and appropriate
@@ -284,17 +290,22 @@ What's different
 * Kernel drivers makes the support code collaborative parts of the Linux
 kernel, rather than cut-and-paste
 
-[[development-platform]]
-Development platform
-~~~~~~~~~~~~~~~~~~~~
+[[development]]
+== Development
 
-* Linux machine
-* 2x http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad]
-* https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
+[[equipment]]
+=== Equipment
+#TODO: This is where I need to pick back up, moving equipment notes from down below up
+to here.#
 
-[[technical-approach]]
-Technical approach
-------------------
+There are several different development equipment options. The earliest available option...
+
+Host:: x86 Linux machine
+BeagleConnect gateway device:: http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad]
+BeagleConnect node device:: * http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
+
+[[background]]
+=== Background
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
 Proposition] BeagleConnect uses Greybus and updated Click Boards with
@@ -302,8 +313,7 @@ identifiers to eliminate the need to add manually configure devices
 added onto the Linux system.
 
 [[high-level]]
-High-level
-~~~~~~~~~~
+==== High-level
 
 * For Linux nerds: Think of BeagleConnect as
 https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN] over
@@ -325,10 +335,9 @@ over https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN] on
 https://en.wikipedia.org/wiki/IEEE_802.15.4[802.15.4].
 
 [[software-architecture]]
-Software architecture
-~~~~~~~~~~~~~~~~~~~~~
+==== Software architecture
 
-* 802.15.4 provides the
+* 802.15.4 provides the #TODO#
 
 [[todo-items]]
 TODO items
@@ -769,7 +778,7 @@ driver, though it isn't strictly required for greybus.
 
 NOTE: Again, `/tmp` is just used as a placeholder and you can use whatever directory you'd like.
 
-TODO: The patches for gb-netlink will eventually be applied here until pushed into mainline.
+#TODO: The patches for gb-netlink will eventually be applied here until pushed into mainline.#
 
 [source,console]
 ----
