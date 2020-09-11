@@ -42,8 +42,8 @@ The minimally viable BeagleConnect development release:
 * Comprises of low-cost BeagleBoard.org Linux SBC, a BeagleConnect gateway, and at 
   least 10 BeagleConnect device nodes each supporting 2 add-on devices.
 
-IMPORTANT: BeagleConnect Leash enables wirelessly adding new device nodes is targeted
-to cost under US$10.
+IMPORTANT: BeagleConnect Leash enables wirelessly adding new device nodes and is targeted
+to cost roughly US$10.
 
 Future releases will be collaborated with the community, evolve
 dynamically, and contain additional functionality. The goal is to
@@ -61,14 +61,25 @@ ships programmed and ready to be used.
 
 toc::[]
 
+[[beagleconnect-leash]]
+== BeagleConnect Leash
+BeagleConnect Leash is based on the TI CC1352 and is the first available
+BeagleConnect solution. It implements:
+
+* BeagleConnect gateway function for Sub-GHz 802.15.4 long-range wireless
+* BeagleConnect node function for Bluetooth Low-Energe (BLE) and Sub-GHz
+802.15.4 long range wireless
+* USB-based serial console and firmware updates
+* 2x mikroBUS sockets with BeagleConnect protocol support
+
 [.float-group]
 --
-image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240,title="BeagleConnect case",role="related thumb left"]
+image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240,title="BeagleConnect Leash case",role="related thumb left"]
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect Leash rev B prototype,300,200,title="BeagleConnect Leash",role="related thumb right"]
 --
 
 [[what-is-new]]
-== What is new?
+== What makes BeagleConnect new and different?
 
 BeagleConnect solves IoT in a different and better way than any previous
 solution.
@@ -180,15 +191,21 @@ secure your own network, and
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
 Step 1] Log into a host system running Linux that is BeagleConnect
 enabled. Enable a Linux host with BeagleConnect by plugging a
-BeagleConnect board into it's USB port. You'll also want to have another
-BeagleConnect board with a sensor, actuator or indicator device on it.
+BeagleConnect gateway device into it's USB port. You'll also want to have a
+BeagleConnect node device with a sensor, actuator or indicator device connected.
+
+NOTE: BeagleConnect Leash can act as either a gateway device or a node device.
+
+IMPORTANT: The Linux host will need to run the BeagleConnect management
+software, most of which is incorporated into the Linux kernel. Support will
+be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 
 TODO: Currently the host is shown to be a PocketBeagle with a cape, but
 should likely be a different SBC with a BeagleConnect board connected
 over USB.
 
 TODO: Currently the device is shown to be a Sensortag, but should likely
-be shown as a BeagleConnect with a Click Board device on it and a
+be shown as a BeagleConnect Leash with a Click Board device on it and a
 battery.
 
 [[connect-host-and-device]]
@@ -204,6 +221,12 @@ the discovery button(s).
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
 Step 3] New streams of self-describing data show up on the host system
 using native device drivers.
+
+High-level applications, like `Node-RED`, can directly read/write these high-level
+data streams (including data-type information) to Internet-based MQTT brokers,
+live dashboards, or other logical operations without requiring any sensor-specific
+coding. Business logic can be applied using simple if-this-then-that style operations
+or be made as complex as desired using virtually any programming language or environment.
 
 TODO: Actually, Node-RED will make these show up automatically as streams.
 
