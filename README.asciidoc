@@ -9,9 +9,9 @@ endif::[]
 :toc-placement!:
 
 [[beagleconnect]]
-= BeagleConnect
+= BeagleConnect™
 
-BeagleConnect is a revolutionary technology virtually eliminating low-level software
+BeagleConnect™ is a revolutionary technology virtually eliminating low-level software
 development for IoT and IIoT applications, such as building automation, factory
 automation, and home automation. While numerous IoT and IIoT solutions available today
 provide massive software libraries for microcontrollers supporting a limited body of
@@ -26,7 +26,7 @@ These are the tools used to automate things in
 https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
 https://en.wikipedia.org/wiki/Internet_of_things[IoT].
 
-BeagleConnect solves: 
+BeagleConnect™ solves: 
 
 * The need to write software to add a large set of diverse devices to your system, 
 * The need to maintain the software with security updates, 
@@ -34,15 +34,15 @@ BeagleConnect solves:
 * The need to connect to devices using long-range, low-power wireless, and 
 * The need to produce high-volume custom hardware cost-optimized for your requirements.
 
-The minimally viable BeagleConnect development release: 
+The minimally viable BeagleConnect™ development release: 
 
 * Supports at least 100 mikroBUS-based Click boards from Mikroelectronika, 
 * Works with BLE-enabled Linux computers at 2.4GHz, 
 * Works on long-range sub-GHz at 500m with data rates of 1kbps, and 
-* Comprises of low-cost BeagleBoard.org Linux SBC, a BeagleConnect gateway, and at 
-  least 10 BeagleConnect device nodes each supporting 2 add-on devices.
+* Comprises of low-cost BeagleBoard.org Linux SBC, a BeagleConnect™ gateway, and at 
+  least 10 BeagleConnect™ device nodes each supporting 2 add-on devices.
 
-IMPORTANT: BeagleConnect Leash enables wirelessly adding new device nodes and is targeted
+IMPORTANT: BeagleConnect™ Leash enables wirelessly adding new device nodes and is targeted
 to cost roughly US$10.
 
 Future releases will be collaborated with the community, evolve
@@ -50,44 +50,44 @@ dynamically, and contain additional functionality. The goal is to
 support over 500 add-on devices within the first year after the
 development release.
 
-NOTE: The term _BeagleConnect_ refers to a technology comprising of
+NOTE: The term _BeagleConnect™_ refers to a technology comprising of
 a family of boards, a collection of Linux kernel drivers,
 microcontroller firmware, a communication protocol, and system-level
 integration to automation software tools. More specific terms will be
 applied in the architecture details. The term is also used here to
 represent the experience introduced to users through the initial
-_BeagleConnect Leash_ product consiting of a board and case which
+_BeagleConnect™ Leash_ product consiting of a board and case which
 ships programmed and ready to be used.
 
 toc::[]
 
 [[beagleconnect-leash]]
-== BeagleConnect Leash
-BeagleConnect Leash is based on the TI CC1352 and is the first available
-BeagleConnect solution. It implements:
+== BeagleConnect™ Leash
+BeagleConnect™ Leash is based on the TI CC1352 and is the first available
+BeagleConnect™ solution. It implements:
 
-* BeagleConnect gateway function for Sub-GHz 802.15.4 long-range wireless
-* BeagleConnect node function for Bluetooth Low-Energe (BLE) and Sub-GHz
+* BeagleConnect™ gateway function for Sub-GHz 802.15.4 long-range wireless
+* BeagleConnect™ node function for Bluetooth Low-Energe (BLE) and Sub-GHz
 802.15.4 long range wireless
 * USB-based serial console and firmware updates
-* 2x mikroBUS sockets with BeagleConnect protocol support
+* 2x mikroBUS sockets with BeagleConnect™ protocol support
 
 [.float-group]
 --
-image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect case design,300,240,title="BeagleConnect Leash case",role="related thumb left"]
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect Leash rev B prototype,300,200,title="BeagleConnect Leash",role="related thumb right"]
+image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect™ case design,300,240,title="BeagleConnect™ Leash case",role="related thumb left"]
+image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect™ Leash rev B prototype,300,200,title="BeagleConnect™ Leash",role="related thumb right"]
 --
 
 [[what-is-new]]
-== What makes BeagleConnect new and different?
+== What makes BeagleConnect™ new and different?
 
-IMPORTANT: BeagleConnect solves IoT in a different and better way than any previous
+IMPORTANT: BeagleConnect™ solves IoT in a different and better way than any previous
 solution.
 
 [[the-device-interface-software-is-already-done]]
 === The device interface software is already done
 
-BeagleConnect uses the collaboratively developed Linux kernel to contain
+BeagleConnect™ uses the collaboratively developed Linux kernel to contain
 the intelligence required to speak to these devices (sensors, actuators,
 and indicators), rather than relying on writing code on a
 microcontroller specific to these devices. Some existing solutions rely
@@ -95,7 +95,7 @@ on large libraries of microcontroller code, but the integration of
 communications, maintenance of the library with a limited set of
 developer resources and other constraints to be explained later make
 those other solutions less suitable for rapid prototyping than
-BeagleConnect.
+BeagleConnect™.
 
 Linux presents these devices abstractly in ways that are
 self-descriptive. Add an accelerometer to the system and you are
@@ -123,20 +123,20 @@ governance model].
 
 Because there isn't code specific to any given network-of-devices
 configuration, we can all leverage the same software code base. This
-means that when someone fixes an issue in either BeagleConnect firmware
+means that when someone fixes an issue in either BeagleConnect™ firmware
 or the Linux kernel, you benefit from the fixes. The source for
-BeagleConnect firmware is also submitted to the
+BeagleConnect™ firmware is also submitted to the
 https://www.zephyrproject.org/[Zephyr Project] upstream, further
 increasing the user base. Additionally, we will maintain stable branches
 of the software and provide mechanisms for updating firmware on
-BeagleConnect hardware. With a single, relatively small firmware load,
+BeagleConnect™ hardware. With a single, relatively small firmware load,
 the potential for bugs is kept low. With large user base, the potential
 for discovering and resolving bugs is high.
 
 [[rapid-prototyping-without-wiring]]
 === Rapid prototyping without wiring
 
-BeagleConnect utilizes the https://elinux.org/Mikrobus[mikroBUS
+BeagleConnect™ utilizes the https://elinux.org/Mikrobus[mikroBUS
 standard]. The mikroBUS standard interface is flexible enough for almost
 any typical sensor or indicator with hundreds of devices available.
 
@@ -150,7 +150,7 @@ as well as the hundreds of compliant boards developed every year.
 [[long-range-low-power-wireless]]
 === Long-range, low-power wireless
 
-BeagleConnect Leash wireless hardware is built around a
+BeagleConnect™ Leash wireless hardware is built around a
 http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
 microcontroller. CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
 80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
@@ -158,15 +158,15 @@ microcontroller. CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB F
 [[full-customization-possible]]
 === Full customization possible
 
-BeagleConnect utilizes https://www.oshwa.org/definition/[open source
+BeagleConnect™ utilizes https://www.oshwa.org/definition/[open source
 hardware] and https://en.wikipedia.org/wiki/Open-source_software[open
 source software], making it possible to optimize hardware and software
 implementations and sourcing to meet end-product requirements.
-BeagleConnect is meant to enable rapid-prototyping and not to
+BeagleConnect™ is meant to enable rapid-prototyping and not to
 necessarily satisfy any particular end-product's requirements, but with
 full considerations for go-to-market needs.
 
-Each BeagleBoard.org BeagleConnect solution will be:
+Each BeagleBoard.org BeagleConnect™ solution will be:
 
 * Readily available for over 10 years, 
 * Built with fully
@@ -192,20 +192,20 @@ This section describes the usage model we are developing. To use the current cod
 please refer to the <<development>> section below.
 
 [[beagleconnect-user-experience]]
-=== BeagleConnect wireless user experience
+=== BeagleConnect™ wireless user experience
 
 [[enable-a-linux-host-with-beagleconnect]]
-==== Enable a Linux host with BeagleConnect
+==== Enable a Linux host with BeagleConnect™
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
-Step 1] Log into a host system running Linux that is BeagleConnect
-enabled. Enable a Linux host with BeagleConnect by plugging a
-`BeagleConnect gateway device` into it's USB port. You'll also want to have a
-`BeagleConnect node device` with a sensor, actuator or indicator device connected.
+Step 1] Log into a host system running Linux that is BeagleConnect™
+enabled. Enable a Linux host with BeagleConnect™ by plugging a
+`BeagleConnect™ gateway device` into it's USB port. You'll also want to have a
+`BeagleConnect™ node device` with a sensor, actuator or indicator device connected.
 
-NOTE: `BeagleConnect Leash` can act as either a gateway device or a node device.
+NOTE: `BeagleConnect™ Leash` can act as either a gateway device or a node device.
 
-IMPORTANT: The Linux host will need to run the `BeagleConnect management
+IMPORTANT: The Linux host will need to run the `BeagleConnect™ management
 software`, most of which is incorporated into the Linux kernel. Support will
 be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 
@@ -237,38 +237,38 @@ or be made as complex as desired using virtually any programming language or env
 === Components
 
 [horizontal]
-BeagleConnect enabled host:: Linux computer, possibly single-board computer (SBC), with
-`BeagleConnect management software` and `BeagleConnect gateway function`. `BeagleConnect gateway
-function` can be provided by a `BeagleConnect compatible interface` or by connecting a
-`BeagleConnect gateway device` over USB.
+BeagleConnect™ enabled host:: Linux computer, possibly single-board computer (SBC), with
+`BeagleConnect™ management software` and `BeagleConnect™ gateway function`. `BeagleConnect™ gateway
+function` can be provided by a `BeagleConnect™ compatible interface` or by connecting a
+`BeagleConnect™ gateway device` over USB.
 +
-NOTE: If the Linux host has BLE, the BeagleConnect is optional for short distances
+NOTE: If the Linux host has BLE, the BeagleConnect™ is optional for short distances
 +
 
-BeagleConnect Leash:: Board, case, and wireless MCU with `Zephyr` based firmware for acting
-as either a `BeagleConnect gateway device` or `BeagleConnect node device`.
-* In `BeagleConnect gateway device` mode:
+BeagleConnect™ Leash:: Board, case, and wireless MCU with `Zephyr` based firmware for acting
+as either a `BeagleConnect™ gateway device` or `BeagleConnect™ node device`.
+* In `BeagleConnect™ gateway device` mode:
 ** Provides long-range, low-power wireless communications,
 ** Connects with the `host` via USB and an associated Linux kernel driver, and
 ** Is powered by the USB connector.
-* In `BeagleConnect node device` mode:
+* In `BeagleConnect™ node device` mode:
 ** Powered by a battery or USB connector
 ** Provides 2 mikroBUS connectors for connecting any of hundreds of
 https://bbb.io/click[Click Board] mikroBUS add-on devices
 ** Provides new Linux host controllers for SPI, I2C, UART, PWM, ADC, and
 GPIO with interrupts via `Greybus`
 
-BeagleConnect gateway device:: Provides a `BeagleConnect compatible interface` to a host. This
-could be a built-in interface device or one connected over USB. `BeagleConnect Leash` can provide
+BeagleConnect™ gateway device:: Provides a `BeagleConnect™ compatible interface` to a host. This
+could be a built-in interface device or one connected over USB. `BeagleConnect™ Leash` can provide
 this function.
 
-BeagleConnect node device:: Utilizes a `BeagleConnect compatible interface` and #TODO#
+BeagleConnect™ node device:: Utilizes a `BeagleConnect™ compatible interface` and #TODO#
 
-BeagleConnect compatible interface:: Immediate plans are to support Bluetooth Low Energy (BLE),
+BeagleConnect™ compatible interface:: Immediate plans are to support Bluetooth Low Energy (BLE),
 2.4GHz IEEE 802.15.4, and Sub-GHz IEEE 802.15.4 _wireless_ interfaces. A built-in BLE interface is
 suitable for this at short range, whereas IEEE 802.15.4 is typically significantly better at long
 ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being considered for future
-`BeagleConnect gateway device` and `BeagleConnect node device` designs.
+`BeagleConnect™ gateway device` and `BeagleConnect™ node device` designs.
 
 Greybus:: #TODO#
 
@@ -302,30 +302,30 @@ There are several different development equipment options. The earliest availabl
 
 [horizontal]
 Host:: x86 Linux machine
-BeagleConnect gateway device:: http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad]
-BeagleConnect node device:: * http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
+BeagleConnect™ gateway device:: http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad]
+BeagleConnect™ node device:: * http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
 
 [[background]]
 === Background
 
 image:https://github.com/jadonk/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
-Proposition] BeagleConnect uses Greybus and updated Click Boards with
+Proposition] BeagleConnect™ uses Greybus and updated Click Boards with
 identifiers to eliminate the need to add manually configure devices
 added onto the Linux system.
 
 [[high-level]]
 ==== High-level
 
-* For Linux nerds: Think of BeagleConnect as
+* For Linux nerds: Think of BeagleConnect™ as
 https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN] over
 https://en.wikipedia.org/wiki/IEEE_802.15.4[802.15.4]-based
 https://kernel-recipes.org/en/2015/talks/an-introduction-to-greybus/[Greybus]
-(instead of Unipro as used by Project Ara), where every BeagleConnect
+(instead of Unipro as used by Project Ara), where every BeagleConnect™
 board shows up as new SPI, I2C, UART, PWM, ADC, and GPIO controllers
 that can now be probed to load drivers for the sensors or whatever is
 connected to them. (Proof of concept of Greybus over TCP/IP:
 https://www.youtube.com/watch?v=7H50pv-4YXw)
-* For MCU folks: Think of BeagleConnect as a
+* For MCU folks: Think of BeagleConnect™ as a
 https://github.com/firmata/protocol[Firmata]-style firmware load that
 exposes the interfaces for remote access over a secured wireless
 network. However, instead of using host software that knows how to speak
@@ -351,7 +351,7 @@ TODO items
 * Click Board drivers and device tree formatted metadata for 100 or so
 Click Boards
 * Click Board plug-ins for node-red for the same 100 or so Click Boards
-* BeagleConnect System Reference Manual and FAQs
+* BeagleConnect™ Leash System Reference Manual and FAQs
 
 [[associated-pre-work]]
 Associated pre-work
