@@ -21,7 +21,7 @@ https://en.wikipedia.org/wiki/Actuator[actuators] and
 https://en.wikipedia.org/wiki/Indicator_(distance_amplifying_instrument)[indicators]
 as well as libraries for communicating over various networks,
 BeagleConnect simply eliminates the need for these libraries by shifting the burden
-into the most massive and collaborative software project of all time, the Linux kernel.
+into the most massive and collaborative software project of all time, the https://en.wikipedia.org/wiki/Linux_kernel[Linux kernel].
 
 These are the tools used to automate things in
 https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
