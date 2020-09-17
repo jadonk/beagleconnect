@@ -315,6 +315,7 @@ BeagleConnect™ node device::
 * https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
 +
 
+
 [[background]]
 === Background
 
