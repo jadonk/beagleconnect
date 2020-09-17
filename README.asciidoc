@@ -12,7 +12,7 @@ endif::[]
 = BeagleConnect™
 
 BeagleConnect™ is a revolutionary technology virtually eliminating low-level software
-development for IoT and IIoT applications, such as building automation, factory
+development for https://en.wikipedia.org/wiki/Internet_of_things[IoT] and https://en.wikipedia.org/wiki/Industrial_internet_of_things[IIoT] applications, such as building automation, factory
 automation, and home automation. While numerous IoT and IIoT solutions available today
 provide massive software libraries for microcontrollers supporting a limited body of
 https://en.wikipedia.org/wiki/Sensor[sensors],
