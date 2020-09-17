@@ -152,7 +152,7 @@ as well as the hundreds of compliant boards developed every year.
 
 _BeagleConnect Leash_ wireless hardware is built around a
 http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
-microcontroller. CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
+microcontroller (MCU). CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
 80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
 
 [[full-customization-possible]]
@@ -283,8 +283,9 @@ device drivers are loaded on the host
 on the host for development
 
 [[whats-different]]
-What's different
-^^^^^^^^^^^^^^^^
+=== What's different
+
+So, in summary, what is so different with this approach?
 
 * No microcontroller code development is required by users
 * Userspace drivers make rapid prototyping really easy
