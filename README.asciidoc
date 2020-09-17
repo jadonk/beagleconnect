@@ -390,7 +390,8 @@ provisioning should load any new drivers
 * Userspace (spidev, etc.) drivers should unload cleanly when 2nd phase
 provisioning is completed
 
-== Introduction
+[[demo-1]]
+== 2.4GHz IEEE 802.15.4 Greybus demo for GPIO and I2C
 
 This document describes, in some detail, the steps required to use
 https://en.wikipedia.org/wiki/Linux[Linux] workstation and the
@@ -398,7 +399,9 @@ https://lwn.net/Articles/715955/[Greybus] protocol, over an IEEE
 802.15.4 wireless link, to blink an LED on a
 https://zephyrproject.org[Zephyr] device.
 
-=== Why??
+=== Introduction
+
+==== Why??
 
 Good question. Blinking an LED is kind of the
 https://en.wikipedia.org/wiki/%22Hello,_World!%22_program[Hello, World]
@@ -419,7 +422,7 @@ and open-source protocol for the Internet of Things using the Greybus
 Protocol, and blinking an LED using Greybus is the simplest
 proof-of-concept for that. All that is required is a reliable transport.
 
-=== History
+==== History
 
 There are a few technologies at the core of this demonstration, and far
 too much background information to describe adequately here, so they are
@@ -462,7 +465,7 @@ Greybus currently supports several busses, including:
 * LED (with various programmability)
 * AUDIO (I2S)
 
-== Hardware Requirements
+==== Hardware Requirements
 
 WARNING: Things might fail silently if you have the wrong board or wrong revision.
 
@@ -483,7 +486,7 @@ http://shop.sysmocom.de/products/atusb[sysmocom]
 ** This part is https://www.oshwa.org/[OSHW] (i.e. all CAD files and
 firmware source is available) for those who choose to create their own.
 
-== Prerequisites
+=== Prerequisites
 
 * Zephyr environment is set up according to the
 https://docs.zephyrproject.org/latest/getting_started/index.html[Getting
@@ -494,7 +497,7 @@ SDK] is installed at ~/zephyr-sdk-0.11.2 (any later version should be
 fine as well)
 * Zephyr board is connected via USB
 
-== Cloning the repository
+=== Cloning the repository
 
 This repository utilizes
 https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to keep
@@ -506,7 +509,7 @@ should stay in a tested state. On-going development will be on the
 NOTE: The parent directory `/tmp` is simply used as a placeholder for testing.
 Please use whatever parent directory you see fit.
 
-=== Clone specific tag
+==== Clone specific tag
 
 [source,console]
 ----
@@ -514,21 +517,21 @@ cd /tmp
 git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
 ----
 
-== Console (`tio`)
+=== Console (`tio`)
 
 In order to see diagnostic messages or to run certain commands on the
 Zephyr device we will require a terminal open to the device console. In
 this case, we use https://tio.github.io/[tio] due how its usage
 simplifies the instructions.
 
-=== Install `tio`
+==== Install `tio`
 
 [source,console]
 ----
 sudo apt install -y tio
 ----
 
-=== Run `tio`
+==== Run `tio`
 
 Now, we’ll open a terminal to Zephyr using the newly created setup with
 the command below.
@@ -540,9 +543,9 @@ tio /dev/ttyACM0
 
 IMPORTANT: To exit `tio` (later), enter `ctrl+t, q`.
 
-== Zephyr
+=== Zephyr
 
-=== Add the Fork
+==== Add the Fork
 
 For the time being, Greybus must remain outside of the main Zephyr
 repository. Currently, it is just in a Zephyr fork, but it should be
@@ -567,7 +570,7 @@ cd /tmp/beagleconnect/sw/zephyrproject/zephyr
 west update
 ----
 
-=== Build and Flash Zephyr
+==== Build and Flash Zephyr
 
 Here, we will build and flash the Zephyr
 https://github.com/cfriedt/zephyr/tree/greybus-sockets/samples/subsys/greybus/net[greybus_net
@@ -703,7 +706,7 @@ uart:~$
   resize      sample      shell
 ----
 
-==== Zephyr Shell: IEEE 802.15.4 commands
+===== Zephyr Shell: IEEE 802.15.4 commands
 
 Entering `ieee802154 help`, we see
 
@@ -746,7 +749,7 @@ uart:~$ ieee802154 get_pan_id
 PAN ID 43981 (0xabcd)
 ----
 
-==== Zephyr Shell: Network Commands
+===== Zephyr Shell: Network Commands
 
 Additionally, we may query the IPv6 information of the Zephyr device.
 
@@ -779,13 +782,13 @@ While the statically configured IPv6 address is useful, it isn’t 100%
 necessary.
 
 [[linux]]
-== Linux
+=== Linux
 
 WARNING: If you aren't comfortable building and installing a Linux kernel on your computer,
 you should probably just stop here. I'll assume you know the basics of building and installing
 a Linux kernel from here on out.
 
-=== Clone, patch, and build the kernel
+==== Clone, patch, and build the kernel
 For this demo, I used the 5.8.4 stable kernel. Also, I've applied the `mikrobus` kernel
 driver, though it isn't strictly required for greybus.
 
@@ -812,7 +815,7 @@ sudo make install
 
 Reboot and select your new kernel.
 
-=== Probe the IEEE 802.15.4 Device Driver
+==== Probe the IEEE 802.15.4 Device Driver
 
 On the Linux machine, make sure the `atusb` driver is loaded. This should happen automatically
 when the adapter is inserted or when the machine is booted while the adapter is installed.
@@ -841,7 +844,7 @@ But wait, that is not an IP address! It’s the hardware address of the
 need to run a couple of other commands (thanks to
 http://wpan.cakelab.org/[cakelab.org]).
 
-=== Set the 802.15.4 Physical and Link-Layer Parameters
+==== Set the 802.15.4 Physical and Link-Layer Parameters
 
 [arabic]
 . First, get the phy number for the `wpan0` device
@@ -909,9 +912,9 @@ ip a show lowpan0
        valid_lft forever preferred_lft forever
 ----
 
-== Ping Pong
+=== Ping Pong
 
-=== Broadcast Ping
+==== Broadcast Ping
 
 Now, perform a broadcast ping to see what else is listening on
 `lowpan0`.
@@ -932,7 +935,7 @@ PING ff02::1(ff02::1) from fe80::9c0b:a4e8:d3:4553%lowpan0 lowpan0: 56 data byte
 Yay! We have pinged (pung?) the Zephyr device over IEEE 802.15.4 using
 6LowPAN!
 
-=== Ping Zephyr
+==== Ping Zephyr
 
 We can ping the Zephyr device directly without a broadcast ping too, of
 course.
@@ -947,7 +950,7 @@ PING fe80::cf99:a11c:4b:1200(fe80::cf99:a11c:4b:1200) from fe80::9c0b:a4e8:d3:45
 64 bytes from fe80::cf99:a11c:4b:1200%lowpan0: icmp_seq=5 ttl=64 time=11.5 ms
 ----
 
-=== Ping Linux
+==== Ping Linux
 
 Similarly, we can ping the Linux host from the Zephyr shell.
 
@@ -967,7 +970,7 @@ PING fe80::9c0b:a4e8:d3:4553
 8 bytes from fe80::9c0b:a4e8:d3:4553 to fe80::cf99:a11c:4b:1200: icmp_seq=4 ttl=64 rssi=126 time=7 ms
 ----
 
-=== Assign a Static Address
+==== Assign a Static Address
 
 So far, we have been using IPv6 Link-Local addressing. However, the
 Zephyr application is configured to use a statically configured IPv6
@@ -1015,13 +1018,13 @@ PING 2001:db8::1(2001:db8::1) 56 data bytes
 Now that we have set up a reliable transport, let’s move on to the
 application layer.
 
-== Greybus
+=== Greybus
 
 Hopefully the videos listed earlier provide a sufficient foundation to
 understand what will happen shortly. However, there is still a bit more
 preparation required.
 
-=== Build and probe Greybus Kernel Modules
+==== Build and probe Greybus Kernel Modules
 
 Greybus was originally intended to work exclusively on the UniPro
 physical layer. However, we’re using RF as our physical layer and TCP/IP
@@ -1043,7 +1046,7 @@ make -j`nproc --all`
 ./gbprobe.sh
 ----
 
-=== Build and Run Gbridge
+==== Build and Run Gbridge
 
 The gbridge utility was created as a proof of concept to abstract the
 Greybus Netlink datapath among several reliable transports. For the
@@ -1062,7 +1065,7 @@ sudo make install
 gbridge
 ----
 
-== Blinky!
+=== Blinky!
 
 Now that we have set up a reliable TCP transport, and set up the Greybus
 modules in the Linux kernel, and used Gbridge to connect a Greybus node
@@ -1162,7 +1165,7 @@ $ *** Booting Zephyr OS build zephyr-v2.3.0-1435-g40c0ed940d71  ***
 ...
 ----
 
-== Read I2C Registers
+=== Read I2C Registers
 
 The SensorTag comes with an opt3001 ambient light sensor as well as an
 hdc2080 temperature & humidity sensor.
@@ -1195,7 +1198,7 @@ i2cget -y 8 0x41 0xfc w
 0x5449
 ----
 
-== Conclusion
+=== Conclusion
 
 The blinking LED can and poking i2c registers can be a somewhat
 anticlimactic, but hopefully it illustrates the potential for Greybus as
