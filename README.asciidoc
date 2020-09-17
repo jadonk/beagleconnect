@@ -40,7 +40,7 @@ The initial _BeagleConnect™ Leash_ development release will:
 * Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
 * Work with https://en.wikipedia.org/wiki/Bluetooth_Low_Energy[Bluetooth Low Energy (BLE)]-enabled Linux computers at 2.4GHz, 
 * Work with long-range sub-1GHz https://en.wikipedia.org/wiki/IEEE_802.15.4[IEEE 802.15.4 wireless connections] at 500 meters with data rates of 1kbps, and 
-* Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)], as a `BeagleConnect™ gateway device`, and
+* Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)] as a `BeagleConnect™ gateway device` and
   work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
 
 
@@ -68,11 +68,11 @@ toc::[]
 _BeagleConnect™ Leash_ is based on the TI CC1352 and is the first available
 BeagleConnect™ solution. It implements:
 
-* BeagleConnect™ gateway function for Sub-GHz 802.15.4 long-range wireless
-* BeagleConnect™ node function for Bluetooth Low-Energe (BLE) and Sub-GHz
+* `BeagleConnect™ gateway device` function for Sub-GHz 802.15.4 long-range wireless
+* `BeagleConnect™ node device` function for Bluetooth Low-Energe (BLE) and Sub-GHz
 802.15.4 long range wireless
 * USB-based serial console and firmware updates
-* 2x mikroBUS sockets with BeagleConnect™ protocol support
+* 2x mikroBUS sockets with `BeagleConnect™ protocol support`
 
 [.float-group]
 --
@@ -111,7 +111,7 @@ of being developed and standardized. In places where proper Linux kernel
 drivers exist, no new specialized code needs to be created for the
 devices.
 
-_Bottom line_: For hundreds of devices, users won't have to write a
+IMPORTANT: _Bottom line_: For hundreds of devices, users won't have to write a
 single line of code to add them their systems. The automation code they
 do write can be extremely simple, done with graphical tools or in any
 language they want. Maintenance of the code is centralized in a small
