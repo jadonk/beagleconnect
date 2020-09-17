@@ -304,8 +304,16 @@ There are several different development equipment options. The earliest availabl
 
 [horizontal]
 Host:: x86 Linux machine
-BeagleConnect™ gateway device:: http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad]
-BeagleConnect™ node device:: * http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
+BeagleConnect™ gateway device::
++
+* http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and
+* http://shop.sysmocom.de/products/atusb[atusb dongle]
++
+BeagleConnect™ node device::
++
+* http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and 
+* https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
++
 
 [[background]]
 === Background
@@ -494,7 +502,7 @@ The instructions here only cover checking out the `demo` branch which
 should stay in a tested state. On-going development will be on the
 `master` branch.
 
-The parent directory `/tmp` is simply used as a placeholder for testing.
+NOTE: The parent directory `/tmp` is simply used as a placeholder for testing.
 Please use whatever parent directory you see fit.
 
 === Clone specific tag
@@ -529,7 +537,7 @@ the command below.
 tio /dev/ttyACM0
 ----
 
-To exit `tio` (later), enter `ctrl+t, q`.
+IMPORTANT: To exit `tio` (later), enter `ctrl+t, q`.
 
 == Zephyr
 
