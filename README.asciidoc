@@ -14,7 +14,8 @@ endif::[]
 BeagleConnect™ is a revolutionary technology virtually eliminating low-level software
 development for https://en.wikipedia.org/wiki/Internet_of_things[IoT] and https://en.wikipedia.org/wiki/Industrial_internet_of_things[IIoT] applications, such as building automation, factory
 automation, and home automation. While numerous IoT and IIoT solutions available today
-provide massive software libraries for microcontrollers supporting a limited body of
+provide massive software libraries for microcontrollers footnote:[Complexity can be seen by exploring https://www.arduino.cc/reference/en/libraries/category/sensors/[Arduino sensor libraries]]
+supporting a limited body of
 https://en.wikipedia.org/wiki/Sensor[sensors],
 https://en.wikipedia.org/wiki/Actuator[actuators] and
 https://en.wikipedia.org/wiki/Indicator_(distance_amplifying_instrument)[indicators]
