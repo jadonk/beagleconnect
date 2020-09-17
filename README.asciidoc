@@ -35,13 +35,14 @@ BeagleConnect™ solves:
 * The need to connect to devices using long-range, low-power wireless, and 
 * The need to produce high-volume custom hardware cost-optimized for your requirements.
 
-The minimally viable BeagleConnect™ development release: 
+The initial _BeagleConnect™ Leash_ development release will: 
 
-* Supports at least 100 mikroBUS-based Click boards from Mikroelectronika, 
-* Works with BLE-enabled Linux computers at 2.4GHz, 
-* Works on long-range sub-GHz at 500m with data rates of 1kbps, and 
-* Comprises of low-cost BeagleBoard.org Linux SBC, a BeagleConnect™ gateway, and at 
-  least 10 BeagleConnect™ device nodes each supporting 2 add-on devices.
+* Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
+* Work with https://en.wikipedia.org/wiki/Bluetooth_Low_Energy[Bluetooth Low Energy (BLE)]-enabled Linux computers at 2.4GHz, 
+* Work with long-range sub-1GHz https://en.wikipedia.org/wiki/IEEE_802.15.4[IEEE 802.15.4 wireless connections] at 500 meters with data rates of 1kbps, and 
+* Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)], as a `BeagleConnect™ gateway device`, and
+  work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
+
 
 IMPORTANT: _BeagleConnect™ Leash_ enables wirelessly adding new device nodes and is targeted
 to cost roughly US$10.
