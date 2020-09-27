@@ -69,6 +69,9 @@ There are many stories behind BeagleConnect™, mine is just one of them. It beg
 with my mom teaching me about computers. She told me I could anything I wanted
 with ours, as long as I didn't open the case.
 
+Get on https://beagleboard.org/about/jkridner[my calendar], if you'd like to chat
+with about this story.
+
 [[beagleconnect-leash]]
 == BeagleConnect™ Leash
 _BeagleConnect™ Leash_ is based on the TI CC1352 and is the first available
