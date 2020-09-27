@@ -63,6 +63,12 @@ ships programmed and ready to be used.
 
 toc::[]
 
+[[story]]
+== The Story Behind BeagleConnect™ 
+There are many stories behind BeagleConnect™, mine is just one of them. It begins
+with my mom teaching me about computers. She told me I could anything I wanted
+with ours, as long as I didn't open the case.
+
 [[beagleconnect-leash]]
 == BeagleConnect™ Leash
 _BeagleConnect™ Leash_ is based on the TI CC1352 and is the first available
