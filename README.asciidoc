@@ -67,9 +67,10 @@ toc::[]
 == The Story Behind BeagleConnect™ 
 There are many stories behind BeagleConnect™, mine is just one of them. It begins
 with my mom teaching me about computers. She told me I could anything I wanted
-with ours, as long as I didn't open the case.
+with ours, as long as I didn't open the case. Of course, it wasn't long before that
+was exactly what I wanted to do.
 
-Get on https://beagleboard.org/about/jkridner[my calendar], if you'd like to chat
+Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat
 with me more about this story.
 
 [[beagleconnect-leash]]
