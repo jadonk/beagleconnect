@@ -16,3 +16,6 @@
 [submodule "sw/usb_uart_bridge"]
 	path = sw/usb_uart_bridge
 	url = https://github.com/jadonk/msp430F55xx_usb_uart_bridge
+[submodule "sw/ti_msp430_python_tools"]
+	path = sw/ti_msp430_python_tools
+	url = https://github.com/jadonk/ti_msp430_python_tools
