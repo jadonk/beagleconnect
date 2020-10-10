@@ -1073,11 +1073,10 @@ modules) with the following:
 
 [source,console]
 ----
-cd ${WORKSPACE}
-git clone https://github.com/friedtco/greybus.git
-cd greybus
+cd ${WORKSPACE}/sw/greybus
 make -j`nproc --all`
-./gbprobe.sh
+sudo make install
+../load_gb_modules.sh
 ----
 
 ==== Build and Run Gbridge
