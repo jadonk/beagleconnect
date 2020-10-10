@@ -1090,6 +1090,7 @@ To run `gbridge`, perform the following:
 
 [source,console]
 ----
+sudo apt install -y libnl-3-dev libnl-genl-3-dev libbluetooth-dev libavahi-client-dev
 cd gbridge
 autoreconf -vfi
 GBNETLINKDIR=${PWD}/../greybus \
