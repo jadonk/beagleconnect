@@ -1,0 +1,8 @@
+#
+# Automatically generated file; DO NOT EDIT.
+#
+
+config BR2_EXTERNAL_beagleconnect_gateway_qemu_PATH
+	string
+	default "/home/jkridner/workspace/beagleconnect/sw/buildroot"
+

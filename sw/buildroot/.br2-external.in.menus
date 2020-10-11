@@ -1,0 +1,10 @@
+#
+# Automatically generated file; DO NOT EDIT.
+#
+
+menu "External options"
+
+comment "beagleconnect_gateway_qemu (in /home/jkridner/workspace/beagleconnect/sw/buildroot)"
+source "/home/jkridner/workspace/beagleconnect/sw/buildroot/Config.in"
+
+endmenu
