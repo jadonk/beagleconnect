@@ -2,4 +2,9 @@
 # Automatically generated file; DO NOT EDIT.
 #
 
-# No br2-external tree defined.
+menu "External options"
+
+comment "beagleconnect_gateway_qemu (in /home/debian/beagleconnect/sw/buildroot)"
+source "/home/debian/beagleconnect/sw/buildroot/Config.in"
+
+endmenu
