@@ -1,0 +1,2 @@
+#!/bin/sh
+make -C /home/debian/buildroot O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
