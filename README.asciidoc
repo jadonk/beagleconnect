@@ -1073,11 +1073,10 @@ modules) with the following:
 
 [source,console]
 ----
-cd ${WORKSPACE}
-git clone https://github.com/friedtco/greybus.git
-cd greybus
+cd ${WORKSPACE}/sw/greybus
 make -j`nproc --all`
-./gbprobe.sh
+sudo make install
+../load_gb_modules.sh
 ----
 
 ==== Build and Run Gbridge
@@ -1090,6 +1089,7 @@ To run `gbridge`, perform the following:
 
 [source,console]
 ----
+sudo apt install -y libnl-3-dev libnl-genl-3-dev libbluetooth-dev libavahi-client-dev
 cd gbridge
 autoreconf -vfi
 GBNETLINKDIR=${PWD}/../greybus \
