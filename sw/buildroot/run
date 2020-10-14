@@ -1,3 +1,4 @@
 #!/bin/sh
 #./host/bin/qemu-system-x86_64 -m 256 -kernel ./images/bzImage -drive "file=images/rootfs.ext2,if=virtio,format=raw" -append "rootwait root=/dev/vda" -net nic,model=virtio -net user,hostfwd=tcp::10022-:22
-./images/start-qemu.sh serial-only
+#./images/start-qemu.sh serial-only
+./host/bin/qemu-system-x86_64 -M pc -kernel images/bzImage -drive "file=images/rootfs.ext2,if=virtio,format=raw" -append "rootwait root=/dev/vda console=tty1 console=ttyS0" -serial stdio -net nic,model=virtio -net "user,hostfwd=tcp::10022-:22"
