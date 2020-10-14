@@ -4,7 +4,7 @@
 
 menu "External options"
 
-comment "beagleconnect_gateway_qemu (in /home/debian/beagleconnect/sw/buildroot)"
-source "/home/debian/beagleconnect/sw/buildroot/Config.in"
+comment "beagleconnect_gateway_qemu (in /home/jkridner/workspace/beagleconnect/sw/buildroot)"
+source "/home/jkridner/workspace/beagleconnect/sw/buildroot/Config.in"
 
 endmenu
