@@ -10,4 +10,4 @@
 # sudo ip link set dev eth0 master qemubr0   # set qemubr0 as the target bridge for eth0
 # sudo ip link set dev qemubr0 up
 
-qemu-system-x86_64 -nographic -M pc -kernel images/bzImage -drive file=images/rootfs.ext2,if=virtio,format=raw -append "rootwait root=/dev/vda console=ttyS0" -net nic,model=virtio -net user,hostfwd=tcp::10022-:22 -net user,hostfwd=tcp::11880-:1880
+./host/bin/qemu-system-x86_64 -nographic -M pc -kernel images/bzImage -drive file=images/rootfs.ext2,if=virtio,format=raw -append "rootwait root=/dev/vda console=ttyS0" -net nic,model=virtio -net user,hostfwd=tcp::10022-:22 -net user,hostfwd=tcp::11880-:1880
