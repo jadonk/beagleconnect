@@ -1,0 +1,7 @@
+config BR2_PACKAGE_GBRIDGE
+	bool "gbridge"
+	select BR2_PACKAGE_BLUEZ5_UTILS
+	select BR2_PACKAGE_LIBNL
+	select BR2_PACKAGE_AVAHI
+	help
+		Bridge network devices to Linux Greybus netlink interface.
