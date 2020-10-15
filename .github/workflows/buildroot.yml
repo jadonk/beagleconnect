@@ -32,7 +32,7 @@ jobs:
         run: cd $BR2_EXTERNAL && make -C $BUILDROOT_PATH O=$BR2_EXTERNAL beagleconnect_gateway_qemu_x86_64_defconfig && make
         env:
           BULIDROOT_PATH: $GITHUB_WORKSPACE/buildroot-2020.08
-          BR2_EXTERNAL: $GITHUB_WORKSPACE/beagleconnect/sw/buildroot
+          BR2_EXTERNAL: $GITHUB_WORKSPACE/sw/buildroot
 
       - uses: actions/upload-artifact@v2
         with:
