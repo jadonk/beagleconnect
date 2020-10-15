@@ -29,10 +29,10 @@ jobs:
           tar xzf buildroot-2020.08.tar.gz
 
       - name: Build buildroot
-        run: cd $BR2_EXTERNAL && make -C $BUILDROOT_PATH O=$BR2_EXTERNAL beagleconnect_gateway_qemu_x86_64_defconfig && make
-        env:
-          BULIDROOT_PATH: $GITHUB_WORKSPACE/buildroot-2020.08
-          BR2_EXTERNAL: $GITHUB_WORKSPACE/sw/buildroot
+        run: |
+          cd $GITHUB_WORKSPACE/sw/buildroot
+          make -C $GITHUB_WORKSPACE/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          make
 
       - uses: actions/upload-artifact@v2
         with:
