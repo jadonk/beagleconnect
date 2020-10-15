@@ -31,7 +31,7 @@ jobs:
       - name: Build buildroot
         run: |
           cd $GITHUB_WORKSPACE/sw/buildroot
-          make -C $GITHUB_WORKSPACE/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          make -C $GITHUB_WORKSPACE/buildroot-2020.08 O=$GITHUB_WORKSPACE/sw/buildroot BR2_EXTERNAL=$GITHUB_WORKSPACE/sw/buildroot beagleconnect_gateway_qemu_x86_64_defconfig
           make
 
       - uses: actions/upload-artifact@v2
