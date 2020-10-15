@@ -24,15 +24,17 @@ jobs:
 
       - name: Install buildroot
         run: |
+          cd $GITHUB_WORKSPACE
           wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
           tar xzf buildroot-2020.08.tar.gz
 
       - name: Build buildroot
-        run: cd sw/buildroot && make beagleconnect_gateway_qemu_x86_64_defconfig && make
+        run: cd $GITHUB_WORKSPACE/beagleconnect/sw/buildroot && make -C $BUILDROOT_PATH beagleconnect_gateway_qemu_x86_64_defconfig && make
         env:
-          BULIDROOT_PATH: $HOME/buildroot-2020.08
+          BULIDROOT_PATH: $GITHUB_WORKSPACE/buildroot-2020.08
+          BR2_EXTERNAL_PATH: $GITHUB_WORKSPACE/beagleconnect/sw/buildroot
 
       - uses: actions/upload-artifact@v2
         with:
           name: buildroot
-          path: sw/buildroot/{host,images}
+          path: $GITHUB_WORKSPACE/sw/buildroot/{host,images}
