@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: usb_uart_bridge
+name: buildroot
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -22,20 +22,17 @@ jobs:
         with:
           submodules: true
 
-      - name: Install msp430-gcc
+      - name: Install buildroot
         run: |
-          wget "http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_2_0_0/export/msp430-gcc-full-linux-x64-installer-9.2.0.0.run"
-          chmod +x ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run
-          sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run  --mode unattended --prefix /opt/msp430-gcc
-          rm -f ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run
-          /opt/msp430-gcc/bin/msp430-elf-gcc --version
+          wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
+          tar xzf buildroot-2020.08.tar.gz
 
-      - name: Build usb_uart_bridge
-        run: cd sw/usb_uart_bridge && make
+      - name: Build buildroot
+        run: cd sw/buildroot && make beagleconnect_gateway_qemu_x86_64_defconfig && make
         env:
-          MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
+          BULIDROOT_PATH: $HOME/buildroot-2020.08
 
       - uses: actions/upload-artifact@v2
         with:
-          name: usb-uart-bridge
-          path: sw/usb_uart_bridge/usb_uart_bridge*.*
+          name: buildroot
+          path: sw/buildroot/{host,images}
