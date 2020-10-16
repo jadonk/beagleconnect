@@ -1,0 +1,5 @@
+config BR2_PACKAGE_GREYBUS_NETLINK_MODULES
+	bool "greybus-netlink-modules"
+	depends on BR2_LINUX_KERNEL
+	help
+		Linux kernel modules for adding netlink support to greybus.
