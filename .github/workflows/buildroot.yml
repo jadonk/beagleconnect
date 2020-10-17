@@ -36,4 +36,4 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: buildroot
-          path: sw/buildroot/{host,images}
+          path: [sw/buildroot/host, sw/buildroot/images]
