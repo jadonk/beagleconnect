@@ -34,5 +34,6 @@ if [ "$NLMOD" == "" ]; then
 fi
 sleep 1
 
-gbridge > /var/log/gbridge
+#gbridge > /var/log/gbridge
+gbridge
 
