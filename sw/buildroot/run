@@ -1,4 +1,9 @@
 #!/bin/sh
+if (( $EUID != 0 )); then
+  sudo $0
+  exit
+fi
+
 #./host/bin/qemu-system-x86_64 -m 256 -kernel ./images/bzImage -drive "file=images/rootfs.ext2,if=virtio,format=raw" -append "rootwait root=/dev/vda" -net nic,model=virtio -net user,hostfwd=tcp::10022-:22
 #./images/start-qemu.sh serial-only
 #./host/bin/qemu-system-x86_64 -M pc -kernel images/bzImage -drive "file=images/rootfs.ext2,if=virtio,format=raw" -append "rootwait root=/dev/vda console=ttyS0" -serial stdio -net nic,model=virtio-net-pci -netdev "user,id=eth0,hostfwd=tcp::10022-:22,hostfwd=tcp::11880-:1880"
