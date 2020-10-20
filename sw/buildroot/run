@@ -20,6 +20,7 @@ fi
 ./host/bin/qemu-system-x86_64 \
 	-nographic \
 	-M pc \
+	-m 512 \
 	-kernel images/bzImage \
 	-drive file=images/rootfs.ext2,if=virtio,format=raw \
 	-append "rootwait root=/dev/vda console=ttyS0" \
