@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name leash)(type KiCad)(uri ${KIPRJMOD}/leash.pretty)(options "")(descr ""))
+  (lib (name mech)(type KiCad)(uri ${KIPRJMOD}/mech)(options "")(descr ""))
+)
