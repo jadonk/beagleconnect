@@ -39,4 +39,5 @@ jobs:
           path: |
             sw/buildroot/host
             sw/buildroot/images
+            sw/buildroot/run
 

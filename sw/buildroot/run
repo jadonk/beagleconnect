@@ -26,10 +26,10 @@ fi
 	-append "rootwait root=/dev/vda console=ttyS0" \
 	-net nic,model=virtio \
 	-net user,hostfwd=tcp::10022-:22 \
-	-net user,hostfwd=tcp::11880-:1880 \
 	-usb -device usb-host,vendorid=0x20b7,productid=0x1540
 
 #	-usb -device usb-ehci,id=ehci \
+#	-net user,hostfwd=tcp::11880-:1880 \
 
 
 
