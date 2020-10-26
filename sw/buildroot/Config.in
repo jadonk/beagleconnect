@@ -1,2 +1,3 @@
 source "$BR2_EXTERNAL_beagleconnect_gateway_qemu_PATH/package/greybus-netlink-modules/Config.in"
 source "$BR2_EXTERNAL_beagleconnect_gateway_qemu_PATH/package/gbridge/Config.in"
+source "$BR2_EXTERNAL_beagleconnect_gateway_qemu_PATH/package/hm3301-module/Config.in"
