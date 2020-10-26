@@ -1,0 +1,5 @@
+config BR2_PACKAGE_HM3301_MODULE
+	bool "hm3301-module"
+	depends on BR2_LINUX_KERNEL
+	help
+		Linux kernel module for HM3301 particulate matter laser scaner.
