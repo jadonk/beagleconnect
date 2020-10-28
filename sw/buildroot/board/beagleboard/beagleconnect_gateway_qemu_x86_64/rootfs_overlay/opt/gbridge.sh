@@ -20,12 +20,15 @@ sleep 1
 killall -9 gbridge
 sleep 1
 
+ping6 -I lowpan0 2001:db8::1 -c 5
+sleep 1
+
 NLMOD=`lsmod | grep gb_netlink`
 if [ "$NLMOD" == "" ]; then
 #  modprobe greybus
   modprobe gb-netlink
 #  modprobe gb-bootrom
-#  modprobe gb-gbphy
+  modprobe gb-gbphy
 #  modprobe gb-loopback
 #  modprobe gb-spilib
 #  modprobe gb-firmware

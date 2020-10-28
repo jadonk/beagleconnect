@@ -925,14 +925,14 @@ $ iwpan list
 ----
 +
 . Next, set the Channel for the 802.15.4 device on the Linux machine
-`console     sudo iwpan phy phy0 set channel 0 26`
+`sudo iwpan phy phy0 set channel 0 26`
 . Then, set the PAN identifier for the 802.15.4 device on the Linux
-machine `console     sudo iwpan dev wpan0 set pan_id 0xabcd` ## Create a
+machine `sudo iwpan dev wpan0 set pan_id 0xabcd` ## Create a
 6LowPAN Network Interface
 . Associate the `wpan0` device to a new, 6lowpan network interface
-`console     sudo ip link add link wpan0 name lowpan0 type lowpan`
+`sudo ip link add link wpan0 name lowpan0 type lowpan`
 . Finally, set the links up for both `wpan0` and `lowpan0`
-`console     sudo ip link set wpan0 up     sudo ip link set lowpan0 up`
+`sudo ip link set wpan0 up     sudo ip link set lowpan0 up`
 
 We should observe something like the following when we run
 `ip a show lowpan0`.
