@@ -35,7 +35,7 @@ BeagleConnect™ solves:
 * The need to connect to devices using long-range, low-power wireless, and 
 * The need to produce high-volume custom hardware cost-optimized for your requirements.
 
-The initial _BeagleConnect™ Leash_ development release will: 
+The initial _BeagleConnect™ Freedom_ development release will: 
 
 * Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
 * Work with https://en.wikipedia.org/wiki/Bluetooth_Low_Energy[Bluetooth Low Energy (BLE)]-enabled Linux computers at 2.4GHz, 
@@ -44,7 +44,7 @@ The initial _BeagleConnect™ Leash_ development release will:
   work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
 
 
-IMPORTANT: _BeagleConnect™ Leash_ enables wirelessly adding new device nodes and is targeted
+IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
 to cost roughly US$10.
 
 Future releases will be collaborated with the community, evolve
@@ -58,7 +58,7 @@ microcontroller firmware, a communication protocol, and system-level
 integration to automation software tools. More specific terms will be
 applied in the architecture details. The term is also used here to
 represent the experience introduced to users through the initial
-_BeagleConnect™ Leash_ product consiting of a board and case which
+_BeagleConnect™ Freedom_ product consiting of a board and case which
 ships programmed and ready to be used.
 
 toc::[]
@@ -96,8 +96,8 @@ Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat
 with me more about this story.
 
 [[beagleconnect-leash]]
-== BeagleConnect™ Leash
-_BeagleConnect™ Leash_ is based on the TI CC1352 and is the first available
+== BeagleConnect™ Freedom
+_BeagleConnect™ Freedom_ is based on the TI CC1352 and is the first available
 BeagleConnect™ solution. It implements:
 
 * `BeagleConnect™ gateway device` function for Sub-GHz 802.15.4 long-range wireless
@@ -184,7 +184,7 @@ as well as the hundreds of compliant boards developed every year.
 [[long-range-low-power-wireless]]
 === Long-range, low-power wireless
 
-_BeagleConnect™ Leash_ wireless hardware is built around a
+_BeagleConnect™ Freedom_ wireless hardware is built around a
 http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
 microcontroller (MCU). CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
 80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
@@ -237,7 +237,7 @@ enabled. Enable a Linux host with BeagleConnect™ by plugging a
 `BeagleConnect™ gateway device` into it's USB port. You'll also want to have a
 `BeagleConnect™ node device` with a sensor, actuator or indicator device connected.
 
-NOTE: _BeagleConnect™ Leash_ can act as either a `BeagleConnect™ gateway device` or a
+NOTE: _BeagleConnect™ Freedom_ can act as either a `BeagleConnect™ gateway device` or a
 `BeagleConnect™ node device`.
 
 IMPORTANT: The Linux host will need to run the `BeagleConnect™ management
@@ -280,7 +280,7 @@ function` can be provided by a `BeagleConnect™ compatible interface` or by con
 NOTE: If the Linux host has BLE, the BeagleConnect™ is optional for short distances
 +
 
-BeagleConnect™ Leash:: Board, case, and wireless MCU with `Zephyr` based firmware for acting
+BeagleConnect™ Freedom:: Board, case, and wireless MCU with `Zephyr` based firmware for acting
 as either a `BeagleConnect™ gateway device` or `BeagleConnect™ node device`.
 * In `BeagleConnect™ gateway device` mode:
 ** Provides long-range, low-power wireless communications,
@@ -294,7 +294,7 @@ https://bbb.io/click[Click Board] mikroBUS add-on devices
 GPIO with interrupts via `Greybus`
 
 BeagleConnect™ gateway device:: Provides a `BeagleConnect™ compatible interface` to a host. This
-could be a built-in interface device or one connected over USB. _BeagleConnect™ Leash_ can provide
+could be a built-in interface device or one connected over USB. _BeagleConnect™ Freedom_ can provide
 this function.
 
 BeagleConnect™ node device:: Utilizes a `BeagleConnect™ compatible interface` and #TODO#
@@ -396,7 +396,7 @@ TODO items
 * Click Board drivers and device tree formatted metadata for 100 or so
 Click Boards
 * Click Board plug-ins for node-red for the same 100 or so Click Boards
-* BeagleConnect™ Leash System Reference Manual and FAQs
+* BeagleConnect™ Freedom System Reference Manual and FAQs
 
 [[associated-pre-work]]
 Associated pre-work
