@@ -22,6 +22,13 @@ jobs:
         with:
           submodules: true
 
+      - name: Prepare cache timestamp
+          id: cache-timestamp
+          shell: cmake -P {0}
+          run: |
+            string(TIMESTAMP current_date "%Y-%m-%d-%H;%M;%S" UTC)
+            message("::set-output name=timestamp::${current_date}")
+
       - name: Install prerequisites
         run: |
           sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
@@ -36,7 +43,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.ccache
-          key: zephyr-ccache-${{ steps.cache-zephyr-ccache.outputs.timestamp }}
+          key: zephyr-ccache-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
             zephyr-ccache-
 

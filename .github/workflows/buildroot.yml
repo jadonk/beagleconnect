@@ -22,6 +22,13 @@ jobs:
         with:
           submodules: true
 
+      - name: Prepare cache timestamp
+          id: cache-timestamp
+          shell: cmake -P {0}
+          run: |
+            string(TIMESTAMP current_date "%Y-%m-%d-%H;%M;%S" UTC)
+            message("::set-output name=timestamp::${current_date}")
+
       - name: Cache for buildroot
         id: cache-buildroot
         uses: actions/cache@v2
@@ -42,7 +49,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.buildroot-ccache
-          key: buildroot-ccache-${{ steps.cache-buildroot-ccache.outputs.timestamp }}
+          key: buildroot-ccache-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
             buildroot-ccache-
 
@@ -51,7 +58,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/downloads
-          key: buildroot-downloads-${{ steps.cache-buildroot-downloads.outputs.timestamp }}
+          key: buildroot-downloads-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
             buildroot-downloads-
 
