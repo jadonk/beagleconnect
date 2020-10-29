@@ -22,7 +22,7 @@ jobs:
         with:
           submodules: true
 
-      - name: Install toolchain
+      - name: Install prerequisites
         run: |
           sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
             ccache dfu-util device-tree-compiler wget \
@@ -30,6 +30,17 @@ jobs:
             make gcc gcc-multilib g++-multilib libsdl2-dev \
             cmake
           pip3 install --user -U west
+
+      - name: Cache for zephyr SDK
+        id: cache-zephyr-sdk-0_11_4
+        uses: actions/cache@v2
+        with:
+          path: ~/zephyr-sdk-0.11.4
+          key: zephyr-sdk-0_11_4
+
+      - name: Install toolchain
+        if: steps.cache-zephyr-sdk-0_11_4.outputs.cache-hit != 'true'
+        run: |
           wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run"
           chmod +x zephyr-sdk-0.11.4-setup.run
           ./zephyr-sdk-0.11.4-setup.run -- -d ~/zephyr-sdk-0.11.4
