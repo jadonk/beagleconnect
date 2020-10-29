@@ -26,8 +26,8 @@ jobs:
         id: cache-buildroot
         uses: actions/cache@v2
         with:
-          path: buildroot
-          key: buildroot-source-2020-08v01
+          path: buildroot-2020.08
+          key: buildroot-source-2020-08v02
 
       - name: Install buildroot
         if: steps.cache-buildroot.outputs.cache-hit != 'true'
