@@ -22,22 +22,53 @@ jobs:
         with:
           submodules: true
 
-      - name: Install buildroot
-        run: |
+     - name: Cache for buildroot
+       id: cache-buildroot
+       uses: actions/cache@v2
+       with:
+         path: buildroot
+         key: buildroot-source-2020-08v01
+
+     - name: Install buildroot
+       if: steps.cache-buildroot.outputs.cache-hit != 'true'
+       run: |
           wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
           tar xzf buildroot-2020.08.tar.gz
+          mkdir ~/ccache || true
+          mkdir ~/downloads || true
+
+     - name: Cache for ccache
+       id: cache-ccache
+       uses: actions/cache@v2
+       with:
+         path: ~/ccache
+         key: buildroot-ccache-2020-08v01
+
+     - name: Cache for downloads
+       id: cache-downloads
+       uses: actions/cache@v2
+       with:
+         path: ~/downloads
+         key: buildroot-downloads-2020-08v01
 
       - name: Build buildroot
         run: |
+          export BR2_CCACHE_DIR=~/ccache
+          export BR2_DL_DIR=~/downloads
           cd sw/buildroot
           make -C $GITHUB_WORKSPACE/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
           make
 
       - uses: actions/upload-artifact@v2
         with:
-          name: buildroot
+          name: buildroot-target
           path: |
-            sw/buildroot/host
             sw/buildroot/images
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: buildroot-host
+          path: |
             sw/buildroot/run
+            sw/buildroot/host
 
