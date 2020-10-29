@@ -1,0 +1,5 @@
+config BR2_PACKAGE_WPANUSB_MODULE
+	bool "wpanusb-module"
+	depends on BR2_LINUX_KERNEL
+	help
+		Linux kernel module for wpanusb radio interface.
