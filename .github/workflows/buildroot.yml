@@ -34,18 +34,18 @@ jobs:
         run: |
           wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
           tar xzf buildroot-2020.08.tar.gz
-          mkdir ~/ccache || true
+          mkdir ~/.buildroot-ccache || true
           mkdir ~/downloads || true
 
       - name: Cache for ccache
-        id: cache-ccache
+        id: cache-buildroot-ccache
         uses: actions/cache@v2
         with:
-          path: ~/ccache
-          key: buildroot-ccache-2020-08v01
+          path: ~/.buildroot-ccache
+          key: buildroot-ccache-2020-08v02
 
       - name: Cache for downloads
-        id: cache-downloads
+        id: cache-buildroot-downloads
         uses: actions/cache@v2
         with:
           path: ~/downloads
@@ -53,7 +53,7 @@ jobs:
 
       - name: Build buildroot
         run: |
-          export BR2_CCACHE_DIR=~/ccache
+          export BR2_CCACHE_DIR=~/.buildroot-ccache
           export BR2_DL_DIR=~/downloads
           cd sw/buildroot
           make -C $GITHUB_WORKSPACE/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
