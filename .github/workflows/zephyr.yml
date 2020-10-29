@@ -36,9 +36,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.ccache
-          key: ${{ matrix.config.name }}-ccache-${{ steps.ccache_cache_timestamp.outputs.timestamp }}
+          key: zephyr-ccache-${{ steps.cache-zephyr-ccache.outputs.timestamp }}
           restore-keys: |
-            ${{ matrix.config.name }}-ccache-
+            zephyr-ccache-
 
       - name: Cache for zephyr SDK
         id: cache-zephyr-sdk-0_11_4

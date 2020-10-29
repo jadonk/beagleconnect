@@ -42,18 +42,18 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.buildroot-ccache
-          key: ${{ matrix.config.name }}-ccache-${{ steps.ccache_cache_timestamp.outputs.timestamp }}
+          key: buildroot-ccache-${{ steps.cache-buildroot-ccache.outputs.timestamp }}
           restore-keys: |
-            ${{ matrix.config.name }}-ccache-
+            buildroot-ccache-
 
       - name: Cache for downloads
         id: cache-buildroot-downloads
         uses: actions/cache@v2
         with:
           path: ~/downloads
-          key: ${{ matrix.config.name }}-downloads-${{ steps.ccache_cache_timestamp.outputs.timestamp }}
+          key: buildroot-downloads-${{ steps.cache-buildroot-downloads.outputs.timestamp }}
           restore-keys: |
-            ${{ matrix.config.name }}-downloads-
+            buildroot-downloads-
 
 
       - name: Build buildroot
