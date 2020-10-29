@@ -22,3 +22,6 @@
 [submodule "sw/ti_msp430_python_tools"]
 	path = sw/ti_msp430_python_tools
 	url = https://github.com/jadonk/ti_msp430_python_tools
+[submodule "sw/linux/wpanusb"]
+	path = sw/linux/wpanusb
+	url = https://github.com/jadonk/wpanusb
