@@ -51,6 +51,7 @@ jobs:
           path: ~/.buildroot-ccache
           key: buildroot-ccache-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
+            buildroot-ccache-2020-
             buildroot-ccache-
 
       - name: Cache for downloads
