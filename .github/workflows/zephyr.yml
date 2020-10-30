@@ -45,6 +45,7 @@ jobs:
           path: ~/.ccache
           key: zephyr-ccache-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
+            zephyr-ccache-2020-
             zephyr-ccache-
 
       - name: Cache for zephyr SDK
