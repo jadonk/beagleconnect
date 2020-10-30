@@ -61,6 +61,7 @@ jobs:
           path: ~/downloads
           key: buildroot-downloads-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
+            buildroot-downloads-2020-
             buildroot-downloads-
 
 
