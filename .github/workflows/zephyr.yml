@@ -87,7 +87,6 @@ jobs:
           BOARD=beagle_connect west build ../wpanusb_bc --pristine \
             --build-dir build/wpanusb_beagleconnect
 
-
       - uses: actions/upload-artifact@v2
         with:
           name: zephyr
