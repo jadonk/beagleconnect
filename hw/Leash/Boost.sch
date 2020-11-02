@@ -4,11 +4,11 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 6 10
-Title "BeagleDust Leash PCB"
-Date "2019-08-12"
+Title "BeagleConnect Leash"
+Date "2020-08-31"
 Rev "A"
 Comp "Beagleboard.org"
-Comment1 "Schematic designed by Analog Life, LLC"
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -6728,7 +6728,10 @@ F 7 "TPS62821DLCR" H 8025 5325 50  0001 C CNN "MPN1"
 F 8 "0.20" H 8025 5325 50  0001 C CNN "Standard Price"
 F 9 "Texas Instruments" H 8025 5325 50  0001 C CNN "Vendor1"
 F 10 "IC REG BUCK ADJ 1A 8VSON-HR" H 8025 5325 50  0001 C CNN "Short Description"
-F 11 "0" H 8025 5325 50  0001 C CNN "Seeed PN"
+F 11 "310032030" H 8025 5325 50  0001 C CNN "Seeed PN"
+F 12 "RC0201FR-070RL" H 8025 5325 50  0001 C CNN "MPN2"
+F 13 "TI" H 8025 5325 50  0001 C CNN "Vendor2"
+F 14 "SMD IC PMIC;DCDC Buck-ADJ-3A;VSON-8" H 8025 5325 50  0001 C CNN "Seeed Description"
 	1    8025 5325
 	1    0    0    -1  
 $EndComp
@@ -6909,9 +6912,9 @@ F 7 "CL05A104MP5NNNC" H 6275 5325 50  0001 C CNN "MPN1"
 F 8 "$0.00315" H 6275 5325 50  0001 C CNN "Standard Price"
 F 9 "Samsung Electro-Mechanics" H 6275 5325 50  0001 C CNN "Vendor1"
 F 10 "CAP CER 0.1UF 10V X5R 0402" H 6275 5325 50  0001 C CNN "Short Description"
-F 11 "" H 6275 5325 50  0001 C CNN "Seeed PN"
-F 12 "CC0402KRX5R6BB105" H 6275 5325 50  0001 C CNN "MPN2"
-F 13 "" H 6275 5325 50  0001 C CNN "Seeed Description"
+F 11 "302010103" H 6275 5325 50  0001 C CNN "Seeed PN"
+F 12 "CC0603KRX5R6BB106" H 6275 5325 50  0001 C CNN "MPN2"
+F 13 "SMD CAP Ceramic 10uF-10V-10%-X5R;0603" H 6275 5325 50  0001 C CNN "Seeed Description"
 F 14 "YAGEO" H 6275 5325 50  0001 C CNN "Vendor2"
 	1    6275 5325
 	1    0    0    -1  
@@ -6959,8 +6962,6 @@ Wire Wire Line
 Wire Wire Line
 	5325 4300 5325 5075
 Connection ~ 5325 5075
-Wire Wire Line
-	12450 5075 12875 5075
 Text GLabel 12875 5075 2    63   Input ~ 0
 3V3
 $Comp
@@ -6994,28 +6995,6 @@ Wire Wire Line
 Connection ~ 7100 5075
 Wire Wire Line
 	7100 5075 7450 5075
-$Comp
-L Device:Polyfuse F?
-U 1 1 5F2F707F
-P 12300 5075
-AR Path="/5D062750/5F2F707F" Ref="F?"  Part="1" 
-AR Path="/5D0620A4/5F2F707F" Ref="F2"  Part="1" 
-F 0 "F2" V 12200 5075 50  0000 C CNN
-F 1 "500mA" V 12400 5075 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 12350 4875 50  0001 L CNN
-F 3 "~" H 12300 5075 50  0001 C CNN
-F 4 "https://www.digikey.com/product-detail/en/yageo/RC0603JR-070RL/311-0-0GRTR-ND/726675" H 12300 5075 50  0001 C CNN "Link1"
-F 5 "RC0603JR-070RL" H 12300 5075 50  0001 C CNN "MPN1"
-F 6 "RES SMD 0 OHM JUMPER 1/10W 0603" H 12300 5075 50  0001 C CNN "Short Description"
-F 7 "0.00196" H 12300 5075 50  0001 C CNN "Standard Price"
-F 8 "Yageo" H 12300 5075 50  0001 C CNN "Vendor1"
-F 9 "307010377" H 12300 5075 50  0001 C CNN "Seeed PN"
-F 10 "0402L050SLKR" H 12300 5075 50  0001 C CNN "MPN2"
-F 11 "SMD PPTC;6V-500mA;0402" H 12300 5075 50  0001 C CNN "Seeed Description"
-F 12 "Littelfuse Inc." H 12300 5075 50  0001 C CNN "Vendor2"
-	1    12300 5075
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6275 5075 7100 5075
 NoConn ~ 7575 5475
@@ -7044,10 +7023,10 @@ Wire Wire Line
 	11000 5425 11000 5075
 Connection ~ 11000 5075
 Wire Wire Line
-	11000 5075 12150 5075
-Wire Wire Line
 	10600 5950 11000 5950
 Wire Wire Line
 	11000 5950 11000 5725
 Connection ~ 10600 5950
+Wire Wire Line
+	11000 5075 12875 5075
 $EndSCHEMATC
