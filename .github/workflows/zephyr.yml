@@ -85,7 +85,7 @@ jobs:
           BOARD=cc1352r_sensortag west build samples/subsys/greybus/net --pristine \
             --build-dir build/greybus_sensortag -- -DCONF_FILE="prj.conf overlay-802154.conf"
           BOARD=beagle_connect west build ../wpanusb_bc --pristine \
-            --build-dir build/wpanusb_beagleconnect
+            --build-dir build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
       - uses: actions/upload-artifact@v2
         with:

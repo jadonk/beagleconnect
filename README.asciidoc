@@ -1271,3 +1271,71 @@ Zephyr module * adding security and authentication * automatic
 detection, joining, and rejoining of devices
 
 Thanks for reading, and we hope you’ve enjoyed this tutorial.
+
+[[demo-2]]
+== Sub-GHz IEEE 802.15.4 Greybus demo for GPIO and I2C
+
+=== Setup
+
+==== MSP430 toolchain
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/
+wget http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_2_0_0/export/msp430-gcc-full-linux-x64-installer-9.2.0.0.run
+chmod +x msp430-gcc-full-linux-x64-installer-9.2.0.0.run
+sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run --mode unattended --prefix /opt/msp430-gcc
+----
+
+==== MSP430 flashing utility
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/ti_msp430_python_tools/python-msp430-tools
+python2 setup.py install --user
+----
+
+=== Building
+
+==== MSP430 uart pass-through
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/usb_uart_bridge
+MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
+----
+
+==== CC1352 gateway
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/zephyrproject/zephyr
+west build -p always -b beagle_connect -d $PWD/build/wpanusb_beagleconnect $PWD/../wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
+----
+
+=== Flashing
+
+Connect board via USB while holding the USER button.
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/usb_uart_bridge
+MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
+----
+
+==== CC1352 gateway
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/zephyrproject/zephyr
+west flash -d $PWD/build/wpanusb_beagleconnect /dev/ttyACM0
+----
+
+=== Run
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/buildroot
+./run
+----
+
