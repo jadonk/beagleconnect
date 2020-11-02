@@ -1297,15 +1297,17 @@ python2 setup.py install --user
 
 === Building
 
-==== MSP430 uart pass-through
+==== MSP430
 
 [source,bash]
 ----
 cd /tmp/beagleconnect/sw/usb_uart_bridge
 MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
+cd /tmp/beagleconnect/sw/usb_wpan_temp
+MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
 ----
 
-==== CC1352 gateway
+==== CC1352
 
 [source,bash]
 ----
@@ -1315,23 +1317,29 @@ west build -p always -b beagle_connect -d $PWD/build/wpanusb_beagleconnect $PWD/
 
 === Flashing
 
-Connect board via USB while holding the USER button.
+==== Gateway
+
+Connect _BeagleConnect™ Freedom_ via USB while holding the USER button.
 
 [source,bash]
 ----
 cd /tmp/beagleconnect/sw/usb_uart_bridge
 MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
-----
-
-==== CC1352 gateway
-
-[source,bash]
-----
 cd /tmp/beagleconnect/sw/zephyrproject/zephyr
 west flash -d $PWD/build/wpanusb_beagleconnect /dev/ttyACM0
 ----
 
+Disconnect and reconnect _BeagleConnect™ Freedom_ via USB while holding the USER button.
+
+[source,bash]
+----
+cd /tmp/beagleconnect/sw/usb_wpan_temp
+MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
+----
+
 === Run
+
+Disconnect and reconnect _BeagleConnect™ Freedom_.
 
 [source,bash]
 ----
