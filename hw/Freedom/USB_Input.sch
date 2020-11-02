@@ -66,24 +66,6 @@ Text Label 9850 2275 2    50   ~ 0
 D+
 Text Label 8900 2075 2    50   ~ 0
 D-
-$Comp
-L LeashPCB:USB_C_Plug_USB2.0-usb_c_plug_usb2.0 P1
-U 1 1 5E44AB21
-P 5425 2175
-F 0 "P1" H 5025 2925 50  0000 L CNN
-F 1 "USB_C_Plug_USB2.0" H 5925 2925 50  0000 R CNN
-F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 5575 2175 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5575 2175 50  0001 C CNN
-F 4 "http://suntek.hk" H 5425 2175 50  0001 C CNN "Link1"
-F 5 "ST-USB-3316" H 5425 2175 50  0001 C CNN "MPN1"
-F 6 "Sungtech" H 5425 2175 50  0001 C CNN "Vendor1"
-F 7 "320010943" H 5425 2175 50  0001 C CNN "Seeed PN"
-F 8 "UBF31-0171" H 5425 2175 50  0001 C CNN "MPN2"
-F 9 "SMD USB Type-c;12P+4-8.9*7.3*3.2mm" H 5425 2175 50  0001 C CNN "Seeed Description"
-F 10 "MTCONN" H 5425 2175 50  0001 C CNN "Vendor2"
-	1    5425 2175
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5425 3075 5425 3275
 Wire Wire Line
@@ -1124,13 +1106,13 @@ U 1 1 5F482FB1
 P 9225 5500
 AR Path="/5D062750/5F482FB1" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5F482FB1" Ref="R26"  Part="1" 
-F 0 "R26" V 9275 5650 50  0000 L CNN
+F 0 "R26" V 9200 5650 50  0000 L CNN
 F 1 "0" V 9225 5475 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 9155 5500 50  0001 C CNN
 F 3 "~" H 9225 5500 50  0001 C CNN
 F 4 "" H 9225 5500 50  0001 C CNN "Description"
 F 5 "$0.00127" H 9225 5500 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 9275 5325 50  0000 C CNN "Population"
+F 6 "DNP" V 9200 5300 50  0000 C CNN "Population"
 F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 9225 5500 50  0001 C CNN "Link1"
 F 8 "RMCF0402ZT0R00" H 9225 5500 50  0001 C CNN "MPN1"
 F 9 "RES 0 OHM JUMPER 1/16W 0402" H 9225 5500 50  0001 C CNN "Short Description"
@@ -1147,13 +1129,13 @@ U 1 1 5F483EE2
 P 9225 5600
 AR Path="/5D062750/5F483EE2" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5F483EE2" Ref="R27"  Part="1" 
-F 0 "R27" V 9275 5750 50  0000 L CNN
+F 0 "R27" V 9200 5750 50  0000 L CNN
 F 1 "0" V 9225 5575 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 9155 5600 50  0001 C CNN
 F 3 "~" H 9225 5600 50  0001 C CNN
 F 4 "" H 9225 5600 50  0001 C CNN "Description"
 F 5 "$0.00127" H 9225 5600 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 9275 5425 50  0000 C CNN "Population"
+F 6 "DNP" V 9200 5400 50  0000 C CNN "Population"
 F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 9225 5600 50  0001 C CNN "Link1"
 F 8 "RMCF0402ZT0R00" H 9225 5600 50  0001 C CNN "MPN1"
 F 9 "RES 0 OHM JUMPER 1/16W 0402" H 9225 5600 50  0001 C CNN "Short Description"
@@ -1206,13 +1188,9 @@ F 3 "~" H 7625 4075 50  0001 C CNN
 $EndComp
 NoConn ~ 6475 6300
 NoConn ~ 6475 6400
-NoConn ~ 6475 6500
-NoConn ~ 6475 6600
 NoConn ~ 6475 6800
 NoConn ~ 6475 6900
 NoConn ~ 8875 6800
-NoConn ~ 8875 6900
-NoConn ~ 8875 5700
 NoConn ~ 6475 7200
 NoConn ~ 6475 7300
 Wire Wire Line
@@ -1374,7 +1352,6 @@ F 12 "YAGEO" H 9175 7300 50  0001 C CNN "Vendor2"
 	1    9175 7300
 	0    1    -1   0   
 $EndComp
-NoConn ~ 8875 5800
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5F864228
@@ -1468,9 +1445,7 @@ F 7 "SEMITEL" H 7425 2700 50  0001 C CNN "Vendor2"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6025 2275 7425 2275
-Wire Wire Line
-	6025 2075 7175 2075
+	6025 2075 6100 2075
 Wire Wire Line
 	6025 1575 6925 1575
 Wire Wire Line
@@ -1691,4 +1666,52 @@ F 13 "YAGEO" H 2575 6600 50  0001 C CNN "Vendor2"
 	1    2575 6600
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 P1
+U 1 1 5F9D6ACA
+P 5425 2175
+F 0 "P1" H 5532 3042 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 5532 2951 50  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 5575 2175 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5575 2175 50  0001 C CNN
+F 4 "http://suntek.hk" H 5425 2175 50  0001 C CNN "Link1"
+F 5 "UBF31-0171" H 5425 2175 50  0001 C CNN "MPN1"
+F 6 "MTCONN" H 5425 2175 50  0001 C CNN "Vendor1"
+F 7 "320010943" H 5425 2175 50  0001 C CNN "Seeed PN"
+F 8 "UBF31-0171" H 5425 2175 50  0001 C CNN "MPN2"
+F 9 "SMD USB Type-c;12P+4-8.9*7.3*3.2mm" H 5425 2175 50  0001 C CNN "Seeed Description"
+F 10 "MTCONN" H 5425 2175 50  0001 C CNN "Vendor2"
+	1    5425 2175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6025 2175 6100 2175
+Wire Wire Line
+	6100 2175 6100 2075
+Connection ~ 6100 2075
+Wire Wire Line
+	6100 2075 7175 2075
+Wire Wire Line
+	6025 2275 6100 2275
+Wire Wire Line
+	6025 2375 6100 2375
+Wire Wire Line
+	6100 2375 6100 2275
+Connection ~ 6100 2275
+Wire Wire Line
+	6100 2275 7425 2275
+Wire Wire Line
+	8875 6900 9650 6900
+Text GLabel 9650 6900 2    50   Input ~ 0
+BUZZER_CTL
+Text GLabel 6025 6500 0    50   Input ~ 0
+LED1
+Text GLabel 6025 6600 0    50   Input ~ 0
+LED2
+Wire Wire Line
+	6475 6500 6025 6500
+Wire Wire Line
+	6475 6600 6025 6600
+NoConn ~ 8875 5700
+NoConn ~ 8875 5800
 $EndSCHEMATC
