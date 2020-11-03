@@ -4,9 +4,9 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 8 10
-Title "BeagleConnect Leash"
-Date "2020-08-31"
-Rev "A"
+Title "BeagleConnect Freedom"
+Date "2020-11-03"
+Rev "C2"
 Comp "Beagleboard.org"
 Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
@@ -1879,11 +1879,9 @@ Wire Wire Line
 Wire Wire Line
 	12925 3250 12925 4100
 $Comp
-L BeagleConnect-Freedom-rescue:0850BM14E0016-Filter B2
+L Filter:0850BM14E0016 B2
 U 1 1 5FBAE784
 P 11775 4675
-AR Path="/5FBAE784" Ref="B2"  Part="1" 
-AR Path="/5D062750/5FBAE784" Ref="B2"  Part="1" 
 F 0 "B2" H 11775 5042 50  0000 C CNN
 F 1 "1720BL15B0200E" H 11775 4951 50  0000 C CNN
 F 2 "RF_Converter:Anaren_0805_2012Metric-6" H 11775 3975 50  0001 C CNN

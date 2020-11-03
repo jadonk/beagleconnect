@@ -4,9 +4,9 @@ EELAYER END
 $Descr C 22000 17000
 encoding utf-8
 Sheet 1 10
-Title "BeagleConnect Leash"
-Date "2020-08-31"
-Rev "A"
+Title "BeagleConnect Freedom"
+Date "2020-11-03"
+Rev "C2"
 Comp "Beagleboard.org"
 Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
@@ -23685,7 +23685,7 @@ F0 "Sensors" 50
 F1 "Sensors.sch" 50
 $EndSheet
 $Bitmap
-Pos 13350 10100
+Pos 13250 9525
 Scale 2.500000
 Data
 89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 02 1A 00 00 02 C1 08 02 00 00 00 91 22 9F 

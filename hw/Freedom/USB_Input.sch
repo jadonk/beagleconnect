@@ -4,9 +4,9 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 5 10
-Title "BeagleConnect Leash"
-Date "2020-08-31"
-Rev "A"
+Title "BeagleConnect Freedom"
+Date "2020-11-03"
+Rev "C2"
 Comp "Beagleboard.org"
 Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
@@ -1400,11 +1400,9 @@ F 13 "YAGEO" H 5325 5525 50  0001 C CNN "Vendor2"
 	-1   0    0    1   
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:SZESD9B5.0ST5G-Diode D8
+L Diode:SZESD9B5.0ST5G D8
 U 1 1 5F359C94
 P 6925 2700
-AR Path="/5F359C94" Ref="D8"  Part="1" 
-AR Path="/5D1A71BB/5F359C94" Ref="D8"  Part="1" 
 F 0 "D8" V 6925 2779 50  0000 L CNN
 F 1 "ESDPSA0402V05" V 6970 2779 50  0001 L CNN
 F 2 "Diode_SMD:D_0402_1005Metric" H 6925 2700 50  0001 C CNN
@@ -1417,11 +1415,9 @@ F 7 "SEMITEL" H 6925 2700 50  0001 C CNN "Vendor2"
 	0    1    1    0   
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:SZESD9B5.0ST5G-Diode D10
+L Diode:SZESD9B5.0ST5G D10
 U 1 1 5F35C058
 P 7175 2700
-AR Path="/5F35C058" Ref="D10"  Part="1" 
-AR Path="/5D1A71BB/5F35C058" Ref="D10"  Part="1" 
 F 0 "D10" V 7175 2779 50  0000 L CNN
 F 1 "ESDPSA0402V05" V 7220 2779 50  0001 L CNN
 F 2 "Diode_SMD:D_0402_1005Metric" H 7175 2700 50  0001 C CNN
@@ -1434,11 +1430,9 @@ F 7 "SEMITEL" H 7175 2700 50  0001 C CNN "Vendor2"
 	0    1    1    0   
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:SZESD9B5.0ST5G-Diode D11
+L Diode:SZESD9B5.0ST5G D11
 U 1 1 5F35CA9C
 P 7425 2700
-AR Path="/5F35CA9C" Ref="D11"  Part="1" 
-AR Path="/5D1A71BB/5F35CA9C" Ref="D11"  Part="1" 
 F 0 "D11" V 7379 2779 50  0000 L CNN
 F 1 "ESDPSA0402V05" V 7470 2779 50  0000 L CNN
 F 2 "Diode_SMD:D_0402_1005Metric" H 7425 2700 50  0001 C CNN
@@ -1673,11 +1667,9 @@ F 13 "YAGEO" H 2575 6600 50  0001 C CNN "Vendor2"
 	1    0    0    -1  
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:USB_C_Receptacle_USB2.0-Connector P1
+L Connector:USB_C_Receptacle_USB2.0 P1
 U 1 1 5F9D6ACA
 P 5425 2175
-AR Path="/5F9D6ACA" Ref="P1"  Part="1" 
-AR Path="/5D1A71BB/5F9D6ACA" Ref="P1"  Part="1" 
 F 0 "P1" H 5532 3042 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 5532 2951 50  0000 C CNN
 F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 5575 2175 50  0001 C CNN

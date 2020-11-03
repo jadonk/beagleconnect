@@ -4,9 +4,9 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 7 10
-Title "BeagleConnect Leash"
-Date "2020-08-31"
-Rev "A"
+Title "BeagleConnect Freedom"
+Date "2020-11-03"
+Rev "C2"
 Comp "Beagleboard.org"
 Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""

@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 10 10
-Title "BeagleConnect Leash"
-Date "2020-08-31"
-Rev "A"
-Comp ""
+Title "BeagleConnect Freedom"
+Date "2020-11-03"
+Rev "C2"
+Comp "Beagleboard.org"
 Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
