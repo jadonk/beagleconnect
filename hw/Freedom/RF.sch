@@ -1879,7 +1879,7 @@ Wire Wire Line
 Wire Wire Line
 	12925 3250 12925 4100
 $Comp
-L Filter:0850BM14E0016 B2
+L BeagleConnect-Freedom-rescue:0850BM14E0016-Filter B2
 U 1 1 5FBAE784
 P 11775 4675
 F 0 "B2" H 11775 5042 50  0000 C CNN
