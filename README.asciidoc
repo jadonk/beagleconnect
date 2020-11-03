@@ -1312,6 +1312,7 @@ MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
 [source,bash]
 ----
 cd /tmp/beagleconnect/sw/zephyrproject/zephyr
+west build -p always -b cc1352r1_launchxl samples/subsys/greybus/net -d build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154-subghz.conf"
 west build -p always -b beagle_connect -d $PWD/build/wpanusb_beagleconnect $PWD/../wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
 ----
 

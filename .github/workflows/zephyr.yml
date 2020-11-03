@@ -81,9 +81,9 @@ jobs:
           west zephyr-export
           pip3 install --user -r scripts/requirements.txt
           BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
-            --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154.conf"
+            --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154-subghz.conf"
           BOARD=cc1352r_sensortag west build samples/subsys/greybus/net --pristine \
-            --build-dir build/greybus_sensortag -- -DCONF_FILE="prj.conf overlay-802154.conf"
+            --build-dir build/greybus_sensortag -- -DCONF_FILE="prj.conf overlay-802154-subghz.conf"
           BOARD=beagle_connect west build ../wpanusb_bc --pristine \
             --build-dir build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
