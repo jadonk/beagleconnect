@@ -540,14 +540,14 @@ The instructions here only cover checking out the `demo` branch which
 should stay in a tested state. On-going development will be on the
 `master` branch.
 
-NOTE: The parent directory `/tmp` is simply used as a placeholder for testing.
+NOTE: The parent directory `~` is simply used as a placeholder for testing.
 Please use whatever parent directory you see fit.
 
 ==== Clone specific tag
 
 [source,console]
 ----
-cd /tmp
+cd ~
 git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
 ----
 
@@ -600,7 +600,7 @@ both or quickly switch between `tio` and the shell.
 
 [source,console]
 ----
-cd /tmp/beagleconnect/sw/zephyrproject/zephyr
+cd ~/beagleconnect/sw/zephyrproject/zephyr
 west update
 ----
 
@@ -826,22 +826,22 @@ a Linux kernel from here on out.
 For this demo, I used the 5.8.4 stable kernel. Also, I've applied the `mikrobus` kernel
 driver, though it isn't strictly required for greybus.
 
-NOTE: Again, `/tmp` is just used as a placeholder and you can use whatever directory you'd like.
+NOTE: Again, `~` is just used as a placeholder and you can use whatever directory you'd like.
 
 #TODO: The patches for gb-netlink will eventually be applied here until pushed into mainline.#
 
 [source,console]
 ----
-cd /tmp
+cd ~
 git clone --branch v5.8.4 --single-branch git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
 cd linux
 git checkout -b v5.8.4-greybus
-git am /tmp/beagleconnect/sw/linux/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
-git am /tmp/beagleconnect/sw/linux/0001-mikroBUS-build-fixes.patch
+git am ~/beagleconnect/sw/linux/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
+git am ~/beagleconnect/sw/linux/0001-mikroBUS-build-fixes.patch
 cp /boot/config-`uname -r` .config
 yes "" | make oldconfig
-./scripts/kconfig/merge_config.sh .config /tmp/beagleconnect/sw/linux/mikrobus.config
-./scripts/kconfig/merge_config.sh .config /tmp/beagleconnect/sw/linux/atusb.config
+./scripts/kconfig/merge_config.sh .config ~/beagleconnect/sw/linux/mikrobus.config
+./scripts/kconfig/merge_config.sh .config ~/beagleconnect/sw/linux/atusb.config
 make -j`nproc --all`
 sudo make modules_install
 sudo make install
@@ -1281,7 +1281,7 @@ Thanks for reading, and we hope you’ve enjoyed this tutorial.
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/
+cd ~/beagleconnect/sw/
 wget http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_2_0_0/export/msp430-gcc-full-linux-x64-installer-9.2.0.0.run
 chmod +x msp430-gcc-full-linux-x64-installer-9.2.0.0.run
 sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run --mode unattended --prefix /opt/msp430-gcc
@@ -1291,7 +1291,7 @@ sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run --mode unattended --prefi
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/ti_msp430_python_tools/python-msp430-tools
+cd ~/beagleconnect/sw/ti_msp430_python_tools/python-msp430-tools
 python2 setup.py install --user
 ----
 +
@@ -1312,7 +1312,7 @@ export PATH=~/.local/bin:"$PATH"
 export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
 export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.4
 export USE_CCACHE=1
-cd /tmp/beagleconnect/sw/zephyrproject/zephyr
+cd ~/beagleconnect/sw/zephyrproject/zephyr
 west update
 west zephyr-export
 pip3 install --user -r scripts/requirements.txt
@@ -1325,7 +1325,7 @@ pip3 install --user -r scripts/requirements.txt
 cd
 wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
 tar xzf buildroot-2020.08.tar.gz
-cd /tmp/beagleconnect/sw/buildroot
+cd ~/beagleconnect/sw/buildroot
 make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
 ----
 
@@ -1335,9 +1335,9 @@ make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/usb_uart_bridge
+cd ~/beagleconnect/sw/usb_uart_bridge
 MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
-cd /tmp/beagleconnect/sw/usb_wpan_temp
+cd ~/beagleconnect/sw/usb_wpan_temp
 MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
 ----
 +
@@ -1345,8 +1345,8 @@ MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/zephyrproject/zephyr
-west build -p always -b cc1352r1_launchxl samples/subsys/greybus/net -d build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154-subghz.conf"
+cd ~/beagleconnect/sw/zephyrproject/zephyr
+west build -p always -b cc1352r1_launchxl samples/subsys/greybus/net -d build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154-subg.conf"
 west build -p always -b beagle_connect -d $PWD/build/wpanusb_beagleconnect $PWD/../wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
 ----
 +
@@ -1354,7 +1354,7 @@ west build -p always -b beagle_connect -d $PWD/build/wpanusb_beagleconnect $PWD/
 +
 [source,bash]
 ----
-cd /tmp/beagleconnectd/sw/buildroot
+cd ~/beagleconnectd/sw/buildroot
 make
 ----
 
@@ -1364,28 +1364,46 @@ make
 
 1. Connect _BeagleConnect™ Freedom_ via USB while holding the USER button.
 +
-2. Flash MSP430 (with temporary firmware for flashing CC1352) and CC1352
-+
-NOTE: Make sure no instances of `tio` or `qemu` are running that would capture the serial port.
-+
-NOTE: Be sure to replace `/tmp` and `/dev/ttyACM0` with appropriate values for your setup.
+2. Flash _BeagleConnect™ Freedom_ MSP430 with temporary firmware for flashing CC1352 using python2 script and MSP430 ROM bootloader.
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/usb_uart_bridge
+cd ~/beagleconnect/sw/usb_uart_bridge
 MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
-cd /tmp/beagleconnect/sw/zephyrproject/zephyr
+----
++
+3. Flash _BeagleConnect™ Freedom_ CC1352 with gateway firmware using `west` and CC1352 ROM bootloader over MSP430 USB to UART connection.
++
+NOTE: Make sure no instances of `tio` or `qemu` are running that would capture the serial port.
++
+NOTE: Be sure to replace `~` and `/dev/ttyACM0` with appropriate values for your setup. Use `dmesg | tail` to discover the correct tty.
++
+[source,bash]
+----
+cd ~/beagleconnect/sw/zephyrproject/zephyr
 west flash -d $PWD/build/wpanusb_beagleconnect /dev/ttyACM0
 ----
 +
 4. Disconnect and reconnect _BeagleConnect™ Freedom_ via USB while holding the USER button.
 +
-5. Flash MSP430 with gateway software
+5. Flash MSP430 with gateway software using python2 script and MSP430 ROM bootloader.
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/usb_wpan_temp
+cd ~/beagleconnect/sw/usb_wpan_temp
 MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
+----
+
+==== Node
+
+1. Connect _CC1352R1 Launchpad_ via USB.
++
+2. Flash _CC1352R1 Launchpad_ using `west`.
++
+[source,bash]
+----
+cd ~/beagleconnect/sw/zephyrproject/zephyr
+west flash -d build/greybus_launchpad
 ----
 
 === Run
@@ -1396,7 +1414,7 @@ MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
 +
 [source,bash]
 ----
-cd /tmp/beagleconnect/sw/buildroot
+cd ~/beagleconnect/sw/buildroot
 ./run
 ----
 +
