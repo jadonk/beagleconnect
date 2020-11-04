@@ -1366,6 +1366,10 @@ make
 +
 2. Flash MSP430 (with temporary firmware for flashing CC1352) and CC1352
 +
+NOTE: Make sure no instances of `tio` or `qemu` are running that would capture the serial port.
++
+NOTE: Be sure to replace `/tmp` and `/dev/ttyACM0` with appropriate values for your setup.
++
 [source,bash]
 ----
 cd /tmp/beagleconnect/sw/usb_uart_bridge
