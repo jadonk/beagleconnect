@@ -1277,7 +1277,25 @@ Thanks for reading, and we hope you’ve enjoyed this tutorial.
 
 === Setup
 
-1. MSP430 toolchain
+1. Clone or update source
++
+NOTE: If you have already cloned the source, skip this part and go to the second part of this step.
++
+[source,bash]
+----
+cd ~
+git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
+----
++
+NOTE: If you just cloned the source, you don't need to perform this update.
++
+[source,bash]
+----
+cd ~
+git pull --recurse-submodules
+----
++
+2. MSP430 toolchain
 +
 [source,bash]
 ----
@@ -1287,7 +1305,7 @@ chmod +x msp430-gcc-full-linux-x64-installer-9.2.0.0.run
 sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run --mode unattended --prefix /opt/msp430-gcc
 ----
 +
-2. MSP430 flashing utility
+3. MSP430 flashing utility
 +
 [source,bash]
 ----
@@ -1295,7 +1313,7 @@ cd ~/beagleconnect/sw/ti_msp430_python_tools/python-msp430-tools
 python2 setup.py install --user
 ----
 +
-3. CC1352 Zephyr toolchain
+4. CC1352 Zephyr toolchain
 +
 [source,bash]
 ----
@@ -1318,7 +1336,7 @@ west zephyr-export
 pip3 install --user -r scripts/requirements.txt
 ----
 +
-4. Linux gateway via buildroot
+5. Linux gateway via buildroot
 +
 [source,bash]
 ----
