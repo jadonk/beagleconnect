@@ -82,11 +82,11 @@ jobs:
           pip3 install --user -r scripts/requirements.txt
           BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
             --build-dir build/greybus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf \
-            -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME="IEEE802154_1" \
+            -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" \
             -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
           BOARD=cc1352r_sensortag west build samples/subsys/greybus/net --pristine \
             --build-dir build/greybus_sensortag -- -DOVERLAY_CONFIG=overlay-802154-subg.conf \
-            -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME="IEEE802154_1" \
+            -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" \
             -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
           BOARD=beagle_connect west build ../wpanusb_bc --pristine \
             --build-dir build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
