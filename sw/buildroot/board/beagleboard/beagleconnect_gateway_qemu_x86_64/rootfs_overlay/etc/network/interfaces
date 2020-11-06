@@ -1,0 +1,21 @@
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+  pre-up /etc/network/nfs_check
+  wait-delay 15
+  hostname $(hostname)
+
+allow-hotplug wpan0
+auto wpan0
+iface wpan0 inet6 manual
+  down ip link set lowpan0 down
+  down ip link set wpan0 down
+  pre-up ip link set wpan0 down
+  pre-up iwpan dev wpan0 set pan_id 0xabcd
+  pre-up iwpan phy `iwpan phy | grep -m1 wpan_phy | cut -d' ' -f2` set channel 0 1
+  pre-up ip link add link wpan0 name lowpan0 type lowpan
+  pre-up ip link set lowpan0 up
+  pre-up ip -6 addr add 2001:db8::2/64 dev lowpan0
+  up ip link set wpan0 up
