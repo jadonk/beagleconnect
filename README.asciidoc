@@ -1349,26 +1349,15 @@ make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_
 
 === Building
 
-1. MSP430
+1. MSP430/CC1352 Firmware
 +
 [source,bash]
 ----
-cd ~/beagleconnect/sw/usb_uart_bridge
-MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
-cd ~/beagleconnect/sw/usb_wpan_temp
-MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make
+cd ~/beagleconnect/sw
+./build-firmware.sh
 ----
 +
-2. CC1352 Zephyr-based firmware for node and gateway
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west build -p always -b cc1352r1_launchxl samples/subsys/greybus/net -d build/greybus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME="IEEE802154_1" -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
-west build -p always -b beagle_connect -d $PWD/build/wpanusb_beagleconnect $PWD/../wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
-----
-+
-3. Buildroot
+2. Buildroot
 +
 [source,bash]
 ----
