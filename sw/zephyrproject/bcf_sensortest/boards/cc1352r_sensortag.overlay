@@ -1,0 +1,31 @@
+/*
+ * Copyright (c) 2020 Friedt Professional Engineering Services, Inc
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+&flash0 {
+	status = "okay";
+};
+
+&led0 {
+	status = "okay";
+};
+
+&led1 {
+	status = "okay";
+};
+
+&led2 {
+	status = "okay";
+};
+
+&sensor0 {
+	status = "okay";
+};
+
+&sensor1 {
+	status = "okay";
+};
+
+/* TODO: add support for hdc2080 */

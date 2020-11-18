@@ -1,0 +1,6 @@
+sample:
+  name: TI CC1352R SensorTag Demo
+tests:
+  sample.boards.ti.cc1352r_sensortag:
+    platform_allow: cc1352r_sensortag
+    tags: gpio led sensor
