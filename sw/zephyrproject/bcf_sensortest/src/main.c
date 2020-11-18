@@ -1,53 +1,19 @@
 /*
  * Copyright (c) 2020 Friedt Professional Engineering Services, Inc
- *
- * Demo application for the cc1352r_sensortag
- *
- * - The application will blink red, green, and blue LEDs on startup
- * - When each button is pressed a message is printed to the console
- * - When both are pressed, sensor values are printed to the console
- *
- * Currently supported sensors include
- *
- * - OPT3001 ambient light sensor
- * - ADXL362 accelerometer
- *
- * Additional work needs to be done in the following areas:
- *
- * - Driver for the HDC2080 temperature and humidity sensor
- * - Driver for the DRV5032 Hall-effect sensor
- * - BLE for the cc13xx_cc26xx platform
- *
- * Optionally, it might be nice to present sensor readings via HTTP
- * either via 802.15.4/6LowPAN or BLE/6LowPAN.
- *
- * Alternatively, the Zephyr demo could be modified to work out of
- * the box with TI's Simplelink Starter app available for both
- * Android and iOS.
- *
- * For more information, please see
- * https://www.ti.com/tool/LPSTK-CC1352R
+ * Copyright (c) 2020 Jason Kridner
  *
  * SPDX-License-Identifier: Apache-2.0
  */
 
+#include <zephyr.h>
 #include <device.h>
 #include <drivers/gpio.h>
-#include <drivers/i2c.h>
 #include <drivers/led.h>
 #include <drivers/sensor.h>
 #include <drivers/spi.h>
-#include <stdbool.h>
-#include <stdint.h>
 #include <stdio.h>
-#include <sys/util.h>
-#include <zephyr.h>
-
-#define LOG_LEVEL LOG_LEVEL_INF
-#include <logging/log.h>
-LOG_MODULE_REGISTER(ti_cc1352r_sensortag);
-
-#define BLINK_MS 500
+#include <net/net_ip.h>
+#include <net/socket.h>
 
 enum api {
 	LED_API,
@@ -56,11 +22,9 @@ enum api {
 };
 
 enum edev {
-	RED_LED,
-	GREEN_LED,
-	BLUE_LED,
+	LED_24G,
+	LED_SUBG,
 	BUTTON1,
-	BUTTON2,
 	OPT3001,
 	ADXL362,
 	/* TODO: add support for hdc2080 */
@@ -75,11 +39,9 @@ struct led_work {
 static void sensor_work_handler(struct k_work *work);
 
 static const char *device_labels[NUM_DEVICES] = {
-	[RED_LED] = DT_LABEL(DT_ALIAS(led1)),
-	[GREEN_LED] = DT_LABEL(DT_ALIAS(led0)),
-	[BLUE_LED] = DT_LABEL(DT_ALIAS(led2)),
-	[BUTTON1] = DT_LABEL(DT_ALIAS(sw0)),
-	[BUTTON2] = DT_LABEL(DT_ALIAS(sw1)),
+	[LED_SUBG] = DT_LABEL(DT_ALIAS(led_subg)),
+	[LED_24G] = DT_LABEL(DT_ALIAS(led_24g)),
+	[BUTTON] = DT_LABEL(DT_ALIAS(button_user)),
 	[OPT3001] = DT_LABEL(DT_ALIAS(sensor0)),
 	[ADXL362] = DT_LABEL(DT_ALIAS(sensor1)),
 	/* TODO: add support for hdc2080 */
