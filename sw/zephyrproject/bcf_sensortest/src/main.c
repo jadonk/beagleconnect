@@ -269,7 +269,7 @@ void main(void)
 	led_work.active_led = LED_SUBG;
 	r = k_delayed_work_submit(&led_work.dwork, K_MSEC(BLINK_MS));
 	__ASSERT(r == 0, "k_delayed_work_submit() failed for LED %u work: %d",
-		 RED_LED, r);
+		 LED_SUBG, r);
 
 	/* setup input-driven button event */
 	gpio_init_callback(
