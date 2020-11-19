@@ -143,8 +143,8 @@ static void print_sensor_value(size_t idx, const char *chan,
 		val->val1 = -val->val1;
 	}
 
-	snprintf(str, 20, "%s: %s%c%d.%06d", device_names[idx], chan, neg, val->val1, val->val2);
-	LOG_INF("%s", str);
+	LOG_INF("%s: %s%c%d.%06d", device_names[idx], chan, neg, val->val1, val->val2);
+	snprintf(str, 20, "%d%c:%c%d.%06d;", idx, chan[0], neg, val->val1, val->val2);
 	strncat(outstr, str, MAX_STR_LEN - strnlen(outstr, MAX_STR_LEN));
 }
 
@@ -163,7 +163,7 @@ static void sensor_work_handler(struct k_work *work)
 
 		if (i == LIGHT) {
 			sensor_channel_get(devices[i], SENSOR_CHAN_LIGHT, &val);
-			print_sensor_value(i, "", &val);
+			print_sensor_value(i, "l: ", &val);
 			continue;
 		}
 
