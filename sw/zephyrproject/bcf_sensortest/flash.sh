@@ -9,9 +9,9 @@ lsusb | grep 2047:0200
 make program
 
 echo <<EOF
-Now run...
+Now run (use the correct ttyACMx)...
 lsusb | grep 2047:0aa5
-west flash -d build/bc_freedom /dev/ttyACM0 -- -DBOARD_ROOT=$SWDIR/zephyrproject/wpanusb_bc
+west flash -d build/bc_freedom /dev/ttyACM0
 EOF
 
 
