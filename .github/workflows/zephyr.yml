@@ -91,7 +91,7 @@ jobs:
           BOARD=beagleconnect_freedom west build ../wpanusb_bc --pristine \
             --build-dir build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
           BOARD=beagleconnect_freedom west build ../bcf_sensortest --pristine \
-            --build-dir build/bcf_sensortest
+            --build-dir build/bcf_sensortest -- -DBOARD_ROOT=../wpanusb_bc
 
       - uses: actions/upload-artifact@v2
         with:
