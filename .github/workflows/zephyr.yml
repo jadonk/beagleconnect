@@ -100,4 +100,5 @@ jobs:
             sw/zephyrproject/zephyr/build/greybus_launchpad
             sw/zephyrproject/zephyr/build/greybus_sensortag
             sw/zephyrproject/zephyr/build/wpanusb_beagleconnect
+            sw/zephyrproject/zephyr/build/bcf_sensortest
 
