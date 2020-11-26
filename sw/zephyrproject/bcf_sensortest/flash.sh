@@ -6,6 +6,6 @@ export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
 
 echo Make sure to use the correct ttyACMx...
 lsusb | grep 2047:0aa5
-west flash -d build/bc_freedom /dev/ttyACM1
+west flash -d build/bc_freedom /dev/ttyACM0
 
 

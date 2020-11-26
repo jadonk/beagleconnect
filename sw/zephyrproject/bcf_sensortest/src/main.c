@@ -40,7 +40,7 @@ enum edev {
 	BUTTON,
 	LIGHT,
 	ACCEL,
-	/* TODO: add support for hdc2080 */
+	HUMIDITY,
 	NUM_DEVICES,
 };
 
@@ -57,7 +57,7 @@ static const char *device_labels[NUM_DEVICES] = {
 	[BUTTON] = DT_LABEL(DT_ALIAS(sw0)),
 	[LIGHT] = DT_LABEL(DT_ALIAS(sensor0)),
 	[ACCEL] = DT_LABEL(DT_ALIAS(sensor1)),
-	/* TODO: add support for hdc2080 */
+	[HUMIDITY] = DT_LABEL(DT_ALIAS(sensor2)),
 };
 
 static const char *device_names[NUM_DEVICES] = {
@@ -66,7 +66,7 @@ static const char *device_names[NUM_DEVICES] = {
 	[BUTTON] = DT_GPIO_LABEL(DT_ALIAS(sw0), gpios),
 	[LIGHT] = DT_LABEL(DT_ALIAS(sensor0)),
 	[ACCEL] = DT_LABEL(DT_ALIAS(sensor1)),
-	/* TODO: add support for hdc2080 */
+	[HUMIDITY] = DT_LABEL(DT_ALIAS(sensor2)),
 };
 
 static const uint8_t device_pins[NUM_DEVICES] = {
@@ -77,8 +77,7 @@ static const uint8_t device_pins[NUM_DEVICES] = {
 
 static const enum api apis[NUM_DEVICES] = {
 	LED_API,    LED_API,    BUTTON_API,
-	SENSOR_API, SENSOR_API,
-	/* TODO: add support for hdc2080 */
+	SENSOR_API, SENSOR_API, SENSOR_API
 };
 
 static struct device *devices[NUM_DEVICES];
@@ -177,6 +176,16 @@ static void sensor_work_handler(struct k_work *work)
 			sensor_channel_get(devices[i], SENSOR_CHAN_ACCEL_Z,
 					   &val);
 			print_sensor_value(i, "z: ", &val);
+			continue;
+		}
+
+		if (i == HUMIDITY) {
+			sensor_channel_get(devices[i], SENSOR_CHAN_HUMIDITY,
+					   &val);
+			print_sensor_value(i, "h: ", &val);
+			sensor_channel_get(devices[i], SENSOR_CHAN_AMBIENT_TEMP,
+					   &val);
+			print_sensor_value(i, "t: ", &val);
 			continue;
 		}
 	}

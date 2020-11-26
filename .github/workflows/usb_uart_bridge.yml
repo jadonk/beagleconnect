@@ -35,14 +35,8 @@ jobs:
         env:
           MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
 
-      - name: Build usb_wpan_temp
-        run: cd sw/usb_wpan_temp && make
-        env:
-          MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
-
       - uses: actions/upload-artifact@v2
         with:
           name: usb-uart-bridge
           path: |
             sw/usb_uart_bridge/usb_uart_bridge*.*
-            sw/usb_wpan_temp/usb_uart_bridge*.*
