@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: zephyr
+name: firmware
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -29,7 +29,15 @@ jobs:
           string(TIMESTAMP current_date "%Y-%m-%d-%H;%M;%S" UTC)
           message("::set-output name=timestamp::${current_date}")
 
-      - name: Install prerequisites
+      - name: Install msp430 tools
+        run: |
+          wget "http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_2_0_0/export/msp430-gcc-full-linux-x64-installer-9.2.0.0.run"
+          chmod +x ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run
+          sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run  --mode unattended --prefix /opt/msp430-gcc
+          rm -f ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run
+          /opt/msp430-gcc/bin/msp430-elf-gcc --version
+
+      - name: Install zephyr prerequisites
         run: |
           sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
             ccache dfu-util device-tree-compiler wget \
@@ -48,14 +56,14 @@ jobs:
             zephyr-ccache-2020-
             zephyr-ccache-
 
-      - name: Cache for zephyr SDK
+      - name: Cache for Zephyr SDK
         id: cache-zephyr-sdk-0_11_4
         uses: actions/cache@v2
         with:
           path: ~/zephyr-sdk-0.11.4
           key: zephyr-sdk-0_11_4
 
-      - name: Install toolchain
+      - name: Install Zephyr toolchain
         if: steps.cache-zephyr-sdk-0_11_4.outputs.cache-hit != 'true'
         run: |
           wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run"
@@ -70,35 +78,39 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Build CC1352 firmware
+      - name: Prep Zephyr repo
+        env:
+          ZEPHYR_TOOLCHAIN_VARIANT: zephyr
+          MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
+          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-0.11.4
         run: |
           export PATH=~/.local/bin:"$PATH"
-          export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-          export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.4
           export USE_CCACHE=1
           cd sw/zephyrproject/zephyr
           west update
           west zephyr-export
           pip3 install --user -r scripts/requirements.txt
-          BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
-            --build-dir build/greybus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf \
-            -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" \
-            -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
-          BOARD=cc1352r_sensortag west build samples/subsys/greybus/net --pristine \
-            --build-dir build/greybus_sensortag -- -DOVERLAY_CONFIG=overlay-802154-subg.conf \
-            -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" \
-            -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
-          BOARD=beagleconnect_freedom west build ../wpanusb_bc --pristine \
-            --build-dir build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
-          BOARD=beagleconnect_freedom west build ../bcf_sensortest --pristine \
-            --build-dir build/bcf_sensortest -- -DBOARD_ROOT=../wpanusb_bc
+
+      - name: Prep Zephyr repo
+        env:
+          ZEPHYR_TOOLCHAIN_VARIANT: zephyr
+          MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
+          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-0.11.4
+        run: |
+          export PATH=~/.local/bin:"$PATH"
+          export USE_CCACHE=1
+          cd $GITHUB_WORKSPACE/beagleconnect/sw
+          ./build-firmware.sh
 
       - uses: actions/upload-artifact@v2
         with:
           name: zephyr
           path: |
-            sw/zephyrproject/zephyr/build/greybus_launchpad
-            sw/zephyrproject/zephyr/build/greybus_sensortag
-            sw/zephyrproject/zephyr/build/wpanusb_beagleconnect
-            sw/zephyrproject/zephyr/build/bcf_sensortest
+            sw/zephyrproject/zephyr/build
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: usb-uart-bridge
+          path: |
+            sw/usb_uart_bridge/usb_uart_bridge*.*
 
