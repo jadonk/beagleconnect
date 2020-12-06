@@ -62,6 +62,8 @@ jobs:
         with:
           path: ~/zephyr-sdk-0.11.4
           key: zephyr-sdk-0_11_4
+          restore-keys: |
+            zephyr-sdk-0_11_4
 
       - name: Install Zephyr toolchain
         if: steps.cache-zephyr-sdk-0_11_4.outputs.cache-hit != 'true'
@@ -83,7 +85,7 @@ jobs:
           ZEPHYR_TOOLCHAIN_VARIANT: zephyr
           MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
           ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-0.11.4
-          USE_CCACHE: 1
+          USE_CCACHE: 0
         run: |
           export PATH=~/.local/bin:"$PATH"
           cd sw/zephyrproject/zephyr
@@ -96,7 +98,7 @@ jobs:
           ZEPHYR_TOOLCHAIN_VARIANT: zephyr
           MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
           ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-0.11.4
-          USE_CCACHE: 1
+          USE_CCACHE: 0
         run: |
           export PATH=~/.local/bin:"$PATH"
           cd sw
