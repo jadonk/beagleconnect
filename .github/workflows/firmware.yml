@@ -91,7 +91,7 @@ jobs:
           west zephyr-export
           pip3 install --user -r scripts/requirements.txt
 
-      - name: Prep Zephyr repo
+      - name: Build firmware
         env:
           ZEPHYR_TOOLCHAIN_VARIANT: zephyr
           MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
@@ -99,7 +99,7 @@ jobs:
         run: |
           export PATH=~/.local/bin:"$PATH"
           export USE_CCACHE=1
-          cd $GITHUB_WORKSPACE/beagleconnect/sw
+          cd sw
           ./build-firmware.sh
 
       - uses: actions/upload-artifact@v2
