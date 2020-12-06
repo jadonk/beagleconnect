@@ -89,6 +89,10 @@ static struct gpio_callback button_callback;
 static struct sockaddr_in6 addr;
 static int fd = -1;
 
+/* Set TIMED_SENSOR_READ to 0 to disable */
+#define TIMED_SENSOR_READ 60
+static int sensor_read_count = TIMED_SENSOR_READ;
+
 static void led_work_handler(struct k_work *work)
 {
 	ARG_UNUSED(work);
@@ -121,6 +125,14 @@ static void led_work_handler(struct k_work *work)
 	r = k_delayed_work_submit(&led_work.dwork, K_MSEC(BLINK_MS));
 	__ASSERT(r == 0, "k_delayed_work_submit() failed for LED %u work: %d",
 		 led_work.active_led, r);
+
+	if (sensor_read_count > 0) {
+		sensor_read_count--;
+		if (sensor_read_count <= 0) {
+			sensor_read_count = TIMED_SENSOR_READ;
+			k_work_submit(&sensor_work);
+		}
+	}
 }
 
 static void print_sensor_value(size_t idx, const char *chan,
