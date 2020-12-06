@@ -1,9 +1,9 @@
 #!/bin/bash -xe
+export SWDIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+export MSP430_TOOLCHAIN_PATH=${MSP430_TOOLCHAIN_PATH:-/opt/msp430-gcc}
 export ZEPHYR_TOOLCHAIN_VARIANT=${ZEPHYR_TOOLCHAIN_VARIANT:-zephyr}
 export ZEPHYR_SDK_INSTALL_DIR=${ZEPHYR_SDK_INSTALL_DIR:-~/zephyr-sdk-0.11.4}
-export SWDIR="$( cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 export ZEPHYR_BASE=${ZEPHYR_BASE:-$SWDIR/zephyrproject/zephyr}
-export MSP430_TOOLCHAIN_PATH=${MSP430_TOOLCHAIN_PATH:-/opt/msp430-gcc}
 
 # MSP430
 cd $SWDIR/usb_uart_bridge
