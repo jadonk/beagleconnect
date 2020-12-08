@@ -25,7 +25,7 @@ LOG_MODULE_REGISTER(beagleconnect_freedom);
 
 #define BLINK_MS 500
 
-#define MAX_STR_LEN 100
+#define MAX_STR_LEN 200
 static char outstr[MAX_STR_LEN];
 
 enum api {
@@ -41,6 +41,7 @@ enum edev {
 	LIGHT,
 	ACCEL,
 	HUMIDITY,
+	ENVIRONMENT,
 	NUM_DEVICES,
 };
 
@@ -58,6 +59,7 @@ static const char *device_labels[NUM_DEVICES] = {
 	[LIGHT] = DT_LABEL(DT_ALIAS(sensor0)),
 	[ACCEL] = DT_LABEL(DT_ALIAS(sensor1)),
 	[HUMIDITY] = DT_LABEL(DT_ALIAS(sensor2)),
+	[ENVIRONMENT] = DT_LABEL(DT_ALIAS(click1)),
 };
 
 static const char *device_names[NUM_DEVICES] = {
@@ -67,6 +69,7 @@ static const char *device_names[NUM_DEVICES] = {
 	[LIGHT] = DT_LABEL(DT_ALIAS(sensor0)),
 	[ACCEL] = DT_LABEL(DT_ALIAS(sensor1)),
 	[HUMIDITY] = DT_LABEL(DT_ALIAS(sensor2)),
+	[ENVIRONMENT] = DT_LABEL(DT_ALIAS(click1)),
 };
 
 static const uint8_t device_pins[NUM_DEVICES] = {
@@ -77,7 +80,8 @@ static const uint8_t device_pins[NUM_DEVICES] = {
 
 static const enum api apis[NUM_DEVICES] = {
 	LED_API,    LED_API,    BUTTON_API,
-	SENSOR_API, SENSOR_API, SENSOR_API
+	SENSOR_API, SENSOR_API, SENSOR_API,
+	SENSOR_API
 };
 
 static struct device *devices[NUM_DEVICES];
@@ -155,7 +159,7 @@ static void print_sensor_value(size_t idx, const char *chan,
 	}
 
 	LOG_INF("%s: %s%c%d.%06d", device_names[idx], chan, neg, val->val1, val->val2);
-	snprintf(str, 20, "%d%c:%c%d.%06d;", idx, chan[0], neg, val->val1, val->val2);
+	snprintf(str, 20, "%d%c:%c%d.%02d;", idx, chan[0], neg, val->val1, val->val2);
 	strncat(outstr, str, MAX_STR_LEN - strnlen(outstr, MAX_STR_LEN));
 }
 
@@ -167,6 +171,10 @@ static void sensor_work_handler(struct k_work *work)
 
 	for (size_t i = 0; i < NUM_DEVICES; ++i) {
 		if (apis[i] != SENSOR_API) {
+			continue;
+		}
+
+		if (devices[i] < 0) {
 			continue;
 		}
 
@@ -199,6 +207,17 @@ static void sensor_work_handler(struct k_work *work)
 					   &val);
 			print_sensor_value(i, "t: ", &val);
 			continue;
+		}
+
+		if (i == ENVIRONMENT) {
+			sensor_channel_get(devices[i], SENSOR_CHAN_AMBIENT_TEMP, &val);
+			print_sensor_value(i, "t: ", &val);
+			sensor_channel_get(devices[i], SENSOR_CHAN_PRESS, &val);
+			print_sensor_value(i, "p: ", &val);
+			sensor_channel_get(devices[i], SENSOR_CHAN_HUMIDITY, &val);
+			print_sensor_value(i, "h: ", &val);
+			sensor_channel_get(devices[i], SENSOR_CHAN_GAS_RES, &val);
+			print_sensor_value(i, "g: ", &val);
 		}
 	}
 
