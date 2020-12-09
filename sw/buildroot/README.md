@@ -10,7 +10,7 @@ NOTE: /tmp is just a place holder for where you checked out the beagleconnect re
 sudo apt install -y sed make binutils build-essential \
   gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc \
   wget \
-  libncurses5 \
+  libncurses5-dev \
   git cvs rsync subversion \
   asciidoc \
   ccache
