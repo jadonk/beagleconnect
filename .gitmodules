@@ -25,3 +25,6 @@
 [submodule "sw/zephyrproject/wpanusb_bc"]
 	path = sw/zephyrproject/wpanusb_bc
 	url = https://github.com/jadonk/wpanusb_bc
+[submodule "sw/zephyrproject/greybus-for-zephyr"]
+	path = sw/zephyrproject/greybus-for-zephyr
+	url = https://github.com/jadonk/greybus-for-zephyr

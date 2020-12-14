@@ -4,6 +4,8 @@ export MSP430_TOOLCHAIN_PATH=${MSP430_TOOLCHAIN_PATH:-/opt/msp430-gcc}
 export ZEPHYR_TOOLCHAIN_VARIANT=${ZEPHYR_TOOLCHAIN_VARIANT:-zephyr}
 export ZEPHYR_SDK_INSTALL_DIR=${ZEPHYR_SDK_INSTALL_DIR:-~/zephyr-sdk-0.11.4}
 export ZEPHYR_BASE=${ZEPHYR_BASE:-$SWDIR/zephyrproject/zephyr}
+export ZPRJ=$SWDIR/zephyrproject
+export ZEPHYR_EXTRA_MODULES=${ZEPHYR_EXTRA_MODULES:-$ZPRJ/greybus-for-zephyr}
 
 # MSP430
 cd $SWDIR/usb_uart_bridge
@@ -13,19 +15,21 @@ make
 cd $ZEPHYR_BASE
 
 ## 802.15.4 SubG
-west build -p always -b cc1352r1_launchxl samples/subsys/greybus/net -d build/greybus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
+west build -p always -b cc1352r1_launchxl $ZPRJ/greybus-for-zephyr/samples/subsys/greybus/net -d build/greybus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y
 
-west build -p always -b beagleconnect_freedom -d $ZEPHYR_BASE/build/wpanusb_beagleconnect $ZEPHYR_BASE/../wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
+west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr/samples/subsys/greybus/net -d build/greybus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_DEV_NAME=\"IEEE802154_1\" -DCONFIG_IEEE802154_CC13XX_CC26XX=n -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ=y -DBOARD_ROOT=$ZPRJ/wpanusb_bc
 
-west build -p always -b beagleconnect_freedom -d $ZEPHYR_BASE/build/sensortest_beagleconnect $ZEPHYR_BASE/../bcf_sensortest -- -DOVERLAY_CONFIG=overlay-subghz.conf -DBOARD_ROOT=$ZEPHYR_BASE/../wpanusb_bc
+west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf -DBOARD_ROOT=$ZPRJ/wpanusb_bc
+
+west build -p always -b beagleconnect_freedom $ZPRJ/bcf_sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf -DBOARD_ROOT=$ZPRJ/wpanusb_bc
 
 ## 802.15.4 2.4GHz
 
-west build -p always -b cc1352r1_launchxl samples/subsys/greybus/net -d build/greybus_launchpad_2G -- -DCONFIG_IEEE802154_CC13XX_CC26XX=y
+west build -p always -b cc1352r1_launchxl $ZPRJ/greybus-for-zephyr/samples/subsys/greybus/net -d build/greybus_launchpad_2G -- -DCONFIG_IEEE802154_CC13XX_CC26XX=y
 
-west build -p always -b beagleconnect_freedom samples/subsys/greybus/net -d build/greybus_beagleconnect_2G -- -DCONFIG_IEEE802154_CC13XX_CC26XX=y -DBOARD_ROOT=$ZEPHYR_BASE/../wpanusb_bc
+west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr/samples/subsys/greybus/net -d build/greybus_beagleconnect_2G -- -DCONFIG_IEEE802154_CC13XX_CC26XX=y -DBOARD_ROOT=$ZPRJ/wpanusb_bc
 
-west build -p always -b beagleconnect_freedom -d $ZEPHYR_BASE/build/wpanusb_beagleconnect_2G $ZEPHYR_BASE/../wpanusb_bc
+west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/wpanusb_beagleconnect_2G -DBOARD_ROOT=$ZPRJ/wpanusb_bc
 
-west build -p always -b beagleconnect_freedom -d $ZEPHYR_BASE/build/sensortest_beagleconnect_2G $ZEPHYR_BASE/../bcf_sensortest -- -DBOARD_ROOT=$ZEPHYR_BASE/../wpanusb_bc
+west build -p always -b beagleconnect_freedom $ZPRJ/bcf_sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect_2G -DBOARD_ROOT=$ZPRJ/wpanusb_bc
 
