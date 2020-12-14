@@ -29,7 +29,7 @@ if [ ! -d ~/zephyr-sdk-0.11.4 ]; then
   #pip3 install --user -r scripts/requirements.txt
 fi
 
-# Buildroot
+# Buildroot and gateway
 sudo apt install -y sed make binutils build-essential \
   gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc \
   wget \
@@ -37,4 +37,5 @@ sudo apt install -y sed make binutils build-essential \
   git cvs rsync subversion \
   asciidoc \
   ccache
-
+sudo apt install -y wpan-tools
+# install wpanusb driver from sw/linux/wpanusb
