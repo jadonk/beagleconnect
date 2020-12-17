@@ -56,20 +56,20 @@ static const char *device_labels[NUM_DEVICES] = {
 	[LED_SUBG] = DT_LABEL(DT_ALIAS(led0)),
 	[LED_24G] = DT_LABEL(DT_ALIAS(led1)),
 	[BUTTON] = DT_LABEL(DT_ALIAS(sw0)),
-	[LIGHT] = "OPT3001-LIGHT",
-	[ACCEL] = "LIS2DE12-ACCEL",
-	[HUMIDITY] = "HDC2010-HUMIDITY",
-	[ENVIRONMENT] = "BME680-ENVIRONMENT",
+	[LIGHT] = "LIGHT",
+	[ACCEL] = "ACCEL",
+	[HUMIDITY] = "HUMIDITY",
+	[ENVIRONMENT] = "ENVIRONMENT",
 };
 
 static const char *device_names[NUM_DEVICES] = {
 	[LED_SUBG] = DT_GPIO_LABEL(DT_ALIAS(led1), gpios),
 	[LED_24G] = DT_GPIO_LABEL(DT_ALIAS(led0), gpios),
 	[BUTTON] = DT_GPIO_LABEL(DT_ALIAS(sw0), gpios),
-	[LIGHT] = "LIGHT",
-	[ACCEL] = "ACCEL",
-	[HUMIDITY] = "HUMIDITY",
-	[ENVIRONMENT] = "ENVIRONMENT",
+	[LIGHT] = "OPT3001-LIGHT",
+	[ACCEL] = "LIS2DE12-ACCEL",
+	[HUMIDITY] = "HDC2010-HUMIDITY",
+	[ENVIRONMENT] = "BME680-ENVIRONMENT",
 };
 
 static const uint8_t device_pins[NUM_DEVICES] = {
@@ -160,7 +160,7 @@ static void print_sensor_value(size_t idx, const char *chan,
 		val->val1 = -val->val1;
 	}
 
-	LOG_INF("%s: %s%c%d.%06d", device_names[idx], chan, neg, val->val1, val->val2);
+	LOG_INF("%s: %s%c%d.%06d", device_labels[idx], chan, neg, val->val1, val->val2);
 	snprintf(str, 20, "%d%c:%c%d.%02d;", idx, chan[0], neg, val->val1, val->val2);
 	if (MAX_STR_LEN < strlen(str) + strlen(outstr)) {
 		strcat(outstr, str);
