@@ -56,20 +56,20 @@ static const char *device_labels[NUM_DEVICES] = {
 	[LED_SUBG] = DT_LABEL(DT_ALIAS(led0)),
 	[LED_24G] = DT_LABEL(DT_ALIAS(led1)),
 	[BUTTON] = DT_LABEL(DT_ALIAS(sw0)),
-	[LIGHT] = DT_LABEL(DT_ALIAS(sensor0)),
-	[ACCEL] = DT_LABEL(DT_ALIAS(sensor1)),
-	[HUMIDITY] = DT_LABEL(DT_ALIAS(sensor2)),
-	[ENVIRONMENT] = DT_LABEL(DT_ALIAS(click1)),
+	[LIGHT] = "OPT3001-LIGHT",
+	[ACCEL] = "LIS2DE12-ACCEL",
+	[HUMIDITY] = "HDC2010-HUMIDITY",
+	[ENVIRONMENT] = "BME680-ENVIRONMENT",
 };
 
 static const char *device_names[NUM_DEVICES] = {
 	[LED_SUBG] = DT_GPIO_LABEL(DT_ALIAS(led1), gpios),
 	[LED_24G] = DT_GPIO_LABEL(DT_ALIAS(led0), gpios),
 	[BUTTON] = DT_GPIO_LABEL(DT_ALIAS(sw0), gpios),
-	[LIGHT] = DT_LABEL(DT_ALIAS(sensor0)),
-	[ACCEL] = DT_LABEL(DT_ALIAS(sensor1)),
-	[HUMIDITY] = DT_LABEL(DT_ALIAS(sensor2)),
-	[ENVIRONMENT] = DT_LABEL(DT_ALIAS(click1)),
+	[LIGHT] = "LIGHT",
+	[ACCEL] = "ACCEL",
+	[HUMIDITY] = "HUMIDITY",
+	[ENVIRONMENT] = "ENVIRONMENT",
 };
 
 static const uint8_t device_pins[NUM_DEVICES] = {
@@ -80,8 +80,10 @@ static const uint8_t device_pins[NUM_DEVICES] = {
 
 static const enum api apis[NUM_DEVICES] = {
 	LED_API,    LED_API,    BUTTON_API,
-	SENSOR_API, SENSOR_API, SENSOR_API,
-	SENSOR_API
+	SENSOR_API,
+	SENSOR_API,
+	SENSOR_API,
+	SENSOR_API,
 };
 
 static struct device *devices[NUM_DEVICES];

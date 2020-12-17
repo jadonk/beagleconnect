@@ -4,18 +4,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-/ {
-	aliases {
-		click1 = &environment;
-	};
-};
-
 &i2c0 {
 	// Grove module defaults to 0x76
 	// Environment Click defaults to 0x76
 	environment: bme680@77 {
 		compatible = "bosch,bme680";
 		reg = <0x77>;
-		label = "BME680";
+		label = "BME680-ENVIRONMENT";
 	};
 };
