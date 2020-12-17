@@ -178,7 +178,7 @@ static void sensor_work_handler(struct k_work *work)
 			continue;
 		}
 
-		if (devices[i] < 0) {
+		if (devices[i] == NULL) {
 			continue;
 		}
 
