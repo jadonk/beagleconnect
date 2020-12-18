@@ -21,7 +21,7 @@
 
 #define LOG_LEVEL LOG_LEVEL_INF
 #include <logging/log.h>
-LOG_MODULE_REGISTER(beagleconnect_freedom);
+LOG_MODULE_REGISTER(sensortest);
 
 #define BLINK_MS 500
 
@@ -145,7 +145,6 @@ static void print_sensor_value(size_t idx, const char *chan,
 			       struct sensor_value *val)
 {
 	char neg = ' ';
-	char str[20];
 
 	/* see sensor.h */
 	if (val->val1 < 0 && val->val2 < 0) {
@@ -161,10 +160,7 @@ static void print_sensor_value(size_t idx, const char *chan,
 	}
 
 	LOG_INF("%s: %s%c%d.%06d", device_labels[idx], chan, neg, val->val1, val->val2);
-	snprintf(str, 20, "%d%c:%c%d.%02d;", idx, chan[0], neg, val->val1, val->val2);
-	if (MAX_STR_LEN < strlen(str) + strlen(outstr)) {
-		strcat(outstr, str);
-	}
+	sprintf(outstr+strlen(outstr), "%d%c:%c%d.%02d;", idx, chan[0], neg, val->val1, val->val2);
 }
 
 static void sensor_work_handler(struct k_work *work)
@@ -251,6 +247,7 @@ static void button_handler(struct device *port, struct gpio_callback *cb,
 void main(void)
 {
 	int r;
+	outstr[0] = '\0';
 
 	fd = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP);
 	if (fd < 0) {
