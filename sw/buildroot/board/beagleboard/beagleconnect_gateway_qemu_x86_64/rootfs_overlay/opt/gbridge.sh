@@ -17,6 +17,7 @@ sleep 1
 ping6 -I lowpan0 2001:db8::1 -c 5
 sleep 1
 
-#gbridge > /var/log/gbridge
-gbridge
+gbridge > /var/log/gbridge &
 
+sleep 5
+for i in `seq 1 100000`; do gpioset 0 6=1; gpioset 0 6=0; sleep 1; done &
