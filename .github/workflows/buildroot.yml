@@ -33,14 +33,14 @@ jobs:
         id: cache-buildroot
         uses: actions/cache@v2
         with:
-          path: buildroot-2020.11
-          key: buildroot-source-2020-11v01
+          path: buildroot-2020.11.1
+          key: buildroot-source-2020-11v1
 
       - name: Install buildroot
         if: steps.cache-buildroot.outputs.cache-hit != 'true'
         run: |
-          wget "https://buildroot.org/downloads/buildroot-2020.11.tar.gz"
-          tar xzf buildroot-2020.11.tar.gz
+          wget "https://buildroot.org/downloads/buildroot-2020.11.1.tar.gz"
+          tar xzf buildroot-2020.11.1.tar.gz
           mkdir ~/.buildroot-ccache || true
           mkdir ~/downloads || true
 
@@ -70,7 +70,7 @@ jobs:
           export BR2_CCACHE_DIR=~/.buildroot-ccache
           export BR2_DL_DIR=~/downloads
           cd sw/buildroot
-          make -C $GITHUB_WORKSPACE/buildroot-2020.11 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
           make
 
       - uses: actions/upload-artifact@v2
