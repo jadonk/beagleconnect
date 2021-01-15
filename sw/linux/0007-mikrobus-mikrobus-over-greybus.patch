@@ -527,13 +527,10 @@ index df8d88424cb7..f54ceecf2be8 100644
  };
  #define to_gb_bundle(d) container_of(d, struct gb_bundle, dev)
  
-diff --git a/drivers/staging/greybus/gbphy.h b/include/linux/greybus/gbphy.h
-similarity index 70%
-rename from drivers/staging/greybus/gbphy.h
-rename to include/linux/greybus/gbphy.h
+diff --git a/drivers/staging/greybus/gbphy.h b/drivers/staging/greybus/gbphy.h
 index 087928a586fb..cfc23589b2e2 100644
 --- a/drivers/staging/greybus/gbphy.h
-+++ b/include/linux/greybus/gbphy.h
++++ b/drivers/staging/greybus/gbphy.h
 @@ -8,6 +8,63 @@
  #ifndef __GBPHY_H
  #define __GBPHY_H
@@ -611,13 +608,10 @@ index ce4def881e6f..a7d8d40fa300 100644
  };
  #define to_gb_interface(d) container_of(d, struct gb_interface, dev)
  
-diff --git a/drivers/misc/mikrobus/mikrobus_core.h b/include/linux/mikrobus.h
-similarity index 97%
-rename from drivers/misc/mikrobus/mikrobus_core.h
-rename to include/linux/mikrobus.h
+diff --git a/drivers/misc/mikrobus/mikrobus_core.h b/drivers/misc/mikrobus/mikrobus_core.h
 index ef7ddce660cb..4999ac70e566 100644
 --- a/drivers/misc/mikrobus/mikrobus_core.h
-+++ b/include/linux/mikrobus.h
++++ b/drivers/misc/mikrobus/mikrobus_core.h
 @@ -18,11 +18,13 @@
  #include <linux/spi/spi.h>
  #include <linux/serdev.h>
