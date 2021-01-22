@@ -624,56 +624,24 @@ F 13 "YAGEO" H 9225 6600 50  0001 C CNN "Vendor2"
 	1    9225 6600
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R R?
-U 1 1 5E6070F0
-P 9225 6700
-AR Path="/5D062750/5E6070F0" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5E6070F0" Ref="R29"  Part="1" 
-F 0 "R29" V 9275 6850 50  0000 L CNN
-F 1 "0" V 9225 6675 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 9155 6700 50  0001 C CNN
-F 3 "~" H 9225 6700 50  0001 C CNN
-F 4 "" H 9225 6700 50  0001 C CNN "Description"
-F 5 "$0.00127" H 9225 6700 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 9275 6525 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 9225 6700 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 9225 6700 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 9225 6700 50  0001 C CNN "Short Description"
-F 10 "301010000" H 9225 6700 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 9225 6700 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 9225 6700 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 9225 6700 50  0001 C CNN "Vendor2"
-	1    9225 6700
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	8875 6600 9075 6600
-Wire Wire Line
-	9600 6600 9600 6700
 Wire Wire Line
 	9375 6600 9600 6600
 $Comp
 L power:GND #PWR?
 U 1 1 5E6183BF
-P 9800 6700
+P 9600 6600
 AR Path="/5E6183BF" Ref="#PWR?"  Part="1" 
 AR Path="/5D062DFA/5E6183BF" Ref="#PWR?"  Part="1" 
 AR Path="/5D1A71BB/5E6183BF" Ref="#PWR022"  Part="1" 
-F 0 "#PWR022" H 9800 6450 50  0001 C CNN
-F 1 "GND" H 9805 6527 50  0000 C CNN
-F 2 "" H 9800 6700 50  0001 C CNN
-F 3 "" H 9800 6700 50  0001 C CNN
-	1    9800 6700
+F 0 "#PWR022" H 9600 6350 50  0001 C CNN
+F 1 "GND" H 9605 6427 50  0000 C CNN
+F 2 "" H 9600 6600 50  0001 C CNN
+F 3 "" H 9600 6600 50  0001 C CNN
+	1    9600 6600
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	8875 6700 9075 6700
-Wire Wire Line
-	9375 6700 9600 6700
-Connection ~ 9600 6700
-Wire Wire Line
-	9600 6700 9800 6700
 Text Label 6650 2275 0    50   ~ 0
 D_P
 Text Label 6650 2075 0    50   ~ 0
@@ -1190,7 +1158,6 @@ NoConn ~ 6475 6300
 NoConn ~ 6475 6400
 NoConn ~ 6475 6800
 NoConn ~ 6475 6900
-NoConn ~ 8875 6800
 NoConn ~ 6475 7200
 NoConn ~ 6475 7300
 Wire Wire Line
@@ -1400,7 +1367,7 @@ F 13 "YAGEO" H 5325 5525 50  0001 C CNN "Vendor2"
 	-1   0    0    1   
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:SZESD9B5.0ST5G-Diode D8
+L Diode:SZESD9B5.0ST5G D8
 U 1 1 5F359C94
 P 6925 2700
 F 0 "D8" V 6925 2779 50  0000 L CNN
@@ -1415,7 +1382,7 @@ F 7 "SEMITEL" H 6925 2700 50  0001 C CNN "Vendor2"
 	0    1    1    0   
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:SZESD9B5.0ST5G-Diode D10
+L Diode:SZESD9B5.0ST5G D10
 U 1 1 5F35C058
 P 7175 2700
 F 0 "D10" V 7175 2779 50  0000 L CNN
@@ -1430,7 +1397,7 @@ F 7 "SEMITEL" H 7175 2700 50  0001 C CNN "Vendor2"
 	0    1    1    0   
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:SZESD9B5.0ST5G-Diode D11
+L Diode:SZESD9B5.0ST5G D11
 U 1 1 5F35CA9C
 P 7425 2700
 F 0 "D11" V 7379 2779 50  0000 L CNN
@@ -1667,11 +1634,9 @@ F 13 "YAGEO" H 2575 6600 50  0001 C CNN "Vendor2"
 	1    0    0    -1  
 $EndComp
 $Comp
-L BeagleConnect-Freedom-rescue:USB_C_Receptacle_USB2.0-Connector P1
+L Connector:USB_C_Receptacle_USB2.0 P1
 U 1 1 5F9D6ACA
 P 5425 2175
-AR Path="/5F9D6ACA" Ref="P1"  Part="1" 
-AR Path="/5D1A71BB/5F9D6ACA" Ref="P1"  Part="1" 
 F 0 "P1" H 5532 3042 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 5532 2951 50  0000 C CNN
 F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 5575 2175 50  0001 C CNN
@@ -1716,4 +1681,12 @@ Wire Wire Line
 	6475 6600 6025 6600
 NoConn ~ 8875 5700
 NoConn ~ 8875 5800
+Text GLabel 9650 6700 2    50   Input ~ 0
+SDA
+Text GLabel 9650 6800 2    50   Input ~ 0
+SCL
+Wire Wire Line
+	8875 6700 9650 6700
+Wire Wire Line
+	8875 6800 9650 6800
 $EndSCHEMATC
