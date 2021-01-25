@@ -76,6 +76,7 @@ away and there wasn't risk of me damaging the family photo album or her ability 
 do her work the next day. I listened and learned from her the basics of programming, but
 it wasn't long before I wanted to take the computer apart. 
 
+==== Getting Started in Electronics
 Exploring http://www.forrestmims.com/[Getting Started in Electronics] satisfied my
 itch for quite a while. Eventually, I got a Commodore 64 and began connecting voice
 synthesizer ICs to it. My interest in computers and electronics flourished into
@@ -85,6 +86,7 @@ Over this time, I've become more and more alarmed with the progress of technolog
 to be clear, I love technology. I love innovation and invention. It is just that some
 things have evolved in a sort of tunnel-vision, without bringing everyone along.
 
+==== But, what about keyboard users?
 As graphical user interfaces and mice took over computers, they rapidly became almost
 unusable by my mom. She typed well, but the dexterity to move a mouse aluded her.
 To satisfy the need to interact with locations on the screen, she adopted using a
@@ -92,6 +94,7 @@ joystick and her productivity came to a crawl. How is it that such assumptions c
 be made impacting *all* computer users without any thoughtful provisions for what
 already worked?
 
+==== Find out more
 Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat
 with me more about this story.
 
