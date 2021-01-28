@@ -28,3 +28,6 @@
 [submodule "sw/zephyrproject/greybus-for-zephyr"]
 	path = sw/zephyrproject/greybus-for-zephyr
 	url = https://github.com/jadonk/greybus-for-zephyr
+[submodule "sw/zephyrproject/greybus-for-zephyr-mikrobus"]
+	path = sw/zephyrproject/greybus-for-zephyr-mikrobus
+	url = https://github.com/vaishnav98/greybus-for-zephyr

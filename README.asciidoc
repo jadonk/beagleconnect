@@ -1436,3 +1436,160 @@ cd ~/beagleconnect/sw/buildroot
 /opt/gbridge.sh
 ----
 
+[[demo-3]]
+== mikroBUS over Greybus demo (Launchpad/SensorTag).
+
+Currently only a limited number of Add-on Board have been tested to work over Greybus. Simple Add-on boards without Interrupt Requirement are the ones that work currently. _BeagleConnect™ Freedom_ Gateway Setup instructions are same as before.
+
+=== Setup
+
+1. Clone or update source
++
+NOTE: If you have already cloned the source, skip this part and go to the second part of this step.
++
+[source,bash]
+----
+cd ~
+git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
+----
++
+NOTE: If you just cloned the source, you don't need to perform this update.
++
+[source,bash]
+----
+cd ~
+git pull --recurse-submodules
+----
++
+2. CC1352 Zephyr toolchain
++
+[source,bash]
+----
+sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
+  ccache dfu-util device-tree-compiler wget \
+  python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
+  make gcc gcc-multilib g++-multilib libsdl2-dev \
+  cmake
+pip3 install --user -U west
+wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run"
+chmod +x zephyr-sdk-0.11.4-setup.run
+./zephyr-sdk-0.11.4-setup.run -- -d ~/zephyr-sdk-0.11.4
+export PATH=~/.local/bin:"$PATH"
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.4
+export USE_CCACHE=1
+cd ~/beagleconnect/sw/zephyrproject/zephyr
+west update
+west zephyr-export
+pip3 install --user -r scripts/requirements.txt
+----
++
+3. Linux gateway via buildroot
++
+[source,bash]
+----
+cd
+wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
+tar xzf buildroot-2020.08.tar.gz
+cd ~/beagleconnect/sw/buildroot
+make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+----
+
+=== Building
+
+1.CC1352 Firmware
++
+[source,bash]
+----
+cd ~/beagleconnect/sw
+./build-firmware.sh
+----
++
+2. Buildroot
++
+[source,bash]
+----
+cd ~/beagleconnect/sw/buildroot
+make
+----
+
+=== Flashing
+
+==== Node
+
+1. Connect _CC1352R1 Launchpad_ via USB.
++
+2. Flash _CC1352R1 Launchpad_ using `west`.
++
+[source,bash]
+----
+cd ~/beagleconnect/sw/zephyrproject/zephyr
+west flash -d build/greybus_mikrobus_sensortag_2G
+----
+
+=== Run
+
+1. Disconnect and reconnect _BeagleConnect™ Freedom_.
++
+2. Start emulator.
++
+[source,bash]
+----
+cd ~/beagleconnect/sw/buildroot
+./run
+----
++
+4. Login using username `root` and password `tempppwd`.
+5. Start gbridge.
++
+[source,bash]
+----
+/opt/gbridge.sh > /dev/null 2>&1 &
+----
+/var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages (by default the example is for Air Quality 2 Click and Weather Click):
+```
+greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
+greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
+greybus 1-2.2: excess descriptors in interface manifest
+mikrobus:mikrobus_port_gb_register: mikrobus gb_probe , num cports= 3, manifest_size 252
+mikrobus:mikrobus_port_gb_register: protocol added 11
+mikrobus:mikrobus_port_gb_register: protocol added 3
+mikrobus:mikrobus_port_gb_register: protocol added 2
+mikrobus:mikrobus_port_register: registering port mikrobus-0
+mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 1, driver=bme280, protocol=3, reg=76
+mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 2, driver=ams-iaq-core, protocol=3, reg=5a
+mikrobus_manifest:mikrobus_manifest_parse:  Greybus Service Sample Application manifest parsed with 2 devices
+mikrobus mikrobus-0: registering device : bme280
+mikrobus mikrobus-0: registering device : ams-iaq-core
+```
+==== Trying for different Clicks
+
+Currently the Click Manifests are selected at compile time(temporarily until Click ID driver is implemented in Zephyr) and the Clicks can be choosen by updating the Kconfig options https://github.com/vaishnav98/greybus-for-zephyr/blob/9f937760960a8303179bff6b9c6fefc9d9622d38/samples/subsys/greybus/net/boards/cc1352r1_launchxl.conf#L14[here] :
+```
+CONFIG_GREYBUS_CLICK_MANIFEST_BUILTIN=y
+CONFIG_GREYBUS_MIKROBUS_CLICK1_NAME="WEATHER-CLICK"
+CONFIG_GREYBUS_MIKROBUS_CLICK2_NAME="AIR-QUALITY-2-CLICK"
+```
+The names of the add-on boards should be specified same as that present in the https://github.com/vaishnav98/manifesto/tree/6b68006f6c62f3d680b947d4a91068be9ff22218/manifests[manifesto/manifests] repository.
+
+==== Describing On-board devices through Zephyr DT
+For MCU Clients like the SensorTag, the on-board fixed devices(like the OPT3001) can be described over the https://github.com/vaishnav98/greybus-for-zephyr/blob/9f937760960a8303179bff6b9c6fefc9d9622d38/samples/subsys/greybus/net/boards/cc1352r_sensortag.overlay#L180[Zephyr Device Tree Overlay] in this manner :
+```
+gbstring3 {
+			label = "GBSTRING_3";
+			status = "okay";
+			compatible = "zephyr,greybus-string";
+			id = <3>;
+			greybus-string = "opt3001";
+	};
+
+gbdevice0 {
+		label = "GBDEVICE_0";
+		status = "okay";
+		compatible = "zephyr,greybus-device";
+		id = <1>;
+		driver-string-id = <&gbstring3>;
+		protocol = <3>;
+		addr = <0x44>;
+	};
+```
