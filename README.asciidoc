@@ -1344,7 +1344,7 @@ pip3 install --user -r scripts/requirements.txt
 [source,bash]
 ----
 cd
-wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
+wget "https://buildroot.org/downloads/buildroot-2020.11.1.tar.gz"
 tar xzf buildroot-2020.08.tar.gz
 cd ~/beagleconnect/sw/buildroot
 make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
@@ -1439,7 +1439,8 @@ cd ~/beagleconnect/sw/buildroot
 [[demo-3]]
 == mikroBUS over Greybus demo (Launchpad/SensorTag).
 
-Currently only a limited number of Add-on Board have been tested to work over Greybus. Simple Add-on boards without Interrupt Requirement are the ones that work currently. _BeagleConnect™ Freedom_ Gateway Setup instructions are same as before.
+Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on boards without interrupt requirement are the ones that work currently. _BeagleConnect™ Freedom_ gateway setup instructions are same as before.
+The example is for Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the device side.
 
 === Setup
 
@@ -1489,7 +1490,7 @@ pip3 install --user -r scripts/requirements.txt
 [source,bash]
 ----
 cd
-wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
+wget "https://buildroot.org/downloads/buildroot-2020.11.1.tar.gz"
 tar xzf buildroot-2020.08.tar.gz
 cd ~/beagleconnect/sw/buildroot
 make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
@@ -1546,7 +1547,7 @@ cd ~/beagleconnect/sw/buildroot
 ----
 /opt/gbridge.sh > /dev/null 2>&1 &
 ----
-/var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages (by default the example is for Air Quality 2 Click and Weather Click):
+/var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages:
 ```
 greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
 greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
@@ -1562,34 +1563,6 @@ mikrobus_manifest:mikrobus_manifest_parse:  Greybus Service Sample Application m
 mikrobus mikrobus-0: registering device : bme280
 mikrobus mikrobus-0: registering device : ams-iaq-core
 ```
-==== Trying for different Clicks
+==== Trying for different add-on boards
 
-Currently the Click Manifests are selected at compile time(temporarily until Click ID driver is implemented in Zephyr) and the Clicks can be choosen by updating the Kconfig options https://github.com/vaishnav98/greybus-for-zephyr/blob/9f937760960a8303179bff6b9c6fefc9d9622d38/samples/subsys/greybus/net/boards/cc1352r1_launchxl.conf#L14[here] :
-```
-CONFIG_GREYBUS_CLICK_MANIFEST_BUILTIN=y
-CONFIG_GREYBUS_MIKROBUS_CLICK1_NAME="WEATHER-CLICK"
-CONFIG_GREYBUS_MIKROBUS_CLICK2_NAME="AIR-QUALITY-2-CLICK"
-```
-The names of the add-on boards should be specified same as that present in the https://github.com/vaishnav98/manifesto/tree/6b68006f6c62f3d680b947d4a91068be9ff22218/manifests[manifesto/manifests] repository.
-
-==== Describing On-board devices through Zephyr DT
-For MCU Clients like the SensorTag, the on-board fixed devices(like the OPT3001) can be described over the https://github.com/vaishnav98/greybus-for-zephyr/blob/9f937760960a8303179bff6b9c6fefc9d9622d38/samples/subsys/greybus/net/boards/cc1352r_sensortag.overlay#L180[Zephyr Device Tree Overlay] in this manner :
-```
-gbstring3 {
-			label = "GBSTRING_3";
-			status = "okay";
-			compatible = "zephyr,greybus-string";
-			id = <3>;
-			greybus-string = "opt3001";
-	};
-
-gbdevice0 {
-		label = "GBDEVICE_0";
-		status = "okay";
-		compatible = "zephyr,greybus-device";
-		id = <1>;
-		driver-string-id = <&gbstring3>;
-		protocol = <3>;
-		addr = <0x44>;
-	};
-```
+See https://github.com/vaishnav98/greybus-for-zephyr/tree/mikrobus#trying-out-different-add-on-boardsdevices-over-mikrobus[mikroBUS over Greybus] for trying out the same example for different mikroBUS add-on boards/ on-board devices.
