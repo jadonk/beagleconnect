@@ -14,3 +14,8 @@ gb-spilib
 gb-uart
 hm3301
 wpanusb
+bmp280_i2c
+st_accel_i2c
+rtc_ds1307
+opt3001
+ams-iaq-core
