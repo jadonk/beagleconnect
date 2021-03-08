@@ -84,13 +84,6 @@ jobs:
         with:
           name: buildroot-host
           path: |
-            sw/buildroot/host
-
-# Disable host tools upload for now due to size
-#      - uses: actions/upload-artifact@v2
-#        with:
-#          name: buildroot-host
-#          path: |
-#            sw/buildroot/run
-#            sw/buildroot/host
+            sw/buildroot/run
+            #sw/buildroot/host
 
