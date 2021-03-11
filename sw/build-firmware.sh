@@ -15,7 +15,7 @@ make
 cd $ZEPHYR_BASE
 
 ## 802.15.4 SubG
-#west build -p always -b cc1352r_sensortag $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_sensortag -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
+west build -p always -b cc1352r_sensortag $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_sensortag -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
 
 west build -p always -b cc1352r1_launchxl $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_launchpad -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
 
@@ -33,7 +33,7 @@ west build -p always -b beagleconnect_freedom $ZPRJ/sensortest -d $ZEPHYR_BASE/b
 
 ## 802.15.4 2.4GHz
 
-#west build -p always -b cc1352r_sensortag $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_sensortag_2G -- -DOVERLAY_CONFIG=overlay-802154.conf
+west build -p always -b cc1352r_sensortag $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_sensortag_2G -- -DOVERLAY_CONFIG=overlay-802154.conf
 
 west build -p always -b cc1352r1_launchxl $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_launchpad_2G -- -DOVERLAY_CONFIG=overlay-802154.conf
 
