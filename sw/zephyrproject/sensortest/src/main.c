@@ -163,6 +163,16 @@ static void print_sensor_value(size_t idx, const char *chan,
 	sprintf(outstr+strlen(outstr), "%d%c:%c%d.%02d;", idx, chan[0], neg, val->val1, val->val2);
 }
 
+static void send_sensor_value()
+{
+	if ((fd >= 0) && (strlen(outstr) > 0))
+		sendto(fd, outstr, strlen(outstr), 0,
+			(const struct sockaddr *) &addr,
+			sizeof(addr));
+
+	outstr[0] = '\0';
+}
+
 static void sensor_work_handler(struct k_work *work)
 {
 	struct sensor_value val;
@@ -183,6 +193,7 @@ static void sensor_work_handler(struct k_work *work)
 		if (i == LIGHT) {
 			sensor_channel_get(devices[i], SENSOR_CHAN_LIGHT, &val);
 			print_sensor_value(i, "l: ", &val);
+			send_sensor_value();
 			continue;
 		}
 
@@ -196,6 +207,7 @@ static void sensor_work_handler(struct k_work *work)
 			sensor_channel_get(devices[i], SENSOR_CHAN_ACCEL_Z,
 					   &val);
 			print_sensor_value(i, "z: ", &val);
+			send_sensor_value();
 			continue;
 		}
 
@@ -206,6 +218,7 @@ static void sensor_work_handler(struct k_work *work)
 			sensor_channel_get(devices[i], SENSOR_CHAN_AMBIENT_TEMP,
 					   &val);
 			print_sensor_value(i, "t: ", &val);
+			send_sensor_value();
 			continue;
 		}
 
@@ -218,13 +231,9 @@ static void sensor_work_handler(struct k_work *work)
 			print_sensor_value(i, "h: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_GAS_RES, &val);
 			print_sensor_value(i, "g: ", &val);
+			send_sensor_value();
 		}
 	}
-
-	if ((fd >= 0) && (strlen(outstr) > 0))
-		sendto(fd, outstr, strlen(outstr), 0,
-			(const struct sockaddr *) &addr,
-			sizeof(addr));
 }
 
 static void button_handler(struct device *port, struct gpio_callback *cb,
