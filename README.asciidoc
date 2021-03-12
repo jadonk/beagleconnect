@@ -45,7 +45,7 @@ The initial _BeagleConnect™ Freedom_ development release will:
 
 
 IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
-to cost roughly US$10.
+to cost initially below US$20 with a roadmap to variants under US$10.
 
 Future releases will be collaborated with the community, evolve
 dynamically, and contain additional functionality. The goal is to
