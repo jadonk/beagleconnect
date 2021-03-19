@@ -1,0 +1,12 @@
+# SGP30 eCO2 and TVOC sensor configuration options
+
+# Copyright (c) 2021 Jason Kridner
+# SPDX-License-Identifier: Apache-2.0
+
+menuconfig SGP30
+	bool "SGP30 sensor"
+	depends on I2C
+	help
+	  Enable driver for SGP30 I2C-based based eCO2 and TVOC sensor.
+
+endif # SGP30

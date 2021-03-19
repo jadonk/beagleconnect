@@ -42,6 +42,7 @@ enum edev {
 	ACCEL,
 	HUMIDITY,
 	ENVIRONMENT,
+	AIRQUALITY,
 	NUM_DEVICES,
 };
 
@@ -60,6 +61,7 @@ static const char *device_labels[NUM_DEVICES] = {
 	[ACCEL] = "ACCEL",
 	[HUMIDITY] = "HUMIDITY",
 	[ENVIRONMENT] = "ENVIRONMENT",
+	[AIRQUALITY] = "AIRQUALITY",
 };
 
 static const char *device_names[NUM_DEVICES] = {
@@ -70,6 +72,7 @@ static const char *device_names[NUM_DEVICES] = {
 	[ACCEL] = "LIS2DE12-ACCEL",
 	[HUMIDITY] = "HDC2010-HUMIDITY",
 	[ENVIRONMENT] = "BME680-ENVIRONMENT",
+	[AIRQUALITY] = "SGP30-AIRQUALITY",
 };
 
 static const uint8_t device_pins[NUM_DEVICES] = {
@@ -80,6 +83,7 @@ static const uint8_t device_pins[NUM_DEVICES] = {
 
 static const enum api apis[NUM_DEVICES] = {
 	LED_API,    LED_API,    BUTTON_API,
+	SENSOR_API,
 	SENSOR_API,
 	SENSOR_API,
 	SENSOR_API,
@@ -231,6 +235,14 @@ static void sensor_work_handler(struct k_work *work)
 			print_sensor_value(i, "h: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_GAS_RES, &val);
 			print_sensor_value(i, "g: ", &val);
+			send_sensor_value();
+		}
+		
+		if (i == AIRQUALITY) {
+			sensor_channel_get(devices[i], SENSOR_CHAN_VOC, &val);
+			print_sensor_value(i, "v: ", &val);
+			sensor_channel_get(devices[i], SENSOR_CHAN_CO2, &val);
+			print_sensor_value(i, "c: ", &val);
 			send_sensor_value();
 		}
 	}
