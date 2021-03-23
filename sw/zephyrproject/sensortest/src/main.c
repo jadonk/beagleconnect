@@ -152,31 +152,25 @@ static void led_work_handler(struct k_work *work)
 static void print_sensor_value(size_t idx, const char *chan,
 			       struct sensor_value *val)
 {
-	char neg = ' ';
+	LOG_INF("%s: %s%d,%d", device_labels[idx], chan, val->val1, val->val2);
 
-	/* see sensor.h */
-	if (val->val1 < 0 && val->val2 < 0) {
-		neg = '-';
-		val->val1 = -val->val1;
-		val->val2 = -val->val2;
-	} else if (val->val1 >= 0 && val->val2 < 0) {
-		neg = '-';
-		val->val2 = -val->val2;
-	} else if (val->val1 < 0 && val->val2 == 0) {
-		neg = '-';
-		val->val1 = -val->val1;
+	sprintf(outstr+strlen(outstr), "%d%c:", idx, chan[0]);
+	sprintf(outstr+strlen(outstr), "%d", val->val1);
+	if (val->val2 != 0) {
+		sprintf(outstr+strlen(outstr), ".%02d;", abs(val->val2) / 10000);
+	} else {
+		sprintf(outstr+strlen(outstr), ";");
 	}
-
-	LOG_INF("%s: %s%c%d.%06d", device_labels[idx], chan, neg, val->val1, val->val2);
-	sprintf(outstr+strlen(outstr), "%d%c:%c%d.%02d;", idx, chan[0], neg, val->val1, val->val2);
 }
 
 static void send_sensor_value()
 {
-	if ((fd >= 0) && (strlen(outstr) > 0))
+	if ((fd >= 0) && (strlen(outstr) > 0)) {
+		//LOG_INF("%s", log_strdup(outstr));
 		sendto(fd, outstr, strlen(outstr), 0,
 			(const struct sockaddr *) &addr,
 			sizeof(addr));
+	}
 
 	outstr[0] = '\0';
 }
@@ -240,6 +234,7 @@ static void sensor_work_handler(struct k_work *work)
 			sensor_channel_get(devices[i], SENSOR_CHAN_GAS_RES, &val);
 			print_sensor_value(i, "g: ", &val);
 			send_sensor_value();
+			continue;
 		}
 		
 		if (i == AIRQUALITY) {
@@ -248,6 +243,7 @@ static void sensor_work_handler(struct k_work *work)
 			sensor_channel_get(devices[i], SENSOR_CHAN_CO2, &val);
 			print_sensor_value(i, "c: ", &val);
 			send_sensor_value();
+			continue;
 		}
 
 		if (i == PARTICULATE) {
@@ -258,6 +254,7 @@ static void sensor_work_handler(struct k_work *work)
 			sensor_channel_get(devices[i], SENSOR_CHAN_PM_10, &val);
 			print_sensor_value(i, "X: ", &val);
 			send_sensor_value();
+			continue;
 		}
 	}
 }

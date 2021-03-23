@@ -13,13 +13,11 @@
 		label = "BME680-ENVIRONMENT";
 	};
 
-	/*
 	airquality: sgp30@58 {
 		compatible = "sensiron,sgp30";
 		reg = <0x58>;
 		label = "SGP30-AIRQUALITY";
 	};
-	*/
 
 	particulate: hm3301@40 {
 		compatible = "seeed,hm3301";
