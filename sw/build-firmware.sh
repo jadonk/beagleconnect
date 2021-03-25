@@ -10,7 +10,8 @@ export ZEPHYR_EXTRA_MODULES=${ZEPHYR_EXTRA_MODULES:-"$ZPRJ/greybus-for-zephyr-mi
 
 # MSP430
 cd $SWDIR/usb_uart_bridge
-#make
+make clean
+make
 
 # CC1352
 cd $ZEPHYR_BASE
