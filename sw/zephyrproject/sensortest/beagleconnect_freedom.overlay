@@ -7,9 +7,9 @@
 &i2c0 {
 	// Grove module defaults to 0x76
 	// Environment Click defaults to 0x76
-	environment: bme680@77 {
+	environment: bme680@76 {
 		compatible = "bosch,bme680";
-		reg = <0x77>;
+		reg = <0x76>;
 		label = "BME680-ENVIRONMENT";
 	};
 
