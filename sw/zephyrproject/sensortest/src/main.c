@@ -269,7 +269,8 @@ static void button_handler(struct device *port, struct gpio_callback *cb,
 
 	if ((mask & cb->pin_mask) != 0) {
 		if ((mask & pins) != 0) {
-			LOG_INF("%s event", device_labels[BUTTON]);
+			/* BEL (7) triggers BEEP on MSP430 */
+			LOG_INF("%c%s event", 7, device_labels[BUTTON]);
 			/* print sensor readings */
 			k_work_submit(&sensor_work);
 		}
