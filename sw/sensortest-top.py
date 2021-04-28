@@ -2,7 +2,7 @@
 import socket
 import sys
 import struct
-import time
+import datetime
 import curses
 import operator
 
@@ -18,13 +18,16 @@ node = {}
 def main(stdscr):
   while True:
     data, sender = sock.recvfrom(1024)
-    node[sender[0]] = time.time()
+    node[sender[0]] = datetime.datetime.now()
     stdscr.clear()
     s_node = sorted(node.items(), key=operator.itemgetter(1), reverse=True)
+    n = datetime.datetime.now()
     for i in xrange(len(s_node)):
-      t = "%3d - %s" % (i+1, str(s_node[i][0]))
+      s = "%3d - %s" % (i+1, str(s_node[i][0]))
+      t = str((n - s_node[i][1]).total_seconds())
       #print(t)
-      stdscr.addstr(i, 0, t)
+      stdscr.addstr(i, 0, s)
+      stdscr.addstr(i, 40, t)
     stdscr.refresh()
 
 curses.wrapper(main)
