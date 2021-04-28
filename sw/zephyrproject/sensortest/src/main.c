@@ -18,6 +18,7 @@
 #include <net/net_ip.h>
 #include <net/socket.h>
 #include <sys/util.h>
+#include <random/rand32.h>
 
 #define LOG_LEVEL LOG_LEVEL_INF
 #include <logging/log.h>
