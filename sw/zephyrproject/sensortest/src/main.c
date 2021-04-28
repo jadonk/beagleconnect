@@ -144,6 +144,9 @@ static void led_work_handler(struct k_work *work)
 		sensor_read_count--;
 		if (sensor_read_count <= 0) {
 			sensor_read_count = TIMED_SENSOR_READ;
+			if(TIMED_SENSOR_READ > 0)
+				sensor_read_count +=
+				       	sys_rand32_get() % TIMED_SENSOR_READ;
 			k_work_submit(&sensor_work);
 		}
 	}
