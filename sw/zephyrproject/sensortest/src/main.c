@@ -182,6 +182,7 @@ static void send_sensor_value()
 static void sensor_work_handler(struct k_work *work)
 {
 	struct sensor_value val;
+	struct sensor_value th[2] = {{0,0}, {0,0}}; /* calibration data for SGP30 */
 
 	outstr[0] = '\0';
 
@@ -230,10 +231,14 @@ static void sensor_work_handler(struct k_work *work)
 
 		if (i == ENVIRONMENT) {
 			sensor_channel_get(devices[i], SENSOR_CHAN_AMBIENT_TEMP, &val);
+			th[0].val1 = val.val1;
+			th[0].val2 = val.val2;
 			print_sensor_value(i, "t: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_PRESS, &val);
 			print_sensor_value(i, "p: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_HUMIDITY, &val);
+			th[1].val1 = val.val1;
+			th[1].val2 = val.val2;
 			print_sensor_value(i, "h: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_GAS_RES, &val);
 			print_sensor_value(i, "g: ", &val);
@@ -246,6 +251,10 @@ static void sensor_work_handler(struct k_work *work)
 			print_sensor_value(i, "v: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_CO2, &val);
 			print_sensor_value(i, "c: ", &val);
+			if(th[0].val1 != 0) {
+				sensor_attr_set(devices[i], SENSOR_CHAN_VOC,
+					SENSOR_ATTR_CALIB_TARGET, &th[0]);
+			}
 			send_sensor_value();
 			continue;
 		}
