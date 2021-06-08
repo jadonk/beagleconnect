@@ -27,5 +27,5 @@
 };
 
 &humidity {
-	status = "disabled";
+	//status = "disabled";
 };

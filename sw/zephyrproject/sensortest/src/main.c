@@ -41,7 +41,7 @@ enum edev {
 	BUTTON,
 	LIGHT,
 	ACCEL,
-	//HUMIDITY,
+	HUMIDITY,
 	ENVIRONMENT,
 	AIRQUALITY,
 	PARTICULATE,
@@ -61,7 +61,7 @@ static const char *device_labels[NUM_DEVICES] = {
 	[BUTTON] = DT_LABEL(DT_ALIAS(sw0)),
 	[LIGHT] = "LIGHT",
 	[ACCEL] = "ACCEL",
-	//[HUMIDITY] = "HUMIDITY",
+	[HUMIDITY] = "HUMIDITY",
 	[ENVIRONMENT] = "ENVIRONMENT",
 	[AIRQUALITY] = "AIRQUALITY",
 	[PARTICULATE] = "PARTICULATE",
@@ -73,7 +73,7 @@ static const char *device_names[NUM_DEVICES] = {
 	[BUTTON] = DT_GPIO_LABEL(DT_ALIAS(sw0), gpios),
 	[LIGHT] = "OPT3001-LIGHT",
 	[ACCEL] = "LIS2DE12-ACCEL",
-	//[HUMIDITY] = "HDC2010-HUMIDITY",
+	[HUMIDITY] = "HDC2010-HUMIDITY",
 	[ENVIRONMENT] = "BME680-ENVIRONMENT",
 	[AIRQUALITY] = "SGP30-AIRQUALITY",
 	[PARTICULATE] = "HM3301-PARTICULATE",
@@ -89,7 +89,7 @@ static const enum api apis[NUM_DEVICES] = {
 	LED_API,    LED_API,    BUTTON_API,
 	SENSOR_API, /* LIGHT */
 	SENSOR_API, /* ACCEL */
-	//SENSOR_API, /* HUMIDITY */
+	SENSOR_API, /* HUMIDITY */
 	SENSOR_API, /* ENVIRONMENT */
 	SENSOR_API, /* AIRQUALITY */
 	SENSOR_API, /* PARTICULATE */
@@ -218,7 +218,6 @@ static void sensor_work_handler(struct k_work *work)
 			continue;
 		}
 
-		/*
 		if (i == HUMIDITY) {
 			sensor_channel_get(devices[i], SENSOR_CHAN_HUMIDITY,
 					   &val);
@@ -229,7 +228,6 @@ static void sensor_work_handler(struct k_work *work)
 			send_sensor_value();
 			continue;
 		}
-		*/
 
 		if (i == ENVIRONMENT) {
 			sensor_channel_get(devices[i], SENSOR_CHAN_AMBIENT_TEMP, &val);
@@ -253,12 +251,10 @@ static void sensor_work_handler(struct k_work *work)
 			print_sensor_value(i, "v: ", &val);
 			sensor_channel_get(devices[i], SENSOR_CHAN_CO2, &val);
 			print_sensor_value(i, "c: ", &val);
-			/*
 			if(th[0].val1 != 0) {
 				sensor_attr_set(devices[i], SENSOR_CHAN_VOC,
 					SENSOR_ATTR_CALIB_TARGET, &th[0]);
 			}
-			*/
 			send_sensor_value();
 			continue;
 		}
