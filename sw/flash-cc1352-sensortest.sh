@@ -9,6 +9,6 @@ export ZEPHYR_BASE=${ZEPHYR_BASE:-$SWDIR/zephyrproject/zephyr}
 
 echo Make sure to use the correct ttyACMx...
 lsusb | grep 2047:0aa5
-west flash -d $ZEPHYR_BASE/$PROJECT $PORT
+west -v flash -d $ZEPHYR_BASE/$PROJECT $PORT
 
 
