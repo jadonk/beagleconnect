@@ -31,3 +31,6 @@
 [submodule "sw/zephyrproject/greybus-for-zephyr-mikrobus"]
 	path = sw/zephyrproject/greybus-for-zephyr-mikrobus
 	url = https://github.com/jadonk/greybus-for-zephyr
+[submodule "sw/zephyrproject/mikrobus-clickid-flasher"]
+	path = sw/zephyrproject/mikrobus-clickid-flasher
+	url = https://github.com/vaishnav98/mikrobus-clickid-flasher.git
