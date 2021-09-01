@@ -1,0 +1,11 @@
+#!/bin/sh
+
+. /etc/sysconfig/functions
+
+if [[ $(lsusb | grep -c "2047:0aa5") -eq "0" ]]; 
+then
+  boot_mesg -n "BeagleConnect Freedom wpanusb device not found"
+  exit 1
+fi
+
+/opt/gbridge.sh &
