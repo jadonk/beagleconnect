@@ -69,29 +69,30 @@ jobs:
           export BR2_CCACHE_DIR=~/.buildroot-ccache
           export BR2_DL_DIR=~/downloads
           cd sw/buildroot
-          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_pocketbeagle_defconfig
+          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD/pb BR2_EXTERNAL=$PWD beagleconnect_gateway_pocketbeagle_defconfig
+          cd pb
           make
 
       - uses: actions/upload-artifact@v2
         with:
           name: pocketbeagle-target
           path: |
-            sw/buildroot/images
-            sw/buildroot/run
+            sw/buildroot/pb/images
 
       - name: Build qemu image
         run: |
           export BR2_CCACHE_DIR=~/.buildroot-ccache
           export BR2_DL_DIR=~/downloads
           cd sw/buildroot
-          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD/qemu BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          cd qemu
           make
 
       - uses: actions/upload-artifact@v2
         with:
           name: qemu-target
           path: |
-            sw/buildroot/images
+            sw/buildroot/qemu/images
             sw/buildroot/run
 
       - uses: actions/upload-artifact@v2
