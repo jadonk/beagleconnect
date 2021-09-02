@@ -20,11 +20,15 @@ sudo apt install -y sed make binutils build-essential \
 
 ```
 cd /tmp
-wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
-tar xzf buildroot-2020.08.tar.gz
+wget "https://buildroot.org/downloads/buildroot-2020.11.tar.gz"
+tar xzf buildroot-2020.11.tar.gz
 cd /tmp/beagleconnect/sw/buildroot
-make -C /tmp/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
-make
+make -C /tmp/buildroot-2020.11 O=$PWD/qemu BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+cd qemu && make
+cd ..
+make -C /tmp/buildroot-2020.11 O=$PWD/pb BR2_EXTERNAL=$PWD beagleconnect_gateway_pocketbeagle_defconfig
+cd pb && make
+cd ..
 ```
 
 ## Running
