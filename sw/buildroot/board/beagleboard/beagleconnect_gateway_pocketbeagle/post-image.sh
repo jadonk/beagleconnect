@@ -4,7 +4,7 @@
 BOARD_DIR="$(dirname $0)"
 
 # copy the uEnv.txt to the output/images directory
-cp board/pocketbeagle/uEnv.txt $BINARIES_DIR/uEnv.txt
+cp $BOARD_DIR/uEnv.txt $BINARIES_DIR/uEnv.txt
 
 GENIMAGE_CFG="${BOARD_DIR}/genimage.cfg"
 GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
