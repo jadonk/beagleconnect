@@ -352,7 +352,7 @@ void main(void)
 	}
 
 	/* setup timer-driven LED event */
-	led_work.dwork.work.handler = led_work_handler;
+	k_delayed_work_init(&led_work.dwork, led_work_handler);
 	led_work.active_led = LED_SUBG;
 	r = k_delayed_work_submit(&led_work.dwork, K_MSEC(BLINK_MS));
 	__ASSERT(r == 0, "k_delayed_work_submit() failed for LED %u work: %d",
