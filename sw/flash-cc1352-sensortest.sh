@@ -8,7 +8,7 @@ export ZEPHYR_SDK_INSTALL_DIR=${ZEPHYR_SDK_INSTALL_DIR:-~/zephyr-sdk-0.11.4}
 export ZEPHYR_BASE=${ZEPHYR_BASE:-$SWDIR/zephyrproject/zephyr}
 
 echo Make sure to use the correct ttyACMx...
-#lsusb | grep 2047:0aa5
-west -v flash -d $ZEPHYR_BASE/$PROJECT -V -p $PORT
-
+lsusb | grep 2047:0aa5
+#west -v flash -d $ZEPHYR_BASE/$PROJECT -V -p $PORT
+./cc2538-bsl.py $ZEPHYR_BASE/$PROJECT $PORT
 
