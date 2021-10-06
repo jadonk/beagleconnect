@@ -104,9 +104,9 @@ static void led_work_handler(struct k_work *work)
 	ARG_UNUSED(work);
 
 	int r;
+	/*
 	uint8_t prev_led;
 
-	/*
 	LOG_DBG("%s(): active_led: %u", __func__, led_work.active_led);
 
 	if (led_work.active_led == LED_SUBG) {
@@ -297,6 +297,12 @@ void main(void)
 		addr.sin6_port = htons(9999);
 		inet_pton(AF_INET6, "ff02::1", &addr.sin6_addr);
 	}
+
+	/* Force I2C_CTRL to HIGH */
+	const struct device *i2c_ctrl_dev;
+	i2c_ctrl_dev = device_get_binding(DT_GPIO_LABEL(DT_NODELABEL(i2c_ctrl), gpios));
+	r = gpio_pin_configure(i2c_ctrl_dev, DT_GPIO_PIN(DT_NODELABEL(i2c_ctrl), gpios),
+			DT_GPIO_FLAGS(DT_NODELABEL(i2c_ctrl), gpios) | GPIO_OUTPUT_HIGH);
 
 	for (size_t i = 0; i < NUM_DEVICES; ++i) {
 		LOG_INF("opening device %s", device_labels[i]);
