@@ -30,14 +30,11 @@ LOG_MODULE_REGISTER(sensortest);
 static char outstr[MAX_STR_LEN];
 
 enum api {
-	LED_API,
 	BUTTON_API,
 	SENSOR_API,
 };
 
 enum edev {
-	LED_24G,
-	LED_SUBG,
 	BUTTON,
 	LIGHT,
 	ACCEL,
@@ -56,8 +53,6 @@ struct led_work {
 static void sensor_work_handler(struct k_work *work);
 
 static const char *device_labels[NUM_DEVICES] = {
-	[LED_SUBG] = DT_LABEL(DT_ALIAS(led0)),
-	[LED_24G] = DT_LABEL(DT_ALIAS(led1)),
 	[BUTTON] = DT_LABEL(DT_ALIAS(sw0)),
 	[LIGHT] = "LIGHT",
 	[ACCEL] = "ACCEL",
@@ -68,8 +63,6 @@ static const char *device_labels[NUM_DEVICES] = {
 };
 
 static const char *device_names[NUM_DEVICES] = {
-	[LED_SUBG] = DT_GPIO_LABEL(DT_ALIAS(led1), gpios),
-	[LED_24G] = DT_GPIO_LABEL(DT_ALIAS(led0), gpios),
 	[BUTTON] = DT_GPIO_LABEL(DT_ALIAS(sw0), gpios),
 	[LIGHT] = "OPT3001-LIGHT",
 	[ACCEL] = "LIS2DE12-ACCEL",
@@ -80,13 +73,11 @@ static const char *device_names[NUM_DEVICES] = {
 };
 
 static const uint8_t device_pins[NUM_DEVICES] = {
-	[LED_SUBG] = DT_GPIO_PIN(DT_ALIAS(led0), gpios),
-	[LED_24G] = DT_GPIO_PIN(DT_ALIAS(led1), gpios),
 	[BUTTON] = DT_GPIO_PIN(DT_ALIAS(sw0), gpios),
 };
 
 static const enum api apis[NUM_DEVICES] = {
-	LED_API,    LED_API,    BUTTON_API,
+	BUTTON_API,
 	SENSOR_API, /* LIGHT */
 	SENSOR_API, /* ACCEL */
 	SENSOR_API, /* HUMIDITY */
@@ -115,6 +106,7 @@ static void led_work_handler(struct k_work *work)
 	int r;
 	uint8_t prev_led;
 
+	/*
 	LOG_DBG("%s(): active_led: %u", __func__, led_work.active_led);
 
 	if (led_work.active_led == LED_SUBG) {
@@ -140,6 +132,7 @@ static void led_work_handler(struct k_work *work)
 	r = k_delayed_work_submit(&led_work.dwork, K_MSEC(BLINK_MS));
 	__ASSERT(r == 0, "k_delayed_work_submit() failed for LED %u work: %d",
 		 led_work.active_led, r);
+	*/
 
 	if (sensor_read_count > 0) {
 		sensor_read_count--;
@@ -316,6 +309,7 @@ void main(void)
 
 		/* per-device setup */
 		switch (apis[i]) {
+		/*
 		case LED_API:
 			r = gpio_pin_configure(devices[i], device_pins[i],
 					       GPIO_OUTPUT_LOW);
@@ -324,6 +318,7 @@ void main(void)
 				 device_labels[i], device_pins[i],
 				 GPIO_OUTPUT_LOW, r);
 			break;
+		*/
 		case BUTTON_API:
 			r = gpio_pin_configure(
 				devices[i], device_pins[i],
@@ -353,7 +348,7 @@ void main(void)
 
 	/* setup timer-driven LED event */
 	k_delayed_work_init(&led_work.dwork, led_work_handler);
-	led_work.active_led = LED_SUBG;
+	//led_work.active_led = LED_SUBG;
 	r = k_delayed_work_submit(&led_work.dwork, K_MSEC(BLINK_MS));
 	__ASSERT(r == 0, "k_delayed_work_submit() failed for LED %u work: %d",
 		 LED_SUBG, r);
