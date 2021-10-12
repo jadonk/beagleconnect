@@ -24,6 +24,25 @@
 		reg = <0x40>;
 		label = "HM3301-PARTICULATE";
 	};
+
+	//0x48,0x49,0x4b
+	adc0: ads1115_0@48 {
+		compatible = "ti,ads1115";
+		reg = <0x48>;
+		label = "ADS-ADC0";
+	};
+
+	adc1: ads1115_1@49 {
+		compatible = "ti,ads1115";
+		reg = <0x49>;
+		label = "ADS-ADC1";
+	};
+
+	adc2: ads1115_2@4b {
+		compatible = "ti,ads1115";
+		reg = <0x4b>;
+		label = "ADS-ADC2";
+	};
 };
 
 &humidity {
