@@ -103,8 +103,8 @@ static void led_work_handler(struct k_work *work)
 {
 	ARG_UNUSED(work);
 
-	int r;
 	/*
+	int r;
 	uint8_t prev_led;
 
 	LOG_DBG("%s(): active_led: %u", __func__, led_work.active_led);
