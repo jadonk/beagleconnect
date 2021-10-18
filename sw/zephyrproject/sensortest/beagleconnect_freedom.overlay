@@ -26,21 +26,21 @@
 	};
 
 	//0x48,0x49,0x4b
-	adccollector0: ads1115_0@48 {
+	adccollector0: ads1115@48 {
 		compatible = "ti,ads1115";
 		reg = <0x48>;
-		label = "ADS-ADC-COLLTOR-0";
+		label = "ADS1115-ADC-0";
 	};
 
-	adccollector1: ads1115_1@49 {
+	adccollector1: ads1115@49 {
 		compatible = "ti,ads1115";
 		reg = <0x49>;
-		label = "ADS-ADC-COLLTOR-1";
+		label = "ADS1115-ADC-1";
 	};
 
-	adccollector2: ads1115_2@4b {
+	adccollector2: ads1115@4b {
 		compatible = "ti,ads1115";
 		reg = <0x4b>;
-		label = "ADS-ADC-COLLTOR-2";
+		label = "ADS1115-ADC-2";
 	};
 };
