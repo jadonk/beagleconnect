@@ -44,7 +44,3 @@
 		label = "ADS-ADC2";
 	};
 };
-
-&humidity {
-	//status = "disabled";
-};

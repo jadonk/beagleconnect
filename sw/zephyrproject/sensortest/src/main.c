@@ -146,6 +146,14 @@ static void led_work_handler(struct k_work *work)
 	}
 }
 
+/* Sampling frequency: 200Hz, 5ms
+ * Sample window: 16 samples, 80ms, 12.5Hz
+ * Data window: 32 RMS samples, 2.5s of data
+ */
+static void adc_work_handler(struct k_work *work)
+{
+}
+
 static void print_sensor_value(size_t idx, const char *chan,
 			       struct sensor_value *val)
 {
