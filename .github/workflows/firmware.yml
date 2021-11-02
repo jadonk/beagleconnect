@@ -110,6 +110,7 @@ jobs:
           name: zephyr
           path: |
             sw/zephyrproject/zephyr/build
+            sw/cc2538-bsl.py
 
       - uses: actions/upload-artifact@v2
         with:
