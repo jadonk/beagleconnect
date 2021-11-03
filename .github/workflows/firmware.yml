@@ -107,10 +107,9 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: zephyr
+          name: bcf-firmware-bin
           path: |
-            sw/zephyrproject/zephyr/build
-            sw/cc2538-bsl.py
+            sw/bcf-zephyr-fw/*
 
       - uses: actions/upload-artifact@v2
         with:

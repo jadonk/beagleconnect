@@ -1120,7 +1120,9 @@ if __name__ == "__main__":
     # print("RUN CC2535-BSL!")
     # print(sys.argv[1:])
     port = None
-    file = sys.argv[1] + '/zephyr/zephyr.bin'
+    file = sys.argv[1]
+    if not sys.argv[1].endswith(".bin"):
+        file += '/zephyr/zephyr.bin'
     if len(sys.argv) > 2:
         port = sys.argv[2]
     main(file, port)
