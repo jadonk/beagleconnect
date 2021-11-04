@@ -117,3 +117,18 @@ jobs:
           path: |
             sw/usb_uart_bridge/usb_uart_bridge*.*
 
+      - name: Prepare Release
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          cd sw/
+          mkdir -p bcf-firmware-release
+          cp bcf-zephyr-fw/* bcf-firmware-release/
+          cp usb_uart_bridge/usb_uart_bridge*.* bcf-firmware-release/
+          zip -r bcf-firmware-release.zip bcf-firmware-release
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            sw/bcf-firmware-release.zip
