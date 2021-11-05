@@ -109,26 +109,21 @@ jobs:
         with:
           name: bcf-firmware-bin
           path: |
-            sw/bcf-zephyr-fw/*
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: usb-uart-bridge
-          path: |
-            sw/usb_uart_bridge/usb_uart_bridge*.*
+            sw/build/*
 
       - name: Prepare Release
+        id: prepare
         if: startsWith(github.ref, 'refs/tags/')
         run: |
+          echo "::set-output name=TAG::${GITHUB_REF#refs/tags/}"
           cd sw/
-          mkdir -p bcf-firmware-release
-          cp bcf-zephyr-fw/* bcf-firmware-release/
-          cp usb_uart_bridge/usb_uart_bridge*.* bcf-firmware-release/
-          zip -r bcf-firmware-release.zip bcf-firmware-release
+          zip -r bcf-${TAG}.zip build
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TAG: ${{ steps.prepare.outputs.TAG }}
         with:
           files: |
-            sw/bcf-firmware-release.zip
+            sw/bcf-${TAG}.zip
