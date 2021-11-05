@@ -126,4 +126,4 @@ jobs:
           TAG: ${{ steps.prepare.outputs.TAG }}
         with:
           files: |
-            sw/bcf-${TAG}.zip
+            sw/bcf-${{ env.TAG }}.zip
