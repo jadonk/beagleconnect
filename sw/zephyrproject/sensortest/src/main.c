@@ -296,6 +296,16 @@ void main(void)
 	int r;
 	outstr[0] = '\0';
 
+	/* Set RF_SW */
+	const struct device *rf_sw_dev;
+	rf_sw_dev = device_get_binding(DT_GPIO_LABEL(DT_NODELABEL(rf_sw), gpios));
+	r = gpio_pin_configure(rf_sw_dev, DT_GPIO_PIN_BY_IDX(DT_NODELABEL(rf_sw), gpios, 0),
+		GPIO_OUTPUT_LOW);  /* Disable SubG +20dB */
+	r = gpio_pin_configure(rf_sw_dev, DT_GPIO_PIN_BY_IDX(DT_NODELABEL(rf_sw), gpios, 1),
+		GPIO_OUTPUT_HIGH); /* Enable SubG TX/RX 0dB */
+	r = gpio_pin_configure(rf_sw_dev, DT_GPIO_PIN_BY_IDX(DT_NODELABEL(rf_sw), gpios, 2),
+		GPIO_OUTPUT_LOW);  /* Disable 2.4GHz TX/RX */
+
 	fd = socket(AF_INET6, SOCK_DGRAM, IPPROTO_UDP);
 	if (fd < 0) {
 		LOG_ERR("failed to open socket");
@@ -305,12 +315,6 @@ void main(void)
 		addr.sin6_port = htons(9999);
 		inet_pton(AF_INET6, "ff02::1", &addr.sin6_addr);
 	}
-
-	/* Force I2C_CTRL to HIGH */
-	const struct device *i2c_ctrl_dev;
-	i2c_ctrl_dev = device_get_binding(DT_GPIO_LABEL(DT_NODELABEL(i2c_ctrl), gpios));
-	r = gpio_pin_configure(i2c_ctrl_dev, DT_GPIO_PIN(DT_NODELABEL(i2c_ctrl), gpios),
-			DT_GPIO_FLAGS(DT_NODELABEL(i2c_ctrl), gpios) | GPIO_OUTPUT_HIGH);
 
 	for (size_t i = 0; i < NUM_DEVICES; ++i) {
 		LOG_INF("opening device %s", device_labels[i]);
