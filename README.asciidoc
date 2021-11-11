@@ -35,7 +35,7 @@ BeagleConnect™ technology solves:
 * The need to connect to devices using long-range, low-power wireless, and 
 * The need to produce high-volume custom hardware cost-optimized for your requirements.
 
-== BeagleConnect™ experience
+= BeagleConnect™ experience
 
 BeagleConnect™ provides a scalable experience for interacting with the physical world.
 
@@ -68,7 +68,9 @@ For home automaters, integration into https://webthings.io[WebThings]...
 
 TODO: think a bit more about this section with some feedback from Cathy.
 
-== BeagleConnect™ hardware and software
+toc::[]
+
+= Hardware
 
 NOTE: The term _BeagleConnect™_ refers to a technology comprising of
 a family of boards, a collection of Linux kernel drivers,
@@ -79,7 +81,7 @@ represent the experience introduced to users through the initial
 _BeagleConnect™ Freedom_ product consisting of a board and case which
 ships programmed and ready to be used.
 
-=== BeagleConnect™ Freedom
+== BeagleConnect™ Freedom
 
 TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective
 
@@ -99,7 +101,7 @@ dynamically, and contain additional functionality. The goal is to
 support over 500 add-on devices within the first year after the
 initial release.
 
-=== BeagleConnect™ Freedom beta kit
+== BeagleConnect™ Freedom beta kit
 
 A small number of beta kits have been assembled with BeagleConnect™ Freedom rev C5
 boards, which is the version that should be taken to production.
@@ -110,12 +112,22 @@ The kit includes:
 * 3x BeagleConnect™ Freedom (board, attenna, USB cable)
 * 1x MikroElektronikia Click ID Board
 
-=== BeagleConnect™ Mobile Gateway
+== BeagleConnect™ Mobile Gateway
 
-toc::[]
+This is a work-in-progress that will be released as the first integrated BeagleConnect™
+gateway. It is possible to assemble a gateway with any Linux computer, but this computer
+will ship setup and ready to go.
+
+The gateway is built from:
+* BeagleBoard.org PocketBeagle,
+* BeagleConnect™ Freedom,
+* a cellular modem,
+* a USB WiFi dongle,
+* antennas, and
+* an enclosure.
 
 [[story]]
-== The Story Behind BeagleConnect™ 
+= The Story Behind BeagleConnect™ 
 
 [[long-background]]
 === The Long Background
@@ -148,6 +160,9 @@ already worked?
 ==== Find out more
 Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat
 with me more about this story.
+
+[[architecture]]
+= Architecture
 
 [[beagleconnect-leash]]
 == BeagleConnect™ Freedom
