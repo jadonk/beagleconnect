@@ -48,16 +48,25 @@ https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed an
 
 TODO: provide images demonstrating Jupyter Notebook visualization
 
-For embedded systems engineers, data is easily extrated using the standard
+For embedded systems developers, data is easily extrated using the standard
 https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
-interface provided by the Linux kernel running on the gateway using any of hundreds of
+interface provided by the https://kernel.org[Linux kernel]
+running on the gateway using any of hundreds of
 programming languages and environments, without writing a line of microcontroller firmware.
 The Linux environment provides opportunities for high-level remote management using tools
-like https://balena.io[Balena] with applications
+like https://balena.io[Balena] with applications deployed in
+https://docker.io[Docker] containers.
 
+TODO: provide image illustrating remote management
 
+The hardware and software are fully open source, providing for scalability and a lack of
+vendor lock-in.
 
-The hardware and software are fully open source
+For DevOps...
+
+For home automaters, integration into https://webthings.io[WebThings]...
+
+TODO: think a bit more about this section with some feedback from Cathy.
 
 
 == BeagleConnect™ hardware and software
