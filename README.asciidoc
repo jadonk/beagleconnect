@@ -27,7 +27,7 @@ These are the tools used to automate things in
 https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
 https://en.wikipedia.org/wiki/Internet_of_things[IoT].
 
-BeagleConnect™ solves: 
+BeagleConnect™ technology solves: 
 
 * The need to write software to add a large set of diverse devices to your system, 
 * The need to maintain the software with security updates, 
@@ -35,7 +35,37 @@ BeagleConnect™ solves:
 * The need to connect to devices using long-range, low-power wireless, and 
 * The need to produce high-volume custom hardware cost-optimized for your requirements.
 
-The initial _BeagleConnect™ Freedom_ development release will: 
+== BeagleConnect™ experience
+
+BeagleConnect™ provides a scalable experience for interacting with the physical world.
+
+For scientists, we are integrating https://jupyter.org/[Jupyter Notebook] with the data streams
+from any of hundreds of sensor options, including https://www.mikroe.com/click/sensors/force[vibration],
+https://www.mikroe.com/click/sensors/gas[gas detection],
+https://www.mikroe.com/click/sensors/biometrics[biometrics] and
+https://www.mikroe.com/click/sensors[more]. These data streams can be stored in simple
+https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed and visualized.
+
+TODO: provide images demonstrating Jupyter Notebook visualization
+
+For embedded systems engineers, data is easily extrated using the standard
+https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
+interface provided by the Linux kernel running on the gateway using any of hundreds of
+programming languages and environments, without writing a line of microcontroller firmware.
+The Linux environment provides opportunities for high-level remote management using tools
+like https://balena.io[Balena] with applications
+
+
+
+The hardware and software are fully open source
+
+
+== BeagleConnect™ hardware and software
+
+IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
+to cost initially around US$20 with a roadmap to variants as low as US$1.
+
+The initial _BeagleConnect™ Freedom_ production release will: 
 
 * Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
 * Work with https://en.wikipedia.org/wiki/Bluetooth_Low_Energy[Bluetooth Low Energy (BLE)]-enabled Linux computers at 2.4GHz, 
@@ -43,14 +73,10 @@ The initial _BeagleConnect™ Freedom_ development release will:
 * Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)] as a `BeagleConnect™ gateway device` and
   work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
 
-
-IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
-to cost initially below US$20 with a roadmap to variants as low as US$1.
-
 Future releases will be collaborated with the community, evolve
 dynamically, and contain additional functionality. The goal is to
 support over 500 add-on devices within the first year after the
-development release.
+initial release.
 
 NOTE: The term _BeagleConnect™_ refers to a technology comprising of
 a family of boards, a collection of Linux kernel drivers,
