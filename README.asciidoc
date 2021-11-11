@@ -68,8 +68,20 @@ For home automaters, integration into https://webthings.io[WebThings]...
 
 TODO: think a bit more about this section with some feedback from Cathy.
 
-
 == BeagleConnect™ hardware and software
+
+NOTE: The term _BeagleConnect™_ refers to a technology comprising of
+a family of boards, a collection of Linux kernel drivers,
+microcontroller firmware, a communication protocol, and system-level
+integration to automation software tools. More specific terms will be
+applied in the architecture details. The term is also used here to
+represent the experience introduced to users through the initial
+_BeagleConnect™ Freedom_ product consisting of a board and case which
+ships programmed and ready to be used.
+
+=== BeagleConnect™ Freedom
+
+TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective
 
 IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
 to cost initially around US$20 with a roadmap to variants as low as US$1.
@@ -87,14 +99,18 @@ dynamically, and contain additional functionality. The goal is to
 support over 500 add-on devices within the first year after the
 initial release.
 
-NOTE: The term _BeagleConnect™_ refers to a technology comprising of
-a family of boards, a collection of Linux kernel drivers,
-microcontroller firmware, a communication protocol, and system-level
-integration to automation software tools. More specific terms will be
-applied in the architecture details. The term is also used here to
-represent the experience introduced to users through the initial
-_BeagleConnect™ Freedom_ product consiting of a board and case which
-ships programmed and ready to be used.
+=== BeagleConnect™ Freedom beta kit
+
+A small number of beta kits have been assembled with BeagleConnect™ Freedom rev C5
+boards, which is the version that should be taken to production.
+
+The kit includes:
+
+* Seeed BeagleBone® Green Gateway (board, USB cable)
+* 3x BeagleConnect™ Freedom (board, attenna, USB cable)
+* 1x MikroElektronikia Click ID Board
+
+=== BeagleConnect™ Mobile Gateway
 
 toc::[]
 
