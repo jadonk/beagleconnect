@@ -112,6 +112,8 @@ The kit includes:
 * 3x BeagleConnect™ Freedom (board, attenna, USB cable)
 * 1x MikroElektronikia Click ID Board
 
+To get started with this kit, see <<demo-1>>.
+
 == BeagleConnect™ Mobile Gateway
 
 This is a work-in-progress that will be released as the first integrated BeagleConnect™
