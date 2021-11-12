@@ -420,10 +420,13 @@ There are many options, but let's get started with one recommended set for the b
 * https://smile.amazon.com/Converter-Terminated-Galileo-BeagleBone-Minnowboard/dp/B06ZYPLFNB[USB to TTL 3.3V UART adapter]
 * Ethernet cable and Internet connection
 * 2x USB power adapters
+* https://www.mikroe.com/weather-click[BME280-based Weather Click]
+* https://www.mikroe.com/air-quality-2-click[iAQ-Core-based Air Quality 2 Click]
 
 === Optional:
 
-* x86_64 Linux laptop running Ubuntu 20.04.3 LTS for rebuilding the firmware
+* x86_64 Linux laptop running Ubuntu 20.04.3 LTS for rebuilding the firmware and observing
+the Zephyr console
 
 [[background]]
 == Background
@@ -500,7 +503,7 @@ provisioning should load any new drivers
 provisioning is completed
 
 [[demo-1]]
-= SubG IEEE 802.15.4 Greybus demo for GPIO and I2C
+= SubG IEEE 802.15.4 Greybus demo for GPIO, I2C and mikroBUS add-on boards
 
 This section describes the steps required to use
 https://en.wikipedia.org/wiki/Linux[Linux] embedded computer and the
@@ -574,6 +577,8 @@ Greybus currently supports several busses, including:
 * LED (with various programmability)
 * AUDIO (I2S)
 
+TODO: The agenda for the above falls a bit short of BeagleConnect
+
 === Hardware requirements
 
 See the <<Equipment>> section for hardware requirements.
@@ -581,6 +586,8 @@ See the <<Equipment>> section for hardware requirements.
 == Running the demo
 
 TODO: Fill in some details for new embedded Linux users
+
+TODO: Arrange demo in order of _fast success_ to _greater understanding_
 
 === Install the latest software image
 
@@ -639,7 +646,7 @@ Every 1-2 minutes, you should see something like:
 
 The value after "2l:" is the amount of light in lux. The value after "4h:" is the relative humidity and after "4t:" is the temperature in Celcius.
 
-=== Flash BeagleConnect Freedom node device
+=== Flash BeagleConnect Freedom node device with Greybus firmware
 
 Do this from the BeagleBone Green Gateway board that was previously used to program the BeagleConned Freedom gateway device:
 1. Disconnect the BeagleConnect Freedom gateway device
@@ -650,40 +657,41 @@ Do this from the BeagleBone Green Gateway board that was previously used to prog
 6. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
 7. `sudo beagleconnect-start-gateway`
 
-== Rebuilding from source
+TODO: update the below for the built-in sensors
 
-TODO: revisit everything below here
+TODO: can we also handle the case where these sensors are included and recommend them? Same firmware?
 
-=== Prerequisites
+Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on
+boards without interrupt requirement are the ones that work currently.  The example is for
+Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the device side.
 
-* Zephyr environment is set up according to the
-https://docs.zephyrproject.org/latest/getting_started/index.html[Getting
-Started Guide]
-** Please use the Zephyr SDK when installing a toolchain above
-* https://docs.zephyrproject.org/latest/getting_started/index.html#install-a-toolchain[Zephyr
-SDK] is installed at ~/zephyr-sdk-0.11.2 (any later version should be
-fine as well)
-* Zephyr board is connected via USB
+/var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages:
 
-=== Cloning the repository
+```
+greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
+greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
+greybus 1-2.2: excess descriptors in interface manifest
+mikrobus:mikrobus_port_gb_register: mikrobus gb_probe , num cports= 3, manifest_size 252
+mikrobus:mikrobus_port_gb_register: protocol added 11
+mikrobus:mikrobus_port_gb_register: protocol added 3
+mikrobus:mikrobus_port_gb_register: protocol added 2
+mikrobus:mikrobus_port_register: registering port mikrobus-0
+mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 1, driver=bme280, protocol=3, reg=76
+mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 2, driver=ams-iaq-core, protocol=3, reg=5a
+mikrobus_manifest:mikrobus_manifest_parse:  Greybus Service Sample Application manifest parsed with 2 devices
+mikrobus mikrobus-0: registering device : bme280
+mikrobus mikrobus-0: registering device : ams-iaq-core
+```
 
-This repository utilizes
-https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to keep
-track of all of the projects required to reproduce the on-going work.
-The instructions here only cover checking out the `demo` branch which
-should stay in a tested state. On-going development will be on the
-`master` branch.
+TODO: bring in the GPIO toggle and I2C explorations for greater understanding
 
-NOTE: The parent directory `~` is simply used as a placeholder for testing.
-Please use whatever parent directory you see fit.
+==== Trying for different add-on boards
 
-==== Clone specific tag
+See https://github.com/vaishnav98/greybus-for-zephyr/tree/mikrobus#trying-out-different-add-on-boardsdevices-over-mikrobus[mikroBUS over Greybus] for trying out the same example for different mikroBUS add-on boards/ on-board devices.
 
-[source,console]
-----
-cd ~
-git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
-----
+== Observe the node device
+
+Connect BeagleConnect Freedom node device to an Ubuntu laptop to observe the Zephyr console.
 
 === Console (`tio`)
 
@@ -711,87 +719,7 @@ tio /dev/ttyACM0
 
 IMPORTANT: To exit `tio` (later), enter `ctrl+t, q`.
 
-=== Zephyr
-
-==== Add the Fork
-
-For the time being, Greybus must remain outside of the main Zephyr
-repository. Currently, it is just in a Zephyr fork, but it should be
-converted to a proper
-https://docs.zephyrproject.org/latest/guides/modules.html[Module
-(External Project)]. This is for a number of reasons, but mainly there
-must be:
-
-* specifications for authentication and encryption 
-* specifications for joining and rejoining wireless networks 
-* specifications for discovery
-
-Therefore, in order to reproduce this example, please run the following.
-
-NOTE: Open a separate terminal window (`Ctrl+Shift+N`) or simply create a
-new tab in your existing terminal (`Ctrl+Shift+T`) so that you can see
-both or quickly switch between `tio` and the shell.
-
-[source,console]
-----
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west update
-----
-
-==== Build and Flash Zephyr
-
-Here, we will build and flash the Zephyr
-https://github.com/cfriedt/zephyr/tree/greybus-sockets/samples/subsys/greybus/net[greybus_net
-sample] to our device.
-
-[arabic]
-. Edit the file `~/.zephyrrc` and place the following text inside of it
-+
-[source,console]
-----
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
-----
-+
-. Set up the required Zephyr environment variables via
-+
-[source,console]
-----
-source zephyr-env.sh
-----
-+
-. Build the project
-+
-[source,console]
-----
-BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
-  --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154.conf"
-----
-+
-. Ensure that the last part of the build process looks somewhat like
-this:
-+
-....
-...
-[221/226] Linking C executable zephyr/zephyr_prebuilt.elf
-Memory region         Used Size  Region Size  %age Used
-           FLASH:      155760 B     360360 B     43.22%
-      FLASH_CCFG:          88 B         88 B    100.00%
-            SRAM:       58496 B        80 KB     71.41%
-        IDT_LIST:         184 B         2 KB      8.98%
-[226/226] Linking C executable zephyr/zephyr.elf
-....
-+
-. Flash the firmware to your device using
-+
-[source,console]
-----
-BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad
-----
-
 === The Zephyr Shell
-
-NOTE: This section is merely informative and you can skip ahead to the <<linux>> section if you'd like.
 
 After flashing, you should observe the something matching the following
 output in `tio`.
@@ -948,6 +876,119 @@ And we see that the static IPv6 address (`2001:db8::1`) from
 `samples/net/sockets/echo_server/prj.conf` is present and configured.
 While the statically configured IPv6 address is useful, it isn’t 100%
 necessary.
+
+== Rebuilding from source
+
+TODO: revisit everything below here
+
+=== Prerequisites
+
+* Zephyr environment is set up according to the
+https://docs.zephyrproject.org/latest/getting_started/index.html[Getting
+Started Guide]
+** Please use the Zephyr SDK when installing a toolchain above
+* https://docs.zephyrproject.org/latest/getting_started/index.html#install-a-toolchain[Zephyr
+SDK] is installed at ~/zephyr-sdk-0.11.2 (any later version should be
+fine as well)
+* Zephyr board is connected via USB
+
+=== Cloning the repository
+
+This repository utilizes
+https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to keep
+track of all of the projects required to reproduce the on-going work.
+The instructions here only cover checking out the `demo` branch which
+should stay in a tested state. On-going development will be on the
+`master` branch.
+
+NOTE: The parent directory `~` is simply used as a placeholder for testing.
+Please use whatever parent directory you see fit.
+
+==== Clone specific tag
+
+[source,console]
+----
+cd ~
+git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
+----
+
+=== Zephyr
+
+==== Add the Fork
+
+For the time being, Greybus must remain outside of the main Zephyr
+repository. Currently, it is just in a Zephyr fork, but it should be
+converted to a proper
+https://docs.zephyrproject.org/latest/guides/modules.html[Module
+(External Project)]. This is for a number of reasons, but mainly there
+must be:
+
+* specifications for authentication and encryption 
+* specifications for joining and rejoining wireless networks 
+* specifications for discovery
+
+Therefore, in order to reproduce this example, please run the following.
+
+NOTE: Open a separate terminal window (`Ctrl+Shift+N`) or simply create a
+new tab in your existing terminal (`Ctrl+Shift+T`) so that you can see
+both or quickly switch between `tio` and the shell.
+
+[source,console]
+----
+cd ~/beagleconnect/sw/zephyrproject/zephyr
+west update
+----
+
+==== Build and Flash Zephyr
+
+Here, we will build and flash the Zephyr
+https://github.com/cfriedt/zephyr/tree/greybus-sockets/samples/subsys/greybus/net[greybus_net
+sample] to our device.
+
+[arabic]
+. Edit the file `~/.zephyrrc` and place the following text inside of it
++
+[source,console]
+----
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
+----
++
+. Set up the required Zephyr environment variables via
++
+[source,console]
+----
+source zephyr-env.sh
+----
++
+. Build the project
++
+[source,console]
+----
+BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
+  --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154.conf"
+----
++
+. Ensure that the last part of the build process looks somewhat like
+this:
++
+....
+...
+[221/226] Linking C executable zephyr/zephyr_prebuilt.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      155760 B     360360 B     43.22%
+      FLASH_CCFG:          88 B         88 B    100.00%
+            SRAM:       58496 B        80 KB     71.41%
+        IDT_LIST:         184 B         2 KB      8.98%
+[226/226] Linking C executable zephyr/zephyr.elf
+....
++
+. Flash the firmware to your device using
++
+[source,console]
+----
+BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad
+----
 
 [[linux]]
 === Linux
@@ -1406,294 +1447,3 @@ detection, joining, and rejoining of devices
 
 Thanks for reading, and we hope you’ve enjoyed this tutorial.
 
-[[demo-2]]
-== Sub-GHz IEEE 802.15.4 Greybus demo for GPIO and I2C
-
-=== Setup
-
-1. Clone or update source
-+
-NOTE: If you have already cloned the source, skip this part and go to the second part of this step.
-+
-[source,bash]
-----
-cd ~
-git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
-----
-+
-NOTE: If you just cloned the source, you don't need to perform this update.
-+
-[source,bash]
-----
-cd ~
-git pull --recurse-submodules
-----
-+
-2. MSP430 toolchain
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/
-wget http://software-dl.ti.com/msp430/msp430_public_sw/mcu/msp430/MSPGCC/9_2_0_0/export/msp430-gcc-full-linux-x64-installer-9.2.0.0.run
-chmod +x msp430-gcc-full-linux-x64-installer-9.2.0.0.run
-sudo ./msp430-gcc-full-linux-x64-installer-9.2.0.0.run --mode unattended --prefix /opt/msp430-gcc
-----
-+
-3. MSP430 flashing utility
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/ti_msp430_python_tools/python-msp430-tools
-python2 setup.py install --user
-----
-+
-4. CC1352 Zephyr toolchain
-+
-[source,bash]
-----
-sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
-  ccache dfu-util device-tree-compiler wget \
-  python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
-  make gcc gcc-multilib g++-multilib libsdl2-dev \
-  cmake
-pip3 install --user -U west
-wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run"
-chmod +x zephyr-sdk-0.11.4-setup.run
-./zephyr-sdk-0.11.4-setup.run -- -d ~/zephyr-sdk-0.11.4
-export PATH=~/.local/bin:"$PATH"
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.4
-export USE_CCACHE=1
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west update
-west zephyr-export
-pip3 install --user -r scripts/requirements.txt
-----
-+
-5. Linux gateway via buildroot
-+
-[source,bash]
-----
-cd
-wget "https://buildroot.org/downloads/buildroot-2020.11.1.tar.gz"
-tar xzf buildroot-2020.08.tar.gz
-cd ~/beagleconnect/sw/buildroot
-make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
-----
-
-=== Building
-
-1. MSP430/CC1352 Firmware
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw
-./build-firmware.sh
-----
-+
-2. Buildroot
-+
-[source,bash]
-----
-cd ~/beagleconnectd/sw/buildroot
-make
-----
-
-=== Flashing
-
-==== Gateway
-
-1. Connect _BeagleConnect™ Freedom_ via USB while holding the USER button.
-+
-2. Flash _BeagleConnect™ Freedom_ MSP430 with temporary firmware for flashing CC1352 using python2 script and MSP430 ROM bootloader.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/usb_uart_bridge
-MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
-----
-+
-3. Flash _BeagleConnect™ Freedom_ CC1352 with gateway firmware using `west` and CC1352 ROM bootloader over MSP430 USB to UART connection.
-+
-NOTE: Make sure no instances of `tio` or `qemu` are running that would capture the serial port.
-+
-NOTE: Be sure to replace `~` and `/dev/ttyACM0` with appropriate values for your setup. Use `dmesg | tail` to discover the correct tty.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west flash -d $PWD/build/wpanusb_beagleconnect /dev/ttyACM0
-----
-+
-4. Disconnect and reconnect _BeagleConnect™ Freedom_ via USB while holding the USER button.
-+
-5. Flash MSP430 with gateway software using python2 script and MSP430 ROM bootloader.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/usb_wpan_temp
-MSP430_TOOLCHAIN_PATH=/opt/msp430-gcc make program
-----
-
-==== Node
-
-1. Connect _CC1352R1 Launchpad_ via USB.
-+
-2. Flash _CC1352R1 Launchpad_ using `west`.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west flash -d build/greybus_launchpad
-----
-
-=== Run
-
-1. Disconnect and reconnect _BeagleConnect™ Freedom_.
-+
-2. Start emulator.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/buildroot
-./run
-----
-+
-4. Login using username `root` and password `tempppwd`.
-5. Start gbridge.
-+
-[source,bash]
-----
-/opt/gbridge.sh
-----
-
-[[demo-3]]
-== mikroBUS over Greybus demo (Launchpad/SensorTag).
-
-Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on boards without interrupt requirement are the ones that work currently. _BeagleConnect™ Freedom_ gateway setup instructions are same as before.
-The example is for Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the device side.
-
-=== Setup
-
-1. Clone or update source
-+
-NOTE: If you have already cloned the source, skip this part and go to the second part of this step.
-+
-[source,bash]
-----
-cd ~
-git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
-----
-+
-NOTE: If you just cloned the source, you don't need to perform this update.
-+
-[source,bash]
-----
-cd ~
-git pull --recurse-submodules
-----
-+
-2. CC1352 Zephyr toolchain
-+
-[source,bash]
-----
-sudo apt install -y --no-install-recommends git cmake ninja-build gperf \
-  ccache dfu-util device-tree-compiler wget \
-  python3-dev python3-pip python3-setuptools python3-tk python3-wheel xz-utils file \
-  make gcc gcc-multilib g++-multilib libsdl2-dev \
-  cmake
-pip3 install --user -U west
-wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run"
-chmod +x zephyr-sdk-0.11.4-setup.run
-./zephyr-sdk-0.11.4-setup.run -- -d ~/zephyr-sdk-0.11.4
-export PATH=~/.local/bin:"$PATH"
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.4
-export USE_CCACHE=1
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west update
-west zephyr-export
-pip3 install --user -r scripts/requirements.txt
-----
-+
-3. Linux gateway via buildroot
-+
-[source,bash]
-----
-cd
-wget "https://buildroot.org/downloads/buildroot-2020.11.1.tar.gz"
-tar xzf buildroot-2020.08.tar.gz
-cd ~/beagleconnect/sw/buildroot
-make -C ~/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
-----
-
-=== Building
-
-1.CC1352 Firmware
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw
-./build-firmware.sh
-----
-+
-2. Buildroot
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/buildroot
-make
-----
-
-=== Flashing
-
-==== Node
-
-1. Connect _CC1352R1 Launchpad_ via USB.
-+
-2. Flash _CC1352R1 Launchpad_ using `west`.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/zephyrproject/zephyr
-west flash -d build/greybus_mikrobus_sensortag_2G
-----
-
-=== Run
-
-1. Disconnect and reconnect _BeagleConnect™ Freedom_.
-+
-2. Start emulator.
-+
-[source,bash]
-----
-cd ~/beagleconnect/sw/buildroot
-./run
-----
-+
-4. Login using username `root` and password `tempppwd`.
-5. Start gbridge.
-+
-[source,bash]
-----
-/opt/gbridge.sh > /dev/null 2>&1 &
-----
-/var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages:
-```
-greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
-greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
-greybus 1-2.2: excess descriptors in interface manifest
-mikrobus:mikrobus_port_gb_register: mikrobus gb_probe , num cports= 3, manifest_size 252
-mikrobus:mikrobus_port_gb_register: protocol added 11
-mikrobus:mikrobus_port_gb_register: protocol added 3
-mikrobus:mikrobus_port_gb_register: protocol added 2
-mikrobus:mikrobus_port_register: registering port mikrobus-0
-mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 1, driver=bme280, protocol=3, reg=76
-mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 2, driver=ams-iaq-core, protocol=3, reg=5a
-mikrobus_manifest:mikrobus_manifest_parse:  Greybus Service Sample Application manifest parsed with 2 devices
-mikrobus mikrobus-0: registering device : bme280
-mikrobus mikrobus-0: registering device : ams-iaq-core
-```
-==== Trying for different add-on boards
-
-See https://github.com/vaishnav98/greybus-for-zephyr/tree/mikrobus#trying-out-different-add-on-boardsdevices-over-mikrobus[mikroBUS over Greybus] for trying out the same example for different mikroBUS add-on boards/ on-board devices.
