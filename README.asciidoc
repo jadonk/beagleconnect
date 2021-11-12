@@ -405,7 +405,8 @@ kernel, rather than cut-and-paste
 
 There are many options, but let's get started with one recommended set for the beta users.
 
-Required:
+=== Required:
+
 * BeagleConnect™ Freedom Beta Kit
 ** https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[Seeed Studio BeagleBone® Green Gateway]
 ** 3x BeagleConnect™ Freedom board, antenna, U.FL to SMA cable, SMA antenna and USB Type-A to Type-C cable
@@ -413,13 +414,15 @@ Required:
 * microSD card (6GB or larger)
 * microSD card programmer
 
-Recommended:
+=== Recommended:
+
 * https://smile.amazon.com/TMEZON-Power-Adapter-Supply-2-1mm/dp/B00Q2E5IXW[12V power brick]
 * https://smile.amazon.com/Converter-Terminated-Galileo-BeagleBone-Minnowboard/dp/B06ZYPLFNB[USB to TTL 3.3V UART adapter]
 * Ethernet cable and Internet connection
 * 2x USB power adapters
 
-Optional:
+=== Optional:
+
 * x86_64 Linux laptop running Ubuntu 20.04.3 LTS for rebuilding the firmware
 
 [[background]]
