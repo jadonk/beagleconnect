@@ -61,7 +61,7 @@ https://www.mikroe.com/click/sensors/biometrics[biometrics] and
 https://www.mikroe.com/click/sensors[more]. These data streams can be stored in simple
 https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed and visualized.
 
-TODO: provide images demonstrating Jupyter Notebook visualization
+#TODO: provide images demonstrating Jupyter Notebook visualization
 
 For embedded systems developers, data is easily extrated using the standard
 https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
@@ -72,7 +72,7 @@ The Linux environment provides opportunities for high-level remote management us
 like https://balena.io[Balena] with applications deployed in
 https://docker.io[Docker] containers.
 
-TODO: provide image illustrating remote management
+#TODO: provide image illustrating remote management
 
 The hardware and software are fully open source, providing for scalability and a lack of
 vendor lock-in.
@@ -81,13 +81,13 @@ For DevOps...
 
 For home automaters, integration into https://webthings.io[WebThings]...
 
-TODO: think a bit more about this section with some feedback from Cathy.
+#TODO: think a bit more about this section with some feedback from Cathy.
 
 = BeagleConnect™ hardware
 
 == BeagleConnect™ Freedom
 
-TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective
+#TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective
 
 IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
 to cost initially around US$20 with a roadmap to variants as low as US$1.
@@ -383,7 +383,7 @@ ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being consider
 
 Greybus:: #TODO#
 
-TODO: Find a place for the following notes:
+#TODO: Find a place for the following notes:
 
 ** The device interfaces get exposed to the host via Greybus BRIDGED_PHY
 protocol
@@ -582,7 +582,7 @@ Greybus currently supports several busses, including:
 * LED (with various programmability)
 * AUDIO (I2S)
 
-TODO: The agenda for the above falls a bit short of BeagleConnect
+#TODO: The agenda for the above falls a bit short of BeagleConnect
 
 === Hardware requirements
 
@@ -590,9 +590,9 @@ See the <<Equipment>> section for hardware requirements.
 
 == Running the demo
 
-TODO: Fill in some details for new embedded Linux users
+#TODO: Fill in some details for new embedded Linux users
 
-TODO: Arrange demo in order of _fast success_ to _greater understanding_
+#TODO: Arrange demo in order of _fast success_ to _greater understanding_
 
 === Install the latest software image
 
@@ -663,9 +663,9 @@ Do this from the BeagleBone Green Gateway board that was previously used to prog
 6. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
 7. `sudo beagleconnect-start-gateway`
 
-TODO: update the below for the built-in sensors
+#TODO: update the below for the built-in sensors
 
-TODO: can we also handle the case where these sensors are included and recommend them? Same firmware?
+#TODO: can we also handle the case where these sensors are included and recommend them? Same firmware?
 
 Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on
 boards without interrupt requirement are the ones that work currently.  The example is for
@@ -689,7 +689,7 @@ mikrobus mikrobus-0: registering device : bme280
 mikrobus mikrobus-0: registering device : ams-iaq-core
 ```
 
-TODO: bring in the GPIO toggle and I2C explorations for greater understanding
+#TODO: bring in the GPIO toggle and I2C explorations for greater understanding
 
 ==== Trying for different add-on boards
 
@@ -885,7 +885,7 @@ necessary.
 
 == Rebuilding from source
 
-TODO: revisit everything below here
+#TODO: revisit everything below here
 
 === Prerequisites
 
