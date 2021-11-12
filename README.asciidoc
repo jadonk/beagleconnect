@@ -13,7 +13,8 @@ endif::[]
 
 BeagleConnect™ is a revolutionary technology virtually eliminating low-level software
 development for https://en.wikipedia.org/wiki/Internet_of_things[IoT] and https://en.wikipedia.org/wiki/Industrial_internet_of_things[IIoT] applications, such as building automation, factory
-automation, and home automation. While numerous IoT and IIoT solutions available today
+automation, home automation, and scientific data acquisition. While numerous IoT and IIoT
+solutions available today
 provide massive software libraries for microcontrollers footnote:[Complexity can be seen by exploring https://www.arduino.cc/reference/en/libraries/category/sensors/[Arduino sensor libraries]]
 supporting a limited body of
 https://en.wikipedia.org/wiki/Sensor[sensors],
@@ -24,7 +25,9 @@ BeagleConnect simply eliminates the need for these libraries by shifting the bur
 into the most massive and collaborative software project of all time, the https://en.wikipedia.org/wiki/Linux_kernel[Linux kernel].
 
 These are the tools used to automate things in
-https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
+https://en.wikipedia.org/wiki/Data_collection_system[scientific data collection],
+https://en.wikipedia.org/wiki/Data_science[data science],
+https://en.wikipedia.org/wiki/Mechatronics[mechatronics], and
 https://en.wikipedia.org/wiki/Internet_of_things[IoT].
 
 BeagleConnect™ technology solves: 
@@ -40,6 +43,15 @@ toc::[]
 = BeagleConnect™ experience
 
 BeagleConnect™ provides a scalable experience for interacting with the physical world.
+
+NOTE: The term _BeagleConnect™_ refers to a technology comprising of
+a family of boards, a collection of Linux kernel drivers,
+microcontroller firmware, a communication protocol, and system-level
+integration to automation software tools. More specific terms will be
+applied in the architecture details. The term is also used here to
+represent the experience introduced to users through the initial
+_BeagleConnect™ Freedom_ product consisting of a board and case which
+ships programmed and ready to be used.
 
 For scientists, we are integrating https://jupyter.org/[Jupyter Notebook] with the data streams
 from any of hundreds of sensor options, including https://www.mikroe.com/click/sensors/force[vibration],
@@ -70,16 +82,7 @@ For home automaters, integration into https://webthings.io[WebThings]...
 
 TODO: think a bit more about this section with some feedback from Cathy.
 
-= Hardware
-
-NOTE: The term _BeagleConnect™_ refers to a technology comprising of
-a family of boards, a collection of Linux kernel drivers,
-microcontroller firmware, a communication protocol, and system-level
-integration to automation software tools. More specific terms will be
-applied in the architecture details. The term is also used here to
-represent the experience introduced to users through the initial
-_BeagleConnect™ Freedom_ product consisting of a board and case which
-ships programmed and ready to be used.
+= BeagleConnect™ hardware
 
 == BeagleConnect™ Freedom
 
@@ -101,6 +104,7 @@ dynamically, and contain additional functionality. The goal is to
 support over 500 add-on devices within the first year after the
 initial release.
 
+[[beta-kit]]
 == BeagleConnect™ Freedom beta kit
 
 A small number of beta kits have been assembled with BeagleConnect™ Freedom rev C5
@@ -407,7 +411,7 @@ There are many options, but let's get started with one recommended set for the b
 
 === Required:
 
-* BeagleConnect™ Freedom Beta Kit
+* <<beta-kit>>
 ** https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[Seeed Studio BeagleBone® Green Gateway]
 ** 3x BeagleConnect™ Freedom board, antenna, U.FL to SMA cable, SMA antenna and USB Type-A to Type-C cable
 ** 1x https://www.mikroe.com/click[MikroE] ID Click
@@ -1441,8 +1445,11 @@ actually fairly straight forward and was accomplished with mostly
 already-upstream source.
 
 For Greybus in Zephyr, there is still a considerable amount of
-integration work to be done, including * converting the fork to a proper
-Zephyr module * adding security and authentication * automatic
+integration work to be done, including
+* converting the fork to a proper
+Zephyr module
+* adding security and authentication
+* automatic
 detection, joining, and rejoining of devices
 
 Thanks for reading, and we hope you’ve enjoyed this tutorial.
