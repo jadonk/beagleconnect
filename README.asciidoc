@@ -500,7 +500,7 @@ provisioning is completed
 = SubG IEEE 802.15.4 Greybus demo for GPIO and I2C
 
 This section describes the steps required to use
-https://en.wikipedia.org/wiki/Linux[Linux] workstation and the
+https://en.wikipedia.org/wiki/Linux[Linux] embedded computer and the
 https://lwn.net/Articles/715955/[Greybus] protocol, over an IEEE
 802.15.4 wireless link, to blink an LED on a
 https://zephyrproject.org[Zephyr] device.
