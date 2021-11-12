@@ -653,6 +653,7 @@ The value after "2l:" is the amount of light in lux. The value after "4h:" is th
 === Flash BeagleConnect Freedom node device with Greybus firmware
 
 Do this from the BeagleBone Green Gateway board that was previously used to program the BeagleConned Freedom gateway device:
+
 1. Disconnect the BeagleConnect Freedom gateway device
 2. Connect a new BeagleConnect Freedom board via USB
 3. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/greybus_mikrobus_beagleconnect.bin /dev/ttyACM0`
