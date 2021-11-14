@@ -58,20 +58,20 @@ jobs:
             zephyr-ccache-2-
 
       - name: Cache for Zephyr SDK
-        id: cache-zephyr-sdk-0_11_4
+        id: cache-zephyr-sdk-0_13_1
         uses: actions/cache@v2
         with:
-          path: ~/zephyr-sdk-0.11.4
-          key: zephyr-sdk-0_11_4
+          path: ~/zephyr-sdk-0.13.1
+          key: zephyr-sdk-0_13_1
           restore-keys: |
-            zephyr-sdk-0_11_4
+            zephyr-sdk-0_13_1
 
       - name: Install Zephyr toolchain
-        if: steps.cache-zephyr-sdk-0_11_4.outputs.cache-hit != 'true'
+        if: steps.cache-zephyr-sdk-0_13_1.outputs.cache-hit != 'true'
         run: |
-          wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.11.4/zephyr-sdk-0.11.4-setup.run"
-          chmod +x zephyr-sdk-0.11.4-setup.run
-          ./zephyr-sdk-0.11.4-setup.run -- -d ~/zephyr-sdk-0.11.4
+          wget "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.13.1/zephyr-sdk-0.13.1-setup.run"
+          chmod +x zephyr-sdk-0.13.1-setup.run
+          ./zephyr-sdk-0.13.1-setup.run -- -d ~/zephyr-sdk
 
       - name: Cache for pip
         uses: actions/cache@v2
@@ -85,7 +85,7 @@ jobs:
         env:
           ZEPHYR_TOOLCHAIN_VARIANT: zephyr
           MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
-          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-0.11.4
+          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk
           USE_CCACHE: 0
         run: |
           export PATH=~/.local/bin:"$PATH"
@@ -98,7 +98,7 @@ jobs:
         env:
           ZEPHYR_TOOLCHAIN_VARIANT: zephyr
           MSP430_TOOLCHAIN_PATH: /opt/msp430-gcc
-          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk-0.11.4
+          ZEPHYR_SDK_INSTALL_DIR: ~/zephyr-sdk
           USE_CCACHE: 0
         run: |
           export PATH=~/.local/bin:"$PATH"
