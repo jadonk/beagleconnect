@@ -14,7 +14,7 @@
 	};
 
 	airquality: sgp30@58 {
-		compatible = "sensiron,sgp30";
+		compatible = "sensirion,sgp30";
 		reg = <0x58>;
 		label = "SGP30-AIRQUALITY";
 	};

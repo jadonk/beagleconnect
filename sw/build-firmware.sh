@@ -11,18 +11,19 @@ cp $SWDIR/usb_uart_bridge/usb_uart_bridge* build/msp430/
 
 # CC1352
 cd $ZEPHYR_BASE
+west update
+
+# WPANUSB Gateway SubG
+west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
 # Sensortest application SubG
-west build -p always -b beagleconnect_freedom $ZPRJ/sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf -DCONFIG_NET_CONFIG_IEEE802154_RADIO_TX_POWER=14 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_CS_THRESHOLD=-20
+west build -p always -b beagleconnect_freedom $ZPRJ/sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
 # mikroBUS over Greybus node SubG
-west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_beagleconnect -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_RADIO_TX_POWER=14 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_DIV_SETUP_PA=1 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_CS_THRESHOLD=-20
+#west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_beagleconnect -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_RADIO_TX_POWER=14 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_DIV_SETUP_PA=1 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_CS_THRESHOLD=-20
 
 # mikroBUS ID flasher
 #west build -p always -t flash -b beagleconnect_freedom $ZPRJ/mikrobus-clickid-flasher/samples/subsys/mikrobus/flasher -d build/greybus_mikrobus_beagleconnect_flasher -- -DBOARD_ROOT=$ZPRJ/wpanusb_bc -DCONFIG_MIKROBUS_FLASHER_CLICK_NAME='"'$MIKROBUS_ID'"'
-
-# WPANUSB Gateway SubG
-west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf -DBOARD_ROOT=$ZPRJ/wpanusb_bc -DCONFIG_NET_CONFIG_IEEE802154_RADIO_TX_POWER=14 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_DIV_SETUP_PA=1 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_CS_THRESHOLD=-20
 
 # make a FW release directory with the FW binaries and relevant debug info
 mkdir -p $SWDIR/build/cc1352
@@ -37,6 +38,6 @@ copy_fwbin () {
 		fi
 }
 
-copy_fwbin sensortest_beagleconnect
-copy_fwbin greybus_mikrobus_beagleconnect
 copy_fwbin wpanusb_beagleconnect
+copy_fwbin sensortest_beagleconnect
+#copy_fwbin greybus_mikrobus_beagleconnect
