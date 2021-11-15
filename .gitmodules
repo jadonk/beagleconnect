@@ -33,4 +33,7 @@
 	url = https://github.com/jadonk/greybus-for-zephyr
 [submodule "sw/zephyrproject/mikrobus-clickid-flasher"]
 	path = sw/zephyrproject/mikrobus-clickid-flasher
-	url = https://github.com/vaishnav98/mikrobus-clickid-flasher.git
+	url = https://github.com/jadonk/mikrobus-clickid-flasher.git
+[submodule "sw/linux/bcfserial"]
+	path = sw/linux/bcfserial
+	url = https://github.com/jadonk/bcfserial

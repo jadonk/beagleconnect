@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-GREYBUS_NETLINK_MODULES_SITE = $(BR2_EXTERNAL_beagleconnect_gateway_qemu_PATH)/../greybus
+GREYBUS_NETLINK_MODULES_SITE = $(BR2_EXTERNAL_beagleconnect_gateway_PATH)/../greybus
 GREYBUS_NETLINK_MODULES_SITE_METHOD = local
 GREYBUS_NETLINK_MODULES_LICENSE = GPL-2.0
 GREYBUS_NETLINK_MODULES_LICENSE_FILES = LICENSE
