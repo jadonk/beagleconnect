@@ -17,7 +17,7 @@ west update
 west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
 # Sensortest application SubG
-west build -p always -b beagleconnect_freedom $ZPRJ/sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
+west build -p always -b beagleconnect_freedom samples/boards/beagle_bcf/sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
 # mikroBUS over Greybus node SubG
 #west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_beagleconnect -- -DOVERLAY_CONFIG=overlay-802154-subg.conf -DCONFIG_NET_CONFIG_IEEE802154_RADIO_TX_POWER=14 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_DIV_SETUP_PA=1 -DCONFIG_IEEE802154_CC13XX_CC26XX_SUB_GHZ_CS_THRESHOLD=-20
