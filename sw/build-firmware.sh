@@ -20,7 +20,7 @@ west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/b
 west build -p always -b beagleconnect_freedom samples/boards/beagle_bcf/sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
 # mikroBUS over Greybus node SubG
-#west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_beagleconnect -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
+west build -p always -b beagleconnect_freedom $ZPRJ/greybus-for-zephyr-mikrobus/samples/subsys/greybus/net -d build/greybus_mikrobus_beagleconnect -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
 
 # mikroBUS ID flasher
 #west build -p always -t flash -b beagleconnect_freedom $ZPRJ/mikrobus-clickid-flasher/samples/subsys/mikrobus/flasher -d build/greybus_mikrobus_beagleconnect_flasher -- -DCONFIG_MIKROBUS_FLASHER_CLICK_NAME='"'$MIKROBUS_ID'"'
