@@ -16,6 +16,9 @@ west update
 # WPANUSB Gateway SubG
 west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/wpanusb_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
+# BCFSERIAL Gateway SubG
+west build -p always -b beagleconnect_freedom $ZPRJ/wpanusb_bc -d $ZEPHYR_BASE/build/bcfserial_beagleconnect -- -DOVERLAY_CONFIG=overlay-bcfserial.conf -DDTC_OVERLAY_FILE=bcfserial.overlay
+
 # Sensortest application SubG
 west build -p always -b beagleconnect_freedom samples/boards/beagle_bcf/sensortest -d $ZEPHYR_BASE/build/sensortest_beagleconnect -- -DOVERLAY_CONFIG=overlay-subghz.conf
 
