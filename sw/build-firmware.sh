@@ -43,4 +43,5 @@ copy_fwbin () {
 
 copy_fwbin wpanusb_beagleconnect
 copy_fwbin sensortest_beagleconnect
-#copy_fwbin greybus_mikrobus_beagleconnect
+copy_fwbin greybus_mikrobus_beagleconnect
+copy_fwbin bcfserial_beagleconnect
