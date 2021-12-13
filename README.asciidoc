@@ -657,11 +657,13 @@ Do this from the BeagleBone Green Gateway board that was previously used to prog
 
 1. Disconnect the BeagleConnect Freedom gateway device
 2. Connect a new BeagleConnect Freedom board via USB
-3. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/greybus_mikrobus_beagleconnect.bin /dev/ttyACM0`
-4. After it finishes programming successfully, disconnect the BeagleConnect Freedom node device
-5. Power the newly programmed BeagleConnect Freedom node device from an alternate USB power source
-6. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
-7. `sudo beagleconnect-start-gateway`
+3. `sudo systemctl stop lowpan.service`
+4. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/greybus_mikrobus_beagleconnect.bin /dev/ttyACM0`
+5. `sudo systemctl start lowpan.service`
+6. After it finishes programming successfully, disconnect the BeagleConnect Freedom node device
+7. Power the newly programmed BeagleConnect Freedom node device from an alternate USB power source
+8. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
+9. `sudo beagleconnect-start-gateway`
 
 #TODO: update the below for the built-in sensors
 
