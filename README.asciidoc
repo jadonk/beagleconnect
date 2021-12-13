@@ -601,7 +601,7 @@ Seeed BeagleBone® Green Gateway host from the
 https://rcn-ee.net/rootfs/debian-mikrobus-armhf[Image repository]
 
 1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from
-https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2021-11-11/bone-debian-10.11-iot-mikrobus-armhf-2021-11-11-4gb.img.xz[here].
+https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2021-12-08/bone-debian-11.1-iot-mikrobus-armhf-2021-12-08-4gb.img.xz[here].
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
 4. Power the Green Gateway via the 12V barrel jack.

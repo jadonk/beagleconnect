@@ -1587,10 +1587,10 @@ F 13 "YAGEO" H 2575 6600 50  0001 C CNN "Vendor2"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 P1
+L Connector:USB_C_Receptacle_USB2.0 USB1
 U 1 1 5F9D6ACA
 P 5425 2175
-F 0 "P1" H 5532 3042 50  0000 C CNN
+F 0 "USB1" H 5532 3042 50  0000 C CNN
 F 1 "USB_C_Receptacle_USB2.0" H 5532 2951 50  0000 C CNN
 F 2 "Connector_USB:USB_C_Receptacle_Palconn_UTC16-G" H 5575 2175 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 5575 2175 50  0001 C CNN

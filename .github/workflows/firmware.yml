@@ -61,7 +61,7 @@ jobs:
         id: cache-zephyr-sdk-0_13_1
         uses: actions/cache@v2
         with:
-          path: ~/zephyr-sdk-0.13.1
+          path: ~/zephyr-sdk
           key: zephyr-sdk-0_13_1
           restore-keys: |
             zephyr-sdk-0_13_1
