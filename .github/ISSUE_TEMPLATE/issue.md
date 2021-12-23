@@ -1,6 +1,16 @@
 ---
 name: Issue
-about: Report a bug or a 
-title: "[HW/SW/Docs/Case]: [FEATURE NAME]"
+about: Report a bug or an issue
+title: "[HW/SW/Docs/Case]: [ISSUE NAME]"
 labels: needs triage
 ---
+
+# What I'm trying to accomplish
+
+# What I researched
+
+# What I tried
+
+# What happened
+
+# What I expect to happen
