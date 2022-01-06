@@ -246,8 +246,11 @@
 <!-- s -->
 <g id="node14" class="node">
 <title>s</title>
+<g id="a_node14"><a xlink:title="Over 1,000 different sensor, actuator and indicator options">
 <polygon fill="green" stroke="green" points="307,-60 243,-60 243,-24 307,-24 307,-60"/>
 <text text-anchor="middle" x="275" y="-38.3" font-family="Times,serif" font-size="14.00">sensor</text>
+</a>
+</g>
 </g>
 <!-- k&#45;&gt;s -->
 <g id="edge12" class="edge">
