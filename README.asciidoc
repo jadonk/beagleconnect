@@ -307,7 +307,7 @@ please refer to the <<development>> section below.
 [[enable-a-linux-host-with-beagleconnect]]
 === Enable a Linux host with BeagleConnect™
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
 Step 1] Log into a host system running Linux that is BeagleConnect™
 enabled. Enable a Linux host with BeagleConnect™ by plugging a
 `BeagleConnect™ gateway device` into it's USB port. You'll also want to have a
@@ -325,14 +325,14 @@ be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 [[connect-host-and-device]]
 === Connect host and device
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning
 Step 2] Initiate a connection between the host and devices by pressing
 the discovery button(s).
 
 [[device-data-shows-up-as-files]]
 === Device data shows up as files
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
 Step 3] New streams of self-describing data show up on the host system
 using native device drivers.
 
@@ -436,7 +436,7 @@ the Zephyr console
 [[background]]
 == Background
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
 Proposition] BeagleConnect™ uses Greybus and updated Click Boards with
 identifiers to eliminate the need to add manually configure devices
 added onto the Linux system.
@@ -466,7 +466,7 @@ https://en.wikipedia.org/wiki/IEEE_802.15.4[802.15.4].
 [[software-architecture]]
 === Software architecture
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/bcf_block_diagram?raw=true[Block Diagram]
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/bcf_block_diagram.svg?raw=true[Block Diagram]
 
 [[todo-items]]
 TODO items
