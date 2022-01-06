@@ -665,15 +665,116 @@ Do this from the BeagleBone Green Gateway board that was previously used to prog
 8. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
 9. `sudo beagleconnect-start-gateway`
 
+```sh
+debian@beaglebone:~$ sudo beagleconnect-start-gateway 
+[sudo] password for debian: 
+setting up wpanusb gateway for IEEE 802154 CHANNEL 1(906 Mhz)
+ping6: Warning: source address might be selected on device other than lowpan0.
+PING 2001:db8::1(2001:db8::1) from ::1 lowpan0: 56 data bytes
+64 bytes from 2001:db8::1: icmp_seq=2 ttl=64 time=185 ms
+64 bytes from 2001:db8::1: icmp_seq=3 ttl=64 time=40.9 ms
+64 bytes from 2001:db8::1: icmp_seq=4 ttl=64 time=40.9 ms
+64 bytes from 2001:db8::1: icmp_seq=5 ttl=64 time=40.6 ms
+
+--- 2001:db8::1 ping statistics ---
+5 packets transmitted, 4 received, 20% packet loss, time 36ms
+rtt min/avg/max/mdev = 40.593/76.796/184.799/62.356 ms
+debian@beaglebone:~$ iio_info 
+Library version: 0.19 (git tag: v0.19)
+Compiled with backends: local xml ip usb serial
+IIO context created with local backend.
+Backend version: 0.19 (git tag: v0.19)
+Backend description string: Linux beaglebone 5.14.18-bone20 #1buster PREEMPT Tue Nov 16 20:47:19 UTC 2021 armv7l
+IIO context has 1 attributes:
+	local,kernel: 5.14.18-bone20
+IIO context has 3 devices:
+	iio:device0: TI-am335x-adc.0.auto (buffer capable)
+		8 channels found:
+			voltage0:  (input, index: 0, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 1412
+			voltage1:  (input, index: 1, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 2318
+			voltage2:  (input, index: 2, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 2631
+			voltage3:  (input, index: 3, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 817
+			voltage4:  (input, index: 4, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 881
+			voltage5:  (input, index: 5, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 0
+			voltage6:  (input, index: 6, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 0
+			voltage7:  (input, index: 7, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 1180
+		2 buffer-specific attributes found:
+				attr  0: data_available value: 0
+				attr  1: watermark value: 1
+	iio:device1: hdc2010
+		3 channels found:
+			humidityrelative:  (input)
+			3 channel-specific attributes found:
+				attr  0: peak_raw value: 52224
+				attr  1: raw value: 52234
+				attr  2: scale value: 1.525878906
+			current:  (output)
+			2 channel-specific attributes found:
+				attr  0: heater_raw value: 0
+				attr  1: heater_raw_available value: 0 1
+			temp:  (input)
+			4 channel-specific attributes found:
+				attr  0: offset value: -15887.515151
+				attr  1: peak_raw value: 25600
+				attr  2: raw value: 25628
+				attr  3: scale value: 2.517700195
+	iio:device2: opt3001
+		1 channels found:
+			illuminance:  (input)
+			2 channel-specific attributes found:
+				attr  0: input value: 79.040000
+				attr  1: integration_time value: 0.800000
+		2 device-specific attributes found:
+				attr  0: current_timestamp_clock value: realtime
+
+				attr  1: integration_time_available value: 0.1 0.8
+debian@beaglebone:~$ dmesg | grep -e mikrobus -e greybus
+[  100.491253] greybus 1-2.2: Interface added (greybus)
+[  100.491294] greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
+[  100.491306] greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
+[  100.737637] greybus 1-2.2: excess descriptors in interface manifest
+[  102.475168] mikrobus:mikrobus_port_gb_register: mikrobus gb_probe , num cports= 2, manifest_size 192 
+[  102.475206] mikrobus:mikrobus_port_gb_register: protocol added 3
+[  102.475214] mikrobus:mikrobus_port_gb_register: protocol added 2
+[  102.475239] mikrobus:mikrobus_port_register: registering port mikrobus-1 
+[  102.475400] mikrobus_manifest:mikrobus_state_get: mikrobus descriptor not found
+[  102.475417] mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 1, driver=opt3001, protocol=3, reg=44
+[  102.494516] mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 2, driver=hdc2010, protocol=3, reg=41
+[  102.494567] mikrobus_manifest:mikrobus_manifest_parse:  (null) manifest parsed with 2 devices
+[  102.494592] mikrobus mikrobus-1: registering device : opt3001
+[  102.495096] mikrobus mikrobus-1: registering device : hdc2010
+debian@beaglebone:~$ 
+```
+
 #TODO: update the below for the built-in sensors
 
 #TODO: can we also handle the case where these sensors are included and recommend them? Same firmware?
+
+#TODO: the current demo is for the built-in sensors, not the Click boards mentioned below
 
 Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on
 boards without interrupt requirement are the ones that work currently.  The example is for
 Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the device side.
 
 /var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages:
+
+#TODO: this log needs to be updated
 
 ```
 greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
@@ -733,28 +834,17 @@ After flashing, you should observe the something matching the following
 output in `tio`.
 
 ....
-uart:~$ *** Booting Zephyr OS version 2.3.99  ***
-[00:00:00.009,735] <inf> net_config: Initializing network
-[00:00:00.109,741] <inf> net_config: IPv6 address: fe80::3177:a11c:4b:1200
-[00:00:00.109,924] <dbg> greybus_service.greybus_service_init: Greybus initializing..
-[00:00:00.110,168] <dbg> greybus_transport_tcpip.gb_transport_backend_init: Greybus TCP/IP Transport initializing..
-[00:00:00.110,321] <dbg> greybus_transport_tcpip.netsetup: created server socket 0 for cport 0
-[00:00:00.110,321] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 0
-[00:00:00.110,321] <dbg> greybus_transport_tcpip.netsetup: binding socket 0 (cport 0) to port 4242
-[00:00:00.110,351] <dbg> greybus_transport_tcpip.netsetup: listening on socket 0 (cport 0)
-[00:00:00.110,534] <dbg> greybus_transport_tcpip.netsetup: created server socket 1 for cport 1
-[00:00:00.110,534] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 1
-[00:00:00.110,565] <dbg> greybus_transport_tcpip.netsetup: binding socket 1 (cport 1) to port 4243
-[00:00:00.110,595] <dbg> greybus_transport_tcpip.netsetup: listening on socket 1 (cport 1)
-[00:00:00.110,839] <inf> net_config: IPv6 address: fe80::3177:a11c:4b:1200
-[00:00:00.110,992] <dbg> greybus_transport_tcpip.netsetup: created server socket 2 for cport 2
-[00:00:00.110,992] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 2
-[00:00:00.110,992] <dbg> greybus_transport_tcpip.netsetup: binding socket 2 (cport 2) to port 4244
-[00:00:00.111,022] <dbg> greybus_transport_tcpip.netsetup: listening on socket 2 (cport 2)
-[00:00:00.111,328] <inf> greybus_transport_tcpip: Greybus TCP/IP Transport initialized
-[00:00:00.113,128] <inf> greybus_service: Greybus is active
-[00:00:00.113,525] <dbg> greybus_transport_tcpip.accept_loop: calling poll
-uart:~$ 
+uart:~$ *** Booting Zephyr OS build 9c858c863223  ***
+[00:00:00.009,735] <inf> greybus_transport_tcpip: CPort 0 mapped to TCP/IP port 4242
+[00:00:00.010,131] <inf> greybus_transport_tcpip: CPort 1 mapped to TCP/IP port 4243
+[00:00:00.010,528] <inf> greybus_transport_tcpip: CPort 2 mapped to TCP/IP port 4244
+[00:00:00.010,742] <inf> greybus_transport_tcpip: Greybus TCP/IP Transport initialized
+[00:00:00.010,864] <inf> greybus_manifest: Registering CONTROL greybus driver.
+[00:00:00.011,230] <inf> greybus_manifest: Registering GPIO greybus driver.
+[00:00:00.011,596] <inf> greybus_manifest: Registering I2C greybus driver.
+[00:00:00.011,871] <inf> greybus_service: Greybus is active
+[00:00:00.026,092] <inf> net_config: Initializing network
+[00:00:00.134,063] <inf> net_config: IPv6 address: 2001:db8::1
 ....
 
 The line beginning with `+++***+++` is the Zephyr boot banner.
