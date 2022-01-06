@@ -87,10 +87,13 @@ error handling updates and to provide additional metadata to users.
 Futher reading:
 * [Greybus for IoT at ELC on Youtube](https://www.youtube.com/watch?v=7H50pv-4YXw&list=PLbzoR-pLrL6pRFP6SOywVJWdEHlmQE51q) [slides](https://elinux.org/images/c/cb/Using_Greybus_for_IoT.pdf)
 
-## ipv6/ieee802154
+## lowpan/ieee802154
 
 These drivers provide the upper networking layers for talking to the BeagleConnect Freedom
 Sub-GHz network.
+
+Further reading:
+* [6LoWPAN on Wikipedia](https://en.wikipedia.org/wiki/6LoWPAN)
 
 ## wpanusb\*\*
 
