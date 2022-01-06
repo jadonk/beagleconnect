@@ -58,7 +58,7 @@
 <g id="node1" class="node">
 <title>A</title>
 <g id="a_node1"><a xlink:title="Primary developer entry point">
-<polygon fill="white" stroke="white" points="160,-689 24,-689 24,-653 160,-653 160,-689"/>
+<polygon fill="green" stroke="green" points="160,-689 24,-689 24,-653 160,-653 160,-689"/>
 <text text-anchor="middle" x="92" y="-667.3" font-family="Times,serif" font-size="14.00">User Application</text>
 </a>
 </g>
@@ -67,7 +67,7 @@
 <g id="node3" class="node">
 <title>I</title>
 <g id="a_node3"><a xlink:title="Hundreds of drivers for sensors and acutators">
-<polygon fill="white" stroke="white" points="145,-606 49,-606 49,-570 145,-570 145,-606"/>
+<polygon fill="green" stroke="green" points="145,-606 49,-606 49,-570 145,-570 145,-606"/>
 <text text-anchor="middle" x="97" y="-584.3" font-family="Times,serif" font-size="14.00">IIO Drivers</text>
 </a>
 </g>
@@ -82,7 +82,7 @@
 <g id="node2" class="node">
 <title>g</title>
 <g id="a_node2"><a xlink:title="Bridge Greybus to networked devices">
-<polygon fill="white" stroke="white" points="264,-689 178,-689 178,-653 264,-653 264,-689"/>
+<polygon fill="green" stroke="green" points="264,-689 178,-689 178,-653 264,-653 264,-689"/>
 <text text-anchor="middle" x="221" y="-667.3" font-family="Times,serif" font-size="14.00">gbridge**</text>
 </a>
 </g>
@@ -90,8 +90,11 @@
 <!-- 6 -->
 <g id="node9" class="node">
 <title>6</title>
-<polygon fill="white" stroke="white" points="251,-606 183,-606 183,-570 251,-570 251,-606"/>
+<g id="a_node9"><a xlink:title="IPv6 for low&#45;power wireless networks">
+<polygon fill="green" stroke="green" points="251,-606 183,-606 183,-570 251,-570 251,-606"/>
 <text text-anchor="middle" x="217" y="-584.3" font-family="Times,serif" font-size="14.00">lowpan</text>
+</a>
+</g>
 </g>
 <!-- g&#45;&gt;6 -->
 <g id="edge6" class="edge">
@@ -103,7 +106,7 @@
 <g id="node6" class="node">
 <title>m</title>
 <g id="a_node6"><a xlink:title="Board&#45;level abstraction to identify sensor connections">
-<polygon fill="white" stroke="white" points="145.5,-534 48.5,-534 48.5,-498 145.5,-498 145.5,-534"/>
+<polygon fill="green" stroke="green" points="145.5,-534 48.5,-534 48.5,-498 145.5,-498 145.5,-534"/>
 <text text-anchor="middle" x="97" y="-512.3" font-family="Times,serif" font-size="14.00">mikrobus**</text>
 </a>
 </g>
@@ -118,7 +121,7 @@
 <g id="node4" class="node">
 <title>r</title>
 <g id="a_node4"><a xlink:title="Dynamic RPC&#45;like bus interface for I2C, SPI, UART, etc.">
-<polygon fill="white" stroke="white" points="135,-462 61,-462 61,-426 135,-426 135,-462"/>
+<polygon fill="green" stroke="green" points="135,-462 61,-462 61,-426 135,-426 135,-462"/>
 <text text-anchor="middle" x="98" y="-440.3" font-family="Times,serif" font-size="14.00">greybus</text>
 </a>
 </g>
@@ -127,7 +130,7 @@
 <g id="node5" class="node">
 <title>n</title>
 <g id="a_node5"><a xlink:title="Extend Greybus over netlink to userspace">
-<polygon fill="white" stroke="white" points="151,-356 49,-356 49,-320 151,-320 151,-356"/>
+<polygon fill="green" stroke="green" points="151,-356 49,-356 49,-320 151,-320 151,-356"/>
 <text text-anchor="middle" x="100" y="-334.3" font-family="Times,serif" font-size="14.00">gb&#45;netlink**</text>
 </a>
 </g>
@@ -154,7 +157,7 @@
 <g id="node7" class="node">
 <title>w</title>
 <g id="a_node7"><a xlink:title="USB&#45;interface to IEEE802.15.4 radio">
-<polygon fill="white" stroke="white" points="262,-462 168,-462 168,-426 262,-426 262,-462"/>
+<polygon fill="green" stroke="green" points="262,-462 168,-462 168,-426 262,-426 262,-462"/>
 <text text-anchor="middle" x="215" y="-440.3" font-family="Times,serif" font-size="14.00">wpanusb**</text>
 </a>
 </g>
@@ -163,7 +166,7 @@
 <g id="node11" class="node">
 <title>b</title>
 <g id="a_node11"><a xlink:title="USB interace to access CC1352 UART that encapulates WPANUSB in HDLC">
-<polygon fill="white" stroke="white" points="450,-356 304,-356 304,-320 450,-320 450,-356"/>
+<polygon fill="green" stroke="green" points="450,-356 304,-356 304,-320 450,-320 450,-356"/>
 <text text-anchor="middle" x="377" y="-334.3" font-family="Times,serif" font-size="14.00">usb_uart_bridge**</text>
 </a>
 </g>
@@ -177,8 +180,11 @@
 <!-- i -->
 <g id="node8" class="node">
 <title>i</title>
-<polygon fill="white" stroke="white" points="264,-534 164,-534 164,-498 264,-498 264,-534"/>
+<g id="a_node8"><a xlink:title="Standards&#45;based radio interface">
+<polygon fill="green" stroke="green" points="264,-534 164,-534 164,-498 264,-498 264,-534"/>
 <text text-anchor="middle" x="214" y="-512.3" font-family="Times,serif" font-size="14.00">ieee802154</text>
+</a>
+</g>
 </g>
 <!-- i&#45;&gt;w -->
 <g id="edge8" class="edge">
@@ -196,7 +202,7 @@
 <g id="node10" class="node">
 <title>z</title>
 <g id="a_node10"><a xlink:title="Zephyr&#45;based IEEE802.15.4 radio accepting HDLC over UART transactions">
-<polygon fill="white" stroke="white" points="422,-265 332,-265 332,-229 422,-229 422,-265"/>
+<polygon fill="green" stroke="green" points="422,-265 332,-265 332,-229 422,-229 422,-265"/>
 <text text-anchor="middle" x="377" y="-243.3" font-family="Times,serif" font-size="14.00">gateway**</text>
 </a>
 </g>
@@ -205,7 +211,7 @@
 <g id="node12" class="node">
 <title>k</title>
 <g id="a_node12"><a xlink:title="Zephyr&#45;based applies Greybus transactions from IPv6/IEEE802154 to physical I2C, SPI, UART, etc.">
-<polygon fill="white" stroke="white" points="456.5,-143 297.5,-143 297.5,-107 456.5,-107 456.5,-143"/>
+<polygon fill="green" stroke="green" points="456.5,-143 297.5,-143 297.5,-107 456.5,-107 456.5,-143"/>
 <text text-anchor="middle" x="377" y="-121.3" font-family="Times,serif" font-size="14.00">greybus&#45;mikrobus**</text>
 </a>
 </g>
@@ -226,7 +232,7 @@
 <g id="node13" class="node">
 <title>e</title>
 <g id="a_node13"><a xlink:title="Manifest for mikroBUS driver">
-<polygon fill="white" stroke="white" points="538.5,-60 325.5,-60 325.5,-24 538.5,-24 538.5,-60"/>
+<polygon fill="green" stroke="green" points="538.5,-60 325.5,-60 325.5,-24 538.5,-24 538.5,-60"/>
 <text text-anchor="middle" x="432" y="-38.3" font-family="Times,serif" font-size="14.00">manifest 1&#45;wire EEPROM**</text>
 </a>
 </g>
@@ -240,7 +246,7 @@
 <!-- s -->
 <g id="node14" class="node">
 <title>s</title>
-<polygon fill="white" stroke="white" points="307,-60 243,-60 243,-24 307,-24 307,-60"/>
+<polygon fill="green" stroke="green" points="307,-60 243,-60 243,-24 307,-24 307,-60"/>
 <text text-anchor="middle" x="275" y="-38.3" font-family="Times,serif" font-size="14.00">sensor</text>
 </g>
 <!-- k&#45;&gt;s -->
