@@ -14,7 +14,7 @@ Some other place-holders here:
 
 # Overall software architecture
 
-![Block Diagram](bcf_block_diagram.png)
+![Block Diagram](bcf_block_diagram.svg)
 
 \*\* - New code generated in this project
 
