@@ -466,7 +466,7 @@ https://en.wikipedia.org/wiki/IEEE_802.15.4[802.15.4].
 [[software-architecture]]
 === Software architecture
 
-* 802.15.4 provides the #TODO#
+image:https://github.com/jadonk/beagleconnect/blob/master/docs/bcf_block_diagram?raw=true[Block Diagram]
 
 [[todo-items]]
 TODO items
