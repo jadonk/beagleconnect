@@ -133,6 +133,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
 
 ### Link
 
+#### CC1352
 * We've got a hook for TX toggle at the antenna switch. A global variable can remember if
   we should leave it on or off.
 * I need to look for where we have RX at the level of valid IEEE802.15.4 packets on the
@@ -140,14 +141,11 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
 
 ### USB
 
-* On the MSP430, I think we'd need:
-  * A flag set by the CC1352 to say if it is running the _gateway_ firmware
-  * A global flag to reflect the LED mode
-  * Clear the LED if not running the _gateway_ firmware
-  * Set the LED if in HDLC mode and running the _gateway_ firmware
-  * Toggle the LED status with short pulses based on getting or sending USB traffic
-  * Toggle the LED slow based on some timeout if not in HDLC mode and running the _gateway_ firmware
-* On the CC1352, notify the MSP430 over I2C if running the _gateway_ firmware
+#### MSP430
+* A global flag to reflect the LED mode
+* Set the LED if USB connected and HDLC connection established with _gateway_ firmware
+* Toggle the LED status with short pulses based on getting or sending USB traffic
+* Toggle the LED slow if USB is connected, but not in HDLC mode (passthrough or searching for HDLC)
 
 ### 1/2
 
