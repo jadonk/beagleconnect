@@ -8,6 +8,7 @@ some of this over as I can work it out.
 
 Some other place-holders here:
 
+* [LEDs](LED.md)
 * [MSP430](MSP430.md)
 * [Green Gateway](Green_Gateway.md)
 * [Roadmap](ROADMAP.md)
