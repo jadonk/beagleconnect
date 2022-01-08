@@ -16,9 +16,11 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
 
 <table>
  <thead>
-  <tr>LED</tr>
-  <tr>Status</tr>
-  <tr>Indication</tr>
+  <tr>
+   <td>LED</td>
+   <td>Status</td>
+   <td>Indication</td>
+  </tr>
  </thead>
  <tbody>
   <tr>
