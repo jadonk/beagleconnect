@@ -14,87 +14,116 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
 
 ## Functions
 
-### C (Charging)
+<table>
+ <thead>
+  <tr>LED</tr>
+  <tr>Status</tr>
+  <tr>Indication</tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td rowspan=2>C (Charging)</td>
+   <td>On</td>
+   <td>Charger active</td>
+  </tr>
+  <tr>
+   <td>Off</td>
+   <td>Charger not active</td>
+  </tr>
+  <tr>
+   <td rowspan=4>L (Link)</td>
+   <td>On</td>
+   <td>Radio RX within timeout</td>
+  </tr>
+  <tr>
+   <td>Fast blink</td>
+   <td>Radio active</td>
+  </tr>
+  <tr>
+   <td>Off</td>
+   <td>Radio RX inactive (timeout)</td>
+  </tr>
+  <tr>
+   <td>Slow blink</td>
+   <td>Radio error</td>
+  </tr>
+  <tr>
+   <td rowspan=4>U (USB)</td>
+   <td>On</td>
+   <td>Device in <i>gateway</i> mode</td>
+  </tr>
+  <tr>
+   <td>Fast blink</td>
+   <td>USB active</td>
+  </tr>
+  <tr>
+   <td>Off</td>
+   <td>Device in <i>node</i> mode</td>
+  </tr>
+  <tr>
+   <td>Slow blink</td>
+   <td>Seeking USB (<i>gateway</i>) connection</td>
+  </tr>
+  <tr>
+   <td rowspan=2>P (Power)</td>
+   <td>On</td>
+   <td>Device powered</td>
+  </tr>
+  <tr>
+   <td>Off</td>
+   <td>Device not powered</td>
+  </tr>
+  <tr>
+   <td rowspan=6>1 (mikroBUS 1)</td>
+   <td>On</td>
+   <td>Identified and connected</td>
+  </tr>
+  <tr>
+   <td>Fast blink (w/o 2)</td>
+   <td>Active</td>
+  </tr>
+  <tr>
+   <td>Fast blink (w/ 2)</td>
+   <td>Internal sensor active</td>
+  </tr>
+  <tr>
+   <td>Off</td>
+   <td>Inactive</td>
+  </tr>
+  <tr>
+   <td>Slow blink (w/o 2)</td>
+   <td>Identified, but not connected</td>
+  </tr>
+  <tr>
+   <td>Slow blink (w/ 2)</td>
+   <td>Seeking Greybus connection</td>
+  </tr>
+  <tr>
+   <td rowspan=6>2 (mikroBUS 2)</td>
+   <td>On</td>
+   <td>Identified and connected</td>
+  </tr>
+  <tr>
+   <td>Fast blink (w/o 1)</td>
+   <td>Active</td>
+  </tr>
+  <tr>
+   <td>Fast blink (w/ 1)</td>
+   <td>Internal sensor active</td>
+  </tr>
+  <tr>
+   <td>Off</td>
+   <td>Inactive</td>
+  </tr>
+  <tr>
+   <td>Slow blink (w/o 1)</td>
+   <td>Identified, but not connected</td>
+  </tr>
+  <tr>
+   <td>Slow blink (w/ 1)</td>
+   <td>Seeking Greybus connection</td>
+  </tr>
+ </tbody>
+</table>
 
-On
-: Attached battery is being charged
-
-Off
-: Charger is not active
-
-### L (Link)
-
-On
-: IEEE802.15.4 SubGHz connection established (RX occurred recently)
-
-Fast blink
-: IEEE802.15.4 SubGHz data TX or RX
-
-Off
-: IEEE802.15.4 SubGHz traffic not seen for some timeout period
-
-Slow blink
-: IEEE802.15.4 SubGHz connection error detected
-
-### H (Gateway/Host)
-
-On
-: Device is in _gateway_ mode
-
-Fast blink
-: USB UART data traffic over MSP430
-
-Off
-: Device is in _node_ mode
-
-Slow blink
-: MSP430 is looking for a _gateway_ connection (USB active), but the CC1352 has not set the MSP430 clearly in _gateway_ or _node_ mode
-
-### P (Power)
-
-On
-: Device is powered
-
-Off
-: Device is not powered
-
-### 1 (mikroBUS 1)
-
-On
-: mikroBUS 1 add-on identified and Greybus connection established
-
-Fast blink (2 not blinking)
-: mikroBUS 1 add-on interface traffic (Greybus or other)
-
-Fast blink (2 blinks at same time)
-: On-board sensor interface traffic (Greybus or other)
-
-Off
-: No sensor identified and not seeking Greybus connection
-
-Slow blink (2 not blinking)
-: Sensor identified in mikroBUS 1 socket and seeking a Greybus connection
-
-Slow blink (2 blinks at same time)
-: Seeking a Greybus connection with or without identifying any external sensor
-
-### 2 (mikroBUS 2)
-
-On
-: mikroBUS 2 add-on identified and Greybus connection established
-
-Fast blink (1 not blinking)
-: mikroBUS 2 add-on interface traffic (Greybus or other)
-
-Fast blink (1 blinks at same time)
-: On-board sensor interface traffic (Greybus or other)
-
-Off
-: No sensor identified and not seeking Greybus connection
-
-Slow blink (1 not blinking)
-: Sensor identified in mikroBUS 2 socket and seeking a Greybus connection
-
-Slow blink (1 blinks at same time)
-: Seeking a Greybus connection with or without identifying any external sensor
 
