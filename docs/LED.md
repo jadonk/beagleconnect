@@ -58,31 +58,43 @@ On
 Off
 : Device is not powered
 
-### S (Sensor)
+### 1 (mikroBUS 1)
 
 On
-: TBD
+: mikroBUS 1 add-on identified and Greybus connection established
 
-Fast blink
-: Sensor traffic
+Fast blink (2 not blinking)
+: mikroBUS 1 add-on interface traffic (Greybus or other)
+
+Fast blink (2 blinks at same time)
+: On-board sensor interface traffic (Greybus or other)
 
 Off
-: TBD
+: No sensor identified and not seeking Greybus connection
 
-Slow blink
-: Sensor error
+Slow blink (2 not blinking)
+: Sensor identified in mikroBUS 1 socket and seeking a Greybus connection
 
-### G (Greybus)
+Slow blink (2 blinks at same time)
+: Seeking a Greybus connection with or without identifying any external sensor
+
+### 2 (mikroBUS 2)
 
 On
-: Greybus connection is active
+: mikroBUS 2 add-on identified and Greybus connection established
 
-Fast blink
-: Greybus traffic
+Fast blink (1 not blinking)
+: mikroBUS 2 add-on interface traffic (Greybus or other)
+
+Fast blink (1 blinks at same time)
+: On-board sensor interface traffic (Greybus or other)
 
 Off
-: Greybus connection is inactive
+: No sensor identified and not seeking Greybus connection
 
-Slow blink
-: Greybus connection being attempted, but not completed
+Slow blink (1 not blinking)
+: Sensor identified in mikroBUS 2 socket and seeking a Greybus connection
+
+Slow blink (1 blinks at same time)
+: Seeking a Greybus connection with or without identifying any external sensor
 
