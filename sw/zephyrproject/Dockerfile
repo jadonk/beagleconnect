@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=nonineractive
 RUN echo . \
 	&& apt update \
 	&& apt install -y gnupg \
-	&& echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ buster main" >> /etc/apt/sources.list \
+	&& echo "deb [arch=armhf] http://repos.rcn-ee.net/debian/ bullseye main" >> /etc/apt/sources.list \
 	&& apt-key adv --batch --keyserver keyserver.ubuntu.com --recv-key D284E608A4C46402 \
 	&& apt update \
 	&& apt install -y \
