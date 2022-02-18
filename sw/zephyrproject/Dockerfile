@@ -59,12 +59,6 @@ RUN echo . \
 	&& echo "source /root/src/bcf-zephyr/zephyr/zephyr-env.sh" >> /root/.bashrc \
 	&& echo .
 
-RUN echo . \
-	&& echo "deb http://deb.debian.org/debian bullseye-backports main" > /etc/apt/sources.list.d/backports.list \
-	&& apt update \
-	&& apt install -y cmake/bullseye-backports \
-	&& echo .
-
 ENV ZEPHYR_BASE=/root/src/bcf-zephyr/zephyr
 ENV PATH=/root/src/bcf-zephyr/zephyr/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 RUN echo . \
