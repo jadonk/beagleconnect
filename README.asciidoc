@@ -605,13 +605,16 @@ https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2021-12-08/bone-debian-11.1-iot-
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
 4. Power the Green Gateway via the 12V barrel jack.
-5. Use Ethernet via a cable or WiFi via `connmanctl` for an Internet connection.
+5. Log onto the Seeed BeagleBone® Green Gateway using `ssh` or, with a serial to USB cable such as those made by FTDI[https://www.digikey.com/short/cfjmdbdd] plugged into J10 with the black wire of the FTDI cable toard the Ethernet connector.  To use `ssh`, you will have to know the Green Gateway's IP address that can be found from your router.
+6. (If using WiFi) Use the `connmanctl` tool to gain an Internet connection.
 
-=== Flash BeagleConnect™ Freedom gateway device
+=== Flash BeagleConnect™ Freedom *gateway* device
 
-On the newly imaged BeagleBone Green Gateway board:
+Comamnd-line instructions below are to be issued into the BeagleBone® Green Gateway terminal, either via `ssh` or the serial console.
 
-1. Connect (or reconnect) a BeagleConnect Freedom board over USB
+On the newly imaged BeagleBone® Green Gateway board:
+
+1. Connect (or reconnect) a BeagleConnect™ Freedom board over USB
 2. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/wpanusb_beagleconnect.bin /dev/ttyACM0`
 3. After it finishes programming successfully, reconnect the BeagleConnect Freedom board over USB
 4. Test that the driver loaded and is talking to the newly added gateway radio
@@ -633,36 +636,20 @@ Interface wpan0
         ackreq_default 0
 ```
 
-=== Test gateway using pre-programmed node firmware
+=== Flash BeagleConnect™ Freedom *node* device with Greybus firmware
 
-By default, the beta boards ship with a debug sensor broadcast per https://gist.github.com/Pillar1989/c579b789e38e856cde16e77345932ac4[sensortest-main.c]. You can use this to further test your gateway.
+#TODO: How can we add a step in here to show the network is connected without needing `gbridge` to be fully functional?
 
-1. Power a BeagleConnect Freedom that has not yet been programmed via a USB power source, not
-the BeagleBone Green Gateway. You'll hear a click every 1-2 seconds along with seeing 4 of the
-LEDs turn off and on.
-2. In an isolated terminal window, `sudo beagleconnect-start-gateway`
-3. `sensortest-rx.py`
+Do this from the BeagleBone® Green Gateway board that was previously used to program the BeagleConnect™ Freedom *gateway* device:
 
-Every 1-2 minutes, you should see something like:
-```
-('fe80::3111:7a22:4b:1200%lowpan0', 52213, 0, 13)  '2l:7.79;'
-('fe80::3111:7a22:4b:1200%lowpan0', 52213, 0, 13)  '4h:43.75;4t:23.11;'
-```
-
-The value after "2l:" is the amount of light in lux. The value after "4h:" is the relative humidity and after "4t:" is the temperature in Celcius.
-
-=== Flash BeagleConnect Freedom node device with Greybus firmware
-
-Do this from the BeagleBone Green Gateway board that was previously used to program the BeagleConned Freedom gateway device:
-
-1. Disconnect the BeagleConnect Freedom gateway device
-2. Connect a new BeagleConnect Freedom board via USB
+1. Disconnect the BeagleConnect™ Freedom *gateway* device
+2. Connect a new BeagleConnect™ Freedom board via USB
 3. `sudo systemctl stop lowpan.service`
 4. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/greybus_mikrobus_beagleconnect.bin /dev/ttyACM0`
-5. `sudo systemctl start lowpan.service`
-6. After it finishes programming successfully, disconnect the BeagleConnect Freedom node device
-7. Power the newly programmed BeagleConnect Freedom node device from an alternate USB power source
-8. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
+5. After it finishes programming successfully, disconnect the BeagleConnect Freedom node device
+6. Power the newly programmed BeagleConnect Freedom *node* device from an alternate USB power source
+7. Reconnect the BeagleConnect Freedom *gateway* device to the BeagleBone Green Gateway
+8. `sudo systemctl start lowpan.service`
 9. `sudo beagleconnect-start-gateway`
 
 ```sh
