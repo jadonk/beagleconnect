@@ -48,7 +48,7 @@ ENV ZEPHYR_BASE=/opt/source/bcf-zephyr/zephyr
 ENV PATH=/opt/source/bcf-zephyr/zephyr/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 RUN echo . \
-	&& echo "source /root/src/bcf-zephyr/zephyr/zephyr-env.sh" >> /root/.bashrc \
+	&& echo "source /opt/source/bcf-zephyr/zephyr/zephyr-env.sh" >> /root/.bashrc \
 	&& echo .
 
 RUN echo . \
