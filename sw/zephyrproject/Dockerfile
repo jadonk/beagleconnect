@@ -46,12 +46,13 @@ ENV ZEPHYR_TOOLCHAIN_VAIRANT=cross-compile
 ENV CROSS_COMPILE=/usr/bin/arm-none-eabi-
 ENV ZEPHYR_BASE=/opt/source/bcf-zephyr/zephyr
 ENV PATH=/opt/source/bcf-zephyr/zephyr/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+ENV BOARD=beagleconnect_freedom
 
 RUN echo . \
 	&& echo "source /opt/source/bcf-zephyr/zephyr/zephyr-env.sh" >> /root/.bashrc \
 	&& echo .
 
 RUN echo . \
-	&& west build -b beagleconnect_freedom zephyr/samples/boards/beagle_bcf/sensortest \
+	&& west build -d sensortest zephyr/samples/boards/beagle_bcf/sensortest \
 	&& echo .
 
