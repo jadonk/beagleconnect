@@ -32,7 +32,7 @@ RUN echo . \
 WORKDIR /opt/source
 RUN echo . \
 	&& touch . \
-	&& west init -m https://github.com/jadonk/zephyr --mr bcf-sdk-0.0.3 bcf-zephyr \
+	&& west init -m https://github.com/jadonk/zephyr --mr bcf-sdk-0.0.4 bcf-zephyr \
 	&& echo .
 
 WORKDIR /opt/source/bcf-zephyr
