@@ -438,8 +438,6 @@ These instructions assume an x86_64 computer runing Ubuntu 20.04.3 LTS, but any 
 
 #TODO
 
-= Develop for BeagleConnect Freedom with Zephyr
-
 [[sdk]]
 == Install Zephyr development tools on BeagleBone Green Gateway
 
