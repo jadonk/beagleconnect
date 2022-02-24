@@ -419,7 +419,7 @@ There are many options, but let's get started with one recommended set for the b
 * microSD card (6GB or larger)
 * microSD card programmer
 
-=== Recommended:
+=== Recommended
 
 * https://smile.amazon.com/TMEZON-Power-Adapter-Supply-2-1mm/dp/B00Q2E5IXW[12V power brick]
 * https://smile.amazon.com/Converter-Terminated-Galileo-BeagleBone-Minnowboard/dp/B06ZYPLFNB[USB to TTL 3.3V UART adapter]
@@ -428,7 +428,7 @@ There are many options, but let's get started with one recommended set for the b
 * https://www.mikroe.com/weather-click[BME280-based Weather Click]
 * https://www.mikroe.com/air-quality-2-click[iAQ-Core-based Air Quality 2 Click]
 
-=== Optional:
+=== Optional
 
 * x86_64 computer running Ubuntu 20.04.3 LTS
 
