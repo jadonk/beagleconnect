@@ -126,6 +126,7 @@ gateway. It is possible to assemble a gateway with any Linux computer, but this 
 will ship setup and ready to go.
 
 The gateway is built from:
+
 * BeagleBoard.org PocketBeagle,
 * BeagleConnect™ Freedom,
 * a cellular modem,
