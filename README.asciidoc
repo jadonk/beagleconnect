@@ -1538,6 +1538,14 @@ Thanks for reading, and we hope you’ve enjoyed this tutorial.
 [[sdk]]
 = Develop for BeagleConnect Freedom with Zephyr
 
+== Requirements to being
+#TODO
+
+== Log into BeagleBone Green Gateway
+#TODO
+
+== Install Zephyr development tools on BeagleBone Green Gateway
+
 [source,bash]
 ----
 sudo apt update
@@ -1570,7 +1578,10 @@ echo "export BOARD=beagleconnect_freedom" >> $HOME/.bashrc
 source $HOME/.bashrc
 ----
 
+== Build applications for BeagleConnect Freedom on BeagleBone Green Gateway
+
 Now you can build various Zephyr applications
+
 [source,bash]
 ----
 cd $HOME/bcf-zephyr
@@ -1580,9 +1591,16 @@ west build -d build/bcfserial modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay
 west build -d build/greybus modules/lib/greybus/samples/subsys/greybus/net -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
 ----
 
+== Flash applications to BeagleConnect Freedom from BeagleBone Green Gateway
+
 And then you can flash the BeagleConnect Freedom boards over USB
+
 [source,bash]
 ----
 cd $HOME/bcf-zephyr
 west flash -d build/sensortest
 ----
+
+== Debug applications over the serial terminal
+
+#TODO
