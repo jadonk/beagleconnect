@@ -1579,3 +1579,10 @@ west build -d build/wpanusb modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay-s
 west build -d build/bcfserial modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay-bcfserial.conf -DDTC_OVERLAY_FILE=bcfserial.overlay
 west build -d build/greybus modules/lib/greybus/samples/subsys/greybus/net -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
 ----
+
+And then you can flash the BeagleConnect Freedom boards over USB
+[source,bash]
+----
+cd $HOME/bcf-zephyr
+west flash -d build/sensortest
+----
