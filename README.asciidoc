@@ -1563,7 +1563,6 @@ cd $HOME/bcf-zephyr
 west update
 west zephyr-export
 pip3 install -r zephyr/scripts/requirements-base.txt
-echo "export ZEPHYR_TOOLCHAIN_VAIRANT=cross-compile" >> $HOME/.bashrc
 echo "export CROSS_COMPILE=/usr/bin/arm-none-eabi-" >> $HOME/.bashrc
 echo "export ZEPHYR_BASE=$HOME/bcf-zephyr/zephyr" >> $HOME/.bashrc
 echo "export PATH=$HOME/bcf-zephyr/zephyr/scripts:$PATH" >> $HOME/.bashrc
