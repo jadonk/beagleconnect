@@ -403,7 +403,9 @@ So, in summary, what is so different with this approach?
 kernel, rather than cut-and-paste
 
 [[development]]
-= Develop for BeagleConnect Freedom with Zephyr
+= Develop for BeagleConnect™ Freedom with Zephyr
+
+Developing directly in Zephyr will not be ultimately required for end-users who won't touch the firmware running on BeagleConnect™ Freedom and will instead use the BeagleConnect™ Greybus functionality, but is important for early adopters as well as people looking to extend the functionality of the open source design. If you are one of those people, this is a good place to get started.
 
 [[equipment]]
 == Equipment to begin development
@@ -522,6 +524,8 @@ cc2538-bsl.py build/blinky
 [[work-in-progress]]
 = Work in progress
 
+To understand a bit more about how the BeagleConnect™ Greybus stack is being built, this section helps describe the development currently in progress and the principles of operation.
+
 [[background]]
 == Background
 
@@ -597,10 +601,11 @@ provisioning should load any new drivers
 provisioning is completed
 
 [[demo-1]]
-= SubG IEEE 802.15.4 Greybus demo for GPIO, I2C and mikroBUS add-on boards
+= BeagleConnect™ Greybus demo using BeagleConnect™ Freedom
+BeagleConnect™ Freedom runs a subGHz IEEE 802.15.4 network. This BeagleConnect™ Greybus demo shows how to interact with GPIO, I2C and mikroBUS add-on boards remotely connected over a BeagleConnect™ Freedom.
 
-This section describes the steps required to use
-https://en.wikipedia.org/wiki/Linux[Linux] embedded computer and the
+This section starts with the steps required to use
+https://en.wikipedia.org/wiki/Linux[Linux] embedded computer (BeagleBone Green Gateway) and the
 https://lwn.net/Articles/715955/[Greybus] protocol, over an IEEE
 802.15.4 wireless link, to blink an LED on a
 https://zephyrproject.org[Zephyr] device.
