@@ -969,9 +969,11 @@ Please press the <Tab> button to see all available commands.
 You can also use the <Tab> button to prompt or auto-complete all commands or its subcommands.
 You can try to call commands with <-h> or <--help> parameter for more information.
 Shell supports following meta-keys:
+
 Ctrl+a, Ctrl+b, Ctrl+c, Ctrl+d, Ctrl+e, Ctrl+f, Ctrl+k, Ctrl+l, Ctrl+n, Ctrl+p, Ctrl+u, Ctrl+w
 Alt+b, Alt+f.
 Please refer to shell documentation for more details.
+
 ----
 
 So after hitting _Tab_, we see that there are several interesting
