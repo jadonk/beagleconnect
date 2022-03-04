@@ -438,11 +438,12 @@ There are many options, but let's get started with one recommended set for the b
 == Install the latest software image for BeagleBone Green Gateway
 
 Download and install the Debian Linux operating system image for the
-Seeed BeagleBone® Green Gateway host from the
-https://rcn-ee.net/rootfs/debian-mikrobus-armhf[Image repository]
+Seeed BeagleBone® Green Gateway host.
 
 1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from
-https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2022-02-24/bone-debian-11.2-iot-mikrobus-armhf-2022-02-24-4gb.img.xz[here].
+https://rcn-ee.net/rootfs/debian-mikrobus-armhf/[here]. 
+Pick the most recent directory and select the file beginning with *bone-* and ending with *.img.xz*.
+Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
 4. Power the Green Gateway via the 12V barrel jack.
@@ -532,7 +533,7 @@ To understand a bit more about how the BeagleConnect™ Greybus stack is being b
 
 image:https://github.com/beagleboard/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
 Proposition] BeagleConnect™ uses Greybus and updated Click Boards with
-identifiers to eliminate the need to add manually configure devices
+identifiers to eliminate the need to add and manually configure devices
 added onto the Linux system.
 
 [[high-level]]
@@ -606,7 +607,7 @@ provisioning is completed
 BeagleConnect™ Freedom runs a subGHz IEEE 802.15.4 network. This BeagleConnect™ Greybus demo shows how to interact with GPIO, I2C and mikroBUS add-on boards remotely connected over a BeagleConnect™ Freedom.
 
 This section starts with the steps required to use
-https://en.wikipedia.org/wiki/Linux[Linux] embedded computer (BeagleBone Green Gateway) and the
+https://en.wikipedia.org/wiki/Linux[Linux] embedded computer (https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[BeagleBone Green Gateway]) and the
 https://lwn.net/Articles/715955/[Greybus] protocol, over an IEEE
 802.15.4 wireless link, to blink an LED on a
 https://zephyrproject.org[Zephyr] device.
@@ -692,11 +693,12 @@ See the <<Equipment>> section for hardware requirements.
 === Install the latest software image
 
 Download and install the Debian Linux operating system image for the
-Seeed BeagleBone® Green Gateway host from the
-https://rcn-ee.net/rootfs/debian-mikrobus-armhf[Image repository]
+Seeed BeagleBone® Green Gateway host.
 
 1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from
-https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2021-12-08/bone-debian-11.1-iot-mikrobus-armhf-2021-12-08-4gb.img.xz[here].
+https://rcn-ee.net/rootfs/debian-mikrobus-armhf/[here]. 
+Pick the most recent directory and select the file beginning with *bone-* and ending with *.img.xz*.
+Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
 4. Power the Green Gateway via the 12V barrel jack.
