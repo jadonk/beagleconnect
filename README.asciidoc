@@ -148,7 +148,7 @@ do her work the next day. I listened and learned from her the basics of programm
 it wasn't long before I wanted to take the computer apart. 
 
 === Getting Started in Electronics
-Exploring http://www.forrestmims.com/[Getting Started in Electronics] satisfied my
+Exploring http://www.forrestmims.org/[Getting Started in Electronics] satisfied my
 itch for quite a while. Eventually, I got a Commodore 64 and began connecting voice
 synthesizer ICs to it. My interest in computers and electronics flourished into
 an electrical engineering degree and a long career in the semiconductor industry.
