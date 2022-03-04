@@ -113,9 +113,9 @@ boards, which is the version that should be taken to production.
 
 The kit includes:
 
-* Seeed BeagleBone® Green Gateway (board, USB cable)
+* 1x https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[Seeed BeagleBone® Green Gateway] (board, USB cable)
 * 3x BeagleConnect™ Freedom (board, attenna, USB cable)
-* 1x MikroElektronikia Click ID Board
+* 1x https://www.mikroe.com/unique-id-click[MikroElektronikia Click ID Board]
 
 To get started with this kit, see <<demo-1>>.
 
