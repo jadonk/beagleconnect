@@ -174,14 +174,14 @@ with me more about this story.
 
 [[beagleconnect-leash]]
 == BeagleConnect™ Freedom
-_BeagleConnect™ Freedom_ is based on the TI CC1352 and is the first available
+_BeagleConnect™ Freedom_ is based on the https://www.ti.com/product/CC1352R[TI CC1352] and is the first available
 BeagleConnect™ solution. It implements:
 
 * `BeagleConnect™ gateway device` function for Sub-GHz 802.15.4 long-range wireless
 * `BeagleConnect™ node device` function for Bluetooth Low-Energe (BLE) and Sub-GHz
 802.15.4 long range wireless
 * USB-based serial console and firmware updates
-* 2x mikroBUS sockets with `BeagleConnect™ protocol support`
+* 2x https://www.mikroe.com/mikrobus[mikroBUS sockets] with `BeagleConnect™ protocol support`
 
 [.float-group]
 --
@@ -264,7 +264,7 @@ as well as the hundreds of compliant boards developed every year.
 _BeagleConnect™ Freedom_ wireless hardware is built around a
 http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
 microcontroller (MCU). CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
-80KB of ultra-low leakage SRAM, and Over-the-Air upgrades (OTA).
+80KB of ultra-low leakage SRAM, and https://en.wikipedia.org/wiki/Over-the-air_programming[Over-the-Air] upgrades (OTA).
 
 [[full-customization-possible]]
 === Full customization possible
@@ -338,7 +338,7 @@ Step 3] New streams of self-describing data show up on the host system
 using native device drivers.
 
 High-level applications, like `Node-RED`, can directly read/write these high-level
-data streams (including data-type information) to Internet-based MQTT brokers,
+data streams (including data-type information) to Internet-based https://mqtt.org/[MQTT] brokers,
 live dashboards, or other logical operations without requiring any sensor-specific
 coding. Business logic can be applied using simple if-this-then-that style operations
 or be made as complex as desired using virtually any programming language or environment.
