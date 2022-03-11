@@ -712,7 +712,8 @@ Comamnd-line instructions below are to be issued into the BeagleBone® Green Gat
 On the newly imaged BeagleBone® Green Gateway board:
 
 1. Connect (or reconnect) a BeagleConnect™ Freedom board over USB
-2. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/wpanusb_beagleconnect.bin /dev/ttyACM0`
+2. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/wpanusb_beagleconnect.bin /dev/ttyACM0` 
+footnote:[If the cc2538-bs1.py command fails, see Flashing via a Linux Host below]
 3. After it finishes programming successfully, reconnect the BeagleConnect Freedom board over USB
 4. Test that the driver loaded and is talking to the newly added gateway radio
 +
@@ -743,6 +744,7 @@ Do this from the BeagleBone® Green Gateway board that was previously used to pr
 2. Connect a new BeagleConnect™ Freedom board via USB
 3. `sudo systemctl stop lowpan.service`
 4. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/greybus_mikrobus_beagleconnect.bin /dev/ttyACM0`
+footnote:[If the cc2538-bs1.py command fails, see Flashing via a Linux Host below]
 5. After it finishes programming successfully, disconnect the BeagleConnect Freedom node device
 6. Power the newly programmed BeagleConnect Freedom *node* device from an alternate USB power source
 7. Reconnect the BeagleConnect Freedom *gateway* device to the BeagleBone Green Gateway
@@ -860,6 +862,7 @@ Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the devi
 
 #TODO: this log needs to be updated
 
+
 ```
 greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
 greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
@@ -877,6 +880,65 @@ mikrobus mikrobus-0: registering device : ams-iaq-core
 ```
 
 #TODO: bring in the GPIO toggle and I2C explorations for greater understanding
+
+=== Flashing via a Linux Host
+If flashing the Freedom board via the BeagleBone fails here's a trick you can try to flash from a Linux host.
+
+Use `sshfs` to mount the Bone's files on the Linux host.  This assumes the Bone is plugged in the the USB
+and appears at `192.168.7.2`:
+
+```
+host$ cd
+host$ sshfs 192.168.7.2:/ bone
+host$ cd bone; ls
+bin   dev  home    lib         media  opt   root  sbin  sys  usr
+boot  etc  ID.txt  lost+found  mnt    proc  run   srv   tmp  var
+host$ ls /dev/ttyACM*
+/dev/ttyACM1
+
+```
+The Bone's files now appear as local files.  Notice there is already a
+`/dev/ACM` appearing.  Now plug the Connect into the Linux host's USB port
+and run the command again.
+
+```
+host$ ls /dev/ttyACM*
+/dev/ttyACM0  /dev/ttyACM1
+
+```
+
+The `/dev/ttyASM` that just appeared is the one associated with the Connect.
+In my case it's `/dev/ttyACM0`.  That's what I'll use in this example.
+
+Now change directories to where the binaries are and load:
+
+```
+host$ cd ~/bone/usr/share/beagleconnect/cc1352;ls
+greybus_mikrobus_beagleconnect.bin     sensortest_beagleconnect.dts
+greybus_mikrobus_beagleconnect.config  wpanusb_beagleconnect.bin
+greybus_mikrobus_beagleconnect.dts     wpanusb_beagleconnect.config
+sensortest_beagleconnect.bin           wpanusb_beagleconnect.dts
+sensortest_beagleconnect.config
+
+host$ ~/bone/usr/bin/cc2538-bsl.py sensortest_beagleconnect.bin /dev/ttyACM0
+8-bsl.py sensortest_beagleconnect.bin /dev/ttyACM0
+Opening port /dev/ttyACM0, baud 50000
+Reading data from sensortest_beagleconnect.bin
+Cannot auto-detect firmware filetype: Assuming .bin
+Connecting to target...
+CC1350 PG2.0 (7x7mm): 352KB Flash, 20KB SRAM, CCFG.BL_CONFIG at 0x00057FD8
+Primary IEEE Address: 00:12:4B:00:22:7A:10:46
+    Performing mass erase
+Erasing all main bank flash sectors
+    Erase done
+Writing 360448 bytes starting at address 0x00000000
+Write 104 bytes at 0x00057F988
+    Write done                                
+Verifying by comparing CRC32 calculations.
+    Verified (match: 0x0f6bdf0f)
+```
+
+Now you are ready to continue the instructions above after the cc2528 command.
 
 ==== Trying for different add-on boards
 
