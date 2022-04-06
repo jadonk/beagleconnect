@@ -445,7 +445,7 @@ https://rcn-ee.net/rootfs/debian-mikrobus-armhf[Image repository]
 https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2022-02-24/bone-debian-11.2-iot-mikrobus-armhf-2022-02-24-4gb.img.xz[here].
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
-4. Power the Green Gateway via the 12V barrel jack.
+4. Power BeagleBone Green Gateway via the 12V barrel jack.
 
 #TODO: describe how to know it is working
 
@@ -453,7 +453,7 @@ https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2022-02-24/bone-debian-11.2-iot-
 
 These instructions assume an x86_64 computer runing Ubuntu 20.04.3 LTS, but any computer can be used to connect to your BeagleBone Green Gateway.
 
-1. Log onto the Seeed BeagleBone® Green Gateway using `ssh` or, with a serial to USB cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toard the Ethernet connector.  To use `ssh`, you will have to know the Green Gateway's IP address that can be found from your router.
+1. Log onto the Seeed BeagleBone® Green Gateway using `ssh` or, with a serial to USB cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector.  To use `ssh`, you will have to know the Green Gateway's IP address that can be found from your router.
 2. (If using WiFi) Use the `connmanctl` tool to gain an Internet connection.
 
 #TODO: Simplify and elaborate on this section
@@ -730,6 +730,24 @@ Interface wpan0
         lbt 0
         ackreq_default 0
 ```
+
+=== Test gateway using pre-programmed node firmware
+
+By default, the beta boards ship with a debug sensor broadcast per https://gist.github.com/Pillar1989/c579b789e38e856cde16e77345932ac4[sensortest-main.c]. You can use this to further test your gateway.
+
+1. Power a BeagleConnect Freedom that has not yet been programmed via a USB power source, not
+the BeagleBone Green Gateway. You'll hear a click every 1-2 seconds along with seeing 4 of the
+LEDs turn off and on.
+2. In an isolated terminal window, `sudo beagleconnect-start-gateway`
+3. `sensortest-rx.py`
+
+Every 1-2 minutes, you should see something like:
+```
+('fe80::3111:7a22:4b:1200%lowpan0', 52213, 0, 13)  '2l:7.79;'
+('fe80::3111:7a22:4b:1200%lowpan0', 52213, 0, 13)  '4h:43.75;4t:23.11;'
+```
+
+The value after "2l:" is the amount of light in lux. The value after "4h:" is the relative humidity and after "4t:" is the temperature in Celcius.
 
 === Flash BeagleConnect™ Freedom *node* device with Greybus firmware
 
