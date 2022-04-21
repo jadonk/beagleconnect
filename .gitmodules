@@ -16,9 +16,6 @@
 [submodule "sw/usb_uart_bridge"]
 	path = sw/usb_uart_bridge
 	url = https://github.com/jadonk/msp430F55xx_usb_uart_bridge
-[submodule "sw/usb_wpan_temp"]
-	path = sw/usb_wpan_temp
-	url = https://github.com/jadonk/msp430F55xx_usb_uart_bridge
 [submodule "sw/ti_msp430_python_tools"]
 	path = sw/ti_msp430_python_tools
 	url = https://github.com/jadonk/ti_msp430_python_tools
@@ -28,3 +25,15 @@
 [submodule "sw/zephyrproject/wpanusb_bc"]
 	path = sw/zephyrproject/wpanusb_bc
 	url = https://github.com/jadonk/wpanusb_bc
+[submodule "sw/zephyrproject/greybus-for-zephyr"]
+	path = sw/zephyrproject/greybus-for-zephyr
+	url = https://github.com/jadonk/greybus-for-zephyr
+[submodule "sw/zephyrproject/greybus-for-zephyr-mikrobus"]
+	path = sw/zephyrproject/greybus-for-zephyr-mikrobus
+	url = https://github.com/jadonk/greybus-for-zephyr
+[submodule "sw/zephyrproject/mikrobus-clickid-flasher"]
+	path = sw/zephyrproject/mikrobus-clickid-flasher
+	url = https://github.com/jadonk/mikrobus-clickid-flasher.git
+[submodule "sw/linux/bcfserial"]
+	path = sw/linux/bcfserial
+	url = https://github.com/jadonk/bcfserial

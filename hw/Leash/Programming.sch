@@ -4,11 +4,11 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 3 10
-Title "BeagleDust Leash PCB"
-Date "2019-08-12"
+Title "BeagleConnect Leash"
+Date "2020-08-31"
 Rev "A"
 Comp "Beagleboard.org"
-Comment1 "Schematic designed by Analog Life, LLC"
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""

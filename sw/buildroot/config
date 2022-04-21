@@ -1,2 +1,6 @@
 #!/bin/sh
-make -C /home/debian/buildroot O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+BUILDROOT_DIR=${1:-$HOME/workspace/buildroot}
+mkdir -p qemu
+make -C $BUILDROOT_DIR O=$PWD/qemu BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+mkdir -p pb
+make -C $BUILDROOT_DIR O=$PWD/pb BR2_EXTERNAL=$PWD beagleconnect_gateway_pocketbeagle_defconfig

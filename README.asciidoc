@@ -4,6 +4,7 @@ ifdef::env-github[]
 :important-caption: :heavy_exclamation_mark:
 :caution-caption: :fire:
 :warning-caption: :warning:
+:todo-caption: :hammer:
 endif::[]
 :toc:
 :toc-placement!:
@@ -13,7 +14,8 @@ endif::[]
 
 BeagleConnect™ is a revolutionary technology virtually eliminating low-level software
 development for https://en.wikipedia.org/wiki/Internet_of_things[IoT] and https://en.wikipedia.org/wiki/Industrial_internet_of_things[IIoT] applications, such as building automation, factory
-automation, and home automation. While numerous IoT and IIoT solutions available today
+automation, home automation, and scientific data acquisition. While numerous IoT and IIoT
+solutions available today
 provide massive software libraries for microcontrollers footnote:[Complexity can be seen by exploring https://www.arduino.cc/reference/en/libraries/category/sensors/[Arduino sensor libraries]]
 supporting a limited body of
 https://en.wikipedia.org/wiki/Sensor[sensors],
@@ -24,10 +26,12 @@ BeagleConnect simply eliminates the need for these libraries by shifting the bur
 into the most massive and collaborative software project of all time, the https://en.wikipedia.org/wiki/Linux_kernel[Linux kernel].
 
 These are the tools used to automate things in
-https://en.wikipedia.org/wiki/Mechatronics[mechatronics] and
+https://en.wikipedia.org/wiki/Data_collection_system[scientific data collection],
+https://en.wikipedia.org/wiki/Data_science[data science],
+https://en.wikipedia.org/wiki/Mechatronics[mechatronics], and
 https://en.wikipedia.org/wiki/Internet_of_things[IoT].
 
-BeagleConnect™ solves: 
+BeagleConnect™ technology solves: 
 
 * The need to write software to add a large set of diverse devices to your system, 
 * The need to maintain the software with security updates, 
@@ -35,22 +39,11 @@ BeagleConnect™ solves:
 * The need to connect to devices using long-range, low-power wireless, and 
 * The need to produce high-volume custom hardware cost-optimized for your requirements.
 
-The initial _BeagleConnect™ Freedom_ development release will: 
+toc::[]
 
-* Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
-* Work with https://en.wikipedia.org/wiki/Bluetooth_Low_Energy[Bluetooth Low Energy (BLE)]-enabled Linux computers at 2.4GHz, 
-* Work with long-range sub-1GHz https://en.wikipedia.org/wiki/IEEE_802.15.4[IEEE 802.15.4 wireless connections] at 500 meters with data rates of 1kbps, and 
-* Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)] as a `BeagleConnect™ gateway device` and
-  work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
+= BeagleConnect™ experience
 
-
-IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
-to cost roughly US$10.
-
-Future releases will be collaborated with the community, evolve
-dynamically, and contain additional functionality. The goal is to
-support over 500 add-on devices within the first year after the
-development release.
+BeagleConnect™ provides a scalable experience for interacting with the physical world.
 
 NOTE: The term _BeagleConnect™_ refers to a technology comprising of
 a family of boards, a collection of Linux kernel drivers,
@@ -58,16 +51,93 @@ microcontroller firmware, a communication protocol, and system-level
 integration to automation software tools. More specific terms will be
 applied in the architecture details. The term is also used here to
 represent the experience introduced to users through the initial
-_BeagleConnect™ Freedom_ product consiting of a board and case which
+_BeagleConnect™ Freedom_ product consisting of a board and case which
 ships programmed and ready to be used.
 
-toc::[]
+For scientists, we are integrating https://jupyter.org/[Jupyter Notebook] with the data streams
+from any of hundreds of sensor options, including https://www.mikroe.com/click/sensors/force[vibration],
+https://www.mikroe.com/click/sensors/gas[gas detection],
+https://www.mikroe.com/click/sensors/biometrics[biometrics] and
+https://www.mikroe.com/click/sensors[more]. These data streams can be stored in simple
+https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed and visualized.
+
+#TODO: provide images demonstrating Jupyter Notebook visualization
+
+For embedded systems developers, data is easily extrated using the standard
+https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
+interface provided by the https://kernel.org[Linux kernel]
+running on the gateway using any of hundreds of
+programming languages and environments, without writing a line of microcontroller firmware.
+The Linux environment provides opportunities for high-level remote management using tools
+like https://balena.io[Balena] with applications deployed in
+https://docker.io[Docker] containers.
+
+#TODO: provide image illustrating remote management
+
+The hardware and software are fully open source, providing for scalability and a lack of
+vendor lock-in.
+
+For DevOps...
+
+For home automaters, integration into https://webthings.io[WebThings]...
+
+#TODO: think a bit more about this section with some feedback from Cathy.
+
+= BeagleConnect™ hardware
+
+== BeagleConnect™ Freedom
+
+#TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective
+
+IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
+to cost initially around US$20 with a roadmap to variants as low as US$1.
+
+The initial _BeagleConnect™ Freedom_ production release will: 
+
+* Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
+* Work with https://en.wikipedia.org/wiki/Bluetooth_Low_Energy[Bluetooth Low Energy (BLE)]-enabled Linux computers at 2.4GHz, 
+* Work with long-range sub-1GHz https://en.wikipedia.org/wiki/IEEE_802.15.4[IEEE 802.15.4 wireless connections] at 500 meters with data rates of 1kbps, and 
+* Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)] as a `BeagleConnect™ gateway device` and
+  work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
+
+Future releases will be collaborated with the community, evolve
+dynamically, and contain additional functionality. The goal is to
+support over 500 add-on devices within the first year after the
+initial release.
+
+[[beta-kit]]
+== BeagleConnect™ Freedom beta kit
+
+A small number of beta kits have been assembled with BeagleConnect™ Freedom rev C5
+boards, which is the version that should be taken to production.
+
+The kit includes:
+
+* Seeed BeagleBone® Green Gateway (board, USB cable)
+* 3x BeagleConnect™ Freedom (board, attenna, USB cable)
+* 1x MikroElektronikia Click ID Board
+
+To get started with this kit, see <<demo-1>>.
+
+== BeagleConnect™ Mobile Gateway
+
+This is a work-in-progress that will be released as the first integrated BeagleConnect™
+gateway. It is possible to assemble a gateway with any Linux computer, but this computer
+will ship setup and ready to go.
+
+The gateway is built from:
+* BeagleBoard.org PocketBeagle,
+* BeagleConnect™ Freedom,
+* a cellular modem,
+* a USB WiFi dongle,
+* antennas, and
+* an enclosure.
 
 [[story]]
-== The Story Behind BeagleConnect™ 
+= The Story Behind BeagleConnect™ 
 
 [[long-background]]
-=== The Long Background
+== The Long Background
 There are many stories behind BeagleConnect™, mine is just one of them. It begins
 with my mom teaching me about computers. She told me I could anything I wanted
 with ours, as long as I didn't open the case. This was the late-70s/early-80s, so
@@ -76,6 +146,7 @@ away and there wasn't risk of me damaging the family photo album or her ability 
 do her work the next day. I listened and learned from her the basics of programming, but
 it wasn't long before I wanted to take the computer apart. 
 
+=== Getting Started in Electronics
 Exploring http://www.forrestmims.com/[Getting Started in Electronics] satisfied my
 itch for quite a while. Eventually, I got a Commodore 64 and began connecting voice
 synthesizer ICs to it. My interest in computers and electronics flourished into
@@ -85,6 +156,7 @@ Over this time, I've become more and more alarmed with the progress of technolog
 to be clear, I love technology. I love innovation and invention. It is just that some
 things have evolved in a sort of tunnel-vision, without bringing everyone along.
 
+=== But, what about keyboard users?
 As graphical user interfaces and mice took over computers, they rapidly became almost
 unusable by my mom. She typed well, but the dexterity to move a mouse aluded her.
 To satisfy the need to interact with locations on the screen, she adopted using a
@@ -92,8 +164,12 @@ joystick and her productivity came to a crawl. How is it that such assumptions c
 be made impacting *all* computer users without any thoughtful provisions for what
 already worked?
 
+=== Find out more
 Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat
 with me more about this story.
+
+[[architecture]]
+= Architecture
 
 [[beagleconnect-leash]]
 == BeagleConnect™ Freedom
@@ -221,17 +297,17 @@ secure your own network, and
 * Fully FCC/CE certified.
 
 [[usage]]
-== Usage
+= Usage
 This section describes the usage model we are developing. To use the current code in development,
 please refer to the <<development>> section below.
 
 [[beagleconnect-user-experience]]
-=== BeagleConnect™ wireless user experience
+== BeagleConnect™ wireless user experience
 
 [[enable-a-linux-host-with-beagleconnect]]
-==== Enable a Linux host with BeagleConnect™
+=== Enable a Linux host with BeagleConnect™
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
 Step 1] Log into a host system running Linux that is BeagleConnect™
 enabled. Enable a Linux host with BeagleConnect™ by plugging a
 `BeagleConnect™ gateway device` into it's USB port. You'll also want to have a
@@ -247,16 +323,16 @@ be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 #TODO: Clean up images#
 
 [[connect-host-and-device]]
-==== Connect host and device
+=== Connect host and device
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning
 Step 2] Initiate a connection between the host and devices by pressing
 the discovery button(s).
 
 [[device-data-shows-up-as-files]]
-==== Device data shows up as files
+=== Device data shows up as files
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
 Step 3] New streams of self-describing data show up on the host system
 using native device drivers.
 
@@ -269,7 +345,7 @@ or be made as complex as desired using virtually any programming language or env
 #TODO: Actually, Node-RED will make these show up automatically as streams.#
 
 [[components]]
-=== Components
+== Components
 
 [horizontal]
 BeagleConnect™ enabled host:: Linux computer, possibly single-board computer (SBC), with
@@ -307,7 +383,7 @@ ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being consider
 
 Greybus:: #TODO#
 
-TODO: Find a place for the following notes:
+#TODO: Find a place for the following notes:
 
 ** The device interfaces get exposed to the host via Greybus BRIDGED_PHY
 protocol
@@ -317,7 +393,7 @@ device drivers are loaded on the host
 on the host for development
 
 [[whats-different]]
-=== What's different
+== What's different
 
 So, in summary, what is so different with this approach?
 
@@ -327,39 +403,46 @@ So, in summary, what is so different with this approach?
 kernel, rather than cut-and-paste
 
 [[development]]
-== Development
+= Development
 
 [[equipment]]
-=== Equipment
-#TODO: This is where I need to pick back up, moving equipment notes from down below up
-to here.#
+== Equipment
 
-There are several different development equipment options. The earliest available option...
+There are many options, but let's get started with one recommended set for the beta users.
 
-[horizontal]
-Host:: x86 Linux machine
-BeagleConnect™ gateway device::
-+
-* http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and
-* http://shop.sysmocom.de/products/atusb[atusb dongle]
-+
-BeagleConnect™ node device::
-+
-* http://www.ti.com/tool/launchxl-cc1352r1[CC1352R Launchpad] and 
-* https://www.mikroe.com/click-booster-pack-2[Click BoosterPack 2]
-+
+=== Required:
 
+* <<beta-kit>>
+** https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[Seeed Studio BeagleBone® Green Gateway]
+** 3x BeagleConnect™ Freedom board, antenna, U.FL to SMA cable, SMA antenna and USB Type-A to Type-C cable
+** 1x https://www.mikroe.com/click[MikroE] ID Click
+* microSD card (6GB or larger)
+* microSD card programmer
+
+=== Recommended:
+
+* https://smile.amazon.com/TMEZON-Power-Adapter-Supply-2-1mm/dp/B00Q2E5IXW[12V power brick]
+* https://smile.amazon.com/Converter-Terminated-Galileo-BeagleBone-Minnowboard/dp/B06ZYPLFNB[USB to TTL 3.3V UART adapter]
+* Ethernet cable and Internet connection
+* 2x USB power adapters
+* https://www.mikroe.com/weather-click[BME280-based Weather Click]
+* https://www.mikroe.com/air-quality-2-click[iAQ-Core-based Air Quality 2 Click]
+
+=== Optional:
+
+* x86_64 Linux laptop running Ubuntu 20.04.3 LTS for rebuilding the firmware and observing
+the Zephyr console
 
 [[background]]
-=== Background
+== Background
 
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/SoftwareProp.PNG?raw=true[Software
 Proposition] BeagleConnect™ uses Greybus and updated Click Boards with
 identifiers to eliminate the need to add manually configure devices
 added onto the Linux system.
 
 [[high-level]]
-==== High-level
+=== High-level
 
 * For Linux nerds: Think of BeagleConnect™ as
 https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN] over
@@ -381,9 +464,9 @@ over https://en.wikipedia.org/wiki/6LoWPAN[6LoWPAN] on
 https://en.wikipedia.org/wiki/IEEE_802.15.4[802.15.4].
 
 [[software-architecture]]
-==== Software architecture
+=== Software architecture
 
-* 802.15.4 provides the #TODO#
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/bcf_block_diagram.svg?raw=true[Block Diagram]
 
 [[todo-items]]
 TODO items
@@ -425,17 +508,17 @@ provisioning should load any new drivers
 provisioning is completed
 
 [[demo-1]]
-== 2.4GHz IEEE 802.15.4 Greybus demo for GPIO and I2C
+= SubG IEEE 802.15.4 Greybus demo for GPIO, I2C and mikroBUS add-on boards
 
-This document describes, in some detail, the steps required to use
-https://en.wikipedia.org/wiki/Linux[Linux] workstation and the
+This section describes the steps required to use
+https://en.wikipedia.org/wiki/Linux[Linux] embedded computer and the
 https://lwn.net/Articles/715955/[Greybus] protocol, over an IEEE
 802.15.4 wireless link, to blink an LED on a
 https://zephyrproject.org[Zephyr] device.
 
-=== Introduction
+== Introduction
 
-==== Why??
+=== Why??
 
 Good question. Blinking an LED is kind of the
 https://en.wikipedia.org/wiki/%22Hello,_World!%22_program[Hello, World]
@@ -456,7 +539,7 @@ and open-source protocol for the Internet of Things using the Greybus
 Protocol, and blinking an LED using Greybus is the simplest
 proof-of-concept for that. All that is required is a reliable transport.
 
-==== History
+=== History
 
 There are a few technologies at the core of this demonstration, and far
 too much background information to describe adequately here, so they are
@@ -499,57 +582,225 @@ Greybus currently supports several busses, including:
 * LED (with various programmability)
 * AUDIO (I2S)
 
-==== Hardware Requirements
+#TODO: The agenda for the above falls a bit short of BeagleConnect
 
-WARNING: Things might fail silently if you have the wrong board or wrong revision.
+=== Hardware requirements
 
-* a Linux workstation running https://releases.ubuntu.com/18.04.4[Ubuntu
-Bionic]
-** Only x86_64 is supported at this time
-* a https://www.ti.com/tool/LAUNCHXL-CC1352R1[CC1352R1 LaunchPad]
-** Please ensure that you purchase a device with
-http://www.ti.com/lit/er/swrz077b/swrz077b.pdf[Revision E Silicon] to
-avoid silicon errata.
-** Also ensure that all jumpers are connected
-`GND, 5V, 3V3, RXD<<, TXD>>, RST, TMS, TCK, TDO, TDI, SW0`
-* a USB IEEE 802.15.4 adapter
-** In this example, we use the
-http://downloads.qi-hardware.com/people/werner/wpan/web[atusb]
-** Available for purchase from
-http://shop.sysmocom.de/products/atusb[sysmocom]
-** This part is https://www.oshwa.org/[OSHW] (i.e. all CAD files and
-firmware source is available) for those who choose to create their own.
+See the <<Equipment>> section for hardware requirements.
 
-=== Prerequisites
+== Running the demo
 
-* Zephyr environment is set up according to the
-https://docs.zephyrproject.org/latest/getting_started/index.html[Getting
-Started Guide]
-** Please use the Zephyr SDK when installing a toolchain above
-* https://docs.zephyrproject.org/latest/getting_started/index.html#install-a-toolchain[Zephyr
-SDK] is installed at ~/zephyr-sdk-0.11.2 (any later version should be
-fine as well)
-* Zephyr board is connected via USB
+#TODO: Fill in some details for new embedded Linux users
 
-=== Cloning the repository
+#TODO: Arrange demo in order of _fast success_ to _greater understanding_
 
-This repository utilizes
-https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to keep
-track of all of the projects required to reproduce the on-going work.
-The instructions here only cover checking out the `demo` branch which
-should stay in a tested state. On-going development will be on the
-`master` branch.
+=== Install the latest software image
 
-NOTE: The parent directory `/tmp` is simply used as a placeholder for testing.
-Please use whatever parent directory you see fit.
+Download and install the Debian Linux operating system image for the
+Seeed BeagleBone® Green Gateway host from the
+https://rcn-ee.net/rootfs/debian-mikrobus-armhf[Image repository]
 
-==== Clone specific tag
+1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from
+https://rcn-ee.net/rootfs/debian-mikrobus-armhf/2021-12-08/bone-debian-11.1-iot-mikrobus-armhf-2021-12-08-4gb.img.xz[here].
+2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
+3. Insert the microSD card into the Green Gateway.
+4. Power the Green Gateway via the 12V barrel jack.
+5. Use Ethernet via a cable or WiFi via `connmanctl` for an Internet connection.
 
-[source,console]
-----
-cd /tmp
-git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
-----
+=== Flash BeagleConnect™ Freedom gateway device
+
+On the newly imaged BeagleBone Green Gateway board:
+
+1. Connect (or reconnect) a BeagleConnect Freedom board over USB
+2. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/wpanusb_beagleconnect.bin /dev/ttyACM0`
+3. After it finishes programming successfully, reconnect the BeagleConnect Freedom board over USB
+4. Test that the driver loaded and is talking to the newly added gateway radio
++
+```
+debian@beaglebone:~$ iwpan wpan0 info
+Interface wpan0
+        ifindex 10
+        wpan_dev 0x200000001
+        extended_addr 0x5a4f745eb7beac7f
+        short_addr 0xffff
+        pan_id 0xffff
+        type node
+        max_frame_retries 3
+        min_be 3
+        max_be 5
+        max_csma_backoffs 4
+        lbt 0
+        ackreq_default 0
+```
+
+=== Test gateway using pre-programmed node firmware
+
+By default, the beta boards ship with a debug sensor broadcast per https://gist.github.com/Pillar1989/c579b789e38e856cde16e77345932ac4[sensortest-main.c]. You can use this to further test your gateway.
+
+1. Power a BeagleConnect Freedom that has not yet been programmed via a USB power source, not
+the BeagleBone Green Gateway. You'll hear a click every 1-2 seconds along with seeing 4 of the
+LEDs turn off and on.
+2. In an isolated terminal window, `sudo beagleconnect-start-gateway`
+3. `sensortest-rx.py`
+
+Every 1-2 minutes, you should see something like:
+```
+('fe80::3111:7a22:4b:1200%lowpan0', 52213, 0, 13)  '2l:7.79;'
+('fe80::3111:7a22:4b:1200%lowpan0', 52213, 0, 13)  '4h:43.75;4t:23.11;'
+```
+
+The value after "2l:" is the amount of light in lux. The value after "4h:" is the relative humidity and after "4t:" is the temperature in Celcius.
+
+=== Flash BeagleConnect Freedom node device with Greybus firmware
+
+Do this from the BeagleBone Green Gateway board that was previously used to program the BeagleConned Freedom gateway device:
+
+1. Disconnect the BeagleConnect Freedom gateway device
+2. Connect a new BeagleConnect Freedom board via USB
+3. `sudo systemctl stop lowpan.service`
+4. `cc2538-bsl.py /usr/share/beagleconnect/cc1352/greybus_mikrobus_beagleconnect.bin /dev/ttyACM0`
+5. `sudo systemctl start lowpan.service`
+6. After it finishes programming successfully, disconnect the BeagleConnect Freedom node device
+7. Power the newly programmed BeagleConnect Freedom node device from an alternate USB power source
+8. Reconnect the BeagleConnect Freedom gateway device to the BeagleBone Green Gateway
+9. `sudo beagleconnect-start-gateway`
+
+```sh
+debian@beaglebone:~$ sudo beagleconnect-start-gateway 
+[sudo] password for debian: 
+setting up wpanusb gateway for IEEE 802154 CHANNEL 1(906 Mhz)
+ping6: Warning: source address might be selected on device other than lowpan0.
+PING 2001:db8::1(2001:db8::1) from ::1 lowpan0: 56 data bytes
+64 bytes from 2001:db8::1: icmp_seq=2 ttl=64 time=185 ms
+64 bytes from 2001:db8::1: icmp_seq=3 ttl=64 time=40.9 ms
+64 bytes from 2001:db8::1: icmp_seq=4 ttl=64 time=40.9 ms
+64 bytes from 2001:db8::1: icmp_seq=5 ttl=64 time=40.6 ms
+
+--- 2001:db8::1 ping statistics ---
+5 packets transmitted, 4 received, 20% packet loss, time 36ms
+rtt min/avg/max/mdev = 40.593/76.796/184.799/62.356 ms
+debian@beaglebone:~$ iio_info 
+Library version: 0.19 (git tag: v0.19)
+Compiled with backends: local xml ip usb serial
+IIO context created with local backend.
+Backend version: 0.19 (git tag: v0.19)
+Backend description string: Linux beaglebone 5.14.18-bone20 #1buster PREEMPT Tue Nov 16 20:47:19 UTC 2021 armv7l
+IIO context has 1 attributes:
+	local,kernel: 5.14.18-bone20
+IIO context has 3 devices:
+	iio:device0: TI-am335x-adc.0.auto (buffer capable)
+		8 channels found:
+			voltage0:  (input, index: 0, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 1412
+			voltage1:  (input, index: 1, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 2318
+			voltage2:  (input, index: 2, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 2631
+			voltage3:  (input, index: 3, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 817
+			voltage4:  (input, index: 4, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 881
+			voltage5:  (input, index: 5, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 0
+			voltage6:  (input, index: 6, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 0
+			voltage7:  (input, index: 7, format: le:u12/16>>0)
+			1 channel-specific attributes found:
+				attr  0: raw value: 1180
+		2 buffer-specific attributes found:
+				attr  0: data_available value: 0
+				attr  1: watermark value: 1
+	iio:device1: hdc2010
+		3 channels found:
+			humidityrelative:  (input)
+			3 channel-specific attributes found:
+				attr  0: peak_raw value: 52224
+				attr  1: raw value: 52234
+				attr  2: scale value: 1.525878906
+			current:  (output)
+			2 channel-specific attributes found:
+				attr  0: heater_raw value: 0
+				attr  1: heater_raw_available value: 0 1
+			temp:  (input)
+			4 channel-specific attributes found:
+				attr  0: offset value: -15887.515151
+				attr  1: peak_raw value: 25600
+				attr  2: raw value: 25628
+				attr  3: scale value: 2.517700195
+	iio:device2: opt3001
+		1 channels found:
+			illuminance:  (input)
+			2 channel-specific attributes found:
+				attr  0: input value: 79.040000
+				attr  1: integration_time value: 0.800000
+		2 device-specific attributes found:
+				attr  0: current_timestamp_clock value: realtime
+
+				attr  1: integration_time_available value: 0.1 0.8
+debian@beaglebone:~$ dmesg | grep -e mikrobus -e greybus
+[  100.491253] greybus 1-2.2: Interface added (greybus)
+[  100.491294] greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
+[  100.491306] greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
+[  100.737637] greybus 1-2.2: excess descriptors in interface manifest
+[  102.475168] mikrobus:mikrobus_port_gb_register: mikrobus gb_probe , num cports= 2, manifest_size 192 
+[  102.475206] mikrobus:mikrobus_port_gb_register: protocol added 3
+[  102.475214] mikrobus:mikrobus_port_gb_register: protocol added 2
+[  102.475239] mikrobus:mikrobus_port_register: registering port mikrobus-1 
+[  102.475400] mikrobus_manifest:mikrobus_state_get: mikrobus descriptor not found
+[  102.475417] mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 1, driver=opt3001, protocol=3, reg=44
+[  102.494516] mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 2, driver=hdc2010, protocol=3, reg=41
+[  102.494567] mikrobus_manifest:mikrobus_manifest_parse:  (null) manifest parsed with 2 devices
+[  102.494592] mikrobus mikrobus-1: registering device : opt3001
+[  102.495096] mikrobus mikrobus-1: registering device : hdc2010
+debian@beaglebone:~$ 
+```
+
+#TODO: update the below for the built-in sensors
+
+#TODO: can we also handle the case where these sensors are included and recommend them? Same firmware?
+
+#TODO: the current demo is for the built-in sensors, not the Click boards mentioned below
+
+Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on
+boards without interrupt requirement are the ones that work currently.  The example is for
+Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the device side.
+
+/var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages:
+
+#TODO: this log needs to be updated
+
+```
+greybus 1-2.2: GMP VID=0x00000126, PID=0x00000126
+greybus 1-2.2: DDBL1 Manufacturer=0x00000126, Product=0x00000126
+greybus 1-2.2: excess descriptors in interface manifest
+mikrobus:mikrobus_port_gb_register: mikrobus gb_probe , num cports= 3, manifest_size 252
+mikrobus:mikrobus_port_gb_register: protocol added 11
+mikrobus:mikrobus_port_gb_register: protocol added 3
+mikrobus:mikrobus_port_gb_register: protocol added 2
+mikrobus:mikrobus_port_register: registering port mikrobus-0
+mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 1, driver=bme280, protocol=3, reg=76
+mikrobus_manifest:mikrobus_manifest_attach_device: parsed device 2, driver=ams-iaq-core, protocol=3, reg=5a
+mikrobus_manifest:mikrobus_manifest_parse:  Greybus Service Sample Application manifest parsed with 2 devices
+mikrobus mikrobus-0: registering device : bme280
+mikrobus mikrobus-0: registering device : ams-iaq-core
+```
+
+#TODO: bring in the GPIO toggle and I2C explorations for greater understanding
+
+==== Trying for different add-on boards
+
+See https://github.com/vaishnav98/greybus-for-zephyr/tree/mikrobus#trying-out-different-add-on-boardsdevices-over-mikrobus[mikroBUS over Greybus] for trying out the same example for different mikroBUS add-on boards/ on-board devices.
+
+== Observe the node device
+
+Connect BeagleConnect Freedom node device to an Ubuntu laptop to observe the Zephyr console.
 
 === Console (`tio`)
 
@@ -577,114 +828,23 @@ tio /dev/ttyACM0
 
 IMPORTANT: To exit `tio` (later), enter `ctrl+t, q`.
 
-=== Zephyr
-
-==== Add the Fork
-
-For the time being, Greybus must remain outside of the main Zephyr
-repository. Currently, it is just in a Zephyr fork, but it should be
-converted to a proper
-https://docs.zephyrproject.org/latest/guides/modules.html[Module
-(External Project)]. This is for a number of reasons, but mainly there
-must be:
-
-* specifications for authentication and encryption 
-* specifications for joining and rejoining wireless networks 
-* specifications for discovery
-
-Therefore, in order to reproduce this example, please run the following.
-
-NOTE: Open a separate terminal window (`Ctrl+Shift+N`) or simply create a
-new tab in your existing terminal (`Ctrl+Shift+T`) so that you can see
-both or quickly switch between `tio` and the shell.
-
-[source,console]
-----
-cd /tmp/beagleconnect/sw/zephyrproject/zephyr
-west update
-----
-
-==== Build and Flash Zephyr
-
-Here, we will build and flash the Zephyr
-https://github.com/cfriedt/zephyr/tree/greybus-sockets/samples/subsys/greybus/net[greybus_net
-sample] to our device.
-
-[arabic]
-. Edit the file `~/.zephyrrc` and place the following text inside of it
-+
-[source,console]
-----
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
-----
-+
-. Set up the required Zephyr environment variables via
-+
-[source,console]
-----
-source zephyr-env.sh
-----
-+
-. Build the project
-+
-[source,console]
-----
-BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
-  --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154.conf"
-----
-+
-. Ensure that the last part of the build process looks somewhat like
-this:
-+
-....
-...
-[221/226] Linking C executable zephyr/zephyr_prebuilt.elf
-Memory region         Used Size  Region Size  %age Used
-           FLASH:      155760 B     360360 B     43.22%
-      FLASH_CCFG:          88 B         88 B    100.00%
-            SRAM:       58496 B        80 KB     71.41%
-        IDT_LIST:         184 B         2 KB      8.98%
-[226/226] Linking C executable zephyr/zephyr.elf
-....
-+
-. Flash the firmware to your device using
-+
-[source,console]
-----
-BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad
-----
-
 === The Zephyr Shell
-
-NOTE: This section is merely informative and you can skip ahead to the <<linux>> section if you'd like.
 
 After flashing, you should observe the something matching the following
 output in `tio`.
 
 ....
-uart:~$ *** Booting Zephyr OS version 2.3.99  ***
-[00:00:00.009,735] <inf> net_config: Initializing network
-[00:00:00.109,741] <inf> net_config: IPv6 address: fe80::3177:a11c:4b:1200
-[00:00:00.109,924] <dbg> greybus_service.greybus_service_init: Greybus initializing..
-[00:00:00.110,168] <dbg> greybus_transport_tcpip.gb_transport_backend_init: Greybus TCP/IP Transport initializing..
-[00:00:00.110,321] <dbg> greybus_transport_tcpip.netsetup: created server socket 0 for cport 0
-[00:00:00.110,321] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 0
-[00:00:00.110,321] <dbg> greybus_transport_tcpip.netsetup: binding socket 0 (cport 0) to port 4242
-[00:00:00.110,351] <dbg> greybus_transport_tcpip.netsetup: listening on socket 0 (cport 0)
-[00:00:00.110,534] <dbg> greybus_transport_tcpip.netsetup: created server socket 1 for cport 1
-[00:00:00.110,534] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 1
-[00:00:00.110,565] <dbg> greybus_transport_tcpip.netsetup: binding socket 1 (cport 1) to port 4243
-[00:00:00.110,595] <dbg> greybus_transport_tcpip.netsetup: listening on socket 1 (cport 1)
-[00:00:00.110,839] <inf> net_config: IPv6 address: fe80::3177:a11c:4b:1200
-[00:00:00.110,992] <dbg> greybus_transport_tcpip.netsetup: created server socket 2 for cport 2
-[00:00:00.110,992] <dbg> greybus_transport_tcpip.netsetup: setting socket options for socket 2
-[00:00:00.110,992] <dbg> greybus_transport_tcpip.netsetup: binding socket 2 (cport 2) to port 4244
-[00:00:00.111,022] <dbg> greybus_transport_tcpip.netsetup: listening on socket 2 (cport 2)
-[00:00:00.111,328] <inf> greybus_transport_tcpip: Greybus TCP/IP Transport initialized
-[00:00:00.113,128] <inf> greybus_service: Greybus is active
-[00:00:00.113,525] <dbg> greybus_transport_tcpip.accept_loop: calling poll
-uart:~$ 
+uart:~$ *** Booting Zephyr OS build 9c858c863223  ***
+[00:00:00.009,735] <inf> greybus_transport_tcpip: CPort 0 mapped to TCP/IP port 4242
+[00:00:00.010,131] <inf> greybus_transport_tcpip: CPort 1 mapped to TCP/IP port 4243
+[00:00:00.010,528] <inf> greybus_transport_tcpip: CPort 2 mapped to TCP/IP port 4244
+[00:00:00.010,742] <inf> greybus_transport_tcpip: Greybus TCP/IP Transport initialized
+[00:00:00.010,864] <inf> greybus_manifest: Registering CONTROL greybus driver.
+[00:00:00.011,230] <inf> greybus_manifest: Registering GPIO greybus driver.
+[00:00:00.011,596] <inf> greybus_manifest: Registering I2C greybus driver.
+[00:00:00.011,871] <inf> greybus_service: Greybus is active
+[00:00:00.026,092] <inf> net_config: Initializing network
+[00:00:00.134,063] <inf> net_config: IPv6 address: 2001:db8::1
 ....
 
 The line beginning with `+++***+++` is the Zephyr boot banner.
@@ -815,6 +975,119 @@ And we see that the static IPv6 address (`2001:db8::1`) from
 While the statically configured IPv6 address is useful, it isn’t 100%
 necessary.
 
+== Rebuilding from source
+
+#TODO: revisit everything below here
+
+=== Prerequisites
+
+* Zephyr environment is set up according to the
+https://docs.zephyrproject.org/latest/getting_started/index.html[Getting
+Started Guide]
+** Please use the Zephyr SDK when installing a toolchain above
+* https://docs.zephyrproject.org/latest/getting_started/index.html#install-a-toolchain[Zephyr
+SDK] is installed at ~/zephyr-sdk-0.11.2 (any later version should be
+fine as well)
+* Zephyr board is connected via USB
+
+=== Cloning the repository
+
+This repository utilizes
+https://git-scm.com/book/en/v2/Git-Tools-Submodules[git submodules] to keep
+track of all of the projects required to reproduce the on-going work.
+The instructions here only cover checking out the `demo` branch which
+should stay in a tested state. On-going development will be on the
+`master` branch.
+
+NOTE: The parent directory `~` is simply used as a placeholder for testing.
+Please use whatever parent directory you see fit.
+
+==== Clone specific tag
+
+[source,console]
+----
+cd ~
+git clone --recurse-submodules --branch demo https://github.com/jadonk/beagleconnect
+----
+
+=== Zephyr
+
+==== Add the Fork
+
+For the time being, Greybus must remain outside of the main Zephyr
+repository. Currently, it is just in a Zephyr fork, but it should be
+converted to a proper
+https://docs.zephyrproject.org/latest/guides/modules.html[Module
+(External Project)]. This is for a number of reasons, but mainly there
+must be:
+
+* specifications for authentication and encryption 
+* specifications for joining and rejoining wireless networks 
+* specifications for discovery
+
+Therefore, in order to reproduce this example, please run the following.
+
+NOTE: Open a separate terminal window (`Ctrl+Shift+N`) or simply create a
+new tab in your existing terminal (`Ctrl+Shift+T`) so that you can see
+both or quickly switch between `tio` and the shell.
+
+[source,console]
+----
+cd ~/beagleconnect/sw/zephyrproject/zephyr
+west update
+----
+
+==== Build and Flash Zephyr
+
+Here, we will build and flash the Zephyr
+https://github.com/cfriedt/zephyr/tree/greybus-sockets/samples/subsys/greybus/net[greybus_net
+sample] to our device.
+
+[arabic]
+. Edit the file `~/.zephyrrc` and place the following text inside of it
++
+[source,console]
+----
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.11.2
+----
++
+. Set up the required Zephyr environment variables via
++
+[source,console]
+----
+source zephyr-env.sh
+----
++
+. Build the project
++
+[source,console]
+----
+BOARD=cc1352r1_launchxl west build samples/subsys/greybus/net --pristine \
+  --build-dir build/greybus_launchpad -- -DCONF_FILE="prj.conf overlay-802154.conf"
+----
++
+. Ensure that the last part of the build process looks somewhat like
+this:
++
+....
+...
+[221/226] Linking C executable zephyr/zephyr_prebuilt.elf
+Memory region         Used Size  Region Size  %age Used
+           FLASH:      155760 B     360360 B     43.22%
+      FLASH_CCFG:          88 B         88 B    100.00%
+            SRAM:       58496 B        80 KB     71.41%
+        IDT_LIST:         184 B         2 KB      8.98%
+[226/226] Linking C executable zephyr/zephyr.elf
+....
++
+. Flash the firmware to your device using
++
+[source,console]
+----
+BOARD=cc1352r1_launchxl west flash --build-dir build/greybus_launchpad
+----
+
 [[linux]]
 === Linux
 
@@ -826,22 +1099,22 @@ a Linux kernel from here on out.
 For this demo, I used the 5.8.4 stable kernel. Also, I've applied the `mikrobus` kernel
 driver, though it isn't strictly required for greybus.
 
-NOTE: Again, `/tmp` is just used as a placeholder and you can use whatever directory you'd like.
+NOTE: Again, `~` is just used as a placeholder and you can use whatever directory you'd like.
 
 #TODO: The patches for gb-netlink will eventually be applied here until pushed into mainline.#
 
 [source,console]
 ----
-cd /tmp
+cd ~
 git clone --branch v5.8.4 --single-branch git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
 cd linux
 git checkout -b v5.8.4-greybus
-git am /tmp/beagleconnect/sw/linux/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
-git am /tmp/beagleconnect/sw/linux/0001-mikroBUS-build-fixes.patch
+git am ~/beagleconnect/sw/linux/v2-0001-RFC-mikroBUS-driver-for-add-on-boards.patch
+git am ~/beagleconnect/sw/linux/0001-mikroBUS-build-fixes.patch
 cp /boot/config-`uname -r` .config
 yes "" | make oldconfig
-./scripts/kconfig/merge_config.sh .config /tmp/beagleconnect/sw/linux/mikrobus.config
-./scripts/kconfig/merge_config.sh .config /tmp/beagleconnect/sw/linux/atusb.config
+./scripts/kconfig/merge_config.sh .config ~/beagleconnect/sw/linux/mikrobus.config
+./scripts/kconfig/merge_config.sh .config ~/beagleconnect/sw/linux/atusb.config
 make -j`nproc --all`
 sudo make modules_install
 sudo make install
@@ -1266,8 +1539,12 @@ actually fairly straight forward and was accomplished with mostly
 already-upstream source.
 
 For Greybus in Zephyr, there is still a considerable amount of
-integration work to be done, including * converting the fork to a proper
-Zephyr module * adding security and authentication * automatic
+integration work to be done, including
+* converting the fork to a proper
+Zephyr module
+* adding security and authentication
+* automatic
 detection, joining, and rejoining of devices
 
 Thanks for reading, and we hope you’ve enjoyed this tutorial.
+

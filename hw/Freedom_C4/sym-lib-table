@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name BeagleConnect-cache)(type Legacy)(uri ${KIPRJMOD}/BeagleConnect-cache.lib)(options "")(descr ""))
+  (lib (name BeagleConnect-rescue)(type Legacy)(uri ${KIPRJMOD}/BeagleConnect-rescue.lib)(options "")(descr ""))
+  (lib (name LeashPCB)(type Legacy)(uri ${KIPRJMOD}/LeashPCB.lib)(options "")(descr ""))
+  (lib (name LeashPCB-cache)(type Legacy)(uri ${KIPRJMOD}/LeashPCB-cache.lib)(options "")(descr ""))
+  (lib (name BeagleConnect_Freedom-cache)(type Legacy)(uri "${KIPRJMOD}/BeagleConnect Freedom-cache.lib")(options "")(descr ""))
+)

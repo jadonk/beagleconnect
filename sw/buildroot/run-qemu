@@ -1,0 +1,36 @@
+#!/bin/sh
+if (( $EUID != 0 )); then
+  sudo $0
+  exit
+fi
+
+#./host/bin/qemu-system-x86_64 -m 256 -kernel ./images/bzImage -drive "file=images/rootfs.ext2,if=virtio,format=raw" -append "rootwait root=/dev/vda" -net nic,model=virtio -net user,hostfwd=tcp::10022-:22
+#./images/start-qemu.sh serial-only
+#./host/bin/qemu-system-x86_64 -M pc -kernel images/bzImage -drive "file=images/rootfs.ext2,if=virtio,format=raw" -append "rootwait root=/dev/vda console=ttyS0" -serial stdio -net nic,model=virtio-net-pci -netdev "user,id=eth0,hostfwd=tcp::10022-:22,hostfwd=tcp::11880-:1880"
+
+# sudo modprobe tun tap
+# sudo ip link add qemubr0 type bridge
+# sudo ip tuntap add dev tap0 mode tap
+# sudo ip link set dev tap0 master qemubr0   # set qemubr0 as the target bridge for tap0
+# sudo ip link set dev eth0 master qemubr0   # set qemubr0 as the target bridge for eth0
+# sudo ip link set dev qemubr0 up
+
+#./host/bin/qemu-system-x86_64 -nographic -M pc -kernel images/bzImage -drive file=images/rootfs.ext2,if=virtio,format=raw -append "rootwait root=/dev/vda console=ttyS0" -net nic,model=virtio -net user,hostfwd=tcp::10022-:22 -net user,hostfwd=tcp::11880-:1880 -usb -device usb-net,id=wpan0 -netdev user,id=wpan0
+
+./qemu/host/bin/qemu-system-x86_64 \
+	-nographic \
+	-M pc \
+	-m 512 \
+	-kernel images/bzImage \
+	-drive file=images/rootfs.ext2,if=virtio,format=raw \
+	-append "rootwait root=/dev/vda console=ttyS0" \
+	-net nic,model=virtio \
+	-net user,hostfwd=tcp::10022-:22 \
+	-net user,hostfwd=tcp::11880-:1880 \
+	-usb -device usb-host,vendorid=0x20b7,productid=0x1540 \
+	-usb -device usb-host,vendorid=0x2047,productid=0x0aa5 \
+
+
+#	-usb -device usb-ehci,id=ehci \
+
+

@@ -33,14 +33,14 @@ jobs:
         id: cache-buildroot
         uses: actions/cache@v2
         with:
-          path: buildroot-2020.08
-          key: buildroot-source-2020-08v02
+          path: buildroot-2020.11.1
+          key: buildroot-source-2020-11v1
 
       - name: Install buildroot
         if: steps.cache-buildroot.outputs.cache-hit != 'true'
         run: |
-          wget "https://buildroot.org/downloads/buildroot-2020.08.tar.gz"
-          tar xzf buildroot-2020.08.tar.gz
+          wget "https://buildroot.org/downloads/buildroot-2020.11.1.tar.gz"
+          tar xzf buildroot-2020.11.1.tar.gz
           mkdir ~/.buildroot-ccache || true
           mkdir ~/downloads || true
 
@@ -61,29 +61,44 @@ jobs:
           path: ~/downloads
           key: buildroot-downloads-${{ steps.cache-timestamp.outputs.timestamp }}
           restore-keys: |
+            buildroot-downloads-2020-
             buildroot-downloads-
 
-
-      - name: Build buildroot
+      - name: Build pocketbeagle image
         run: |
           export BR2_CCACHE_DIR=~/.buildroot-ccache
           export BR2_DL_DIR=~/downloads
           cd sw/buildroot
-          make -C $GITHUB_WORKSPACE/buildroot-2020.08 O=$PWD BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD/pb BR2_EXTERNAL=$PWD beagleconnect_gateway_pocketbeagle_defconfig
+          cd pb
           make
 
       - uses: actions/upload-artifact@v2
         with:
-          name: buildroot-target
+          name: pocketbeagle-target
           path: |
-            sw/buildroot/images
+            sw/buildroot/pb/images
+
+      - name: Build qemu image
+        run: |
+          export BR2_CCACHE_DIR=~/.buildroot-ccache
+          export BR2_DL_DIR=~/downloads
+          cd sw/buildroot
+          make -C $GITHUB_WORKSPACE/buildroot-2020.11.1 O=$PWD/qemu BR2_EXTERNAL=$PWD beagleconnect_gateway_qemu_x86_64_defconfig
+          cd qemu
+          make
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: qemu-target
+          path: |
+            sw/buildroot/qemu/images
             sw/buildroot/run
 
-# Disable host tools upload for now due to size
-#      - uses: actions/upload-artifact@v2
-#        with:
-#          name: buildroot-host
-#          path: |
-#            sw/buildroot/run
-#            sw/buildroot/host
+      - uses: actions/upload-artifact@v2
+        with:
+          name: buildroot-host
+          path: |
+            sw/buildroot/run
+            #sw/buildroot/host
 

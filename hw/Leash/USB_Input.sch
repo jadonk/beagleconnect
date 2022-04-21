@@ -4,11 +4,11 @@ EELAYER END
 $Descr B 17000 11000
 encoding utf-8
 Sheet 5 10
-Title "BeagleDust Leash PCB"
-Date "2019-08-12"
+Title "BeagleConnect Leash"
+Date "2020-08-31"
 Rev "A"
 Comp "Beagleboard.org"
-Comment1 "Schematic designed by Analog Life, LLC"
+Comment1 "Schematic originally designed by Analog Life, LLC"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -66,10 +66,6 @@ Text Label 9850 2275 2    50   ~ 0
 D+
 Text Label 8900 2075 2    50   ~ 0
 D-
-Text Label 750  5150 0    50   ~ 0
-MSP430_TDI
-Text Label 875  5350 0    50   ~ 0
-MSP430_TMS
 $Comp
 L LeashPCB:USB_C_Plug_USB2.0-usb_c_plug_usb2.0 P1
 U 1 1 5E44AB21
@@ -407,10 +403,10 @@ Wire Wire Line
 Text Label 9825 1725 2    50   ~ 0
 MSP_PUR
 $Comp
-L LeashPCB:Crystal_GND24_Small-Device Y1
+L LeashPCB:Crystal_GND24_Small-Device Y?
 U 1 1 5E5687A3
 P 5400 7050
-AR Path="/5E5687A3" Ref="Y1"  Part="1" 
+AR Path="/5E5687A3" Ref="Y?"  Part="1" 
 AR Path="/5D1A71BB/5E5687A3" Ref="Y1"  Part="1" 
 F 0 "Y1" V 5375 6650 50  0000 L CNN
 F 1 "24MHz" V 5300 6650 50  0000 L CNN
@@ -421,10 +417,10 @@ F 5 "https://www.digikey.com/product-detail/en/abracon-llc/ABM8-24-000MHZ-B2-T/5
 F 6 "CRYSTAL 24.0000MHZ 18PF SMD" H 5400 7050 50  0001 C CNN "Short Description"
 F 7 "0.35100" H 5400 7050 50  0001 C CNN "Standard Price"
 F 8 "Abracon LLC" H 5400 7050 50  0001 C CNN "Vendor1"
-F 9 "306010743" H 5400 7050 50  0001 C CNN "Seeed PN"
-F 10 "CX3225GB24000P0HPQCC" H 5400 7050 50  0001 C CNN "MPN2"
+F 9 "306011063" H 5400 7050 50  0001 C CNN "Seeed PN"
+F 10 "5YAA24000182TF50Q3" H 5400 7050 50  0001 C CNN "MPN2"
 F 11 "SMD Crystal 24MHz-18pF-30ppm;4P-SMD-L3.2*W2.5*H0.8mm" H 5400 7050 50  0001 C CNN "Seeed Description"
-F 12 "Kyocera" H 5400 7050 50  0001 C CNN "Vendor2"
+F 12 "Interquip" H 5400 7050 50  0001 C CNN "Vendor2"
 	1    5400 7050
 	0    1    1    0   
 $EndComp
@@ -788,7 +784,10 @@ F 5 "https://www.digikey.com/product-detail/en/texas-instruments/BQ21040DBVR/296
 F 6 "BQ21040DBVR" H 13675 3050 50  0001 C CNN "MPN1"
 F 7 "IC BAT CHG LI-ION 1 CELL SOT23-6" H 13675 3050 50  0001 C CNN "Short Description"
 F 8 "Texas Instruments" H 13675 3050 50  0001 C CNN "Vendor1"
-F 9 "0" H 13675 3050 50  0001 C CNN "Seeed PN"
+F 9 "310032031" H 13675 3050 50  0001 C CNN "Seeed PN"
+F 10 "BQ21040DBVR" H 13675 3050 50  0001 C CNN "MPN2"
+F 11 "TI" H 13675 3050 50  0001 C CNN "Vendor2"
+F 12 "SMD IC PMIC;Battery Charger-4.2V-800mA;SOT23-6" H 13675 3050 50  0001 C CNN "Seeed Description"
 	1    13675 3050
 	1    0    0    -1  
 $EndComp
@@ -893,7 +892,7 @@ P 12950 3325
 AR Path="/5D062750/5E578B4A" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5E578B4A" Ref="R31"  Part="1" 
 F 0 "R31" H 13020 3371 50  0000 L CNN
-F 1 "1K" H 13020 3280 50  0000 L CNN
+F 1 "1.2K" H 13020 3280 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 12880 3325 50  0001 C CNN
 F 3 "~" H 12950 3325 50  0001 C CNN
 F 4 "" H 12950 3325 50  0001 C CNN "Description"
@@ -902,9 +901,9 @@ F 6 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT
 F 7 "RC0402JR-071KL" H 12950 3325 50  0001 C CNN "MPN1"
 F 8 "RES SMD 1K OHM 5% 1/16W 0402" H 12950 3325 50  0001 C CNN "Short Description"
 F 9 "Yageo" H 12950 3325 50  0001 C CNN "Vendor1"
-F 10 "301010006" H 12950 3325 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-071KL" H 12950 3325 50  0001 C CNN "MPN2"
-F 12 "SMD RES 1K-5%-1/16W;0402" H 12950 3325 50  0001 C CNN "Seeed Description"
+F 10 "301010470" H 12950 3325 50  0001 C CNN "Seeed PN"
+F 11 "RC0402FR-071K2L" H 12950 3325 50  0001 C CNN "MPN2"
+F 12 "SMD RES 1.2K-1%-1/16W;0402" H 12950 3325 50  0001 C CNN "Seeed Description"
 F 13 "YAGEO" H 12950 3325 50  0001 C CNN "Vendor2"
 	1    12950 3325
 	1    0    0    -1  
@@ -1024,8 +1023,6 @@ NoConn ~ 7000 3200
 Text Notes 6650 8450 0    50   ~ 0
 May want to shrink center pad or connect manually\n\nOn rev B prototype, the soldermask peeled back and many of the \npins on the edge of the QFN would short to the center pad after \nattempted repair to the part (reflow, component replacement)
 Wire Wire Line
-	3075 5250 3650 5250
-Wire Wire Line
 	3075 5050 3225 5050
 Wire Wire Line
 	3225 5050 3225 5500
@@ -1041,12 +1038,6 @@ F 3 "" H 3225 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 3075 5350
-Wire Wire Line
-	875  5350 1350 5350
-Wire Wire Line
-	2575 5150 1650 5150
-Text Label 850  4950 0    50   ~ 0
-MSP430_TDO
 Text Label 5825 5550 0    50   ~ 0
 MSP430_TDI
 Text Label 5825 5750 0    50   ~ 0
@@ -1069,62 +1060,37 @@ Text Label 4775 5300 0    50   ~ 0
 ~MSP430_RST
 Wire Wire Line
 	4775 5300 5325 5300
-$Comp
-L Device:R R?
-U 1 1 5F3F6279
-P 3850 5250
-AR Path="/5D062750/5F3F6279" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F3F6279" Ref="R16"  Part="1" 
-F 0 "R16" V 3900 5400 50  0000 L CNN
-F 1 "0" V 3850 5225 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 3780 5250 50  0001 C CNN
-F 3 "~" H 3850 5250 50  0001 C CNN
-F 4 "" H 3850 5250 50  0001 C CNN "Description"
-F 5 "$0.00127" H 3850 5250 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 3900 5075 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3850 5250 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 3850 5250 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3850 5250 50  0001 C CNN "Short Description"
-F 10 "301010000" H 3850 5250 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 3850 5250 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 3850 5250 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 3850 5250 50  0001 C CNN "Vendor2"
-	1    3850 5250
-	0    1    1    0   
-$EndComp
 Text Notes 1675 5925 0    50   ~ 0
 Verify all connections with Erik Larson
 $Comp
 L Device:R R?
 U 1 1 5F4291D7
-P 5525 5025
+P 5325 5025
 AR Path="/5D062750/5F4291D7" Ref="R?"  Part="1" 
 AR Path="/5D1A71BB/5F4291D7" Ref="R17"  Part="1" 
-F 0 "R17" H 5575 5175 50  0000 L CNN
-F 1 "47K" V 5525 4950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 5455 5025 50  0001 C CNN
-F 3 "~" H 5525 5025 50  0001 C CNN
-F 4 "" H 5525 5025 50  0001 C CNN "Description"
-F 5 "" H 5525 5025 50  0001 C CNN "Standard Price"
-F 6 "" H 5525 5025 50  0001 C CNN "Short Description"
-F 7 "301010005" H 5525 5025 50  0001 C CNN "Seeed PN"
-F 8 "RC0402JR-0747KL" H 5525 5025 50  0001 C CNN "MPN2"
-F 9 "SMD RES 47K-5%-1/16W;0402" H 5525 5025 50  0001 C CNN "Seeed Description"
-F 10 "YAGEO" H 5525 5025 50  0001 C CNN "Vendor2"
-	1    5525 5025
+F 0 "R17" H 5375 5175 50  0000 L CNN
+F 1 "47K" V 5325 4950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5255 5025 50  0001 C CNN
+F 3 "~" H 5325 5025 50  0001 C CNN
+F 4 "" H 5325 5025 50  0001 C CNN "Description"
+F 5 "" H 5325 5025 50  0001 C CNN "Standard Price"
+F 6 "" H 5325 5025 50  0001 C CNN "Short Description"
+F 7 "301010005" H 5325 5025 50  0001 C CNN "Seeed PN"
+F 8 "RC0402JR-0747KL" H 5325 5025 50  0001 C CNN "MPN2"
+F 9 "SMD RES 47K-5%-1/16W;0402" H 5325 5025 50  0001 C CNN "Seeed Description"
+F 10 "YAGEO" H 5325 5025 50  0001 C CNN "Vendor2"
+F 11 "RC0402JR-0747KL" H 5325 5025 50  0001 C CNN "MPN1"
+	1    5325 5025
 	1    0    0    1   
 $EndComp
-Text GLabel 5400 4650 0    63   Input ~ 0
+Text GLabel 5200 4650 0    63   Input ~ 0
 3V3
 Wire Wire Line
-	5400 4650 5525 4650
+	5200 4650 5325 4650
 Wire Wire Line
-	5525 4650 5525 4875
+	5325 4650 5325 4875
 Wire Wire Line
-	5525 5175 5525 5300
-Connection ~ 5525 5300
-Wire Wire Line
-	5525 5300 6475 5300
+	5325 5175 5325 5300
 $Comp
 L power:GND #PWR?
 U 1 1 5F43927B
@@ -1144,8 +1110,6 @@ Wire Wire Line
 Wire Wire Line
 	5325 5375 5325 5300
 Connection ~ 5325 5300
-Wire Wire Line
-	5325 5300 5525 5300
 Text GLabel 9650 7000 2    63   Input ~ 0
 CC1352_RX_MSP430_TX
 Text GLabel 9650 7100 2    63   Input ~ 0
@@ -1251,48 +1215,8 @@ NoConn ~ 8875 6900
 NoConn ~ 8875 5700
 NoConn ~ 6475 7200
 NoConn ~ 6475 7300
-$Comp
-L Device:R R?
-U 1 1 5F6EA49C
-P 1500 5050
-AR Path="/5D062750/5F6EA49C" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F6EA49C" Ref="R8"  Part="1" 
-F 0 "R8" V 1550 5200 50  0000 L CNN
-F 1 "0" V 1500 5025 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 5050 50  0001 C CNN
-F 3 "~" H 1500 5050 50  0001 C CNN
-F 4 "" H 1500 5050 50  0001 C CNN "Description"
-F 5 "$0.00127" H 1500 5050 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 1550 4875 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 5050 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 1500 5050 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 5050 50  0001 C CNN "Short Description"
-F 10 "301010000" H 1500 5050 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 1500 5050 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 1500 5050 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 1500 5050 50  0001 C CNN "Vendor2"
-	1    1500 5050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2500 5250 2575 5250
-Wire Wire Line
-	2575 5050 1650 5050
-$Comp
-L power:GND #PWR09
-U 1 1 5F71BB40
-P 625 5275
-F 0 "#PWR09" H 625 5025 50  0001 C CNN
-F 1 "GND" H 630 5102 50  0000 C CNN
-F 2 "" H 625 5275 50  0001 C CNN
-F 3 "" H 625 5275 50  0001 C CNN
-	1    625  5275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1350 5050 625  5050
-Wire Wire Line
-	625  5050 625  5275
 Wire Wire Line
 	14075 3050 14325 3050
 Wire Wire Line
@@ -1319,6 +1243,7 @@ F 7 "301010005" H 14475 3050 50  0001 C CNN "Seeed PN"
 F 8 "RC0402JR-0747KL" H 14475 3050 50  0001 C CNN "MPN2"
 F 9 "SMD RES 47K-5%-1/16W;0402" H 14475 3050 50  0001 C CNN "Seeed Description"
 F 10 "YAGEO" H 14475 3050 50  0001 C CNN "Vendor2"
+F 11 "RC0402JR-0747KL" H 14475 3050 50  0001 C CNN "MPN1"
 	1    14475 3050
 	0    -1   1    0   
 $EndComp
@@ -1395,7 +1320,7 @@ L Transistor_FET:BSS84 Q1
 U 1 1 5F7944FD
 P 2900 6775
 F 0 "Q1" H 3104 6729 50  0000 L CNN
-F 1 "BSS84" H 3104 6820 50  0000 L CNN
+F 1 "CJ2305" H 3104 6820 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 3100 6700 50  0001 L CIN
 F 3 "http://assets.nexperia.com/documents/data-sheet/BSS84.pdf" H 2900 6775 50  0001 L CNN
 F 4 "305030014" H 2900 6775 50  0001 C CNN "Seeed PN"
@@ -1411,26 +1336,6 @@ Wire Wire Line
 	3000 6975 3000 7050
 Wire Wire Line
 	2325 6775 2575 6775
-$Comp
-L Device:R R?
-U 1 1 5F7CE286
-P 2575 6600
-AR Path="/5D062750/5F7CE286" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F7CE286" Ref="R11"  Part="1" 
-F 0 "R11" H 2625 6750 50  0000 L CNN
-F 1 "47K" V 2575 6525 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2505 6600 50  0001 C CNN
-F 3 "~" H 2575 6600 50  0001 C CNN
-F 4 "" H 2575 6600 50  0001 C CNN "Description"
-F 5 "" H 2575 6600 50  0001 C CNN "Standard Price"
-F 6 "" H 2575 6600 50  0001 C CNN "Short Description"
-F 7 "301010005" H 2575 6600 50  0001 C CNN "Seeed PN"
-F 8 "RC0402JR-0747KL" H 2575 6600 50  0001 C CNN "MPN2"
-F 9 "SMD RES 47K-5%-1/16W;0402" H 2575 6600 50  0001 C CNN "Seeed Description"
-F 10 "YAGEO" H 2575 6600 50  0001 C CNN "Vendor2"
-	1    2575 6600
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	2575 6450 3000 6450
 Connection ~ 3000 6450
@@ -1483,178 +1388,16 @@ F 5 "DNP" H 2450 4275 50  0001 C CNN "Population"
 	1    2450 4275
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3650 4700 3650 5250
-$Comp
-L Connector:TestPoint TP2
-U 1 1 5F87F30E
-P 3650 4700
-F 0 "TP2" H 3708 4818 50  0000 L CNN
-F 1 "TestPoint" H 3708 4727 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3850 4700 50  0001 C CNN
-F 3 "~" H 3850 4700 50  0001 C CNN
-F 4 "0" H 3650 4700 50  0001 C CNN "Seeed PN"
-F 5 "DNP" H 3650 4700 50  0001 C CNN "Population"
-	1    3650 4700
-	1    0    0    -1  
-$EndComp
 Text GLabel 9650 7200 2    63   Input ~ 0
 MB1_CTRL
 Wire Wire Line
 	8875 7200 9650 7200
-$Comp
-L Device:R R?
-U 1 1 5F2AECDA
-P 1500 4950
-AR Path="/5D062750/5F2AECDA" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F2AECDA" Ref="R7"  Part="1" 
-F 0 "R7" V 1550 5100 50  0000 L CNN
-F 1 "0" V 1500 4925 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 4950 50  0001 C CNN
-F 3 "~" H 1500 4950 50  0001 C CNN
-F 4 "" H 1500 4950 50  0001 C CNN "Description"
-F 5 "$0.00127" H 1500 4950 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 1550 4775 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 4950 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 1500 4950 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 4950 50  0001 C CNN "Short Description"
-F 10 "301010000" H 1500 4950 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 1500 4950 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 1500 4950 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 1500 4950 50  0001 C CNN "Vendor2"
-	1    1500 4950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	850  4950 1350 4950
 Wire Wire Line
 	1650 4950 2450 4950
 Wire Wire Line
 	2450 4950 2575 4950
 Connection ~ 2450 4950
-Wire Wire Line
-	2450 4450 2450 4950
-Wire Wire Line
-	2700 4450 2450 4450
-Wire Wire Line
-	3075 4950 3250 4950
-Wire Wire Line
-	3250 4450 3250 4950
-Wire Wire Line
-	3000 4450 3250 4450
-$Comp
-L Device:R R?
-U 1 1 5F3E3582
-P 2850 4450
-AR Path="/5D062750/5F3E3582" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F3E3582" Ref="R12"  Part="1" 
-F 0 "R12" V 2900 4600 50  0000 L CNN
-F 1 "0" V 2850 4425 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 2780 4450 50  0001 C CNN
-F 3 "~" H 2850 4450 50  0001 C CNN
-F 4 "" H 2850 4450 50  0001 C CNN "Description"
-F 5 "$0.00127" H 2850 4450 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 2900 4275 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 2850 4450 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 2850 4450 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 2850 4450 50  0001 C CNN "Short Description"
-F 10 "301010000" H 2850 4450 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 2850 4450 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 2850 4450 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 2850 4450 50  0001 C CNN "Vendor2"
-	1    2850 4450
-	0    1    1    0   
-$EndComp
 Text Label 3625 5250 2    50   ~ 0
-MSP430_TEST
-Text Label 4575 5250 2    50   ~ 0
-MSP430_TCK
-Wire Wire Line
-	3075 5150 3700 5150
-Wire Wire Line
-	4575 5250 4000 5250
-$Comp
-L Device:R R?
-U 1 1 5F32BF98
-P 1500 5350
-AR Path="/5D062750/5F32BF98" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F32BF98" Ref="R10"  Part="1" 
-F 0 "R10" V 1550 5500 50  0000 L CNN
-F 1 "0" V 1500 5325 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 5350 50  0001 C CNN
-F 3 "~" H 1500 5350 50  0001 C CNN
-F 4 "" H 1500 5350 50  0001 C CNN "Description"
-F 5 "$0.00127" H 1500 5350 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 1550 5175 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 5350 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 1500 5350 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 5350 50  0001 C CNN "Short Description"
-F 10 "301010000" H 1500 5350 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 1500 5350 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 1500 5350 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 1500 5350 50  0001 C CNN "Vendor2"
-	1    1500 5350
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1650 5350 2575 5350
-$Comp
-L Device:R R?
-U 1 1 5F37F7C2
-P 1500 5150
-AR Path="/5D062750/5F37F7C2" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F37F7C2" Ref="R9"  Part="1" 
-F 0 "R9" V 1550 5300 50  0000 L CNN
-F 1 "0" V 1500 5125 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 1430 5150 50  0001 C CNN
-F 3 "~" H 1500 5150 50  0001 C CNN
-F 4 "" H 1500 5150 50  0001 C CNN "Description"
-F 5 "$0.00127" H 1500 5150 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 1550 4975 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 1500 5150 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 1500 5150 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 1500 5150 50  0001 C CNN "Short Description"
-F 10 "301010000" H 1500 5150 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 1500 5150 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 1500 5150 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 1500 5150 50  0001 C CNN "Vendor2"
-	1    1500 5150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1350 5150 750  5150
-Wire Wire Line
-	2450 4275 2450 4450
-Connection ~ 2450 4450
-Connection ~ 3650 5250
-Wire Wire Line
-	3650 5250 3700 5250
-$Comp
-L Device:R R?
-U 1 1 5F3BEF9B
-P 3850 5150
-AR Path="/5D062750/5F3BEF9B" Ref="R?"  Part="1" 
-AR Path="/5D1A71BB/5F3BEF9B" Ref="R15"  Part="1" 
-F 0 "R15" V 3900 5300 50  0000 L CNN
-F 1 "0" V 3850 5125 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" V 3780 5150 50  0001 C CNN
-F 3 "~" H 3850 5150 50  0001 C CNN
-F 4 "" H 3850 5150 50  0001 C CNN "Description"
-F 5 "$0.00127" H 3850 5150 50  0001 C CNN "Standard Price"
-F 6 "DNP" V 3900 4975 50  0000 C CNN "Population"
-F 7 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 3850 5150 50  0001 C CNN "Link1"
-F 8 "RMCF0402ZT0R00" H 3850 5150 50  0001 C CNN "MPN1"
-F 9 "RES 0 OHM JUMPER 1/16W 0402" H 3850 5150 50  0001 C CNN "Short Description"
-F 10 "301010000" H 3850 5150 50  0001 C CNN "Seeed PN"
-F 11 "RC0402JR-070RL" H 3850 5150 50  0001 C CNN "MPN2"
-F 12 "SMD RES 0R-5%-1/16W;0402" H 3850 5150 50  0001 C CNN "Seeed Description"
-F 13 "YAGEO" H 3850 5150 50  0001 C CNN "Vendor2"
-	1    3850 5150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4000 5150 4575 5150
-Text Label 4575 5150 2    50   ~ 0
 MSP430_TEST
 $Comp
 L Device:C C?
@@ -1780,7 +1523,10 @@ F 5 "0.2875" H 7675 6300 50  0001 C CNN "Standard Price"
 F 6 "https://www.digikey.com/product-detail/en/texas-instruments/MSP430F5500IRGZR/296-27553-1-ND/2331791" H 7675 6300 50  0001 C CNN "Link1"
 F 7 "IC MCU 16BIT 8KB FLASH 48VQFN" H 7675 6300 50  0001 C CNN "Short Description"
 F 8 "Texas Instruments" H 7675 6300 50  0001 C CNN "Vendor1"
-F 9 "0" H 7675 6300 50  0001 C CNN "Seeed PN"
+F 9 "310011336" H 7675 6300 50  0001 C CNN "Seeed PN"
+F 10 "MSP430F5503IRGZR" H 7675 6300 50  0001 C CNN "MPN2"
+F 11 "TI" H 7675 6300 50  0001 C CNN "Vendor2"
+F 12 "SMD IC MCU;VQFN-48" H 7675 6300 50  0001 C CNN "Seeed Description"
 	1    7675 6300
 	1    0    0    -1  
 $EndComp
@@ -1889,7 +1635,7 @@ P 6300 4150
 AR Path="/5D062750/5E505748" Ref="L?"  Part="1" 
 AR Path="/5D1A71BB/5E505748" Ref="L1"  Part="1" 
 F 0 "L1" V 6490 4150 50  0000 C CNN
-F 1 "6.8 uH" V 6399 4150 50  0000 C CNN
+F 1 "120R-1.3A" V 6399 4150 50  0000 C CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 6300 4150 50  0001 C CNN
 F 3 "~" H 6300 4150 50  0001 C CNN
 F 4 "FERRITE BEAD 1.5 KOHM 0603 1LN" H 6300 4150 50  0001 C CNN "Description"
@@ -1909,4 +1655,40 @@ Wire Wire Line
 	5925 4150 6150 4150
 Text GLabel 5925 4150 0    63   Input ~ 0
 3V3
+Wire Wire Line
+	3075 5250 3700 5250
+Wire Wire Line
+	2450 4275 2450 4950
+NoConn ~ 3075 5150
+NoConn ~ 3075 4950
+NoConn ~ 2575 5050
+NoConn ~ 2575 5150
+NoConn ~ 2575 5350
+Wire Wire Line
+	5325 5300 6475 5300
+Text Notes 13500 3650 0    50   ~ 0
+Charge current set to 450mA
+$Comp
+L Device:R R?
+U 1 1 5F7092FE
+P 2575 6600
+AR Path="/5D099F02/5F7092FE" Ref="R?"  Part="1" 
+AR Path="/5D1A71BB/5F7092FE" Ref="R11"  Part="1" 
+F 0 "R11" H 2645 6646 50  0000 L CNN
+F 1 "1K" H 2645 6555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 2505 6600 50  0001 C CNN
+F 3 "~" H 2575 6600 50  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/16W 0402" H 2575 6600 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/yageo/RC0402JR-071KL/311-1.0KJRCT-ND/729355" H 2575 6600 50  0001 C CNN "Link1"
+F 6 "RC0402JR-071KL" H 2575 6600 50  0001 C CNN "MPN1"
+F 7 "$0.00139" H 2575 6600 50  0001 C CNN "Standard Price"
+F 8 "Yageo" H 2575 6600 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 1K OHM 5% 1/16W 0402" H 2575 6600 50  0001 C CNN "Short Description"
+F 10 "301010006" H 2575 6600 50  0001 C CNN "Seeed PN"
+F 11 "RC0402JR-071KL" H 2575 6600 50  0001 C CNN "MPN2"
+F 12 "SMD RES 1K-5%-1/16W;0402" H 2575 6600 50  0001 C CNN "Seeed Description"
+F 13 "YAGEO" H 2575 6600 50  0001 C CNN "Vendor2"
+	1    2575 6600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

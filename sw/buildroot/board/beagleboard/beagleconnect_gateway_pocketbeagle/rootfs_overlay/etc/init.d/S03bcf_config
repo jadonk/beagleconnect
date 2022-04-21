@@ -1,0 +1,9 @@
+#!/bin/sh
+
+. /etc/sysconfig/functions
+
+echo uart > /sys/devices/platform/ocp/ocp:P2_05_pinmux/state
+echo uart > /sys/devices/platform/ocp/ocp:P2_07_pinmux/state
+echo gpio > /sys/devices/platform/ocp/ocp:P1_04_pinmux/state
+echo out > /sys/class/gpio/gpio89/direction
+echo 1 > /sys/class/gpio/gpio89/value

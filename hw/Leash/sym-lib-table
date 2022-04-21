@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name LeashPCB)(type Legacy)(uri ${KIPRJMOD}/LeashPCB.lib)(options "")(descr ""))
+  (lib (name LeashPCB-rescue)(type Legacy)(uri ${KIPRJMOD}/LeashPCB-rescue.lib)(options "")(descr ""))
+  (lib (name BeagleConnect-rescue)(type Legacy)(uri ${KIPRJMOD}/BeagleConnect-rescue.lib)(options "")(descr ""))
 )

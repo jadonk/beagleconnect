@@ -1,0 +1,257 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 11 11
+Title "BeagleConnect Freedom"
+Date "2020-11-03"
+Rev "C4"
+Comp "Beagleboard.org"
+Comment1 "Schematic originally designed by Analog Life, LLC"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 4025 2250 0    63   Input ~ 0
+3V3
+$Comp
+L LeashPCB:MX25R8035FZUIL0-LeashPCB U?
+U 1 1 60BFE823
+P 6625 3600
+AR Path="/5D062750/60BFE823" Ref="U?"  Part="1" 
+AR Path="/60BA7B7F/60BFE823" Ref="U6"  Part="1" 
+F 0 "U6" H 6625 4465 50  0000 C CNN
+F 1 "GD25Q16CEIGR" H 6625 4374 50  0000 C CNN
+F 2 "leash:MX25R8035FZUIL0" H 6625 3600 50  0001 C CNN
+F 3 "https://www.macronix.com/Lists/Datasheet/Attachments/7461/MX25R8035F,%20Wide%20Range,%208Mb,%20v1.6.pdf" H 6625 3600 50  0001 C CNN
+F 4 "MX25R8035FZUIL0" H 6625 3600 50  0001 C CNN "MPN1"
+F 5 "https://www.digikey.com/product-detail/en/macronix/MX25R8035FZUIL0/1092-1207-1-ND/6558611" H 6625 3600 50  0001 C CNN "Link1"
+F 6 "IC FLASH 8M SPI 33MHZ 8USON" H 6625 3600 50  0001 C CNN "Description"
+F 7 "0.42218" H 6625 3600 50  0001 C CNN "Standard Price"
+F 8 "Macronix" H 6625 3600 50  0001 C CNN "Vendor1"
+F 9 "IC FLASH 8M SPI 33MHZ 8USON" H 6625 3600 50  0001 C CNN "Short Description"
+F 10 "310091053" H 6625 3600 50  0001 C CNN "Seeed PN"
+F 11 "GD25Q16CEIGR" H 6625 3600 50  0001 C CNN "MPN2"
+F 12 "SMD IC NOR Flash;16Mbit-SPI;USON-8;2*3mm" H 6625 3600 50  0001 C CNN "Seeed Description"
+F 13 "Gigadevice" H 6625 3600 50  0001 C CNN "Vendor2"
+	1    6625 3600
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 3300 0    50   Input ~ 0
+~FLASH_CS
+Text GLabel 7525 3350 2    50   Input ~ 0
+MISO
+Text GLabel 5350 3100 0    50   Input ~ 0
+MOSI
+Text GLabel 5350 3200 0    50   Input ~ 0
+SCK
+Wire Wire Line
+	4350 3500 4500 3500
+Text GLabel 4350 3500 0    79   Input ~ 0
+RESET_N
+Wire Wire Line
+	8775 2250 8775 3100
+Wire Wire Line
+	8700 3100 8775 3100
+Wire Wire Line
+	4500 2800 4500 3500
+$Comp
+L power:GND #PWR?
+U 1 1 60BFE832
+P 5750 4100
+AR Path="/5D062750/60BFE832" Ref="#PWR?"  Part="1" 
+AR Path="/60BA7B7F/60BFE832" Ref="#PWR081"  Part="1" 
+F 0 "#PWR081" H 5750 3850 50  0001 C CNN
+F 1 "GND" H 5755 3927 50  0000 C CNN
+F 2 "" H 5750 4100 50  0001 C CNN
+F 3 "" H 5750 4100 50  0001 C CNN
+	1    5750 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3850 5750 4100
+Wire Wire Line
+	5975 3850 5750 3850
+Connection ~ 5750 3850
+Wire Wire Line
+	5750 3750 5750 3850
+Wire Wire Line
+	5975 3750 5750 3750
+Wire Wire Line
+	4500 2250 4025 2250
+Connection ~ 4500 2250
+Wire Wire Line
+	4500 2500 4500 2250
+Connection ~ 4500 3500
+Wire Wire Line
+	5975 3500 4500 3500
+Wire Wire Line
+	4800 2800 4800 3400
+Wire Wire Line
+	4800 3400 5975 3400
+Wire Wire Line
+	4500 2250 4800 2250
+Connection ~ 4800 2250
+Wire Wire Line
+	4800 2250 4800 2500
+$Comp
+L Device:R R?
+U 1 1 60BFE852
+P 4500 2650
+AR Path="/5D062750/60BFE852" Ref="R?"  Part="1" 
+AR Path="/60BA7B7F/60BFE852" Ref="R41"  Part="1" 
+F 0 "R41" H 4570 2741 50  0000 L CNN
+F 1 "2.21K" H 4570 2650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4430 2650 50  0001 C CNN
+F 3 "~" H 4500 2650 50  0001 C CNN
+F 4 "" H 4570 2559 50  0000 L CNN "Population"
+F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4500 2650 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 4500 2650 50  0001 C CNN "Link1"
+F 7 "ERJ-2RKF2211X" H 4500 2650 50  0001 C CNN "MPN1"
+F 8 "0.00498" H 4500 2650 50  0001 C CNN "Standard Price"
+F 9 "Panasonic Electronic Components" H 4500 2650 50  0001 C CNN "Vendor1"
+F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4500 2650 50  0001 C CNN "Short Description"
+F 11 "301010881" H 4500 2650 50  0001 C CNN "Seeed PN"
+F 12 "RC0402FR-072K21L" H 4500 2650 50  0001 C CNN "MPN2"
+F 13 "SMD RES 2.21K-1%-1/16W;0402" H 4500 2650 50  0001 C CNN "Seeed Description"
+F 14 "YAGEO" H 4500 2650 50  0001 C CNN "Vendor2"
+	1    4500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60BFE863
+P 4800 2650
+AR Path="/5D062750/60BFE863" Ref="R?"  Part="1" 
+AR Path="/60BA7B7F/60BFE863" Ref="R43"  Part="1" 
+F 0 "R43" H 4870 2741 50  0000 L CNN
+F 1 "2.21K" H 4870 2650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 4730 2650 50  0001 C CNN
+F 3 "~" H 4800 2650 50  0001 C CNN
+F 4 "" H 4870 2559 50  0000 L CNN "Population"
+F 5 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4800 2650 50  0001 C CNN "Description"
+F 6 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 4800 2650 50  0001 C CNN "Link1"
+F 7 "ERJ-2RKF2211X" H 4800 2650 50  0001 C CNN "MPN1"
+F 8 "0.00498" H 4800 2650 50  0001 C CNN "Standard Price"
+F 9 "Panasonic Electronic Components" H 4800 2650 50  0001 C CNN "Vendor1"
+F 10 "RES SMD 2.21K OHM 1% 1/10W 0402" H 4800 2650 50  0001 C CNN "Short Description"
+F 11 "301010881" H 4800 2650 50  0001 C CNN "Seeed PN"
+F 12 "RC0402FR-072K21L" H 4800 2650 50  0001 C CNN "MPN2"
+F 13 "SMD RES 2.21K-1%-1/16W;0402" H 4800 2650 50  0001 C CNN "Seeed Description"
+F 14 "YAGEO" H 4800 2650 50  0001 C CNN "Vendor2"
+	1    4800 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5975 3200 5350 3200
+Wire Wire Line
+	5975 3100 5350 3100
+Wire Wire Line
+	5600 2250 8775 2250
+Wire Wire Line
+	5600 2250 4800 2250
+Connection ~ 5600 2250
+Wire Wire Line
+	5600 2250 5600 2500
+Wire Wire Line
+	5600 3300 5350 3300
+Wire Wire Line
+	5600 2800 5600 3300
+Connection ~ 5600 3300
+Wire Wire Line
+	5975 3300 5600 3300
+Wire Wire Line
+	7275 3350 7525 3350
+$Comp
+L power:GND #PWR?
+U 1 1 60BFE874
+P 8050 3750
+AR Path="/5D062750/60BFE874" Ref="#PWR?"  Part="1" 
+AR Path="/60BA7B7F/60BFE874" Ref="#PWR082"  Part="1" 
+F 0 "#PWR082" H 8050 3500 50  0001 C CNN
+F 1 "GND" H 8055 3577 50  0000 C CNN
+F 2 "" H 8050 3750 50  0001 C CNN
+F 3 "" H 8050 3750 50  0001 C CNN
+	1    8050 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3100 8400 3100
+Wire Wire Line
+	8050 3575 8050 3750
+Wire Wire Line
+	8050 3100 8050 3275
+Connection ~ 8050 3100
+Wire Wire Line
+	7275 3100 8050 3100
+$Comp
+L Device:C C?
+U 1 1 60BFE889
+P 8050 3425
+AR Path="/5D062750/60BFE889" Ref="C?"  Part="1" 
+AR Path="/60BA7B7F/60BFE889" Ref="C26"  Part="1" 
+F 0 "C26" H 7935 3379 50  0000 R CNN
+F 1 "0.1U" H 7935 3470 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8088 3275 50  0001 C CNN
+F 3 "~" H 8050 3425 50  0001 C CNN
+F 4 "CAP CER 0.1UF 10V X5R 0402" H 8050 3425 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics/CL05A104MP5NNNC/1276-1443-1-ND/3889529" H 8050 3425 50  0001 C CNN "Link1"
+F 6 "CL05A104MP5NNNC" H 8050 3425 50  0001 C CNN "MPN1"
+F 7 "$0.00315" H 8050 3425 50  0001 C CNN "Standard Price"
+F 8 "Samsung Electro-Mechanics" H 8050 3425 50  0001 C CNN "Vendor1"
+F 9 "CAP CER 0.1UF 10V X5R 0402" H 8050 3425 50  0001 C CNN "Short Description"
+F 10 "302011121" H 8050 3425 50  0001 C CNN "Seeed PN"
+F 11 "CC0402KRX5R6BB104" H 8050 3425 50  0001 C CNN "MPN2"
+F 12 "YAGEO" H 8050 3425 50  0001 C CNN "Vendor2"
+F 13 "SMD CAP Ceramic 100nF-10V-10%-X5R;0402" H 8050 3425 50  0001 C CNN "Seeed Description"
+	1    8050 3425
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60BFE899
+P 8550 3100
+AR Path="/5D062750/60BFE899" Ref="R?"  Part="1" 
+AR Path="/60BA7B7F/60BFE899" Ref="R45"  Part="1" 
+F 0 "R45" V 8343 3100 50  0000 C CNN
+F 1 "0" V 8434 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 8480 3100 50  0001 C CNN
+F 3 "~" H 8550 3100 50  0001 C CNN
+F 4 "RES 0 OHM JUMPER 1/16W 0402" H 8550 3100 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/RMCF0402ZT0R00/RMCF0402ZT0R00TR-ND/1756905" H 8550 3100 50  0001 C CNN "Link1"
+F 6 "RMCF0402ZT0R00" H 8550 3100 50  0001 C CNN "MPN1"
+F 7 "$0.00127" H 8550 3100 50  0001 C CNN "Standard Price"
+F 8 "Stackpole Electronics Inc" H 8550 3100 50  0001 C CNN "Vendor1"
+F 9 "RES 0 OHM JUMPER 1/16W 0402" H 8550 3100 50  0001 C CNN "Short Description"
+F 10 "301010000" H 8550 3100 50  0001 C CNN "Seeed PN"
+F 11 "RC0402JR-070RL" H 8550 3100 50  0001 C CNN "MPN2"
+F 12 "SMD RES 0R-5%-1/16W;0402" H 8550 3100 50  0001 C CNN "Seeed Description"
+F 13 "YAGEO" H 8550 3100 50  0001 C CNN "Vendor2"
+	1    8550 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60BFE8A9
+P 5600 2650
+AR Path="/5D062750/60BFE8A9" Ref="R?"  Part="1" 
+AR Path="/60BA7B7F/60BFE8A9" Ref="R44"  Part="1" 
+F 0 "R44" H 5670 2696 50  0000 L CNN
+F 1 "2.21K" H 5670 2605 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 5530 2650 50  0001 C CNN
+F 3 "~" H 5600 2650 50  0001 C CNN
+F 4 "RES SMD 2.21K OHM 1% 1/10W 0402" H 5600 2650 50  0001 C CNN "Description"
+F 5 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-2RKF2211X/P2.21KLTR-ND/192198" H 5600 2650 50  0001 C CNN "Link1"
+F 6 "ERJ-2RKF2211X" H 5600 2650 50  0001 C CNN "MPN1"
+F 7 "0.00498" H 5600 2650 50  0001 C CNN "Standard Price"
+F 8 "Panasonic Electronic Components" H 5600 2650 50  0001 C CNN "Vendor1"
+F 9 "RES SMD 2.21K OHM 1% 1/10W 0402" H 5600 2650 50  0001 C CNN "Short Description"
+F 10 "301010881" H 5600 2650 50  0001 C CNN "Seeed PN"
+F 11 "RC0402FR-072K21L" H 5600 2650 50  0001 C CNN "MPN2"
+F 12 "SMD RES 2.21K-1%-1/16W;0402" H 5600 2650 50  0001 C CNN "Seeed Description"
+F 13 "YAGEO" H 5600 2650 50  0001 C CNN "Vendor2"
+	1    5600 2650
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
