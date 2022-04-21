@@ -56,3 +56,8 @@ RUN echo . \
 	&& west build -d sensortest zephyr/samples/boards/beagle_bcf/sensortest \
 	&& echo .
 
+ENV ZEPHYR_BASE=/root/src/bcf-zephyr/zephyr
+ENV PATH=/root/src/bcf-zephyr/zephyr/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+RUN echo . \
+	&& west build -b beagleconnect_freedom zephyr/samples/boards/beagle_bcf/sensortest \
+	&& echo .
