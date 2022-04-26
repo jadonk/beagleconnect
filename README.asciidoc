@@ -12,24 +12,11 @@ endif::[]
 [[beagleconnect]]
 = BeagleConnect™
 
-BeagleConnect™ is a revolutionary technology virtually eliminating low-level software
-development for https://en.wikipedia.org/wiki/Internet_of_things[IoT] and https://en.wikipedia.org/wiki/Industrial_internet_of_things[IIoT] applications, such as building automation, factory
-automation, home automation, and scientific data acquisition. While numerous IoT and IIoT
-solutions available today
-provide massive software libraries for microcontrollers footnote:[Complexity can be seen by exploring https://www.arduino.cc/reference/en/libraries/category/sensors/[Arduino sensor libraries]]
-supporting a limited body of
-https://en.wikipedia.org/wiki/Sensor[sensors],
-https://en.wikipedia.org/wiki/Actuator[actuators] and
-https://en.wikipedia.org/wiki/Indicator_(distance_amplifying_instrument)[indicators]
-as well as libraries for communicating over various networks,
-BeagleConnect simply eliminates the need for these libraries by shifting the burden
-into the most massive and collaborative software project of all time, the https://en.wikipedia.org/wiki/Linux_kernel[Linux kernel].
+BeagleConnect™ is a revolutionary technology virtually eliminating low-level software development for https://en.wikipedia.org/wiki/Internet_of_things[IoT] and https://en.wikipedia.org/wiki/Industrial_internet_of_things[IIoT] applications, such as building automation, factory automation, home automation, and scientific data acquisition. While numerous IoT and IIoT solutions available today provide massive software libraries for microcontrollers footnote:[Complexity can be seen by exploring https://www.arduino.cc/reference/en/libraries/category/sensors/[Arduino sensor libraries]] supporting a limited body of https://en.wikipedia.org/wiki/Sensor[sensors], https://en.wikipedia.org/wiki/Actuator[actuators] and https://en.wikipedia.org/wiki/Indicator_(distance_amplifying_instrument)[indicators] as well as libraries for communicating over various networks, BeagleConnect simply eliminates the need for these libraries by shifting the burden into the most massive and collaborative software project of all time, the https://en.wikipedia.org/wiki/Linux_kernel[Linux kernel].
 
-These are the tools used to automate things in
-https://en.wikipedia.org/wiki/Data_collection_system[scientific data collection],
-https://en.wikipedia.org/wiki/Data_science[data science],
-https://en.wikipedia.org/wiki/Mechatronics[mechatronics], and
-https://en.wikipedia.org/wiki/Internet_of_things[IoT].
+image::graphics/BeagleConnect-Freedom-C5-Boards.png[]
+
+These are the tools used to automate things in https://en.wikipedia.org/wiki/Data_collection_system[scientific data collection], https://en.wikipedia.org/wiki/Data_science[data science], https://en.wikipedia.org/wiki/Mechatronics[mechatronics], and https://en.wikipedia.org/wiki/Internet_of_things[IoT].
 
 BeagleConnect™ technology solves: 
 
@@ -45,37 +32,17 @@ toc::[]
 
 BeagleConnect™ provides a scalable experience for interacting with the physical world.
 
-NOTE: The term _BeagleConnect™_ refers to a technology comprising of
-a family of boards, a collection of Linux kernel drivers,
-microcontroller firmware, a communication protocol, and system-level
-integration to automation software tools. More specific terms will be
-applied in the architecture details. The term is also used here to
-represent the experience introduced to users through the initial
-_BeagleConnect™ Freedom_ product consisting of a board and case which
-ships programmed and ready to be used.
+NOTE: The term _BeagleConnect™_ refers to a technology comprising of a family of boards, a collection of Linux kernel drivers, microcontroller firmware, a communication protocol, and system-level integration to automation software tools. More specific terms will be applied in the architecture details. The term is also used here to represent the experience introduced to users through the initial _BeagleConnect™ Freedom_ product consisting of a board and case which ships programmed and ready to be used.
 
-For scientists, we are integrating https://jupyter.org/[Jupyter Notebook] with the data streams
-from any of hundreds of sensor options, including https://www.mikroe.com/click/sensors/force[vibration],
-https://www.mikroe.com/click/sensors/gas[gas detection],
-https://www.mikroe.com/click/sensors/biometrics[biometrics] and
-https://www.mikroe.com/click/sensors[more]. These data streams can be stored in simple
-https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed and visualized.
+For scientists, we are integrating https://jupyter.org/[Jupyter Notebook] with the data streams from any of hundreds of sensor options, including https://www.mikroe.com/click/sensors/force[vibration], https://www.mikroe.com/click/sensors/gas[gas detection], https://www.mikroe.com/click/sensors/biometrics[biometrics] and https://www.mikroe.com/click/sensors[more]. These data streams can be stored in simple https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed and visualized.
 
 #TODO: provide images demonstrating Jupyter Notebook visualization
 
-For embedded systems developers, data is easily extrated using the standard
-https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
-interface provided by the https://kernel.org[Linux kernel]
-running on the gateway using any of hundreds of
-programming languages and environments, without writing a line of microcontroller firmware.
-The Linux environment provides opportunities for high-level remote management using tools
-like https://balena.io[Balena] with applications deployed in
-https://docker.io[Docker] containers.
+For embedded systems developers, data is easily extrated using the standard https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO] interface provided by the https://kernel.org[Linux kernel] running on the gateway using any of hundreds of programming languages and environments, without writing a line of microcontroller firmware. The Linux environment provides opportunities for high-level remote management using tools like https://balena.io[Balena] with applications deployed in https://docker.io[Docker] containers.
 
 #TODO: provide image illustrating remote management
 
-The hardware and software are fully open source, providing for scalability and a lack of
-vendor lock-in.
+The hardware and software are fully open source, providing for scalability and a lack of vendor lock-in.
 
 For DevOps...
 
@@ -86,11 +53,11 @@ For home automaters, integration into https://webthings.io[WebThings]...
 = BeagleConnect™ hardware
 
 == BeagleConnect™ Freedom
+image::graphics/BeagleConnect-Freedom-C5-HandPhoto.png[]
 
 #TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective
 
-IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
-to cost initially around US$20 with a roadmap to variants as low as US$1.
+IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted to cost initially around US$20 with a roadmap to variants as low as US$1.
 
 The initial _BeagleConnect™ Freedom_ production release will: 
 
@@ -100,16 +67,12 @@ The initial _BeagleConnect™ Freedom_ production release will:
 * Work with a low-cost BeagleBoard.org Linux https://en.wikipedia.org/wiki/Single-board_computer[single-board computer (SBC)] as a `BeagleConnect™ gateway device` and
   work with at least 10 other `BeagleConnect™ node devices` each supporting 2 add-on sensor, actuator or indicator devices.
 
-Future releases will be collaborated with the community, evolve
-dynamically, and contain additional functionality. The goal is to
-support over 500 add-on devices within the first year after the
-initial release.
+Future releases will be collaborated with the community, evolve dynamically, and contain additional functionality. The goal is to support over 500 add-on devices within the first year after the initial release.
 
 [[beta-kit]]
 == BeagleConnect™ Freedom beta kit
 
-A small number of beta kits have been assembled with BeagleConnect™ Freedom rev C5
-boards, which is the version that should be taken to production.
+A small number of beta kits have been assembled with BeagleConnect™ Freedom rev C5 boards, which is the version that should be taken to production.
 
 The kit includes:
 
@@ -121,9 +84,7 @@ To get started with this kit, see <<demo-1>>.
 
 == BeagleConnect™ Mobile Gateway
 
-This is a work-in-progress that will be released as the first integrated BeagleConnect™
-gateway. It is possible to assemble a gateway with any Linux computer, but this computer
-will ship setup and ready to go.
+This is a work-in-progress that will be released as the first integrated BeagleConnect™ gateway. It is possible to assemble a gateway with any Linux computer, but this computer will ship setup and ready to go.
 
 The gateway is built from:
 
@@ -148,46 +109,28 @@ do her work the next day. I listened and learned from her the basics of programm
 it wasn't long before I wanted to take the computer apart. 
 
 === Getting Started in Electronics
-Exploring http://www.forrestmims.org/[Getting Started in Electronics] satisfied my
-itch for quite a while. Eventually, I got a Commodore 64 and began connecting voice
-synthesizer ICs to it. My interest in computers and electronics flourished into
-an electrical engineering degree and a long career in the semiconductor industry.
+Exploring http://www.forrestmims.org/[Getting Started in Electronics] satisfied my itch for quite a while. Eventually, I got a Commodore 64 and began connecting voice synthesizer ICs to it. My interest in computers and electronics flourished into an electrical engineering degree and a long career in the semiconductor industry.
 
-Over this time, I've become more and more alarmed with the progress of technology. Now,
-to be clear, I love technology. I love innovation and invention. It is just that some
-things have evolved in a sort of tunnel-vision, without bringing everyone along.
+Over this time, I've become more and more alarmed with the progress of technology. Now, to be clear, I love technology. I love innovation and invention. It is just that some things have evolved in a sort of tunnel-vision, without bringing everyone along.
 
 === But, what about keyboard users?
-As graphical user interfaces and mice took over computers, they rapidly became almost
-unusable by my mom. She typed well, but the dexterity to move a mouse aluded her.
-To satisfy the need to interact with locations on the screen, she adopted using a
-joystick and her productivity came to a crawl. How is it that such assumptions could
-be made impacting *all* computer users without any thoughtful provisions for what
-already worked?
+As graphical user interfaces and mice took over computers, they rapidly became almost unusable by my mom. She typed well, but the dexterity to move a mouse aluded her. To satisfy the need to interact with locations on the screen, she adopted using a joystick and her productivity came to a crawl. How is it that such assumptions could be made impacting *all* computer users without any thoughtful provisions for what already worked?
 
 === Find out more
-Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat
-with me more about this story.
+Get on https://beagleboard.org/about/jkridner[my calendar] if you'd like to chat with me more about this story.
 
 [[architecture]]
 = Architecture
 
 [[beagleconnect-leash]]
 == BeagleConnect™ Freedom
-_BeagleConnect™ Freedom_ is based on the https://www.ti.com/product/CC1352R[TI CC1352] and is the first available
-BeagleConnect™ solution. It implements:
+_BeagleConnect™ Freedom_ is based on the https://www.ti.com/product/CC1352R[TI CC1352] and is the first available BeagleConnect™ solution. It implements:
 
 * `BeagleConnect™ gateway device` function for Sub-GHz 802.15.4 long-range wireless
-* `BeagleConnect™ node device` function for Bluetooth Low-Energe (BLE) and Sub-GHz
-802.15.4 long range wireless
+* `BeagleConnect™ node device` function for Bluetooth Low-Energe (BLE) and Sub-GHz 802.15.4 long range wireless
 * USB-based serial console and firmware updates
 * 2x https://www.mikroe.com/mikrobus[mikroBUS sockets] with `BeagleConnect™ protocol support`
 
-[.float-group]
---
-image:https://raw.githubusercontent.com/jadonk/beagleconnect/demo/case/Industrial%20design/BeagleConnect_ID_1.png[BeagleConnect™ case design,300,240,title="BeagleConnect™ Leash case",role="related thumb left"]
-image:https://github.com/jadonk/beagleconnect/blob/master/docs/MVIMG_20200410_095337.jpg[BeagleConnect™ Leash rev B prototype,300,200,title="BeagleConnect™ Leash",role="related thumb right"]
---
 
 [[what-is-new]]
 == What makes BeagleConnect™ new and different?
@@ -198,12 +141,8 @@ solution.
 [[the-device-interface-software-is-already-done]]
 === The device interface software is already done
 
-BeagleConnect™ uses the collaboratively developed Linux kernel to contain
-the intelligence required to speak to these devices (sensors, actuators,
-and indicators), rather than relying on writing code on a
-microcontroller specific to these devices. Some existing solutions rely
-on large libraries of microcontroller code, but the integration of
-communications, maintenance of the library with a limited set of
+BeagleConnect™ uses the collaboratively developed Linux kernel to contain the intelligence required to speak to these devices (sensors, actuators, and indicators), rather than relying on writing code on a
+microcontroller specific to these devices. Some existing solutions rely on large libraries of microcontroller code, but the integration of communications, maintenance of the library with a limited set of
 developer resources and other constraints to be explained later make
 those other solutions less suitable for rapid prototyping than
 BeagleConnect™.
@@ -211,60 +150,30 @@ BeagleConnect™.
 Linux presents these devices abstractly in ways that are
 self-descriptive. Add an accelerometer to the system and you are
 automatically fed a stream of force values in standard units. Add a
-temperature sensor and you get it back in standard units again. Same for
-sensing magnetism, proximity, color, light, frequency, orientation, or
-multitudes of other inputs. Indicators, such as LEDs and displays, are
-similarly abstracted with a few other kernel subsystems and more
-advanced actuators with and without feedback control are in the process
-of being developed and standardized. In places where proper Linux kernel
-drivers exist, no new specialized code needs to be created for the
-devices.
+temperature sensor and you get it back in standard units again. Same for sensing magnetism, proximity, color, light, frequency, orientation, or multitudes of other inputs. Indicators, such as LEDs and displays, are similarly abstracted with a few other kernel subsystems and more advanced actuators with and without feedback control are in the process of being developed and standardized. In places where proper Linux kernel drivers exist, no new specialized code needs to be created for the devices.
 
-IMPORTANT: _Bottom line_: For hundreds of devices, users won't have to write a
-single line of code to add them their systems. The automation code they
-do write can be extremely simple, done with graphical tools or in any
-language they want. Maintenance of the code is centralized in a small
-reusable set of microcontroller firmware and the Linux kernel, which is
-highly peer reviewed under a
-https://wiki.p2pfoundation.net/Linux_-_Governance[highly-regarded
-governance model].
+IMPORTANT: _Bottom line_: For hundreds of devices, users won't have to write a single line of code to add them their systems. The automation code they do write can be extremely simple, done with graphical tools or in any language they want. Maintenance of the code is centralized in a small reusable set of microcontroller firmware and the Linux kernel, which is highly peer reviewed under a https://wiki.p2pfoundation.net/Linux_-_Governance[highly-regarded governance model].
 
 [[on-going-maintenance]]
 === On-going maintenance
 
 Because there isn't code specific to any given network-of-devices
 configuration, we can all leverage the same software code base. This
-means that when someone fixes an issue in either BeagleConnect™ firmware
-or the Linux kernel, you benefit from the fixes. The source for
-BeagleConnect™ firmware is also submitted to the
-https://www.zephyrproject.org/[Zephyr Project] upstream, further
-increasing the user base. Additionally, we will maintain stable branches
-of the software and provide mechanisms for updating firmware on
-BeagleConnect™ hardware. With a single, relatively small firmware load,
-the potential for bugs is kept low. With large user base, the potential
-for discovering and resolving bugs is high.
+means that when someone fixes an issue in either BeagleConnect™ firmware or the Linux kernel, you benefit from the fixes. The source for BeagleConnect™ firmware is also submitted to the https://www.zephyrproject.org/[Zephyr Project] upstream, further increasing the user base. Additionally, we will maintain stable branches of the software and provide mechanisms for updating firmware on BeagleConnect™ hardware. With a single, relatively small firmware load, the potential for bugs is kept low. With large user base, the potential for discovering and resolving bugs is high.
 
 [[rapid-prototyping-without-wiring]]
 === Rapid prototyping without wiring
 
 BeagleConnect™ utilizes the https://elinux.org/Mikrobus[mikroBUS
-standard]. The mikroBUS standard interface is flexible enough for almost
-any typical sensor or indicator with hundreds of devices available.
+standard]. The mikroBUS standard interface is flexible enough for almost any typical sensor or indicator with hundreds of devices available.
 
-NOTE: Currently, we have support in the Linux kernel for a bit over 100
-_Click_ mikroBUS add-on boards from Mikroelektronika and are working
-with Mikroelektronika on a updated version of the specification for these
-boards to self-identify. Further, eventually the vast majority of over
-800 currently available _Click_ mikroBUS add-on boards will be supported
-as well as the hundreds of compliant boards developed every year.
+NOTE: Currently, we have support in the Linux kernel for a bit over 100 _Click_ mikroBUS add-on boards from Mikroelektronika and are working with Mikroelektronika on a updated version of the specification for these boards to self-identify. Further, eventually the vast majority of over 800 currently available _Click_ mikroBUS add-on boards will be supported as well as the hundreds of compliant boards developed every year.
 
 [[long-range-low-power-wireless]]
 === Long-range, low-power wireless
 
 _BeagleConnect™ Freedom_ wireless hardware is built around a
-http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless 
-microcontroller (MCU). CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM,
-80KB of ultra-low leakage SRAM, and https://en.wikipedia.org/wiki/Over-the-air_programming[Over-the-Air] upgrades (OTA).
+http://www.ti.com/product/CC1352R[TI CC1352] multiprotocol and multi-band Sub-1 GHz and 2.4-GHz wireless microcontroller (MCU). CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 352KB Flash, 256KB ROM, 8KB Cache SRAM, 80KB of ultra-low leakage SRAM, and https://en.wikipedia.org/wiki/Over-the-air_programming[Over-the-Air] upgrades (OTA).
 
 [[full-customization-possible]]
 === Full customization possible
@@ -272,29 +181,17 @@ microcontroller (MCU). CC1352R includes a 48-MHz Arm® Cortex®-M4F processor, 3
 BeagleConnect™ utilizes https://www.oshwa.org/definition/[open source
 hardware] and https://en.wikipedia.org/wiki/Open-source_software[open
 source software], making it possible to optimize hardware and software
-implementations and sourcing to meet end-product requirements.
-BeagleConnect™ is meant to enable rapid-prototyping and not to
-necessarily satisfy any particular end-product's requirements, but with
-full considerations for go-to-market needs.
+implementations and sourcing to meet end-product requirements. BeagleConnect™ is meant to enable rapid-prototyping and not to necessarily satisfy any particular end-product's requirements, but with full considerations for go-to-market needs.
 
 Each BeagleBoard.org BeagleConnect™ solution will be:
 
 * Readily available for over 10 years, 
 * Built with fully
-open source software with submissions to mainline Linux and Zephyr
-repositories to aide in support and porting, 
-* Built with fully open
-source and non-restrictive hardware design including schematic,
-bill-of-materials, layout, and manufacturing files (with only the
-BeagleBoard.org logo removed due to licensing restrictions of our
-brand), 
-* Built with parts where at least a compatible part is available
-from worldwide distributors in any quantity, 
-* Built with design and
-manufacturing partners able to help scale derivative designs, 
-* Based on
-a security model using public/private keypairs that can be replaced to
-secure your own network, and 
+open source software with submissions to mainline Linux and Zephyr repositories to aide in support and porting, 
+* Built with fully open source and non-restrictive hardware design including schematic, bill-of-materials, layout, and manufacturing files (with only the BeagleBoard.org logo removed due to licensing restrictions of our brand), 
+* Built with parts where at least a compatible part is available from worldwide distributors in any quantity, 
+* Built with design and manufacturing partners able to help scale derivative designs, 
+* Based on a security model using public/private keypairs that can be replaced to secure your own network, and 
 * Fully FCC/CE certified.
 
 [[usage]]
@@ -308,40 +205,32 @@ please refer to the <<development>> section below.
 [[enable-a-linux-host-with-beagleconnect]]
 === Enable a Linux host with BeagleConnect™
 
-image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning
-Step 1] Log into a host system running Linux that is BeagleConnect™
-enabled. Enable a Linux host with BeagleConnect™ by plugging a
-`BeagleConnect™ gateway device` into it's USB port. You'll also want to have a
-`BeagleConnect™ node device` with a sensor, actuator or indicator device connected.
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep1.PNG?raw=true[Provisioning Step 1]
+
+Log into a host system running Linux that is BeagleConnect™ enabled. Enable a Linux host with BeagleConnect™ by plugging a `BeagleConnect™ gateway device` into it's USB port. You'll also want to have a `BeagleConnect™ node device` with a sensor, actuator or indicator device connected.
 
 NOTE: _BeagleConnect™ Freedom_ can act as either a `BeagleConnect™ gateway device` or a
 `BeagleConnect™ node device`.
 
-IMPORTANT: The Linux host will need to run the `BeagleConnect™ management
-software`, most of which is incorporated into the Linux kernel. Support will
-be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
+IMPORTANT: The Linux host will need to run the `BeagleConnect™ management software`, most of which is incorporated into the Linux kernel. Support will be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 
 #TODO: Clean up images#
 
 [[connect-host-and-device]]
 === Connect host and device
 
-image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning
-Step 2] Initiate a connection between the host and devices by pressing
-the discovery button(s).
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep2.PNG?raw=true[Provisioning Step 2]
+
+Initiate a connection between the host and devices by pressing the discovery button(s).
 
 [[device-data-shows-up-as-files]]
 === Device data shows up as files
 
-image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning
-Step 3] New streams of self-describing data show up on the host system
-using native device drivers.
+image:https://github.com/beagleboard/beagleconnect/blob/master/docs/ProvStep3.PNG?raw=true[Provisioning Step 3]
 
-High-level applications, like `Node-RED`, can directly read/write these high-level
-data streams (including data-type information) to Internet-based https://mqtt.org/[MQTT] brokers,
-live dashboards, or other logical operations without requiring any sensor-specific
-coding. Business logic can be applied using simple if-this-then-that style operations
-or be made as complex as desired using virtually any programming language or environment.
+New streams of self-describing data show up on the host system using native device drivers.
+
+High-level applications, like `Node-RED`, can directly read/write these high-level data streams (including data-type information) to Internet-based https://mqtt.org/[MQTT] brokers, live dashboards, or other logical operations without requiring any sensor-specific coding. Business logic can be applied using simple if-this-then-that style operations or be made as complex as desired using virtually any programming language or environment.
 
 #TODO: Actually, Node-RED will make these show up automatically as streams.#
 
@@ -349,49 +238,35 @@ or be made as complex as desired using virtually any programming language or env
 == Components
 
 [horizontal]
-BeagleConnect™ enabled host:: Linux computer, possibly single-board computer (SBC), with
-`BeagleConnect™ management software` and `BeagleConnect™ gateway function`. `BeagleConnect™ gateway
-function` can be provided by a `BeagleConnect™ compatible interface` or by connecting a
-`BeagleConnect™ gateway device` over USB.
+BeagleConnect™ enabled host:: Linux computer, possibly single-board computer (SBC), with `BeagleConnect™ management software` and `BeagleConnect™ gateway function`. `BeagleConnect™ gateway function` can be provided by a `BeagleConnect™ compatible interface` or by connecting a `BeagleConnect™ gateway device` over USB.
+
 +
 NOTE: If the Linux host has BLE, the BeagleConnect™ is optional for short distances
 +
 
-BeagleConnect™ Freedom:: Board, case, and wireless MCU with `Zephyr` based firmware for acting
-as either a `BeagleConnect™ gateway device` or `BeagleConnect™ node device`.
+BeagleConnect™ Freedom:: Board, case, and wireless MCU with `Zephyr` based firmware for acting as either a `BeagleConnect™ gateway device` or `BeagleConnect™ node device`.
 * In `BeagleConnect™ gateway device` mode:
 ** Provides long-range, low-power wireless communications,
 ** Connects with the `host` via USB and an associated Linux kernel driver, and
 ** Is powered by the USB connector.
 * In `BeagleConnect™ node device` mode:
 ** Powered by a battery or USB connector
-** Provides 2 mikroBUS connectors for connecting any of hundreds of
-https://bbb.io/click[Click Board] mikroBUS add-on devices
-** Provides new Linux host controllers for SPI, I2C, UART, PWM, ADC, and
-GPIO with interrupts via `Greybus`
+** Provides 2 mikroBUS connectors for connecting any of hundreds of https://bbb.io/click[Click Board] mikroBUS add-on devices
+** Provides new Linux host controllers for SPI, I2C, UART, PWM, ADC, and GPIO with interrupts via `Greybus`
 
-BeagleConnect™ gateway device:: Provides a `BeagleConnect™ compatible interface` to a host. This
-could be a built-in interface device or one connected over USB. _BeagleConnect™ Freedom_ can provide
-this function.
+BeagleConnect™ gateway device:: Provides a `BeagleConnect™ compatible interface` to a host. This could be a built-in interface device or one connected over USB. _BeagleConnect™ Freedom_ can provide this function.
 
 BeagleConnect™ node device:: Utilizes a `BeagleConnect™ compatible interface` and #TODO#
 
-BeagleConnect™ compatible interface:: Immediate plans are to support Bluetooth Low Energy (BLE),
-2.4GHz IEEE 802.15.4, and Sub-GHz IEEE 802.15.4 _wireless_ interfaces. A built-in BLE interface is
-suitable for this at short range, whereas IEEE 802.15.4 is typically significantly better at long
-ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being considered for future
-`BeagleConnect™ gateway device` and `BeagleConnect™ node device` designs.
+BeagleConnect™ compatible interface:: Immediate plans are to support Bluetooth Low Energy (BLE), 2.4GHz IEEE 802.15.4, and Sub-GHz IEEE 802.15.4 _wireless_ interfaces. A built-in BLE interface is suitable for this at short range, whereas IEEE 802.15.4 is typically significantly better at long ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being considered for future `BeagleConnect™ gateway device` and `BeagleConnect™ node device` designs.
 
 Greybus:: #TODO#
 
 #TODO: Find a place for the following notes:
 
-** The device interfaces get exposed to the host via Greybus BRIDGED_PHY
-protocol
-** The I2C bus is probed for a an identifier EEPROM and appropriate
-device drivers are loaded on the host
-** Unsupported Click Boards connected are exposed via userspace drivers
-on the host for development
+** The device interfaces get exposed to the host via Greybus BRIDGED_PHY protocol
+** The I2C bus is probed for a an identifier EEPROM and appropriate device drivers are loaded on the host
+** Unsupported Click Boards connected are exposed via userspace drivers on the host for development
 
 [[whats-different]]
 == What's different
@@ -400,8 +275,7 @@ So, in summary, what is so different with this approach?
 
 * No microcontroller code development is required by users
 * Userspace drivers make rapid prototyping really easy
-* Kernel drivers makes the support code collaborative parts of the Linux
-kernel, rather than cut-and-paste
+* Kernel drivers makes the support code collaborative parts of the Linux kernel, rather than cut-and-paste
 
 [[development]]
 = Develop for BeagleConnect™ Freedom with Zephyr
@@ -437,13 +311,9 @@ There are many options, but let's get started with one recommended set for the b
 
 == Install the latest software image for BeagleBone Green Gateway
 
-Download and install the Debian Linux operating system image for the
-Seeed BeagleBone® Green Gateway host.
+Download and install the Debian Linux operating system image for the Seeed BeagleBone® Green Gateway host.
 
-1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from
-https://rcn-ee.net/rootfs/debian-mikrobus-armhf/[here]. 
-Pick the most recent directory and select the file beginning with *bone-* and ending with *.img.xz*.
-Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
+1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from https://rcn-ee.net/rootfs/debian-mikrobus-armhf/[here]. Scroll down to find the most recent directory and select the file beginning with *bone-* and ending with *.img.xz*. Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
 4. Power BeagleBone Green Gateway via the 12V barrel jack.
@@ -454,17 +324,53 @@ Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 
 These instructions assume an x86_64 computer runing Ubuntu 20.04.3 LTS, but any computer can be used to connect to your BeagleBone Green Gateway.
 
-1. Log onto the Seeed BeagleBone® Green Gateway using `ssh` or, with a serial to USB cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector.  To use `ssh`, you will have to know the Green Gateway's IP address that can be found from your router.
-2. (If using WiFi) Use the `connmanctl` tool to gain an Internet connection.
+1. Log onto the Seeed BeagleBone® Green Gateway using `ssh`.
+** We need IP address, Username, and Password to connect to the device.
+** The default IP for the BeagleBone hardware is `192.168.7.2`
+** The default Username is `debian` & Password is `temppwd`
+** To connect you can simply type `$ ssh debian@192.168.7.2` and when asked for password just type `temppwd`.
+** Congratulations, You are now connected to the device!
+2. Connect to the https://forum.beagleboard.org/t/debian-11-x-bullseye-monthly-snapshots/31280[WiFi]
+** Execute `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf` and provide the password `temppwd` to edit the configuration file for the WiFi connection.
+** Now edit the the file (shown below) under the `network={ ... }` section you can set you `ssid` (WiFi name) and `psk` (Wifi Password).
+
+    ctrl_interface=DIR=/run/wpa_supplicant GROUP=netdev
+    update_config=1
+    #country=IN
+    network={
+            ssid="WiFi Name"
+            psk="WiFi Password"
+    }
+    
+** Now save the file with `CTRL+O` and exit with `CTRL+X`.
+** Check if the connection is established by executing `$ ping 8.8.8.8` you should see something like shown below.
+
+    debian@BeagleBone:~$ ping 8.8.8.8
+    PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+    64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=10.5 ms
+    64 bytes from 8.8.8.8: icmp_seq=2 ttl=118 time=5.72 ms
+    64 bytes from 8.8.8.8: icmp_seq=3 ttl=118 time=6.13 ms
+    64 bytes from 8.8.8.8: icmp_seq=4 ttl=118 time=6.11 ms
+    ...
+    
+** If everything goes will, you are ready to update your system and install new applications for beagleconnect.
+
+NOTE: If you are facing some issue during boot then you can try debuging the boot session with a USB to serial interface cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector. Application like putty/mimicom can be used to make the connection estibleshment procedure easy.
 
 #TODO: Simplify and elaborate on this section
 
 [[sdk]]
 == Install Zephyr development tools on BeagleBone Green Gateway
 
+* Update the system.
 [source,bash]
 ----
 sudo apt update
+----
+
+* Install all BeagleConnect™ management software.
+[source,bash]
+----
 sudo apt install -y \
 	beagleconnect beagleconnect-msp430 \
 	git vim \
@@ -476,19 +382,91 @@ sudo apt install -y \
 	gcc-arm-none-eabi libnewlib-arm-none-eabi \
 	libtool-bin pkg-config autoconf automake libusb-1.0-0-dev \
 	python3-dev python3-pip python3-setuptools python3-tk python3-wheel
-pip3 install -U west
+----
+
+[source,bash]
+----
 echo "export PATH=$PATH:$HOME/.local/bin" >> $HOME/.bashrc
+----
+
+[source,bash]
+----
 source $HOME/.bashrc
+----
+
+* Reboot
+[source,bash]
+----
+sudo reboot
+----
+
+* Install BeagleConnect™ flashing software
+
+[source,bash]
+----
+pip3 install -U west
+----
+
+* Reboot
+[source,bash]
+----
+sudo reboot
+----
+
+* Download and setup Zephyr for BeagleConnect™ 
+
+[source,bash]
+----
 cd
+----
+
+[source,bash]
+----
 west init -m https://github.com/jadonk/zephyr --mr bcf-sdk-0.0.5 bcf-zephyr
+----
+
+[source,bash]
+----
 cd $HOME/bcf-zephyr
+----
+
+[source,bash]
+----
 west update
+----
+
+[source,bash]
+----
 west zephyr-export
+----
+
+[source,bash]
+----
 pip3 install -r zephyr/scripts/requirements-base.txt
+----
+
+[source,bash]
+----
 echo "export CROSS_COMPILE=/usr/bin/arm-none-eabi-" >> $HOME/.bashrc
+----
+
+[source,bash]
+----
 echo "export ZEPHYR_BASE=$HOME/bcf-zephyr/zephyr" >> $HOME/.bashrc
+----
+
+[source,bash]
+----
 echo "export PATH=$HOME/bcf-zephyr/zephyr/scripts:$PATH" >> $HOME/.bashrc
+----
+
+[source,bash]
+----
 echo "export BOARD=beagleconnect_freedom" >> $HOME/.bashrc
+----
+
+[source,bash]
+----
 source $HOME/.bashrc
 ----
 
@@ -499,10 +477,30 @@ Now you can build various Zephyr applications
 [source,bash]
 ----
 cd $HOME/bcf-zephyr
+----
+
+[source,bash]
+----
 west build -d build/blinky zephyr/samples/basic/blinky
+----
+
+[source,bash]
+----
 west build -d build/sensortest zephyr/samples/boards/beagle_bcf/sensortest -- -DOVERLAY_CONFIG=overlay-subghz.conf
+----
+
+[source,bash]
+----
 west build -d build/wpanusb modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
+----
+
+[source,bash]
+----
 west build -d build/bcfserial modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay-bcfserial.conf -DDTC_OVERLAY_FILE=bcfserial.overlay
+----
+
+[source,bash]
+----
 west build -d build/greybus modules/lib/greybus/samples/subsys/greybus/net -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
 ----
 
@@ -513,6 +511,10 @@ And then you can flash the BeagleConnect Freedom boards over USB
 [source,bash]
 ----
 cd $HOME/bcf-zephyr
+----
+
+[source,bash]
+----
 cc2538-bsl.py build/blinky
 ----
 
