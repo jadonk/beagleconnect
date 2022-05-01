@@ -74,7 +74,7 @@ The Linux environment provides opportunities for high-level remote management us
 like https://balena.io[Balena] with applications deployed in
 https://docker.io[Docker] containers.
 
-#TODO: provide image illustrating remote management
+#TODO: provide image illustrating remote management#
 
 The hardware and software are fully open source, providing for scalability and a lack of
 vendor lock-in.
@@ -91,6 +91,7 @@ For home automaters, integration into https://webthings.io[WebThings]...
 
 image::graphics/BeagleConnect-Freedom-C5-HandPhoto.png[]
 
+#TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective#
 
 IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
 to cost initially around US$20 with a roadmap to variants as low as US$1.
@@ -187,7 +188,7 @@ BeagleConnect™ solution. It implements:
 * 2x https://www.mikroe.com/mikrobus[mikroBUS sockets] with `BeagleConnect™ protocol support`
 
 
-#TODO: provide image of BeagleConnect™ Freedom in a case with a hand for size perspective
+#TODO: provide BeagleConnect™ Freedom pinout diagram#
 
 [[what-is-new]]
 == What makes BeagleConnect™ new and different?
@@ -452,12 +453,12 @@ Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 
 == Log into BeagleBone Green Gateway
 
-These instructions assume an x86_64 computer runing Ubuntu 20.04.3 LTS, but any computer can be used to connect to your BeagleBone Green Gateway.
+These instructions assume your BeagleBone Green is connected over USB to an x86_64 computer runing Ubuntu 20.04.3 LTS, but any other computer can also be used.
 
 1. Log onto the Seeed BeagleBone® Green Gateway using `ssh`.
-** We need IP address, Username, and Password to connect to the device.
-** The default IP for the BeagleBone hardware is `192.168.7.2`
-** The default Username is `debian` & Password is `temppwd`
+** We need IP address, username, and password to connect to the device.
+** The default IP for the BeagleBone hardware over USB is `192.168.7.2` (over Ethernet it's usually at beaglebone.local)
+** The default username is `debian` & password is `temppwd`
 ** To connect you can simply type `$ ssh debian@192.168.7.2` and when asked for password just type `temppwd`.
 ** Congratulations, You are now connected to the device!
 2. Connect to the https://forum.beagleboard.org/t/debian-11-x-bullseye-monthly-snapshots/31280[WiFi]
