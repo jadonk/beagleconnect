@@ -1,0 +1,199 @@
+== BeagleConnect™ Freedom & Zephyr
+
+[[development]]
+=== Develop for BeagleConnect™ Freedom with Zephyr
+
+Developing directly in Zephyr will not be ultimately required for end-users who won't touch the firmware running on BeagleConnect™ Freedom and will instead use the BeagleConnect™ Greybus functionality, but is important for early adopters as well as people looking to extend the functionality of the open source design. If you are one of those people, this is a good place to get started.
+
+[[equipment]]
+==== Equipment to begin development
+
+There are many options, but let's get started with one recommended set for the beta users.
+
+=== Required
+
+* <<beta-kit>>
+** https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[Seeed Studio BeagleBone® Green Gateway]
+** 3x BeagleConnect™ Freedom board, antenna, U.FL to SMA cable, SMA antenna and USB Type-A to Type-C cable
+** 1x https://www.mikroe.com/click[MikroE] ID Click
+* microSD card (6GB or larger)
+* microSD card programmer
+
+=== Recommended
+
+* https://smile.amazon.com/TMEZON-Power-Adapter-Supply-2-1mm/dp/B00Q2E5IXW[12V power brick]
+* https://smile.amazon.com/Converter-Terminated-Galileo-BeagleBone-Minnowboard/dp/B06ZYPLFNB[USB to TTL 3.3V UART adapter]
+* Ethernet cable and Internet connection
+* 2x USB power adapters
+* https://www.mikroe.com/weather-click[BME280-based Weather Click]
+* https://www.mikroe.com/air-quality-2-click[iAQ-Core-based Air Quality 2 Click]
+
+=== Optional
+
+* x86_64 computer running Ubuntu 20.04.3 LTS
+
+=== Install the latest software image for BeagleBone Green Gateway
+
+Download and install the Debian Linux operating system image for the
+Seeed BeagleBone® Green Gateway host.
+
+1. Download the special mikroBUS/Greybus BeagleBoard.org Debian image from
+https://rcn-ee.net/rootfs/debian-mikrobus-armhf/[here]. 
+Pick the most recent directory and select the file beginning with *bone-* and ending with *.img.xz*.
+Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
+2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
+3. Insert the microSD card into the Green Gateway.
+4. Power BeagleBone Green Gateway via the 12V barrel jack.
+
+#TODO: describe how to know it is working
+
+=== Log into BeagleBone Green Gateway
+
+These instructions assume an x86_64 computer runing Ubuntu 20.04.3 LTS, but any computer can be used to connect to your BeagleBone Green Gateway.
+
+1. Log onto the Seeed BeagleBone® Green Gateway using `ssh`.
+** We need IP address, Username, and Password to connect to the device.
+** The default IP for the BeagleBone hardware is `192.168.7.2`
+** The default Username is `debian` & Password is `temppwd`
+** To connect you can simply type `$ ssh debian@192.168.7.2` and when asked for password just type `temppwd`.
+** Congratulations, You are now connected to the device!
+2. Connect to the https://forum.beagleboard.org/t/debian-11-x-bullseye-monthly-snapshots/31280[WiFi]
+** Execute `sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf` and provide the password `temppwd` to edit the configuration file for the WiFi connection.
+** Now edit the the file (shown below) under the `network={ ... }` section you can set you `ssid` (WiFi name) and `psk` (Wifi Password).
+
+    ctrl_interface=DIR=/run/wpa_supplicant GROUP=netdev
+    update_config=1
+    #country=IN
+    network={
+            ssid="WiFi Name"
+            psk="WiFi Password"
+    }
+    
+** Now save the file with `CTRL+O` and exit with `CTRL+X`.
+** Check if the connection is established by executing `$ ping 8.8.8.8` you should see something like shown below.
+
+    debian@BeagleBone:~$ ping 8.8.8.8
+    PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+    64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=10.5 ms
+    64 bytes from 8.8.8.8: icmp_seq=2 ttl=118 time=5.72 ms
+    64 bytes from 8.8.8.8: icmp_seq=3 ttl=118 time=6.13 ms
+    64 bytes from 8.8.8.8: icmp_seq=4 ttl=118 time=6.11 ms
+    ...
+    
+** If everything goes well, you are ready to update your system and install new applications for beagleconnect.
+
+NOTE: If you are facing some issue during boot then you can try debuging the boot session with a USB to serial interface cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector. Application like tio/mimicom/putty can be used to make the connection estibleshment procedure easy.
+
+#TODO: Simplify and elaborate on this section, add boot session debugging walkthrough#
+
+[[sdk]]
+=== Install Zephyr development tools on BeagleBone Green Gateway
+
+<1> Update the system.
+
+    sudo apt update
+
+<2> Install all BeagleConnect™ management software.
+    
+    sudo apt install -y \
+	    beagleconnect beagleconnect-msp430 \
+	    git vim \
+	    build-essential \
+	    cmake ninja-build gperf \
+	    ccache dfu-util device-tree-compiler \
+	    make gcc libsdl2-dev \
+	    libxml2-dev libxslt-dev libssl-dev libjpeg62-turbo-dev \
+	    gcc-arm-none-eabi libnewlib-arm-none-eabi \
+	    libtool-bin pkg-config autoconf automake libusb-1.0-0-dev \
+	    python3-dev python3-pip python3-setuptools python3-tk python3-wheel
+
+
+    echo "export PATH=$PATH:$HOME/.local/bin" >> $HOME/.bashrc
+    
+    source $HOME/.bashrc
+
+
+<3> Reboot
+
+    sudo reboot
+
+
+<4> Install BeagleConnect™ flashing software
+
+    pip3 install -U west
+
+<5> Reboot
+
+    sudo reboot
+
+<6> Download and setup Zephyr for BeagleConnect™ 
+
+    cd
+
+    west init -m https://github.com/jadonk/zephyr --mr bcf-sdk-0.0.5 bcf-zephyr
+
+    cd $HOME/bcf-zephyr
+
+    west update
+
+    west zephyr-export
+
+    pip3 install -r zephyr/scripts/requirements-base.txt
+
+    echo "export CROSS_COMPILE=/usr/bin/arm-none-eabi-" >> $HOME/.bashrc
+
+    echo "export ZEPHYR_BASE=$HOME/bcf-zephyr/zephyr" >> $HOME/.bashrc
+
+    echo "export PATH=$HOME/bcf-zephyr/zephyr/scripts:$PATH" >> $HOME/.bashrc
+
+    echo "export BOARD=beagleconnect_freedom" >> $HOME/.bashrc
+
+    source $HOME/.bashrc
+
+
+=== Build applications for BeagleConnect Freedom on BeagleBone Green Gateway
+
+Now you can build various Zephyr applications
+
+<1> Change directory to BeagleConnect Freedom zephyr repository.
+    
+    cd $HOME/bcf-zephyr
+
+
+<2> Build blinky example
+
+    west build -d build/blinky zephyr/samples/basic/blinky
+
+<3> TODO
+
+    west build -d build/sensortest zephyr/samples/boards/beagle_bcf/sensortest -- -DOVERLAY_CONFIG=overlay-subghz.conf
+
+<4> TODO
+
+    west build -d build/wpanusb modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay-subghz.conf
+
+<5> TODO 
+
+    west build -d build/bcfserial modules/lib/wpanusb_bc -- -DOVERLAY_CONFIG=overlay-bcfserial.conf -DDTC_OVERLAY_FILE=bcfserial.overlay
+
+<6> TODO
+
+    west build -d build/greybus modules/lib/greybus/samples/subsys/greybus/net -- -DOVERLAY_CONFIG=overlay-802154-subg.conf
+
+
+=== Flash applications to BeagleConnect Freedom from BeagleBone Green Gateway
+
+And then you can flash the BeagleConnect Freedom boards over USB
+
+<1> Make sure you are in Zephyr directory
+
+    cd $HOME/bcf-zephyr
+
+<2> Flash Blinky
+
+    cc2538-bsl.py build/blinky
+
+=== Debug applications over the serial terminal
+
+#TODO
+

@@ -1,0 +1,24 @@
+= BeagleConnect™ C5 System Reference Manual
+:doctype: book
+:encoding: utf-8
+:lan: en
+:toc: left
+:toclevels: 2
+:numbered:
+
+////
+Initial System Reference Manual
+////
+
+include::preface.adoc[]
+
+include::chapter-01.adoc[]
+
+include::chapter-02.adoc[]
+
+include::chapter-03.adoc[]
+
+include::chapter-04.adoc[]
+
+include::index.adoc[]
+
