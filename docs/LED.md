@@ -10,7 +10,7 @@ side of the case.
 
 ## Positions
 
-TBD - I need to determine for sure where each LED is on the board and make it clear in this document.
+#TODO: - I need to determine for sure where each LED is on the board and make it clear in this document.
 
 ## Functions
 
