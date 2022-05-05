@@ -137,6 +137,35 @@ side of the case.
 
 ## Modes
 
+<table>
+ <thead>
+  <tr>
+   <td>Mode/firmware</td>
+   <td>Submode</td>
+   <td>USB LED (U)</td>
+   <td>MikroBUS LEDs (1/2)</td>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td rowspan=1>Sensortest node</td>
+   <td>-</td>
+   <td>off</td>
+   <td>off</td>
+  </tr>
+  <tr>
+   <td rowspan=4>Greybus node</td>
+   <td>searching</td>
+   <td rowspan=3>off</td>
+   <td>slow blink</td>
+  </tr>
+  <tr>
+   <td>searching</td>
+   <td rowspan=3>connected</td>
+   <td>off</td>
+  </tr>
+
+
 | Mode/firmware   | USB LED                                 | MikroBUS 1/2 LEDs                       |
 | --------------- | --------------------------------------- | --------------------------------------- |
 | Sensortest node | off                                     | off                                     |
