@@ -135,6 +135,13 @@ side of the case.
  </tbody>
 </table>
 
+## Modes
+
+| Mode/firmware   | USB LED                                 | MikroBUS 1/2 LEDs                       |
+| =============== | ======================================= | ======================================= |
+| Sensortest node | off                                     | off                                     |
+| Greybus node    | off                                     | slow blink, fast blink, or on (not off) |
+| Gateway         | slow blink, fast blink, or on (not off) | off                                     |
 
 ## Implementation
 
