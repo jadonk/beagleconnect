@@ -72,6 +72,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
   </tr>
   <tr>
    <td rowspan=2>P (Power)</td>
+   <td rowspan=2>PWR (no S/W control)</td>
    <td>On</td>
    <td>Device powered</td>
   </tr>
