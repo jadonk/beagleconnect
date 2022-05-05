@@ -18,6 +18,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
  <thead>
   <tr>
    <td>LED</td>
+   <td>Signal</td>
    <td>Status</td>
    <td>Indication</td>
   </tr>
@@ -25,6 +26,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
  <tbody>
   <tr>
    <td rowspan=2>C (Charging)</td>
+   <td rowspan=2>CHG (no S/W control)</td>
    <td>On</td>
    <td>Charger active</td>
   </tr>
@@ -34,6 +36,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
   </tr>
   <tr>
    <td rowspan=4>L (Link)</td>
+   <td rowspan=4>2.4G (DIO_18 on CC1352)</td>
    <td>On</td>
    <td>Radio RX within timeout</td>
   </tr>
@@ -51,6 +54,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
   </tr>
   <tr>
    <td rowspan=4>U (USB)</td>
+   <td rowspan=4>900M (P6.1 on MSP430)</td>
    <td>On</td>
    <td>Device in <i>gateway</i> mode</td>
   </tr>
@@ -77,6 +81,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
   </tr>
   <tr>
    <td rowspan=6>1 (mikroBUS 1)</td>
+   <td rowspan=6>LED1 (P6.2 on MSP430)</td>
    <td>On</td>
    <td>Identified and connected</td>
   </tr>
@@ -102,6 +107,7 @@ TBD - I need to determine for sure where each LED is on the board and make it cl
   </tr>
   <tr>
    <td rowspan=6>2 (mikroBUS 2)</td>
+   <td rowspan=6>LED2 (P6.3 on MSP430)</td>
    <td>On</td>
    <td>Identified and connected</td>
   </tr>
