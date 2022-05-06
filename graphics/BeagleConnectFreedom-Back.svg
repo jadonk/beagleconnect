@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="36.30125mm"
    height="59.894379mm"
    viewBox="-597839 -5435 14291.826 23580.202"
    id="svg22445"
    sodipodi:docname="BeagleConnectFreedom-Back.svg"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   inkscape:export-filename="/home/lorforlinux/Documents/Upside Down Labs Store/BeagleBoard.org/BeagleConnect/PCBs/BeagleConnectFreedom-Back.png"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   inkscape:export-filename="/home/lorforlinux/Documents/Upside Down Labs/Custom Technology Development/BeagleBoard.org/Github/beagleconnect/graphics/BeagleConnectFreedom-Back.png"
    inkscape:export-xdpi="2000"
-   inkscape:export-ydpi="2000">
+   inkscape:export-ydpi="2000"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata22451">
     <rdf:RDF>
@@ -327,10 +327,10 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter10647-9"
-       x="-0.18974091"
-       width="1.3794818"
-       y="-0.71616721"
-       height="2.4323344">
+       x="-0.19064249"
+       width="1.381285"
+       y="-0.7195702"
+       height="2.4391404">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="54.143888"
@@ -5937,7 +5937,7 @@
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
        id="filter72269"
-       x="-0.014347184"
+       x="-0.014347185"
        width="1.0286944"
        y="-0.0016751357"
        height="1.0033503">
@@ -20693,19 +20693,21 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="910"
-     inkscape:window-height="475"
+     inkscape:window-width="1366"
+     inkscape:window-height="693"
      id="namedview22447"
      showgrid="false"
-     inkscape:zoom="32.000002"
-     inkscape:cx="108.90911"
-     inkscape:cy="143.16553"
-     inkscape:window-x="698"
-     inkscape:window-y="239"
-     inkscape:window-maximized="0"
+     inkscape:zoom="2.388214"
+     inkscape:cx="41.034849"
+     inkscape:cy="123.52327"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg22445"
      inkscape:snap-nodes="false"
-     inkscape:document-rotation="0" />
+     inkscape:document-rotation="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm" />
   <title
      id="title2">BeagleConnect C5 (Back)</title>
   <desc
@@ -20835,7 +20837,7 @@
     </g>
   </g>
   <style
-     id="style48427"></style>
+     id="style48427" />
   <g
      id="highlightContainer-1"
      transform="translate(-718627.92,-19583.117)" />
@@ -20914,6 +20916,42 @@
        id="rect12658"
        style="fill:url(#linearGradient12824);fill-opacity:1;stroke-width:2352.32;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:9409.29, 2352.32;stroke-dashoffset:9644.55"
        d="m 67887.398,-5928.4973 v 2853.6387 h 3510.207 v -2853.6387 z m 992.773,1858.2243 h 317.429 c 28.867,0 52.221,23.3544 52.221,52.2204 v 104.1474 c 0,28.8661 -23.354,52.2204 -52.221,52.2204 h -317.429 c -28.865,0 -51.927,-23.3543 -51.927,-52.2204 v -104.1474 c 0,-28.866 23.062,-52.2204 51.927,-52.2204 z m 1217.498,0 h 317.429 c 28.866,0 51.927,23.3544 51.927,52.2204 v 104.1474 c 0,28.8661 -23.061,52.2204 -51.927,52.2204 h -317.429 c -28.865,0 -52.221,-23.3543 -52.221,-52.2204 v -104.1474 c 0,-28.866 23.356,-52.2204 52.221,-52.2204 z" />
+  </g>
+  <g
+     id="g171259"
+     transform="translate(-660231.15,581.62371)">
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke-width:846.298;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3385.23, 846.298;stroke-dashoffset:3469.85"
+       id="rect48855"
+       width="924.00647"
+       height="572.9397"
+       x="67981.625"
+       y="16548.447" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke-width:1541.64;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:6166.58, 1541.64;stroke-dashoffset:6320.75"
+       id="rect48857"
+       width="1799.9912"
+       height="975.95428"
+       x="67543.633"
+       y="15732.038" />
+  </g>
+  <g
+     id="g171265"
+     transform="translate(-657854.85,581.62371)">
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke-width:846.298;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3385.23, 846.298;stroke-dashoffset:3469.85"
+       id="rect171261"
+       width="924.00647"
+       height="572.9397"
+       x="67981.625"
+       y="16548.447" />
+    <rect
+       style="fill:#e6e6e6;fill-opacity:1;stroke-width:1541.64;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:6166.58, 1541.64;stroke-dashoffset:6320.75"
+       id="rect171263"
+       width="1799.9912"
+       height="975.95428"
+       x="67543.633"
+       y="15732.038" />
   </g>
   <g
      transform="matrix(-1,0,0,1,-482735.3,-14535.269)"
