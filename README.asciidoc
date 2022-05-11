@@ -96,6 +96,9 @@ image::graphics/BeagleConnect-Freedom-C5-HandPhoto.png[]
 IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
 to cost initially around US$20 with a roadmap to variants as low as US$1.
 
+image::graphics/BeagleConnectFreedom-Front-Annotated-wbg.png[]
+image::graphics/BeagleConnectFreedom-Back-Annotated-wbg.png[]
+
 The initial _BeagleConnect™ Freedom_ production release will: 
 
 * Support at least 100 https://elinux.org/Mikrobus[mikroBUS]-based https://mikroe.com/click[Click boards from Mikroelectronika], 
@@ -662,7 +665,7 @@ https://en.wikipedia.org/wiki/IEEE_802.15.4[802.15.4].
 [[software-architecture]]
 === Software architecture
 
-image:https://github.com/beagleboard/beagleconnect/blob/master/docs/bcf_block_diagram.svg?raw=true[Block Diagram]
+image::graphics/bcf_block_diagram.png[Block Diagram]
 
 [[todo-items]]
 TODO items
