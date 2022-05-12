@@ -83,7 +83,7 @@ For DevOps...
 
 For home automaters, integration into https://webthings.io[WebThings]...
 
-#TODO: think a bit more about this section with some feedback from Cathy.
+WARNING: TODO think a bit more about this section with some feedback from Cathy.
 
 = BeagleConnect™ hardware
 
