@@ -190,8 +190,7 @@ BeagleConnect™ solution. It implements:
 * USB-based serial console and firmware updates
 * 2x https://www.mikroe.com/mikrobus[mikroBUS sockets] with `BeagleConnect™ protocol support`
 
-
-#TODO: provide BeagleConnect™ Freedom pinout diagram#
+WARNING: TODO provide BeagleConnect™ Freedom pinout diagram
 
 [[what-is-new]]
 == What makes BeagleConnect™ new and different?
@@ -325,7 +324,7 @@ IMPORTANT: The Linux host will need to run the `BeagleConnect™ management
 software`, most of which is incorporated into the Linux kernel. Support will
 be provided for BeagleBoard and BeagleBone boards, x86 hosts, and Raspberry Pi.
 
-#TODO: Clean up images#
+WARNING: TODO Clean up images
 
 [[connect-host-and-device]]
 === Connect host and device
@@ -347,7 +346,7 @@ live dashboards, or other logical operations without requiring any sensor-specif
 coding. Business logic can be applied using simple if-this-then-that style operations
 or be made as complex as desired using virtually any programming language or environment.
 
-#TODO: Actually, Node-RED will make these show up automatically as streams.#
+WARNING: TODO Actually, Node-RED will make these show up automatically as streams.
 
 [[components]]
 == Components
@@ -388,7 +387,7 @@ ranges. Other _wired_ interfaces, such as _CAN_ and _RS-485_, are being consider
 
 Greybus:: #TODO#
 
-#TODO: Find a place for the following notes:
+WARNING: TODO Find a place for the following notes:
 
 ** The device interfaces get exposed to the host via Greybus BRIDGED_PHY
 protocol
@@ -452,7 +451,7 @@ Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 3. Insert the microSD card into the Green Gateway.
 4. Power BeagleBone Green Gateway via the 12V barrel jack.
 
-#TODO: describe how to know it is working
+WARNING: TODO describe how to know it is working
 
 == Setup BeagleBone Green Gateway
 
@@ -510,11 +509,11 @@ These instructions assume your BeagleBone Green is connected over USB to an x86_
 
 image::graphics/bb-code-server-terminal.png[]
 
-
+WARNING: TODO the above installation of bb-code-server should not be required on the mikrobus images. it needs to be enabled by default.
 
 NOTE: If you are facing some issue during boot then you can try debuging the boot session with a USB to serial interface cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector. Application like tio/mimicom/putty can be used to make the connection estibleshment procedure easy.
 
-#TODO: Simplify and elaborate on this section, add boot session debugging walkthrough#
+WARNING: TODO Simplify and elaborate on this section, add boot session debugging walkthrough
 
 [[sdk]]
 == Install Zephyr development tools on BeagleBone Green Gateway
@@ -782,7 +781,7 @@ Greybus currently supports several busses, including:
 * LED (with various programmability)
 * AUDIO (I2S)
 
-#TODO: The agenda for the above falls a bit short of BeagleConnect
+WARNING: TODO The agenda for the above falls a bit short of BeagleConnect
 
 === Hardware requirements
 
@@ -790,9 +789,9 @@ See the <<Equipment>> section for hardware requirements.
 
 == Running the demo
 
-#TODO: Fill in some details for new embedded Linux users
+WARNING: TODO Fill in some details for new embedded Linux users
 
-#TODO: Arrange demo in order of _fast success_ to _greater understanding_
+WARNING: TODO Arrange demo in order of _fast success_ to _greater understanding_
 
 === Install the latest software image
 
@@ -858,7 +857,7 @@ The value after "2l:" is the amount of light in lux. The value after "4h:" is th
 
 === Flash BeagleConnect™ Freedom *node* device with Greybus firmware
 
-#TODO: How can we add a step in here to show the network is connected without needing `gbridge` to be fully functional?
+WARNING: TODO How can we add a step in here to show the network is connected without needing `gbridge` to be fully functional?
 
 Do this from the BeagleBone® Green Gateway board that was previously used to program the BeagleConnect™ Freedom *gateway* device:
 
@@ -972,9 +971,9 @@ debian@beaglebone:~$
 
 #TODO: update the below for the built-in sensors
 
-#TODO: can we also handle the case where these sensors are included and recommend them? Same firmware?
+WARNING: TODO can we also handle the case where these sensors are included and recommend them? Same firmware?
 
-#TODO: the current demo is for the built-in sensors, not the Click boards mentioned below
+WARNING: TODO the current demo is for the built-in sensors, not the Click boards mentioned below
 
 Currently only a limited number of add-on boards have been tested to work over Greybus, simple add-on
 boards without interrupt requirement are the ones that work currently.  The example is for
@@ -982,7 +981,7 @@ Air Quality 2 Click and Weather Click attached to the mikroBUS ports on the devi
 
 /var/log/gbridge will have the gbridge log, and if the mikroBUS port has been instantiated successfully the kernel log will show the devices probe messages:
 
-#TODO: this log needs to be updated
+WARNING: TODO this log needs to be updated
 
 
 ```
@@ -1001,7 +1000,7 @@ mikrobus mikrobus-0: registering device : bme280
 mikrobus mikrobus-0: registering device : ams-iaq-core
 ```
 
-#TODO: bring in the GPIO toggle and I2C explorations for greater understanding
+WARNING: TODO bring in the GPIO toggle and I2C explorations for greater understanding
 
 === Flashing via a Linux Host
 If flashing the Freedom board via the BeagleBone fails here's a trick you can try to flash from a Linux host.
@@ -1247,7 +1246,7 @@ necessary.
 
 == Rebuilding from source
 
-#TODO: revisit everything below here
+WARNING: TODO revisit everything below here
 
 === Prerequisites
 
@@ -1371,7 +1370,7 @@ driver, though it isn't strictly required for greybus.
 
 NOTE: Again, `~` is just used as a placeholder and you can use whatever directory you'd like.
 
-#TODO: The patches for gb-netlink will eventually be applied here until pushed into mainline.#
+WARNING: TODO The patches for gb-netlink will eventually be applied here until pushed into mainline.#
 
 [source,console]
 ----
