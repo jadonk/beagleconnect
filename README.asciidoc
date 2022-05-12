@@ -63,7 +63,7 @@ https://www.mikroe.com/click/sensors/biometrics[biometrics] and
 https://www.mikroe.com/click/sensors[more]. These data streams can be stored in simple
 https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed and visualized.
 
-#TODO: provide images demonstrating Jupyter Notebook visualization
+WARNING: TODO provide images demonstrating Jupyter Notebook visualization
 
 For embedded systems developers, data is easily extrated using the standard
 https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
@@ -74,7 +74,7 @@ The Linux environment provides opportunities for high-level remote management us
 like https://balena.io[Balena] with applications deployed in
 https://docker.io[Docker] containers.
 
-#TODO: provide image illustrating remote management#
+WARNING: TODO provide image illustrating remote management#
 
 The hardware and software are fully open source, providing for scalability and a lack of
 vendor lock-in.
@@ -91,7 +91,7 @@ For home automaters, integration into https://webthings.io[WebThings]...
 
 image::graphics/BeagleConnect-Freedom-C5-HandPhoto.png[]
 
-#TODO: provide image of BeagleConnect™ Freedom in case with a hand for size perspective#
+WARNING: TODO provide image of BeagleConnect™ Freedom in case with a hand for size perspective#
 
 IMPORTANT: _BeagleConnect™ Freedom_ enables wirelessly adding new device nodes and is targeted
 to cost initially around US$20 with a roadmap to variants as low as US$1.
