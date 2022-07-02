@@ -559,7 +559,7 @@ WARNING: TODO Simplify and elaborate on this section, add boot session debugging
 
     cd
 
-    west init -m https://github.com/jadonk/zephyr --mr bcf-sdk-0.0.5 bcf-zephyr
+    west init -m https://github.com/jadonk/zephyr --mr bcf-sdk-3.1.0-rebase bcf-zephyr
 
     cd $HOME/bcf-zephyr
 
