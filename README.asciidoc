@@ -65,7 +65,7 @@ https://en.wikipedia.org/wiki/Comma-separated_values[data files] or processed an
 
 WARNING: TODO provide images demonstrating Jupyter Notebook visualization
 
-For embedded systems developers, data is easily extrated using the standard
+For embedded systems developers, data is easily extracted using the standard
 https://www.kernel.org/doc/html/latest/driver-api/iio/index.html[IIO]
 interface provided by the https://kernel.org[Linux kernel]
 running on the gateway using any of hundreds of
@@ -121,7 +121,7 @@ boards, which is the version that should be taken to production.
 The kit includes:
 
 * 1x https://wiki.seeedstudio.com/BeagleBone-Green-Gateway/[Seeed BeagleBone® Green Gateway] (board, USB cable)
-* 3x BeagleConnect™ Freedom (board, attenna, USB cable)
+* 3x BeagleConnect™ Freedom (board, antenna, USB cable)
 * 1x https://www.mikroe.com/unique-id-click[MikroElektronikia Click ID Board]
 
 To get started with this kit, see <<demo-1>>.
@@ -166,7 +166,7 @@ things have evolved in a sort of tunnel-vision, without bringing everyone along.
 
 === But, what about keyboard users?
 As graphical user interfaces and mice took over computers, they rapidly became almost
-unusable by my mom. She typed well, but the dexterity to move a mouse aluded her.
+unusable by my mom. She typed well, but the dexterity to move a mouse alluded her.
 To satisfy the need to interact with locations on the screen, she adopted using a
 joystick and her productivity came to a crawl. How is it that such assumptions could
 be made impacting *all* computer users without any thoughtful provisions for what
@@ -185,7 +185,7 @@ _BeagleConnect™ Freedom_ is based on the https://www.ti.com/product/CC1352R[TI
 BeagleConnect™ solution. It implements:
 
 * `BeagleConnect™ gateway device` function for Sub-GHz 802.15.4 long-range wireless
-* `BeagleConnect™ node device` function for Bluetooth Low-Energe (BLE) and Sub-GHz
+* `BeagleConnect™ node device` function for Bluetooth Low-Energy (BLE) and Sub-GHz
 802.15.4 long range wireless
 * USB-based serial console and firmware updates
 * 2x https://www.mikroe.com/mikrobus[mikroBUS sockets] with `BeagleConnect™ protocol support`
@@ -511,7 +511,7 @@ image::graphics/bb-code-server-terminal.png[]
 
 WARNING: TODO the above installation of bb-code-server should not be required on the mikrobus images. it needs to be enabled by default.
 
-NOTE: If you are facing some issue during boot then you can try debuging the boot session with a USB to serial interface cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector. Application like tio/mimicom/putty can be used to make the connection estibleshment procedure easy.
+NOTE: If you are facing some issue during boot then you can try debuging the boot session with a USB to serial interface cable such as those made by https://www.digikey.com/short/cfjmdbdd[FTDI] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector. Application like tio/minicom/putty can be used to make the connection establishment procedure easy.
 
 WARNING: TODO Simplify and elaborate on this section, add boot session debugging walkthrough
 
@@ -805,12 +805,12 @@ Today that file is *bone-debian-11.2-iot-mikrobus-armhf-2022-03-04-4gb.img.xz*.
 2. Load this image to a microSD card using a tool like https://www.balena.io/etcher/[Etcher].
 3. Insert the microSD card into the Green Gateway.
 4. Power the Green Gateway via the 12V barrel jack.
-5. Log onto the Seeed BeagleBone® Green Gateway using `ssh` or, with a serial to USB cable such as those made by FTDI[https://www.digikey.com/short/cfjmdbdd] plugged into J10 with the black wire of the FTDI cable toard the Ethernet connector.  To use `ssh`, you will have to know the Green Gateway's IP address that can be found from your router.
+5. Log onto the Seeed BeagleBone® Green Gateway using `ssh` or, with a serial to USB cable such as those made by FTDI[https://www.digikey.com/short/cfjmdbdd] plugged into J10 with the black wire of the FTDI cable toward the Ethernet connector.  To use `ssh`, you will have to know the Green Gateway's IP address that can be found from your router.
 6. (If using WiFi) Use the `connmanctl` tool to gain an Internet connection.
 
 === Flash BeagleConnect™ Freedom *gateway* device
 
-Comamnd-line instructions below are to be issued into the BeagleBone® Green Gateway terminal, either via `ssh` or the serial console.
+Command-line instructions below are to be issued into the BeagleBone® Green Gateway terminal, either via `ssh` or the serial console.
 
 On the newly imaged BeagleBone® Green Gateway board:
 
