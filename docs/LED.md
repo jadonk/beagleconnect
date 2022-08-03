@@ -25,7 +25,7 @@ side of the case.
  </thead>
  <tbody>
   <tr>
-   <td rowspan=2>C (Charging)</td>
+   <td rowspan=2>CHG (Charging)</td>
    <td rowspan=2>CHG (no S/W control)</td>
    <td>On</td>
    <td>Charger active</td>
@@ -35,7 +35,7 @@ side of the case.
    <td>Charger not active</td>
   </tr>
   <tr>
-   <td rowspan=4>L (Link)</td>
+   <td rowspan=4>LNK (Link)</td>
    <td rowspan=4>2.4G (DIO_18 on CC1352)</td>
    <td>On</td>
    <td>Radio RX within timeout</td>
@@ -53,7 +53,7 @@ side of the case.
    <td>Radio error</td>
   </tr>
   <tr>
-   <td rowspan=4>U (USB)</td>
+   <td rowspan=4>USB (USB)</td>
    <td rowspan=4>900M (P6.1 on MSP430)</td>
    <td>On</td>
    <td>Device in <i>gateway</i> mode</td>
@@ -71,7 +71,7 @@ side of the case.
    <td>Seeking USB (<i>gateway</i>) connection</td>
   </tr>
   <tr>
-   <td rowspan=2>P (Power)</td>
+   <td rowspan=2>PWR (Power)</td>
    <td rowspan=2>PWR (no S/W control)</td>
    <td>On</td>
    <td>Device powered</td>
@@ -81,7 +81,7 @@ side of the case.
    <td>Device not powered</td>
   </tr>
   <tr>
-   <td rowspan=6>1 (mikroBUS 1)</td>
+   <td rowspan=6>MB1 (mikroBUS 1)</td>
    <td rowspan=6>LED1 (P6.2 on MSP430)</td>
    <td>On</td>
    <td>Identified and connected</td>
@@ -107,7 +107,7 @@ side of the case.
    <td>Seeking Greybus connection</td>
   </tr>
   <tr>
-   <td rowspan=6>2 (mikroBUS 2)</td>
+   <td rowspan=6>MB2 (mikroBUS 2)</td>
    <td rowspan=6>LED2 (P6.3 on MSP430)</td>
    <td>On</td>
    <td>Identified and connected</td>
