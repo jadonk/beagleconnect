@@ -26,7 +26,7 @@ side of the case.
  <tbody>
   <tr>
    <td rowspan=2>CHG (Charging)</td>
-   <td rowspan=2>CHG (no S/W control)</td>
+   <td rowspan=2>D7, CHG (no S/W control)</td>
    <td>On</td>
    <td>Charger active</td>
   </tr>
@@ -36,7 +36,7 @@ side of the case.
   </tr>
   <tr>
    <td rowspan=4>LNK (Link)</td>
-   <td rowspan=4>2.4G (DIO_18 on CC1352)</td>
+   <td rowspan=4>D6, 2.4G (DIO_18 on CC1352)</td>
    <td>On</td>
    <td>Radio RX within timeout</td>
   </tr>
@@ -54,7 +54,7 @@ side of the case.
   </tr>
   <tr>
    <td rowspan=4>USB (USB)</td>
-   <td rowspan=4>900M (P6.1 on MSP430)</td>
+   <td rowspan=4>D5, 900M (P6.1 on MSP430)</td>
    <td>On</td>
    <td>Device in <i>gateway</i> mode</td>
   </tr>
@@ -72,7 +72,7 @@ side of the case.
   </tr>
   <tr>
    <td rowspan=2>PWR (Power)</td>
-   <td rowspan=2>PWR (no S/W control)</td>
+   <td rowspan=2>D4, PWR (no S/W control)</td>
    <td>On</td>
    <td>Device powered</td>
   </tr>
@@ -82,7 +82,7 @@ side of the case.
   </tr>
   <tr>
    <td rowspan=6>MB1 (mikroBUS 1)</td>
-   <td rowspan=6>LED1 (P6.2 on MSP430)</td>
+   <td rowspan=6>D3, LED1 (P6.2 on MSP430)</td>
    <td>On</td>
    <td>Identified and connected</td>
   </tr>
@@ -108,7 +108,7 @@ side of the case.
   </tr>
   <tr>
    <td rowspan=6>MB2 (mikroBUS 2)</td>
-   <td rowspan=6>LED2 (P6.3 on MSP430)</td>
+   <td rowspan=6>D2, LED2 (P6.3 on MSP430)</td>
    <td>On</td>
    <td>Identified and connected</td>
   </tr>
