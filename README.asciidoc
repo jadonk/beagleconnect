@@ -9,6 +9,8 @@ endif::[]
 :toc:
 :toc-placement!:
 
+Moved to https://git.beagleboard.org/beagleconnect/freedom
+
 [[beagleconnect]]
 = BeagleConnect™
 
